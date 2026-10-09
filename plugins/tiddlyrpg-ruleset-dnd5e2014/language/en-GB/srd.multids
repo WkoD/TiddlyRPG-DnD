@@ -1,0 +1,73 @@
+created: 20261009183319191
+modified: 20261009183319191
+title: $:/tiddlyrpg/language/en-GB/
+
+# Terms of the System Reference Document 5.1 (English, CC-BY-4.0, see the tab license), by hand;
+# page numbers of SRD_CC_v5.1.pdf. Variant name: the term written out.
+
+# Damage types: p. 97 ("Damage Types"); the phrase as after the dice in stat blocks, e.g.
+# p. 218 "7 (1d8 + 3) slashing damage plus 4 (1d8) necrotic damage"
+Rules/Damage/acid: acid
+Rules/Damage/acid/Phrase: acid damage
+Rules/Damage/bludgeoning: bludgeoning
+Rules/Damage/bludgeoning/Phrase: bludgeoning damage
+Rules/Damage/cold: cold
+Rules/Damage/cold/Phrase: cold damage
+Rules/Damage/fire: fire
+Rules/Damage/fire/Phrase: fire damage
+Rules/Damage/force: force
+Rules/Damage/force/Phrase: force damage
+Rules/Damage/lightning: lightning
+Rules/Damage/lightning/Phrase: lightning damage
+Rules/Damage/necrotic: necrotic
+Rules/Damage/necrotic/Phrase: necrotic damage
+Rules/Damage/piercing: piercing
+Rules/Damage/piercing/Phrase: piercing damage
+Rules/Damage/poison: poison
+Rules/Damage/poison/Phrase: poison damage
+Rules/Damage/psychic: psychic
+Rules/Damage/psychic/Phrase: psychic damage
+Rules/Damage/radiant: radiant
+Rules/Damage/radiant/Phrase: radiant damage
+Rules/Damage/slashing: slashing
+Rules/Damage/slashing/Phrase: slashing damage
+Rules/Damage/thunder: thunder
+Rules/Damage/thunder/Phrase: thunder damage
+
+# Abilities: stat block p. 218 "STR DEX CON INT WIS CHA"; names p. 76 ("Ability Scores and Modifiers");
+# save: short for "<Ability> saving throw", e.g. p. 10 "a Wisdom saving throw"
+Rules/Term/str: STR
+Rules/Term/str/name: Strength
+Rules/Term/str/save: STR save
+Rules/Term/dex: DEX
+Rules/Term/dex/name: Dexterity
+Rules/Term/dex/save: DEX save
+Rules/Term/con: CON
+Rules/Term/con/name: Constitution
+Rules/Term/con/save: CON save
+Rules/Term/int: INT
+Rules/Term/int/name: Intelligence
+Rules/Term/int/save: INT save
+Rules/Term/wis: WIS
+Rules/Term/wis/name: Wisdom
+Rules/Term/wis/save: WIS save
+Rules/Term/cha: CHA
+Rules/Term/cha/name: Charisma
+Rules/Term/cha/save: CHA save
+
+# Terms: AC p. 62 "Armor Class (AC)"; HP p. 116 table "Size HP AC" (= de p. 149);
+# DC p. 77 "Difficulty Class ... DC"; CR p. 15 "Destroy Undead (CR 1/2)" (= de p. 30);
+# XP p. 258 "experience points (XP)"; GM p. 12 "before the GM says" (= de p. 12), "the game master" p. 59.
+# The SRD 5.1 says GM, not DM (182 times GM, never DM).
+Rules/Term/ac: AC
+Rules/Term/ac/name: Armor Class
+Rules/Term/hp: HP
+Rules/Term/hp/name: hit points
+Rules/Term/dc: DC
+Rules/Term/dc/name: Difficulty Class
+Rules/Term/cr: CR
+Rules/Term/cr/name: challenge rating
+Rules/Term/xp: XP
+Rules/Term/xp/name: experience points
+Rules/Term/gm: GM
+Rules/Term/gm/name: game master

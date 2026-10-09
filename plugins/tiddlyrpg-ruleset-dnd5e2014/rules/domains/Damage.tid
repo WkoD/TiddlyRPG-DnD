@@ -1,0 +1,52 @@
+created: 20261009183319191
+modified: 20261009183319191
+tags: $:/tags/tiddlyrpg/RulesDomain
+title: $:/tiddlyrpg/rules/domain/Damage
+type: application/json
+
+{
+    "domain": "Damage",
+    "type": "damage",
+    "keys": "Rules/Damage/",
+    "entries": [
+        {
+            "id": "acid"
+        },
+        {
+            "id": "bludgeoning"
+        },
+        {
+            "id": "cold"
+        },
+        {
+            "id": "fire"
+        },
+        {
+            "id": "force"
+        },
+        {
+            "id": "lightning"
+        },
+        {
+            "id": "necrotic"
+        },
+        {
+            "id": "piercing"
+        },
+        {
+            "id": "poison"
+        },
+        {
+            "id": "psychic"
+        },
+        {
+            "id": "radiant"
+        },
+        {
+            "id": "slashing"
+        },
+        {
+            "id": "thunder"
+        }
+    ]
+}

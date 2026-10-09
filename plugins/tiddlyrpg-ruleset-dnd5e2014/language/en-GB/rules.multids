@@ -1,0 +1,44 @@
+created: 20261009183319191
+modified: 20261009183319191
+title: $:/tiddlyrpg/language/en-GB/
+
+# Units, dice and the damage grammar of D&D 5e (2014) in English; factors of the SRD 5.1 per pair:
+# in -> cm 2.5 and ft -> m 0.3 (en p. 134 "1 foot of stone, 1 inch of common metal ... 3 feet of wood",
+# de p. 132 "30 Zentimeter ... 2,5 Zentimeter ... 90 Zentimeter"; en p. 5 "5 by 30 ft. line", de p. 5
+# "1,5 m x 9 m"), mi -> km 1.6 (en p. 84 "30 miles" per day, de p. 91 "48 km"), lb -> kg 0.5 (en p. 66
+# handaxe "2 lb.", de p. 69 Beil "1 kg"). The German SRD rounds unevenly (de p. 152 "einem Meter" for 3 feet).
+
+Rules/System/Name: D&D 5e (2014, SRD 5.1)
+Rules/Unit/System: imperial
+
+# Units and the words read for them
+Rules/Unit/in: in
+Rules/Unit/in/Parse: in., inch, inches
+Rules/Unit/ft: ft
+Rules/Unit/ft/Parse: ft., feet, foot
+Rules/Unit/mi: mi
+Rules/Unit/mi/Parse: mi., mile, miles
+Rules/Unit/lb: lb
+Rules/Unit/lb/Parse: lb., lbs, lbs., pound, pounds
+Rules/Unit/cm: cm
+Rules/Unit/cm/Parse: centimeter, centimeters, centimetre, centimetres
+Rules/Unit/m: m
+Rules/Unit/m/Parse: meter, meters, metre, metres
+Rules/Unit/km: km
+Rules/Unit/km/Parse: kilometer, kilometers, kilometre, kilometres
+Rules/Unit/kg: kg
+Rules/Unit/kg/Parse: kilogram, kilograms
+
+# Dice: the token of NdM ("1d6")
+Rules/Token/die: d
+
+# Damage: pattern and join as in stat blocks ("... slashing damage plus 4 (1d8) necrotic damage");
+# words read and dropped; written variants of the types
+Rules/Damage/Pattern: $dice$ $qualifiers$ $type$
+Rules/Damage/Join: plus
+Rules/Damage/Joiners: plus, and
+Rules/Damage/Fillers: damage, dmg
+Rules/Damage/Extras: extra
+Rules/Damage/bludgeoning/Parse: bludgeon
+Rules/Damage/piercing/Parse: pierce
+Rules/Damage/slashing/Parse: slash

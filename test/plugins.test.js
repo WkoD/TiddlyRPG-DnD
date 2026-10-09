@@ -11,7 +11,7 @@ var test = require("node:test"),
 
 var root = path.join(__dirname, ".."),
 	pkg = require(path.join(root, "package.json")),
-	TYPES = {"tiddlyrpg-setting-forgottenrealms": "setting"};
+	TYPES = {"tiddlyrpg-ruleset-dnd5e2014": "ruleset", "tiddlyrpg-setting-forgottenrealms": "setting"};
 
 var $tw, wiki, pluginTypes;
 

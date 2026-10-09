@@ -1,0 +1,37 @@
+created: 20261009183319191
+modified: 20261009183319191
+tags: $:/tags/tiddlyrpg/RulesDomain
+title: $:/tiddlyrpg/rules/domain/Ability
+type: application/json
+
+{
+    "domain": "Ability",
+    "type": "label",
+    "keys": "Rules/Term/",
+    "entries": [
+        {
+            "id": "str",
+            "shortcut": "str"
+        },
+        {
+            "id": "dex",
+            "shortcut": "dex"
+        },
+        {
+            "id": "con",
+            "shortcut": "con"
+        },
+        {
+            "id": "int",
+            "shortcut": "int"
+        },
+        {
+            "id": "wis",
+            "shortcut": "wis"
+        },
+        {
+            "id": "cha",
+            "shortcut": "cha"
+        }
+    ]
+}

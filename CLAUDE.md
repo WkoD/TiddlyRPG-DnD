@@ -55,8 +55,20 @@ npm run test-lang            # only test/lang/: language packs
     version of this repo equals the one of the core; the Forgotten Realms are the active setting
   - `calendar` - the Calendar of Harptos with the real data: months, festivals, era, Shieldmeet,
     length of a year, de-DE and en-GB, the rules domain `Calendar` and its display language
+  - `srd` - the SRD terms by hand: the seven domains, the 13 damage types, 6 abilities and 6
+    terms; every entry, unit and token has its keys in every language; every key of
+    `srd.multids` stands below a comment with a page reference; the license tab
+  - `units`, `damage`, `terms` - the macros with the real data: the factors of the SRD 5.1, the
+    cases of the campaigns (Vandalia), GM/SL and XP/EP
   - `lang/packs` - every language of every plugin complete against en-GB (keys only in
-    `en-GB/names.multids` are proper names and may be missing)
+    `en-GB/names.multids` are proper names and may be missing; keys ending in `/Parse` are the
+    words read in one language only)
+
+**SRD terms by hand:** `tiddlyrpg-ruleset-dnd5e2014/language/<code>/srd.multids` holds the terms
+of the System Reference Document 5.1 (EN, DE). Every block of keys stands below `#` comments
+with the page in the PDF (`.multids` skips lines starting with `#`); a new term gets its page
+too (`test/srd.test.js` checks it). The PDFs are only read, never checked in. Units, dice and
+the damage grammar are in `rules.multids`, with the pages of the factors.
 - Tests here check the real data; the engines themselves are tested in `TiddlyRPG-Plugins`
   against fixture plugins. A test of the same topic has the same file name in both repos.
 

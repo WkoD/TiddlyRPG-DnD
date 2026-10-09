@@ -1,0 +1,73 @@
+created: 20261009183319191
+modified: 20261009183319191
+title: $:/tiddlyrpg/language/de-DE/
+
+# Begriffe des Systemreferenzdokuments 5.1 (deutsch, CC-BY-4.0, siehe den Tab license), von Hand;
+# Seiten von SRD_CC_v5.1_DE.pdf. Variante name: der Begriff ausgeschrieben.
+
+# Schadensarten: S. 104-105 ("Schadensarten"); die Wendung wie nach den Würfeln in Werteblöcken,
+# z. B. S. 293 "10 (2W6+3) Hiebschaden plus 3 (1W6) Säureschaden"; adjektivische im Nominativ
+# ("nekrotischer Schaden" 10-mal, "nekrotischen Schaden" 2-mal nach Würfeln)
+Rules/Damage/acid: Säure
+Rules/Damage/acid/Phrase: Säureschaden
+Rules/Damage/bludgeoning: Wucht
+Rules/Damage/bludgeoning/Phrase: Wuchtschaden
+Rules/Damage/cold: Kälte
+Rules/Damage/cold/Phrase: Kälteschaden
+Rules/Damage/fire: Feuer
+Rules/Damage/fire/Phrase: Feuerschaden
+Rules/Damage/force: Energie
+Rules/Damage/force/Phrase: Energieschaden
+Rules/Damage/lightning: Blitz
+Rules/Damage/lightning/Phrase: Blitzschaden
+Rules/Damage/necrotic: Nekrotisch
+Rules/Damage/necrotic/Phrase: nekrotischer Schaden
+Rules/Damage/piercing: Stich
+Rules/Damage/piercing/Phrase: Stichschaden
+Rules/Damage/poison: Gift
+Rules/Damage/poison/Phrase: Giftschaden
+Rules/Damage/psychic: Psychisch
+Rules/Damage/psychic/Phrase: psychischer Schaden
+Rules/Damage/radiant: Gleißend
+Rules/Damage/radiant/Phrase: gleißender Schaden
+Rules/Damage/slashing: Hieb
+Rules/Damage/slashing/Phrase: Hiebschaden
+Rules/Damage/thunder: Schall
+Rules/Damage/thunder/Phrase: Schallschaden
+
+# Attribute: Werteblock S. 259 "STR GES KON INT WEI CHA"; save: kurz für den Rettungswurf, z. B. S. 10
+# "einen Weisheitsrettungswurf (SG 8 + ...)"
+Rules/Term/str: STR
+Rules/Term/str/name: Stärke
+Rules/Term/str/save: STR-Rettungswurf
+Rules/Term/dex: GES
+Rules/Term/dex/name: Geschicklichkeit
+Rules/Term/dex/save: GES-Rettungswurf
+Rules/Term/con: KON
+Rules/Term/con/name: Konstitution
+Rules/Term/con/save: KON-Rettungswurf
+Rules/Term/int: INT
+Rules/Term/int/name: Intelligenz
+Rules/Term/int/save: INT-Rettungswurf
+Rules/Term/wis: WEI
+Rules/Term/wis/name: Weisheit
+Rules/Term/wis/save: WEI-Rettungswurf
+Rules/Term/cha: CHA
+Rules/Term/cha/name: Charisma
+Rules/Term/cha/save: CHA-Rettungswurf
+
+# Begriffe: RK S. 66 "Rüstungsklasse (RK)"; TP S. 149 Tabelle "Größe TP RK"; SG S. 82
+# "Schwierigkeitsgrad (SG)"; HG S. 30 "Untote zerstören (HG 1/2)"; EP S. 288 "Erfahrungspunkte (EP)";
+# SL S. 12 "bevor der SL angibt", "Spielleiter" S. 63.
+Rules/Term/ac: RK
+Rules/Term/ac/name: Rüstungsklasse
+Rules/Term/hp: TP
+Rules/Term/hp/name: Trefferpunkte
+Rules/Term/dc: SG
+Rules/Term/dc/name: Schwierigkeitsgrad
+Rules/Term/cr: HG
+Rules/Term/cr/name: Herausforderungsgrad
+Rules/Term/xp: EP
+Rules/Term/xp/name: Erfahrungspunkte
+Rules/Term/gm: SL
+Rules/Term/gm/name: Spielleiter

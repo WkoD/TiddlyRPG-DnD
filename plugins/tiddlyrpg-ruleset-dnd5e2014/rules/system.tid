@@ -1,0 +1,7 @@
+created: 20261009183319191
+currency-reference: gp
+modified: 20261009183319191
+title: $:/tiddlyrpg/rules/system
+
+The rules system of the active ruleset: its name is the language key Rules/System/Name; its
+prices are in the coin named in currency-reference.

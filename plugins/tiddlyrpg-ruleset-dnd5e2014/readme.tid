@@ -1,0 +1,19 @@
+created: 20261009183319191
+modified: 20261009183319191
+title: $:/plugins/tiddlyrpg-ruleset-dnd5e2014/readme
+
+! D&D 5e (2014, SRD 5.1)
+
+The rules system D&D 5e, rules of 2014, for `tiddlyrpg-core`, as plugin type `ruleset`. Contains no
+code, only data and texts:
+
+* Rules domains (`$:/tiddlyrpg/rules/domain/...`): `Size`, `Distance`, `Weight` (units with the
+  factors of the SRD 5.1: 1 in = 2.5 cm, 1 ft = 0.3 m, 1 mi = 1.6 km, 1 lb = 0.5 kg), `Dice`,
+  `Damage` (the 13 damage types), `Ability` and `Terms`.
+* Language keys `Rules/...` in en-GB and de-DE; the terms come from the System Reference Document
+  5.1 in English and German (see the tab "license").
+* `$:/tiddlyrpg/rules/system`: the name of the system; its prices are in gold pieces
+  (`currency-reference: gp`).
+
+The macros `<<unit>>`, `<<dice>>`, `<<damage>>` and `<<term>>` of `tiddlyrpg-core` show these
+terms in the rules language set under ControlPanel -> Settings -> TiddlyRPG.

@@ -1,0 +1,40 @@
+created: 20261009183319191
+modified: 20261009183319191
+title: $:/tiddlyrpg/language/de-DE/
+
+# Einheiten, Würfel und die Schadensgrammatik von D&D 5e (2014) auf Deutsch; Belege der Faktoren siehe en-GB.
+
+Rules/System/Name: D&D 5e (2014, SRD 5.1)
+Rules/Unit/System: metric
+
+# Einheiten und die Wörter, die dafür gelesen werden
+Rules/Unit/in: in
+Rules/Unit/in/Parse: Zoll
+Rules/Unit/ft: ft
+Rules/Unit/ft/Parse: Fuß
+Rules/Unit/mi: mi
+Rules/Unit/mi/Parse: Meile, Meilen
+Rules/Unit/lb: lb
+Rules/Unit/lb/Parse: Pfund
+Rules/Unit/cm: cm
+Rules/Unit/cm/Parse: Zentimeter, Zentimetern
+Rules/Unit/m: m
+Rules/Unit/m/Parse: Meter, Metern
+Rules/Unit/km: km
+Rules/Unit/km/Parse: Kilometer, Kilometern
+Rules/Unit/kg: kg
+Rules/Unit/kg/Parse: Kilogramm
+
+# Würfel: das Zeichen in NdM ("1W6")
+Rules/Token/die: W
+
+# Schaden: Muster und Verbindung wie in Werteblöcken (S. 293 "... Hiebschaden plus 3 (1W6) Säureschaden");
+# gelesene und verworfene Wörter; gebeugte Formen der adjektivischen Schadensarten
+Rules/Damage/Pattern: $dice$ $qualifiers$ $type$
+Rules/Damage/Join: plus
+Rules/Damage/Joiners: plus, und
+Rules/Damage/Fillers: Schaden, Schadens
+Rules/Damage/Extras: zusätzlich, zusätzlichen, zusätzlichen
+Rules/Damage/necrotic/Parse: nekrotischen Schaden, nekrotischem Schaden
+Rules/Damage/psychic/Parse: psychischen Schaden, psychischem Schaden
+Rules/Damage/radiant/Parse: gleißenden Schaden, gleißendem Schaden

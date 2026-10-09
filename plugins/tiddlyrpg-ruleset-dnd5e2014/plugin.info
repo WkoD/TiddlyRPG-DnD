@@ -1,0 +1,14 @@
+{
+  "title": "$:/plugins/tiddlyrpg-ruleset-dnd5e2014",
+  "name": "tiddlyrpg-ruleset-dnd5e2014",
+  "description": "Ruleset D&D 5e, rules of 2014 (SRD 5.1), for tiddlyrpg-core: rules domains for sizes, distances, weights, dice, damage, abilities and terms, with the terms of the SRD 5.1 in en-GB and de-DE. Data only, no code. Requires tiddlyrpg-core.",
+  "author": "WkoD",
+  "version": "2.0.0",
+  "core-version": ">=5.4.0",
+  "plugin-type": "ruleset",
+  "dependents": [
+    "$:/plugins/tiddlyrpg-core"
+  ],
+  "tiddlyrpg-core-version": ">=2.0.0",
+  "list": "readme license"
+}
