@@ -1,0 +1,14 @@
+{
+    "description": "Minimal edition for the boot/smoke check (npm run smoke) and the tests (test/helpers.js): loads tiddlyrpg-core, staticfiles, the graph stack and the plugins of this repo with the de-DE language and aborts on module/load errors. Deliberately without sync plugins (tiddlyweb/filesystem) -> writes nothing to disk, no content.",
+    "plugins": [
+        "tiddlyrpg-core",
+        "staticfiles",
+        "graph",
+        "vis-network",
+        "relink",
+        "tiddlyrpg-setting-forgottenrealms"
+    ],
+    "languages": [
+        "de-DE"
+    ]
+}

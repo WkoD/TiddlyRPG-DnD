@@ -1,0 +1,17 @@
+{
+  "name": "tiddlyrpg-dnd",
+  "version": "1.0.0",
+  "private": true,
+  "description": "D&D content for tiddlyrpg-core (TiddlyRPG repo family): the setting tiddlyrpg-setting-forgottenrealms (Calendar of Harptos). Data and wikitext only, no code. Includes a minimal edition for the boot/smoke check (npm run smoke) and the tests in test/ (npm test).",
+  "scripts": {
+    "smoke": "node scripts/tw.js editions/smoke --verbose --version",
+    "test": "node --test \"test/**/*.test.js\"",
+    "test-lang": "node --test \"test/lang/*.test.js\""
+  },
+  "devDependencies": {
+    "tiddlywiki": "5.4.1",
+    "tw5-graph": "git+https://github.com/flibbles/tw5-graph.git#v1.7.1",
+    "tw5-vis-network": "git+https://github.com/flibbles/tw5-vis-network.git#v10.6.3",
+    "tw5-relink": "git+https://github.com/flibbles/tw5-relink.git#v2.6.1"
+  }
+}

@@ -1,0 +1,71 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Project overview
+
+D&D content for `tiddlyrpg-core`, the format layer of the TiddlyRPG repo family (repo
+`TiddlyRPG-Plugins`, npm `tiddlyrpg-plugins`). Contents and how wikis use it: see `README.md`.
+
+- **Data and wikitext only, no JS modules.** Everything here uses what `tiddlyrpg-core` offers as
+  its contract (calendar data, language keys, config tiddlers). A change that needs code belongs in
+  `tiddlyrpg-core`, not here.
+- The rules of how the data is read live in `TiddlyRPG-Plugins` (`CLAUDE.md` and `README.md`
+  there: "Calendar engine", "Language system").
+
+## Documentation - who covers what
+
+- **CLAUDE.md** (here): development support - rules, conventions, editing and release workflow.
+- **README.md**: what the plugins contain and how a wiki uses them.
+
+## Editing the plugins
+
+The plugins are **folder plugins** under `plugins/` (no build step - the folder *is* the plugin).
+
+```bash
+npm install
+npm link tiddlyrpg-plugins   # once `npm link` ran in a checkout of TiddlyRPG-Plugins
+npm run smoke                # boot/load check with tiddlyrpg-core, these plugins and de-DE
+npm test                     # all tests in test/
+npm run test-lang            # only test/lang/: language packs
+```
+
+- `tiddlyrpg-core` comes from `node_modules/tiddlyrpg-plugins`. During development that is an
+  `npm link` to a checkout of `TiddlyRPG-Plugins`, so a change in core is tested here at once.
+  `npm install` removes the link; set it again right after every `npm install`.
+- `scripts/plugin-path.js` builds `TIDDLYWIKI_PLUGIN_PATH` for `scripts/tw.js` and the tests:
+  `./plugins`, then `node_modules/tiddlyrpg-plugins/plugins`, then the pinned
+  `node_modules/tw5-*/plugins`.
+- `npm run smoke` boots `editions/smoke` and aborts on module/load errors. A plugin that is not
+  found is only a warning (`Cannot find plugin`) and the boot exits 0 - read the output; the CI
+  step fails on it.
+- `npm test` runs `test/**/*.test.js` with `node:test`; `test/helpers.js` boots the smoke edition.
+  One file per topic, a test that changes the wiki restores it:
+  - `lang/packs` - every language of every plugin complete against en-GB (keys only in
+    `en-GB/names.multids` are proper names and may be missing)
+- Tests here check the real data; the engines themselves are tested in `TiddlyRPG-Plugins`
+  against fixture plugins. A test of the same topic has the same file name in both repos.
+
+**Timestamps (`created`/`modified`):** every tiddler (`.tid`, `.multids` header) carries these
+fields in TiddlyWiki format (UTC, `YYYYMMDDHHMMSSmmm`). New file: `created` = `modified` = now;
+content change: only `modified`; mechanical mass renames/migrations excepted.
+
+**Naming:** internal names are English, files `kebab-case`; titles and keys follow the
+namespaces of `tiddlyrpg-core` (`$:/tiddlyrpg/...`, `$:/config/tiddlyrpg/...`,
+`$:/tiddlyrpg/language/<code>/...`).
+
+**Language:** everything in this repo is English - code, comments, docs, commit messages, tags
+and release notes. Other languages appear only as data: the language packs and the expected output
+in `test/`.
+
+**License:** none yet; it is set before the first publication of this repo.
+
+## Publishing a new version
+
+This repo has a version of its own (`package.json`, started at 1.0.0), independent of
+`tiddlyrpg-core`.
+
+1. Raise `version` in `package.json` and in the `plugin.info` of every plugin (same version).
+2. `npm install`, then `npm link tiddlyrpg-plugins` again.
+3. `npm run smoke`, `npm test`.
+4. Commit and push; once the CI run is green, **tag == version** and create the release.
