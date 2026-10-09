@@ -40,6 +40,7 @@ function keys(code) {
 function needed() {
 	var list = ["Rules/System/Name", "Rules/Unit/System"];
 	domains().forEach(function(d) {
+		list.push("Rules/Domain/" + d.domain);
 		if(d.type === "unit") {
 			Object.keys(d.units).forEach(function(id) { list.push("Rules/Unit/" + id); });
 		} else if(d.type === "tokens") {
@@ -63,6 +64,10 @@ test("the seven domains of the ruleset with their types", function() {
 	var types = {};
 	domains().forEach(function(d) { types[d.domain] = d.type; });
 	assert.deepEqual(types, {Ability: "label", Damage: "damage", Dice: "tokens", Distance: "unit", Size: "unit", Terms: "label", Weight: "unit"});
+});
+
+test("every domain has an example for the settings tab", function() {
+	assert.deepEqual(domains().filter(function(d) { return !d.example; }).map(function(d) { return d.domain; }), []);
 });
 
 test("the 13 damage types, 6 abilities and 6 terms of the SRD 5.1", function() {

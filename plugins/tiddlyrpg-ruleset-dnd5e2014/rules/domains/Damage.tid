@@ -1,5 +1,5 @@
 created: 20261009183319191
-modified: 20261009183319191
+modified: 20261009190000000
 tags: $:/tags/tiddlyrpg/RulesDomain
 title: $:/tiddlyrpg/rules/domain/Damage
 type: application/json
@@ -48,5 +48,6 @@ type: application/json
         {
             "id": "thunder"
         }
-    ]
+    ],
+    "example": "1d8 cold"
 }

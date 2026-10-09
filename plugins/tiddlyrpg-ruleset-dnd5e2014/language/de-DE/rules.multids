@@ -1,11 +1,20 @@
 created: 20261009183319191
-modified: 20261009183319191
+modified: 20261009190000000
 title: $:/tiddlyrpg/language/de-DE/
 
 # Einheiten, Würfel und die Schadensgrammatik von D&D 5e (2014) auf Deutsch; Belege der Faktoren siehe en-GB.
 
 Rules/System/Name: D&D 5e (2014, SRD 5.1)
 Rules/Unit/System: metric
+
+# Namen der Bereiche
+Rules/Domain/Ability: Attribute
+Rules/Domain/Damage: Schaden
+Rules/Domain/Dice: Würfel
+Rules/Domain/Distance: Entfernung
+Rules/Domain/Size: Größe
+Rules/Domain/Terms: Begriffe
+Rules/Domain/Weight: Gewicht
 
 # Einheiten und die Wörter, die dafür gelesen werden
 Rules/Unit/in: in

@@ -1,5 +1,5 @@
 created: 20261009183319191
-modified: 20261009183319191
+modified: 20261009190000000
 tags: $:/tags/tiddlyrpg/RulesDomain
 title: $:/tiddlyrpg/rules/domain/Ability
 type: application/json
@@ -33,5 +33,6 @@ type: application/json
             "id": "cha",
             "shortcut": "cha"
         }
-    ]
+    ],
+    "example": "wis save"
 }
