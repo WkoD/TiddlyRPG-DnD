@@ -47,7 +47,7 @@ npm run test-lang            # only test/lang/: language packs
   One file per topic, a test that changes the wiki restores it:
   - `plugins` - every plugin: its type (`ruleset`/`setting`), dependency on the core only, no JS
     modules, the version of `package.json`, `tiddlyrpg-core-version` met by the linked core; the
-    Forgotten Realms are the active setting
+    version of this repo equals the one of the core; the Forgotten Realms are the active setting
   - `calendar` - the Calendar of Harptos with the real data: months, festivals, era, Shieldmeet,
     length of a year, de-DE and en-GB
   - `lang/packs` - every language of every plugin complete against en-GB (keys only in
@@ -71,10 +71,11 @@ in `test/`.
 
 ## Publishing a new version
 
-This repo has a version of its own (`package.json`, started at 1.0.0), independent of
-`tiddlyrpg-core`.
+For now this repo keeps the version of `TiddlyRPG-Plugins` (`tiddlyrpg-core`), to show which
+versions fit together; the two may part later. A release here follows the one of the core.
 
-1. Raise `version` in `package.json` and in the `plugin.info` of every plugin (same version).
+1. Raise `version` in `package.json` and in the `plugin.info` of every plugin to the version of
+   the core.
 2. `npm install`, then `npm link tiddlyrpg-plugins` again.
 3. `npm run smoke`, `npm test`.
 4. Commit and push; once the CI run is green, **tag == version** and create the release.

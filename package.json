@@ -1,6 +1,6 @@
 {
   "name": "tiddlyrpg-dnd",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "description": "D&D content for tiddlyrpg-core (TiddlyRPG repo family): the setting tiddlyrpg-setting-forgottenrealms (Calendar of Harptos). Data and wikitext only, no code. Includes a minimal edition for the boot/smoke check (npm run smoke) and the tests in test/ (npm test).",
   "scripts": {
