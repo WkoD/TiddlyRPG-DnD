@@ -10,7 +10,7 @@ Not affiliated with or endorsed by Wizards of the Coast.
 
 | Plugin | Purpose |
 |---|---|
-| `$:/plugins/tiddlyrpg-setting-forgottenrealms` | Forgotten Realms: the Calendar of Harptos as calendar data, activated through `$:/config/tiddlyrpg/calendar`, with language keys (en-GB, de-DE; month names and DR only in en-GB, they are proper names) |
+| `$:/plugins/tiddlyrpg-setting-forgottenrealms` | Campaign setting (plugin type `setting`) Forgotten Realms: the Calendar of Harptos as calendar data, activated through `$:/config/tiddlyrpg/calendar`, with language keys (en-GB, de-DE; month names and DR only in en-GB, they are proper names) |
 
 ## Using it in a wiki
 
