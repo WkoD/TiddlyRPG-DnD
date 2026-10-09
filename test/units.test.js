@@ -35,6 +35,12 @@ test.describe("en-GB", function() {
 		assert.equal(u("1,5 kg"), "3 lb");
 	});
 
+	test("sizes and distances are one domain: a height in metres also without kind", function() {
+		assert.equal(u("1,70 m"), "5 ft 8 in");
+		assert.equal(u("9 m"), "30 ft");
+		assert.equal(u("12 m", "range"), "40 ft");
+	});
+
 	test("German words of a campaign text", function() {
 		assert.equal(u("300 Pfund"), "300 lb");
 		assert.equal(u("1,70 m", "height"), "5 ft 8 in");

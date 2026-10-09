@@ -1,5 +1,5 @@
 created: 20261009183319191
-modified: 20261009183319191
+modified: 20261009200000000
 title: $:/tiddlyrpg/language/de-DE/
 
 # Begriffe des Systemreferenzdokuments 5.1 (deutsch, CC-BY-4.0, siehe den Tab license), von Hand;
@@ -58,7 +58,9 @@ Rules/Term/cha/save: CHA-Rettungswurf
 
 # Begriffe: RK S. 66 "Rüstungsklasse (RK)"; TP S. 149 Tabelle "Größe TP RK"; SG S. 82
 # "Schwierigkeitsgrad (SG)"; HG S. 30 "Untote zerstören (HG 1/2)"; EP S. 288 "Erfahrungspunkte (EP)";
-# SL S. 12 "bevor der SL angibt", "Spielleiter" S. 63.
+# SL S. 12 "bevor der SL angibt", "Spielleiter" S. 63. Übungsbonus: S. 27 Klassentabelle "Stufe
+# Übungsbonus" (94-mal ausgeschrieben); das SRD 5.1 kürzt ihn nie ab, ÜB entsprechend PB
+# (bei der Sichtung aller Begriffe zu prüfen).
 Rules/Term/ac: RK
 Rules/Term/ac/name: Rüstungsklasse
 Rules/Term/hp: TP
@@ -71,3 +73,5 @@ Rules/Term/xp: EP
 Rules/Term/xp/name: Erfahrungspunkte
 Rules/Term/gm: SL
 Rules/Term/gm/name: Spielleiter
+Rules/Term/pb: ÜB
+Rules/Term/pb/name: Übungsbonus

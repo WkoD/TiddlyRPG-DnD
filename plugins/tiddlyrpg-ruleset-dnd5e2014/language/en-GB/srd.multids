@@ -1,5 +1,5 @@
 created: 20261009183319191
-modified: 20261009183319191
+modified: 20261009200000000
 title: $:/tiddlyrpg/language/en-GB/
 
 # Terms of the System Reference Document 5.1 (English, CC-BY-4.0, see the tab license), by hand;
@@ -58,7 +58,9 @@ Rules/Term/cha/save: CHA save
 # Terms: AC p. 62 "Armor Class (AC)"; HP p. 116 table "Size HP AC" (= de p. 149);
 # DC p. 77 "Difficulty Class ... DC"; CR p. 15 "Destroy Undead (CR 1/2)" (= de p. 30);
 # XP p. 258 "experience points (XP)"; GM p. 12 "before the GM says" (= de p. 12), "the game master" p. 59.
-# The SRD 5.1 says GM, not DM (182 times GM, never DM).
+# The SRD 5.1 says GM, not DM (182 times GM, never DM). Proficiency bonus: p. 8 class table
+# "Level Proficiency Bonus" (91 times written out); the SRD 5.1 never abbreviates it, PB is the
+# abbreviation in use (to be checked in the review of all terms).
 Rules/Term/ac: AC
 Rules/Term/ac/name: Armor Class
 Rules/Term/hp: HP
@@ -71,3 +73,5 @@ Rules/Term/xp: XP
 Rules/Term/xp/name: experience points
 Rules/Term/gm: GM
 Rules/Term/gm/name: game master
+Rules/Term/pb: PB
+Rules/Term/pb/name: proficiency bonus

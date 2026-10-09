@@ -60,22 +60,22 @@ function needed() {
 	return list.filter(function(key, index) { return list.indexOf(key) === index; });
 }
 
-test("the seven domains of the ruleset with their types", function() {
+test("the six domains of the ruleset with their types", function() {
 	var types = {};
 	domains().forEach(function(d) { types[d.domain] = d.type; });
-	assert.deepEqual(types, {Ability: "label", Damage: "damage", Dice: "tokens", Distance: "unit", Size: "unit", Terms: "label", Weight: "unit"});
+	assert.deepEqual(types, {Ability: "label", Damage: "damage", Dice: "tokens", Length: "unit", Terms: "label", Weight: "unit"});
 });
 
 test("every domain has an example for the settings tab", function() {
 	assert.deepEqual(domains().filter(function(d) { return !d.example; }).map(function(d) { return d.domain; }), []);
 });
 
-test("the 13 damage types, 6 abilities and 6 terms of the SRD 5.1", function() {
+test("the 13 damage types, 6 abilities and 7 terms of the SRD 5.1", function() {
 	var byName = {};
 	domains().forEach(function(d) { byName[d.domain] = d; });
 	assert.equal(byName.Damage.entries.length, 13);
 	assert.deepEqual(byName.Ability.entries.map(function(e) { return e.id; }), ["str", "dex", "con", "int", "wis", "cha"]);
-	assert.deepEqual(byName.Terms.entries.map(function(e) { return e.id; }), ["ac", "hp", "dc", "cr", "xp", "gm"]);
+	assert.deepEqual(byName.Terms.entries.map(function(e) { return e.id; }), ["ac", "hp", "dc", "cr", "xp", "gm", "pb"]);
 });
 
 CODES.forEach(function(code) {

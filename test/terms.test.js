@@ -28,6 +28,8 @@ test("en-GB", function() {
 	assert.equal(t("gm"), "GM");
 	assert.equal(t("xp"), "XP");
 	assert.equal(t("dex", "name"), "Dexterity");
+	assert.equal(t("pb"), "PB");
+	assert.equal(t("pb", "name"), "proficiency bonus");
 });
 
 test("de-DE", function() {
@@ -38,4 +40,6 @@ test("de-DE", function() {
 	assert.equal(t("gm"), "SL");
 	assert.equal(t("xp"), "EP");
 	assert.equal(t("dex", "name"), "Geschicklichkeit");
+	assert.equal(t("pb"), "ÜB");
+	assert.equal(t("pb", "name"), "Übungsbonus");
 });

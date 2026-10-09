@@ -1,5 +1,5 @@
 created: 20261009183319191
-modified: 20261009190000000
+modified: 20261009200000000
 tags: $:/tags/tiddlyrpg/RulesDomain
 title: $:/tiddlyrpg/rules/domain/Terms
 type: application/json
@@ -31,6 +31,10 @@ type: application/json
         },
         {
             "id": "gm"
+        },
+        {
+            "id": "pb",
+            "shortcut": "pb"
         }
     ],
     "example": "ac"

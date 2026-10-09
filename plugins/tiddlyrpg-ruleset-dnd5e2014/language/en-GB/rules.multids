@@ -1,5 +1,5 @@
 created: 20261009183319191
-modified: 20261009190000000
+modified: 20261009200000000
 title: $:/tiddlyrpg/language/en-GB/
 
 # Units, dice and the damage grammar of D&D 5e (2014) in English; factors of the SRD 5.1 per pair:
@@ -15,8 +15,7 @@ Rules/Unit/System: imperial
 Rules/Domain/Ability: Abilities
 Rules/Domain/Damage: Damage
 Rules/Domain/Dice: Dice
-Rules/Domain/Distance: Distance
-Rules/Domain/Size: Size
+Rules/Domain/Length: Length
 Rules/Domain/Terms: Terms
 Rules/Domain/Weight: Weight
 
