@@ -1,11 +1,11 @@
 created: 20261009181232255
-domain: Calendar
-keys: Calendar/
 modified: 20261009181232255
 tags: $:/tags/tiddlyrpg/RulesDomain
 title: $:/tiddlyrpg/rules/domain/Calendar
-type: calendar
+type: application/json
 
-The rules domain of the Calendar of Harptos: names of months, festivals, epithets and the era.
-Their language follows the rules language of the wiki (Settings -> TiddlyRPG), not only the wiki
-language.
+{
+    "domain": "Calendar",
+    "type": "calendar",
+    "keys": "Calendar/"
+}

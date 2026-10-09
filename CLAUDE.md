@@ -14,8 +14,9 @@ D&D content for `tiddlyrpg-core`, the format layer of the TiddlyRPG repo family 
   each type the wiki has one active (`$:/config/tiddlyrpg/ruleset`, `.../setting`, default: the
   only or first installed one). Each declares `"dependents": ["$:/plugins/tiddlyrpg-core"]` and
   the core version it needs as `"tiddlyrpg-core-version": ">=x.y.z"`.
-- The terms a plugin brings belong to rules domains: data tiddlers in `rules/domains/` tagged
-  `$:/tags/tiddlyrpg/RulesDomain` (fields `domain`, `type`, `keys`), e.g. `Calendar` of the
+- The terms a plugin brings belong to rules domains: JSON data tiddlers in `rules/domains/`
+  tagged `$:/tags/tiddlyrpg/RulesDomain` (`domain`, `type`, `keys` and what the type needs, in
+  the JSON; the field `type` is `application/json`), e.g. `Calendar` of the
   setting. Their language follows the rules language of the wiki ("Rules language" in
   `CLAUDE.md` of `TiddlyRPG-Plugins`).
 - The rules of how the data is read live in `TiddlyRPG-Plugins` (`CLAUDE.md` and `README.md`
