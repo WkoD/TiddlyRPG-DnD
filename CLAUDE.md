@@ -14,6 +14,10 @@ D&D content for `tiddlyrpg-core`, the format layer of the TiddlyRPG repo family 
   each type the wiki has one active (`$:/config/tiddlyrpg/ruleset`, `.../setting`, default: the
   only or first installed one). Each declares `"dependents": ["$:/plugins/tiddlyrpg-core"]` and
   the core version it needs as `"tiddlyrpg-core-version": ">=x.y.z"`.
+- The terms a plugin brings belong to rules domains: data tiddlers in `rules/domains/` tagged
+  `$:/tags/tiddlyrpg/RulesDomain` (fields `domain`, `type`, `keys`), e.g. `Calendar` of the
+  setting. Their language follows the rules language of the wiki ("Rules language" in
+  `CLAUDE.md` of `TiddlyRPG-Plugins`).
 - The rules of how the data is read live in `TiddlyRPG-Plugins` (`CLAUDE.md` and `README.md`
   there: "Calendar engine", "Language system").
 
@@ -49,7 +53,7 @@ npm run test-lang            # only test/lang/: language packs
     modules, the version of `package.json`, `tiddlyrpg-core-version` met by the linked core; the
     version of this repo equals the one of the core; the Forgotten Realms are the active setting
   - `calendar` - the Calendar of Harptos with the real data: months, festivals, era, Shieldmeet,
-    length of a year, de-DE and en-GB
+    length of a year, de-DE and en-GB, the rules domain `Calendar` and its display language
   - `lang/packs` - every language of every plugin complete against en-GB (keys only in
     `en-GB/names.multids` are proper names and may be missing)
 - Tests here check the real data; the engines themselves are tested in `TiddlyRPG-Plugins`

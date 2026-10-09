@@ -54,6 +54,29 @@ test.describe("de-DE", function() {
 	});
 });
 
+test.describe("rules language", function() {
+	test.before(function() {
+		h.setLanguage(wiki, "de-DE");
+	});
+
+	test("the setting registers the domain Calendar", function() {
+		var language = $tw.modules.execute("$:/plugins/tiddlyrpg-core/modules/language.js");
+		assert.equal(language.domains(wiki).Calendar.type, "calendar");
+	});
+
+	test("shown in en-GB in a German wiki", function() {
+		h.add(wiki, {title: "$:/config/tiddlyrpg/rules/display/mode", text: "domain"});
+		h.add(wiki, {title: "$:/config/tiddlyrpg/rules/display/domain/Calendar", text: "en-GB"});
+		try {
+			assert.equal(f("[[1351-01-31]dateformat[]]"), "Midwinter 1351");
+		} finally {
+			wiki.deleteTiddler("$:/config/tiddlyrpg/rules/display/mode");
+			wiki.deleteTiddler("$:/config/tiddlyrpg/rules/display/domain/Calendar");
+		}
+		assert.equal(f("[[1351-01-31]dateformat[]]"), "Mittwinter 1351");
+	});
+});
+
 test.describe("en-GB", function() {
 	test.before(function() {
 		h.setLanguage(wiki, "en-GB");
