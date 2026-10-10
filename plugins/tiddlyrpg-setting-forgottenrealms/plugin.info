@@ -1,12 +1,12 @@
 {
   "title": "$:/plugins/tiddlyrpg-setting-forgottenrealms",
   "name": "tiddlyrpg-setting-forgottenrealms",
-  "description": "Campaign setting Forgotten Realms for tiddlyrpg-core: the Calendar of Harptos (Dalereckoning) as calendar data with language keys (en-GB, de-DE). Requires tiddlyrpg-core.",
+  "description": "Campaign setting Forgotten Realms for tiddlyrpg-core: the Calendar of Harptos (Dalereckoning) and the coins of Faerûn, with language keys (en-GB, de-DE). Requires tiddlyrpg-core.",
   "author": "WkoD",
   "version": "2.0.0",
   "core-version": ">=5.4.0",
   "plugin-type": "setting",
   "dependents": ["$:/plugins/tiddlyrpg-core"],
   "tiddlyrpg-core-version": ">=2.0.0",
-  "list": "readme"
+  "list": "readme license"
 }

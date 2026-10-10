@@ -11,7 +11,7 @@ Not affiliated with or endorsed by Wizards of the Coast.
 | Plugin | Purpose |
 |---|---|
 | `$:/plugins/tiddlyrpg-ruleset-dnd5e2014` | Ruleset (plugin type `ruleset`) D&D 5e, rules of 2014: domains for sizes, distances, weights (factors of the SRD 5.1), dice, the 13 damage types, abilities and terms, with the terms of the SRD 5.1 in en-GB and de-DE; shown by the macros `<<unit>>`, `<<dice>>`, `<<damage>>`, `<<term>>` of `tiddlyrpg-core` |
-| `$:/plugins/tiddlyrpg-setting-forgottenrealms` | Campaign setting (plugin type `setting`) Forgotten Realms: the Calendar of Harptos as calendar data, activated through `$:/config/tiddlyrpg/calendar`, with language keys (en-GB, de-DE; month names and DR only in en-GB, they are proper names) |
+| `$:/plugins/tiddlyrpg-setting-forgottenrealms` | Campaign setting (plugin type `setting`) Forgotten Realms: the Calendar of Harptos as calendar data, activated through `$:/config/tiddlyrpg/calendar`, and the coins of Faerûn (cp, sp, ep, gp, pp with the rates and names of the SRD 5.1), activated through `$:/config/tiddlyrpg/currency`; language keys en-GB and de-DE (month names and DR only in en-GB, they are proper names) |
 
 ## Using it in a wiki
 

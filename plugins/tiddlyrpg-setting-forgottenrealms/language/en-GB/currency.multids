@@ -1,0 +1,23 @@
+created: 20261010063203140
+modified: 20261010063203140
+title: $:/tiddlyrpg/language/en-GB/Currency/Faerun/
+
+# Coins of the SRD 5.1 (English, CC-BY-4.0, see the tab license), by hand: p. 62 "the gold piece (gp),
+# the silver piece (sp), and the copper piece (cp)", "The electrum piece (ep) and the platinum piece (pp)";
+# rates p. 62 table (1 gp = 10 sp = 100 cp, 1 ep = 5 sp, 1 pp = 10 gp). Name and Parse words are not from the SRD.
+Name: Coins of Faerûn
+Unit/cp: cp
+Unit/sp: sp
+Unit/ep: ep
+Unit/gp: gp
+Unit/pp: pp
+Coin/cp: copper piece
+Coin/sp: silver piece
+Coin/ep: electrum piece
+Coin/gp: gold piece
+Coin/pp: platinum piece
+Unit/cp/Parse: copper
+Unit/sp/Parse: silver
+Unit/ep/Parse: electrum
+Unit/gp/Parse: gold
+Unit/pp/Parse: platinum
