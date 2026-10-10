@@ -1,5 +1,5 @@
 /*
- * The coins of Faerûn of tiddlyrpg-setting-forgottenrealms with the real data: the active currency,
+ * The coins of the Forgotten Realms of tiddlyrpg-setting-forgottenrealms with the real data: the active currency,
  * gp / GM and the other labels of the SRD 5.1, the rates, the reference coin matching the prices
  * of tiddlyrpg-ruleset-dnd5e2014 (gp), the hub. The engine itself: currency tests of
  * TiddlyRPG-Plugins.
@@ -21,8 +21,8 @@ function f(text, variables) {
 	return h.filter(wiki, text, variables).join(" ");
 }
 
-test("the coins of Faerûn are the currency, gp matches the prices of the ruleset", function() {
-	assert.equal(f("[currency[id]]"), "Faerun");
+test("the coins of the Forgotten Realms are the currency, gp matches the prices of the ruleset", function() {
+	assert.equal(f("[currency[id]]"), "ForgottenRealms");
 	assert.equal(f("[currency[coins]]"), "cp sp ep gp pp");
 	assert.equal(f("[currency[reference]]"), "gp");
 	assert.equal(f("[currency[rulesreference]]"), "gp");
@@ -59,6 +59,6 @@ test("the electrum piece is ep in the currency, the experience points are XP/EP 
 test("the hub Currency", function() {
 	h.setLanguage(wiki, "de-DE");
 	var html = h.render(wiki, "text/html", "{{Currency}}");
-	assert.match(html, /Münzen von Faerûn/);
+	assert.match(html, /Münzen der Forgotten Realms/);
 	assert.match(html, /Preise des Regelwerks in GM sind hier Preise in GM\./);
 });

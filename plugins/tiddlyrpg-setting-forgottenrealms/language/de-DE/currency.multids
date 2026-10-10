@@ -1,11 +1,11 @@
 created: 20261010063203140
-modified: 20261010063203140
-title: $:/tiddlyrpg/language/de-DE/Currency/Faerun/
+modified: 20261010075544000
+title: $:/tiddlyrpg/language/de-DE/Currency/ForgottenRealms/
 
 # Münzen des SRD 5.1 (deutsch, CC-BY-4.0, siehe den Tab license), von Hand: S. 65 "die Goldmünze (GM),
 # die Silbermünze (SM), und die Kupfermünze (KM)", "Die Elektrummünze (EM) und die Platinmünze (PM)";
 # Kurse S. 65. Name und die gelesenen Wörter stammen nicht aus dem SRD.
-Name: Münzen von Faerûn
+Name: Münzen der Forgotten Realms
 Unit/cp: KM
 Unit/sp: SM
 Unit/ep: EM

@@ -1,10 +1,10 @@
 created: 20261010063203140
-modified: 20261010070618000
-title: $:/tiddlyrpg/currency/Faerun
+modified: 20261010075544000
+title: $:/tiddlyrpg/currency/ForgottenRealms
 type: application/json
 
 {
-    "id": "Faerun",
+    "id": "ForgottenRealms",
     "base": "gp",
     "reference": "gp",
     "currencies": [

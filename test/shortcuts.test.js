@@ -42,7 +42,7 @@ function inData(plugin) {
 		Object.keys(d.units || {}).forEach(function(u) { if(d.units[u].shortcut) { names.push(d.units[u].shortcut); } });
 	});
 	if(plugin === SETTING) {
-		(wiki.getTiddlerData("$:/tiddlyrpg/currency/Faerun").currencies || []).forEach(function(c) { if(c.shortcut) { names.push(c.shortcut); } });
+		(wiki.getTiddlerData("$:/tiddlyrpg/currency/ForgottenRealms").currencies || []).forEach(function(c) { if(c.shortcut) { names.push(c.shortcut); } });
 	}
 	return names.sort();
 }

@@ -1,12 +1,12 @@
 created: 20261010070618000
-modified: 20261010070618000
+modified: 20261010075544000
 tags: $:/tags/Global
 title: $:/plugins/tiddlyrpg-setting-forgottenrealms/rules/shortcuts
 type: text/vnd.tiddlywiki
 
-<!-- The shortcuts of the coins of Faerûn (shortcut in $:/tiddlyrpg/currency/Faerun): <<gp 50>> is
-     <<unit "50 gp">>. A new shortcut goes into the data and here; test/shortcuts.test.js compares
-     both. -->
+<!-- The shortcuts of the coins of the Forgotten Realms (shortcut in
+     $:/tiddlyrpg/currency/ForgottenRealms): <<gp 50>> is <<unit "50 gp">>. A new shortcut goes
+     into the data and here; test/shortcuts.test.js compares both. -->
 \procedure cp(n) <$transclude $variable="unit" value={{{ [<n>addsuffix[ cp]] }}}/>
 \procedure sp(n) <$transclude $variable="unit" value={{{ [<n>addsuffix[ sp]] }}}/>
 \procedure ep(n) <$transclude $variable="unit" value={{{ [<n>addsuffix[ ep]] }}}/>

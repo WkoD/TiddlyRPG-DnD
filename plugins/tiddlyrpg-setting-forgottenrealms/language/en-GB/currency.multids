@@ -1,11 +1,11 @@
 created: 20261010063203140
-modified: 20261010063203140
-title: $:/tiddlyrpg/language/en-GB/Currency/Faerun/
+modified: 20261010075544000
+title: $:/tiddlyrpg/language/en-GB/Currency/ForgottenRealms/
 
 # Coins of the SRD 5.1 (English, CC-BY-4.0, see the tab license), by hand: p. 62 "the gold piece (gp),
 # the silver piece (sp), and the copper piece (cp)", "The electrum piece (ep) and the platinum piece (pp)";
 # rates p. 62 table (1 gp = 10 sp = 100 cp, 1 ep = 5 sp, 1 pp = 10 gp). Name and Parse words are not from the SRD.
-Name: Coins of Faerûn
+Name: Coins of the Forgotten Realms
 Unit/cp: cp
 Unit/sp: sp
 Unit/ep: ep

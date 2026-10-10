@@ -63,7 +63,7 @@ npm run test-lang            # only test/lang/: language packs
   - `srd` - the SRD terms by hand: the seven domains, the 13 damage types, 6 abilities and 6
     terms; every entry, unit and token has its keys in every language; every key of
     `srd.multids` stands below a comment with a page reference; the license tab
-  - `currency` - the coins of Faerûn: labels EN/DE, the rates of the SRD 5.1, the reference
+  - `currency` - the coins of the Forgotten Realms: labels EN/DE, the rates of the SRD 5.1, the reference
     coin gp matching the ruleset, the hub
   - `units`, `damage`, `terms` - the macros with the real data: the factors of the SRD 5.1, the
     cases of the campaigns (Vandalia), GM/SL and XP/EP; `terms` also the hub `Ruleset`
