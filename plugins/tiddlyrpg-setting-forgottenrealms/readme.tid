@@ -1,5 +1,5 @@
 created: 20261001095424000
-modified: 20261010063203140
+modified: 20261010070618000
 title: $:/plugins/tiddlyrpg-setting-forgottenrealms/readme
 
 ! Forgotten Realms
@@ -15,6 +15,8 @@ The campaign setting Forgotten Realms for `tiddlyrpg-core`, as plugin type `sett
   coin, the hub "Currency" converts them
 * the rules domains `Calendar` and `Currency`: names of months, festivals and coins follow the
   rules language of the wiki (ControlPanel -> Settings -> TiddlyRPG)
+* shortcuts for prices in the text: `<<cp 3>>` `<<sp 5>>` `<<ep 1>>` `<<gp 50>>` `<<pp 2>>`
+  (`$:/plugins/tiddlyrpg-setting-forgottenrealms/rules/shortcuts`)
 * language keys `Calendar/Harptos/...` and `Currency/Faerun/...` (en-GB, de-DE). Month names and
   DR exist only in en-GB and are shown in English in every language
 

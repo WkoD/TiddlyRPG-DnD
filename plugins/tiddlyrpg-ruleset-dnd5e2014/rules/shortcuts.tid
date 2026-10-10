@@ -1,0 +1,25 @@
+created: 20261010070618000
+modified: 20261010070618000
+tags: $:/tags/Global
+title: $:/plugins/tiddlyrpg-ruleset-dnd5e2014/rules/shortcuts
+type: text/vnd.tiddlywiki
+
+<!-- The shortcuts of the data (shortcut in the domains Ability, Terms, Length, Weight), each the
+     macro of tiddlyrpg-core it stands for: <<wis save>> is <<term wis save>>, <<ft 30 range>> is
+     <<unit "30 ft" range>>. A new shortcut goes into the data and here; test/shortcuts.test.js
+     compares both. -->
+\procedure str(variant) <$transclude $variable="term" id="str" arg=<<variant>>/>
+\procedure dex(variant) <$transclude $variable="term" id="dex" arg=<<variant>>/>
+\procedure con(variant) <$transclude $variable="term" id="con" arg=<<variant>>/>
+\procedure int(variant) <$transclude $variable="term" id="int" arg=<<variant>>/>
+\procedure wis(variant) <$transclude $variable="term" id="wis" arg=<<variant>>/>
+\procedure cha(variant) <$transclude $variable="term" id="cha" arg=<<variant>>/>
+\procedure ac(variant) <$transclude $variable="term" id="ac" arg=<<variant>>/>
+\procedure hp(variant) <$transclude $variable="term" id="hp" arg=<<variant>>/>
+\procedure dc(variant) <$transclude $variable="term" id="dc" arg=<<variant>>/>
+\procedure cr(variant) <$transclude $variable="term" id="cr" arg=<<variant>>/>
+\procedure xp(variant) <$transclude $variable="term" id="xp" arg=<<variant>>/>
+\procedure pb(variant) <$transclude $variable="term" id="pb" arg=<<variant>>/>
+\procedure ft(n,kind) <$transclude $variable="unit" value={{{ [<n>addsuffix[ ft]] }}} kind=<<kind>>/>
+\procedure mi(n,kind) <$transclude $variable="unit" value={{{ [<n>addsuffix[ mi]] }}} kind=<<kind>>/>
+\procedure lb(n,kind) <$transclude $variable="unit" value={{{ [<n>addsuffix[ lb]] }}} kind=<<kind>>/>

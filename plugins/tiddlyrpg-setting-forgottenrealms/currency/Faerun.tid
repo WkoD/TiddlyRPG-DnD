@@ -1,5 +1,5 @@
 created: 20261010063203140
-modified: 20261010063203140
+modified: 20261010070618000
 title: $:/tiddlyrpg/currency/Faerun
 type: application/json
 
@@ -10,23 +10,28 @@ type: application/json
     "currencies": [
         {
             "id": "cp",
-            "value": 1
+            "value": 1,
+            "shortcut": "cp"
         },
         {
             "id": "sp",
-            "value": 10
+            "value": 10,
+            "shortcut": "sp"
         },
         {
             "id": "ep",
-            "value": 50
+            "value": 50,
+            "shortcut": "ep"
         },
         {
             "id": "gp",
-            "value": 100
+            "value": 100,
+            "shortcut": "gp"
         },
         {
             "id": "pp",
-            "value": 1000
+            "value": 1000,
+            "shortcut": "pp"
         }
     ]
 }

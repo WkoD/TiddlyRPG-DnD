@@ -1,5 +1,5 @@
 created: 20261009183319191
-modified: 20261009200000000
+modified: 20261010070618000
 title: $:/plugins/tiddlyrpg-ruleset-dnd5e2014/readme
 
 ! D&D 5e (2014, SRD 5.1)
@@ -17,3 +17,8 @@ code, only data and texts:
 
 The macros `<<unit>>`, `<<dice>>`, `<<damage>>` and `<<term>>` of `tiddlyrpg-core` show these
 terms in the rules language set under ControlPanel -> Settings -> TiddlyRPG.
+
+Shortcuts (`$:/plugins/tiddlyrpg-ruleset-dnd5e2014/rules/shortcuts`): `<<str>>` `<<dex>>`
+`<<con>>` `<<int>>` `<<wis>>` `<<cha>>` with a variant (`<<wis save>>`, `<<dex name>>`),
+`<<ac>>` `<<hp>>` `<<dc>>` `<<cr>>` `<<xp>>` `<<pb>>`, and `<<ft 30>>` `<<mi 2>>` `<<lb 10>>`
+with an optional kind (`<<ft 60 range>>`). The hub "Ruleset" lists them.
