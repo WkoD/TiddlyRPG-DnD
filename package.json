@@ -2,7 +2,7 @@
   "name": "tiddlyrpg-dnd",
   "version": "2.0.0",
   "private": true,
-  "description": "D&D content for tiddlyrpg-core (TiddlyRPG repo family): the ruleset tiddlyrpg-ruleset-dnd5e2014 (D&D 5e 2014, terms of the SRD 5.1) and the setting tiddlyrpg-setting-forgottenrealms (Calendar of Harptos). Data and wikitext only, no code. Includes a minimal edition for the boot/smoke check (npm run smoke) and the tests in test/ (npm test).",
+  "description": "D&D content for tiddlyrpg-core (TiddlyRPG repo family): the ruleset tiddlyrpg-ruleset-dnd5e2014 (D&D 5e 2014, terms of the SRD 5.1) and the setting tiddlyrpg-setting-forgottenrealms (Calendar of Harptos, coins of Faerûn). Data and wikitext only, no code. Includes a minimal edition for the boot/smoke check (npm run smoke) and the tests in test/ (npm test).",
   "scripts": {
     "smoke": "node scripts/tw.js editions/smoke --verbose --version",
     "test": "node --test \"test/**/*.test.js\"",
