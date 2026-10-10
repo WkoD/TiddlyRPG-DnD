@@ -32,6 +32,16 @@ test("en-GB", function() {
 	assert.equal(t("pb", "name"), "proficiency bonus");
 });
 
+test("the hub Ruleset: the system, its domains, the setting", function() {
+	h.setLanguage(wiki, "de-DE");
+	var html = h.render(wiki, "text/html", "{{Ruleset}}");
+	assert.match(html, /<h2[^>]*>D&amp;D 5e \(2014, SRD 5\.1\)<\/h2>/);
+	["Attribute", "Schaden", "Würfel", "Länge", "Begriffe", "Gewicht", "Kalender", "Währung"].forEach(function(name) {
+		assert.match(html, new RegExp("<h3[^>]*>" + name + "</h3>"), name);
+	});
+	assert.equal((html.match(/<td><code>(acid|bludgeoning|cold|fire|force|lightning|necrotic|piercing|poison|psychic|radiant|slashing|thunder)<\/code><\/td>/g) || []).length, 13);
+});
+
 test("de-DE", function() {
 	h.setLanguage(wiki, "de-DE");
 	assert.equal(t("wis"), "WEI");
