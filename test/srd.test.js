@@ -102,6 +102,24 @@ CODES.forEach(function(code) {
 	});
 });
 
+CODES.forEach(function(code) {
+	test(code + ": no word twice in a word list (Parse, Joiners, Fillers, Extras)", function() {
+		var have = keys(code),
+			twice = [];
+		Object.keys(have).filter(function(key) { return /\/(Parse|Joiners|Fillers|Extras)$/.test(key); }).forEach(function(key) {
+			var seen = {};
+			have[key].split(",").forEach(function(word) {
+				word = word.trim().toLowerCase();
+				if(seen[word]) {
+					twice.push(key + ": " + word);
+				}
+				seen[word] = true;
+			});
+		});
+		assert.deepEqual(twice, []);
+	});
+});
+
 test("the plugin lists its license tab", function() {
 	var info = JSON.parse(fs.readFileSync(path.join(plugin, "plugin.info"), "utf8"));
 	assert.deepEqual(info.list.split(" "), ["readme", "license"]);

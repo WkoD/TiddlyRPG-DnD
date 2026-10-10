@@ -1,5 +1,5 @@
 created: 20261009183319191
-modified: 20261009200000000
+modified: 20261010074626000
 title: $:/tiddlyrpg/language/de-DE/
 
 # Einheiten, Würfel und die Schadensgrammatik von D&D 5e (2014) auf Deutsch; Belege der Faktoren siehe en-GB.
@@ -42,7 +42,7 @@ Rules/Damage/Pattern: $dice$ $qualifiers$ $type$
 Rules/Damage/Join: plus
 Rules/Damage/Joiners: plus, und
 Rules/Damage/Fillers: Schaden, Schadens
-Rules/Damage/Extras: zusätzlich, zusätzlichen, zusätzlichen
+Rules/Damage/Extras: zusätzlich, zusätzlichen
 Rules/Damage/necrotic/Parse: nekrotischen Schaden, nekrotischem Schaden
 Rules/Damage/psychic/Parse: psychischen Schaden, psychischem Schaden
 Rules/Damage/radiant/Parse: gleißenden Schaden, gleißendem Schaden
