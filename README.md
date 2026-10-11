@@ -34,9 +34,9 @@ With one installed, it is active; ControlPanel -> Settings -> TiddlyRPG chooses 
 or switches one off.
 
 **Rules language.** A German wiki shows the terms in German by default ("WEI", "1W8
-Hiebschaden", "9 m", "50 GM"). To keep the English terms of an English rulebook, set "Shown in"
-and "Written in" under ControlPanel -> Settings -> TiddlyRPG -> "Ruleset options" to English,
-for all domains or per domain. The names of months and coins have their own setting under
+Hiebschaden", "9 m", "50 GM"). To keep the English terms of an English rulebook, set the
+language under ControlPanel -> Settings -> TiddlyRPG -> "Ruleset options" to English, for all
+domains or per domain. The names of months and coins have their own setting under
 "Campaign setting options" - e.g. coins in English ("50 gp"), the calendar in German.
 
 **Shortcuts** for the text, next to the macros of `tiddlyrpg-core`:
@@ -45,7 +45,7 @@ for all domains or per domain. The names of months and coins have their own sett
 |---|---|---|
 | `<<str>>` `<<dex>>` `<<con>>` `<<int>>` `<<wis>>` `<<cha>>` | `<<term wis>>`; variants `save`, `name` | WIS / WEI, `<<wis save>>`: WIS save / WEI-Rettungswurf |
 | `<<ac>>` `<<hp>>` `<<dc>>` `<<cr>>` `<<xp>>` `<<pb>>` | `<<term ac>>`; variant `name` | AC / RK, `<<pb name>>`: proficiency bonus / Übungsbonus |
-| `<<ft 30>>` `<<mi 2>>` `<<lb 10>>` | `<<unit "30 ft">>`; optional kind: `<<ft 60 range>>` | 30 ft / 9 m |
+| `<<ft 30>>` `<<mi 2>>` `<<lb 10>>` | `<<unit "30 ft">>`; for ft and mi an optional kind `range` or `travel`: `<<ft 60 range>>` | 30 ft / 9 m |
 | `<<cp 3>>` `<<sp 5>>` `<<ep 1>>` `<<gp 50>>` `<<pp 2>>` | `<<unit "50 gp">>` | 50 gp / 50 GM |
 
 The shortcuts belong to their plugin: without it they show nothing, and a hint below the title

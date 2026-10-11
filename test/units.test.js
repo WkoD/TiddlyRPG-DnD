@@ -43,7 +43,7 @@ test.describe("en-GB", function() {
 
 	test("German words of a campaign text", function() {
 		assert.equal(u("300 Pfund"), "300 lb");
-		assert.equal(u("1,70 m", "height"), "5 ft 8 in");
+		assert.equal(u("1,70 m"), "5 ft 8 in");
 	});
 });
 
@@ -66,7 +66,13 @@ test.describe("de-DE", function() {
 	});
 
 	test("a size: below 1 m in cm", function() {
-		assert.equal(u("6 ft", "height"), "1,8 m");
-		assert.equal(u("3 ft", "size"), "90 cm");
+		assert.equal(u("6 ft"), "1,8 m");
+		assert.equal(u("3 ft"), "90 cm");
+	});
+
+	test("the kinds range and travel; a number needs its unit", function() {
+		assert.equal(u("25 ft", "range"), "7,5 m");
+		assert.equal(u("3 mi", "travel"), "4,8 km");
+		assert.equal(u("60", "range"), "60", "without unit unchanged");
 	});
 });

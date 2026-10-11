@@ -1,5 +1,5 @@
 created: 20261010070618000
-modified: 20261010070618000
+modified: 20261011160657000
 tags: $:/tags/Global
 title: $:/plugins/tiddlyrpg-ruleset-dnd5e2014/rules/shortcuts
 type: text/vnd.tiddlywiki
@@ -22,4 +22,4 @@ type: text/vnd.tiddlywiki
 \procedure pb(variant) <$transclude $variable="term" id="pb" arg=<<variant>>/>
 \procedure ft(n,kind) <$transclude $variable="unit" value={{{ [<n>addsuffix[ ft]] }}} kind=<<kind>>/>
 \procedure mi(n,kind) <$transclude $variable="unit" value={{{ [<n>addsuffix[ mi]] }}} kind=<<kind>>/>
-\procedure lb(n,kind) <$transclude $variable="unit" value={{{ [<n>addsuffix[ lb]] }}} kind=<<kind>>/>
+\procedure lb(n) <$transclude $variable="unit" value={{{ [<n>addsuffix[ lb]] }}}/>

@@ -65,13 +65,13 @@ test.describe("rules language", function() {
 	});
 
 	test("shown in en-GB in a German wiki", function() {
-		h.add(wiki, {title: "$:/config/tiddlyrpg/rules/setting/display/mode", text: "domain"});
-		h.add(wiki, {title: "$:/config/tiddlyrpg/rules/setting/display/domain/Calendar", text: "en-GB"});
+		h.add(wiki, {title: "$:/config/tiddlyrpg/rules/setting/mode", text: "domain"});
+		h.add(wiki, {title: "$:/config/tiddlyrpg/rules/setting/domain/Calendar", text: "en-GB"});
 		try {
 			assert.equal(f("[[1351-01-31]dateformat[]]"), "Midwinter 1351");
 		} finally {
-			wiki.deleteTiddler("$:/config/tiddlyrpg/rules/setting/display/mode");
-			wiki.deleteTiddler("$:/config/tiddlyrpg/rules/setting/display/domain/Calendar");
+			wiki.deleteTiddler("$:/config/tiddlyrpg/rules/setting/mode");
+			wiki.deleteTiddler("$:/config/tiddlyrpg/rules/setting/domain/Calendar");
 		}
 		assert.equal(f("[[1351-01-31]dateformat[]]"), "Mittwinter 1351");
 	});
