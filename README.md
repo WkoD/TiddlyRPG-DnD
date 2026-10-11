@@ -35,8 +35,9 @@ or switches one off.
 
 **Rules language.** A German wiki shows the terms in German by default ("WEI", "1W8
 Hiebschaden", "9 m", "50 GM"). To keep the English terms of an English rulebook, set "Shown in"
-and "Written in" under ControlPanel -> Settings -> TiddlyRPG -> "Rules language" to English, for
-all domains or per domain (e.g. the calendar in German, everything else in English).
+and "Written in" under ControlPanel -> Settings -> TiddlyRPG -> "Ruleset options" to English,
+for all domains or per domain. The names of months and coins have their own setting under
+"Campaign setting options" - e.g. coins in English ("50 gp"), the calendar in German.
 
 **Shortcuts** for the text, next to the macros of `tiddlyrpg-core`:
 
