@@ -45,7 +45,7 @@ domains or per domain. The names of months and coins have their own setting unde
 |---|---|
 | `<<term wis>>`, `<<term wis save>>` (abilities str, dex, con, int, wis, cha; variants `save`, `name`) | WIS / WEI, WIS save / WEI-Rettungswurf |
 | `<<term ac>>`, `<<term pb name>>` (terms ac, hp, dc, cr, xp, pb; variant `name`) | AC / RK, proficiency bonus / Übungsbonus |
-| `<<unit "30 ft">>`, `<<unit "60 ft" range>>` (lengths with the kinds `range` and `travel`, weights) | 30 ft / 9 m |
+| `<<unit "30 ft">>`, `<<unit "60 ft" range>>` (lengths with the kinds `range`, `distance` and `size`, weights) | 30 ft / 9 m |
 | `<<unit "50 gp">>` (coins cp, sp, ep, gp, pp) | 50 gp / 50 GM |
 
 The hubs "Ruleset" and "Currency" list every term in every language.

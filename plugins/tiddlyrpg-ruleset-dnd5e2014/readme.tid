@@ -1,5 +1,5 @@
 created: 20261009183319191
-modified: 20261011172757439
+modified: 20261011173657380
 title: $:/plugins/tiddlyrpg-ruleset-dnd5e2014/readme
 
 ! D&D 5e (2014, SRD 5.1)
@@ -18,5 +18,6 @@ code, only data and texts:
 The macros `<<unit>>`, `<<dice>>`, `<<damage>>` and `<<term>>` of `tiddlyrpg-core` show these
 terms in the rules language set under ControlPanel -> Settings -> TiddlyRPG.
 
-Lengths know the kinds `range` and `travel`: `<<unit "60 ft" range>>` shows whole feet or metres
-with one decimal, `travel` miles or kilometres. The hub "Ruleset" lists every term.
+Lengths know the kinds `range`, `distance` and `size`: `<<unit "60 ft" range>>` shows whole feet
+or metres with one decimal, `distance` miles or kilometres, `size` (bodies and things) feet and
+inches or centimetres and metres. The hub "Ruleset" lists every term.

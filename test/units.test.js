@@ -70,9 +70,11 @@ test.describe("de-DE", function() {
 		assert.equal(u("3 ft"), "90 cm");
 	});
 
-	test("the kinds range and travel; a number needs its unit", function() {
+	test("the kinds range, distance and size; a number needs its unit", function() {
 		assert.equal(u("25 ft", "range"), "7,5 m");
-		assert.equal(u("3 mi", "travel"), "4,8 km");
+		assert.equal(u("3 mi", "distance"), "4,8 km");
+		assert.equal(u("6 ft", "size"), "1,8 m");
+		assert.equal(u("3 ft", "size"), "90 cm");
 		assert.equal(u("60", "range"), "60", "without unit unchanged");
 	});
 });
