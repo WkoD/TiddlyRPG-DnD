@@ -48,8 +48,8 @@ domains or per domain. The names of months and coins have their own setting unde
 | `<<unit "30 ft">>`, `<<unit "60 ft" range>>` (lengths with the kinds `range`, `distance` and `size`, weights) | 30 ft / 9 m |
 | `<<unit "50 gp">>` (coins cp, sp, ep, gp, pp) | 50 gp / 50 GM |
 
-The hubs "Ruleset" and "CampaignSetting" list every term and name in every language, "Currency"
-converts prices.
+The hubs "Ruleset" and "CampaignSetting" list every term and name in the language it is shown
+in, "Currency" converts prices.
 
 **Source of the terms.** The terms of the ruleset and the names and rates of the coins come from
 the System Reference Document 5.1 in English and German, entered by hand with the page of each
