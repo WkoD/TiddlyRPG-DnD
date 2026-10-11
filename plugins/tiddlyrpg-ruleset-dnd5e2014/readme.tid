@@ -1,5 +1,5 @@
 created: 20261009183319191
-modified: 20261011160657000
+modified: 20261011172757439
 title: $:/plugins/tiddlyrpg-ruleset-dnd5e2014/readme
 
 ! D&D 5e (2014, SRD 5.1)
@@ -18,8 +18,5 @@ code, only data and texts:
 The macros `<<unit>>`, `<<dice>>`, `<<damage>>` and `<<term>>` of `tiddlyrpg-core` show these
 terms in the rules language set under ControlPanel -> Settings -> TiddlyRPG.
 
-Shortcuts (`$:/plugins/tiddlyrpg-ruleset-dnd5e2014/rules/shortcuts`): `<<str>>` `<<dex>>`
-`<<con>>` `<<int>>` `<<wis>>` `<<cha>>` with a variant (`<<wis save>>`, `<<dex name>>`),
-`<<ac>>` `<<hp>>` `<<dc>>` `<<cr>>` `<<xp>>` `<<pb>>`, and `<<ft 30>>` `<<mi 2>>` `<<lb 10>>`,
-ft and mi with an optional kind `range` or `travel` (`<<ft 60 range>>`: whole feet or metres
-with one decimal). The hub "Ruleset" lists them.
+Lengths know the kinds `range` and `travel`: `<<unit "60 ft" range>>` shows whole feet or metres
+with one decimal, `travel` miles or kilometres. The hub "Ruleset" lists every term.

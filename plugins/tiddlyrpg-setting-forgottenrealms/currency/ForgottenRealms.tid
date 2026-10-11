@@ -1,5 +1,5 @@
 created: 20261010063203140
-modified: 20261010075544000
+modified: 20261011172757439
 title: $:/tiddlyrpg/currency/ForgottenRealms
 type: application/json
 
@@ -10,28 +10,23 @@ type: application/json
     "currencies": [
         {
             "id": "cp",
-            "value": 1,
-            "shortcut": "cp"
+            "value": 1
         },
         {
             "id": "sp",
-            "value": 10,
-            "shortcut": "sp"
+            "value": 10
         },
         {
             "id": "ep",
-            "value": 50,
-            "shortcut": "ep"
+            "value": 50
         },
         {
             "id": "gp",
-            "value": 100,
-            "shortcut": "gp"
+            "value": 100
         },
         {
             "id": "pp",
-            "value": 1000,
-            "shortcut": "pp"
+            "value": 1000
         }
     ]
 }

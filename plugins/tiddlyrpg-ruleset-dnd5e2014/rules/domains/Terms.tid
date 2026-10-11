@@ -1,5 +1,5 @@
 created: 20261009183319191
-modified: 20261009200000000
+modified: 20261011172757439
 tags: $:/tags/tiddlyrpg/RulesDomain
 title: $:/tiddlyrpg/rules/domain/Terms
 type: application/json
@@ -10,31 +10,25 @@ type: application/json
     "keys": "Rules/Term/",
     "entries": [
         {
-            "id": "ac",
-            "shortcut": "ac"
+            "id": "ac"
         },
         {
-            "id": "hp",
-            "shortcut": "hp"
+            "id": "hp"
         },
         {
-            "id": "dc",
-            "shortcut": "dc"
+            "id": "dc"
         },
         {
-            "id": "cr",
-            "shortcut": "cr"
+            "id": "cr"
         },
         {
-            "id": "xp",
-            "shortcut": "xp"
+            "id": "xp"
         },
         {
             "id": "gm"
         },
         {
-            "id": "pb",
-            "shortcut": "pb"
+            "id": "pb"
         }
     ],
     "example": "ac"

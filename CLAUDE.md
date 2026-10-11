@@ -21,11 +21,6 @@ D&D content for `tiddlyrpg-core`, the format layer of the TiddlyRPG repo family 
   `CLAUDE.md` of `TiddlyRPG-Plugins`).
 - The rules of how the data is read live in `TiddlyRPG-Plugins` (`CLAUDE.md` and `README.md`
   there: "Calendar engine", "Language system").
-- Shortcuts (`<<wis save>>`, `<<ft 30>>`, `<<gp 50>>`): the data names them (`shortcut` of an
-  entry, a unit, a coin), `rules/shortcuts.tid` of the same plugin defines them as procedures
-  (tag `$:/tags/Global`) calling the macro of the core they stand for. A new shortcut goes into
-  both; `test/shortcuts.test.js` compares them ("Rules engine" -> "Shortcuts" in `CLAUDE.md` of
-  `TiddlyRPG-Plugins`).
 
 ## Documentation - who covers what
 
@@ -67,8 +62,6 @@ npm run test-lang            # only test/lang/: language packs
     coin gp matching the ruleset, the hub
   - `units`, `damage`, `terms` - the macros with the real data: the factors of the SRD 5.1, the
     cases of the campaigns (Vandalia), GM/SL and XP/EP; `terms` also the hub `Ruleset`
-  - `shortcuts` - per plugin data and procedures match, no name taken by another global
-    definition, each shows like its macro, the hubs list them as defined
   - `lang/packs` - every language of every plugin complete against en-GB (keys only in
     `en-GB/names.multids` are proper names and may be missing; keys ending in `/Parse` are the
     words read in one language only)
