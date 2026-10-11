@@ -61,7 +61,7 @@ npm run test-lang            # only test/lang/: language packs
   - `currency` - the coins of the Forgotten Realms: labels EN/DE, the rates of the SRD 5.1, the reference
     coin gp matching the ruleset, the hub
   - `units`, `damage`, `terms` - the macros with the real data: the factors of the SRD 5.1, the
-    cases of the campaigns (Vandalia), GM/SL and XP/EP; `terms` also the hub `Ruleset`
+    cases of the campaigns (Vandalia), GM/SL and XP/EP; `terms` also the hubs `Ruleset` and `CampaignSetting`
   - `lang/packs` - every language of every plugin complete against en-GB (keys only in
     `en-GB/names.multids` are proper names and may be missing; keys ending in `/Parse` are the
     words read in one language only)

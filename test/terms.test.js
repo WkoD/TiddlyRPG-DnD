@@ -32,12 +32,18 @@ test("en-GB", function() {
 	assert.equal(t("pb", "name"), "proficiency bonus");
 });
 
-test("the hub Ruleset: the system, its domains, the setting", function() {
+test("the hubs Ruleset and CampaignSetting: the system and the setting, each with its domains", function() {
 	h.setLanguage(wiki, "de-DE");
-	var html = h.render(wiki, "text/html", "{{Ruleset}}");
+	var html = h.render(wiki, "text/html", "{{Ruleset}}"),
+		setting = h.render(wiki, "text/html", "{{CampaignSetting}}");
 	assert.match(html, /<h2[^>]*>D&amp;D 5e \(2014, SRD 5\.1\)<\/h2>/);
-	["Attribute", "Schaden", "Würfel", "Länge", "Begriffe", "Gewicht", "Kalender", "Währung"].forEach(function(name) {
+	["Attribute", "Schaden", "Würfel", "Länge", "Begriffe", "Gewicht"].forEach(function(name) {
 		assert.match(html, new RegExp("<h3[^>]*>" + name + "</h3>"), name);
+	});
+	assert.match(setting, /<h2[^>]*>Forgotten Realms<\/h2>/);
+	["Kalender", "Währung"].forEach(function(name) {
+		assert.match(setting, new RegExp("<h3[^>]*>" + name + "</h3>"), name);
+		assert.doesNotMatch(html, new RegExp("<h3[^>]*>" + name + "</h3>"), name);
 	});
 	assert.equal((html.match(/<td><code>(acid|bludgeoning|cold|fire|force|lightning|necrotic|piercing|poison|psychic|radiant|slashing|thunder)<\/code><\/td>/g) || []).length, 13);
 });
