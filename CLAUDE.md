@@ -25,7 +25,9 @@ D&D content for `tiddlyrpg-core`, the format layer of the TiddlyRPG repo family 
 ## Documentation - who covers what
 
 - **CLAUDE.md** (here): development support - rules, conventions, editing and release workflow.
-- **README.md**: what the plugins contain and how a wiki uses them.
+- **README.md**: what the plugins contain and how a wiki uses them, their sources and licenses;
+  its marked parts are also the tabs "readme" and "license" of the plugins (see "License and
+  sources").
 
 ## Editing the plugins
 
@@ -62,6 +64,9 @@ npm run test-lang            # only test/lang/: language packs
     coin gp matching the ruleset, the hub
   - `units`, `damage`, `terms` - the macros with the real data: the factors of the SRD 5.1, the
     cases of the campaigns (Vandalia), GM/SL and XP/EP; `terms` also the hubs `Ruleset` and `CampaignSetting`
+  - `licenses` - the tabs "readme" and "license" from `README.md` and `LICENSE`, the
+    attribution of the SRD 5.1 word for word, the notice of the Fan Content Policy only in the
+    setting, CC0 in `package.json`
   - `lang/packs` - every language of every plugin complete against en-GB (keys only in
     `en-GB/names.multids` are proper names and may be missing; keys ending in `/Parse` are the
     words read in one language only)
@@ -86,7 +91,37 @@ namespaces of `tiddlyrpg-core` (`$:/tiddlyrpg/...`, `$:/config/tiddlyrpg/...`,
 and release notes. Other languages appear only as data: the language packs and the expected output
 in `test/`.
 
-**License:** none yet; it is set before the first publication of this repo.
+## License and sources
+
+What is own work here - plugins, data, texts, tests, scripts - is under **CC0 1.0** (`LICENSE`,
+`"license": "CC0-1.0"` in `package.json`). CC0 and not CC-BY: the Fan Content Policy of Wizards
+of the Coast wants fan content to be usable "without ... giving you credit".
+
+Material of others needs its notice, in the README and so in the plugin:
+
+- **From the SRD 5.1** (CC-BY-4.0): the attribution of page 1 of the SRD 5.1, English and German,
+  word for word, plus the sentence on section 5 of the license - and nothing else on Wizards (page
+  1 asks for that): no "Not affiliated", no trademark notes. Allowed in descriptions: "compatible
+  with fifth edition" / "5E compatible".
+- **Wizards material outside the SRD** (names of a world, e.g. the Calendar of Harptos): also the
+  notice of the Fan Content Policy word for word, with the name of the plugin as its title. Never
+  logos, never text or images copied from a book.
+- Every term keeps its page reference (`#` comment, see "SRD terms by hand").
+
+**Readme and license tabs** are built as in `TiddlyRPG-Plugins` ("Readme and license of a
+plugin" in its `CLAUDE.md`); the texts live only in `README.md` and `LICENSE`:
+
+- `plugins/<name>/files/tiddlywiki.files` loads `README.md` twice with a prefix
+  `<!-- wiki-select <name> -->` (-> `$:/plugins/<name>/readme`) and
+  `<!-- wiki-select <name>/license -->` (-> `$:/plugins/<name>/license/notice`), both
+  `type: text/x-tiddlyrpg-markdown`, and `LICENSE` as `$:/plugins/<name>/license/text`
+  (`text/plain`).
+- `README.md` marks what belongs to which tab: `<!-- wiki <name> -->` ... `<!-- /wiki -->`, a part
+  for several with several names (`<!-- wiki <a> <b> -->`). The attribution stands once, marked
+  for every plugin that contains SRD material.
+- `license.tid` (wikitext): `{{$:/plugins/<name>/license/notice}}` and the license text;
+  `plugin.info`: `"list": "readme license"`.
+- A new plugin: the same three pieces, its README sections, and a test in `test/licenses.test.js`.
 
 ## Publishing a new version
 

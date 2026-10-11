@@ -1,0 +1,27 @@
+{
+	"tiddlers": [
+		{
+			"file": "../../../README.md",
+			"prefix": "<!-- wiki-select tiddlyrpg-setting-forgottenrealms -->\n",
+			"fields": {
+				"title": "$:/plugins/tiddlyrpg-setting-forgottenrealms/readme",
+				"type": "text/x-tiddlyrpg-markdown"
+			}
+		},
+		{
+			"file": "../../../README.md",
+			"prefix": "<!-- wiki-select tiddlyrpg-setting-forgottenrealms/license -->\n",
+			"fields": {
+				"title": "$:/plugins/tiddlyrpg-setting-forgottenrealms/license/notice",
+				"type": "text/x-tiddlyrpg-markdown"
+			}
+		},
+		{
+			"file": "../../../LICENSE",
+			"fields": {
+				"title": "$:/plugins/tiddlyrpg-setting-forgottenrealms/license/text",
+				"type": "text/plain"
+			}
+		}
+	]
+}

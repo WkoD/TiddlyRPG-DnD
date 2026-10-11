@@ -1,0 +1,27 @@
+{
+	"tiddlers": [
+		{
+			"file": "../../../README.md",
+			"prefix": "<!-- wiki-select tiddlyrpg-ruleset-dnd5e2014 -->\n",
+			"fields": {
+				"title": "$:/plugins/tiddlyrpg-ruleset-dnd5e2014/readme",
+				"type": "text/x-tiddlyrpg-markdown"
+			}
+		},
+		{
+			"file": "../../../README.md",
+			"prefix": "<!-- wiki-select tiddlyrpg-ruleset-dnd5e2014/license -->\n",
+			"fields": {
+				"title": "$:/plugins/tiddlyrpg-ruleset-dnd5e2014/license/notice",
+				"type": "text/x-tiddlyrpg-markdown"
+			}
+		},
+		{
+			"file": "../../../LICENSE",
+			"fields": {
+				"title": "$:/plugins/tiddlyrpg-ruleset-dnd5e2014/license/text",
+				"type": "text/plain"
+			}
+		}
+	]
+}

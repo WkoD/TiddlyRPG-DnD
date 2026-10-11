@@ -1,20 +1,11 @@
 created: 20261009183319191
-modified: 20261009183319191
+modified: 20261011210226000
 title: $:/plugins/tiddlyrpg-ruleset-dnd5e2014/license
 
-! Terms from the SRD 5.1
+<!-- The notice comes from README.md (section tiddlyrpg-ruleset-dnd5e2014/license),
+     the license from LICENSE; both are loaded by files/tiddlywiki.files. -->
+{{$:/plugins/tiddlyrpg-ruleset-dnd5e2014/license/notice}}
 
-This plugin contains terms (damage types, abilities, abbreviations, units) taken from the System
-Reference Document 5.1 and reformatted.
+!! CC0 1.0 Universal
 
-This work includes material taken from the System Reference Document 5.1 (“SRD 5.1”) by Wizards of
-the Coast LLC and available at https://dnd.wizards.com/resources/systems-reference-document. The
-SRD 5.1 is licensed under the Creative Commons Attribution 4.0 International License available at
-https://creativecommons.org/licenses/by/4.0/legalcode.
-
-Dieses Werk enthält Material aus dem Systemreferenzdokument 5.1 („SRD 5.1”) von Wizards of the
-Coast LLC, das unter https://dnd.wizards.com/de/resources/systems-reference-document verfügbar ist.
-Das SRD 5.1 ist lizenziert gemäß der Lizenz Creative Commons Namensnennung 4.0 International, die
-unter https://creativecommons.org/licenses/by/4.0/legalcode.de verfügbar ist.
-
-Section 5 of CC-BY-4.0 includes a Disclaimer of Warranties and Limitation of Liability.
+{{$:/plugins/tiddlyrpg-ruleset-dnd5e2014/license/text}}
