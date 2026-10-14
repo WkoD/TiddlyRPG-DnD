@@ -1,0 +1,68 @@
+created: 20261014200240000
+modified: 20261014200240000
+tags: $:/tags/tiddlyrpg/RulesDomain
+title: $:/tiddlyrpg/rules/domain/Skill
+type: application/json
+
+{
+    "domain": "Skill",
+    "type": "label",
+    "keys": "Rules/Term/",
+    "entries": [
+        {
+            "id": "acrobatics"
+        },
+        {
+            "id": "animal-handling"
+        },
+        {
+            "id": "arcana"
+        },
+        {
+            "id": "athletics"
+        },
+        {
+            "id": "deception"
+        },
+        {
+            "id": "history"
+        },
+        {
+            "id": "insight"
+        },
+        {
+            "id": "intimidation"
+        },
+        {
+            "id": "investigation"
+        },
+        {
+            "id": "medicine"
+        },
+        {
+            "id": "nature"
+        },
+        {
+            "id": "perception"
+        },
+        {
+            "id": "performance"
+        },
+        {
+            "id": "persuasion"
+        },
+        {
+            "id": "religion"
+        },
+        {
+            "id": "sleight-of-hand"
+        },
+        {
+            "id": "stealth"
+        },
+        {
+            "id": "survival"
+        }
+    ],
+    "example": "perception"
+}

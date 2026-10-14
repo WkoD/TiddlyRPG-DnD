@@ -1,0 +1,35 @@
+created: 20261014200240000
+modified: 20261014200240000
+tags: $:/tags/tiddlyrpg/RulesDomain
+title: $:/tiddlyrpg/rules/domain/Spellcasting
+type: application/json
+
+{
+    "domain": "Spellcasting",
+    "type": "label",
+    "keys": "Rules/Term/",
+    "entries": [
+        {
+            "id": "cantrip"
+        },
+        {
+            "id": "ritual"
+        },
+        {
+            "id": "concentration"
+        },
+        {
+            "id": "spell-attack"
+        },
+        {
+            "id": "spell-slot"
+        },
+        {
+            "id": "spellcasting-focus"
+        },
+        {
+            "id": "attunement"
+        }
+    ],
+    "example": "spell-slot"
+}

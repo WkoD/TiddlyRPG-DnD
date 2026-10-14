@@ -9,7 +9,9 @@ var test = require("node:test"),
 	path = require("path");
 
 var plugin = path.join(__dirname, "..", "plugins", "tiddlyrpg-ruleset-dnd5e2014"),
-	CODES = ["en-GB", "de-DE"];
+	CODES = ["en-GB", "de-DE"],
+	// label domains whose terms are abbreviations: each term has its variant name, written out
+	ABBREVIATED = ["Ability", "Alignment", "Terms"];
 
 // The JSON of the domain tiddlers
 function domains() {
@@ -54,16 +56,41 @@ function needed() {
 				}
 			});
 		} else if(d.type === "label") {
-			d.entries.forEach(function(e) { list.push("Rules/Term/" + e.id, "Rules/Term/" + e.id + "/name"); });
+			d.entries.forEach(function(e) {
+				list.push("Rules/Term/" + e.id);
+				if(ABBREVIATED.indexOf(d.domain) !== -1) {
+					list.push("Rules/Term/" + e.id + "/name");
+				}
+			});
 		}
 	});
 	return list.filter(function(key, index) { return list.indexOf(key) === index; });
 }
 
-test("the six domains of the ruleset with their types", function() {
+test("the 17 domains of the ruleset with their types", function() {
 	var types = {};
 	domains().forEach(function(d) { types[d.domain] = d.type; });
-	assert.deepEqual(types, {Ability: "label", Damage: "damage", Dice: "tokens", Length: "unit", Terms: "label", Weight: "unit"});
+	assert.deepEqual(types, {
+		Ability: "label", Action: "label", Alignment: "label", Condition: "label", CreatureType: "label",
+		Damage: "damage", Dice: "tokens", Language: "label", Length: "unit", Mechanics: "label",
+		School: "label", Sense: "label", Size: "label", Skill: "label", Spellcasting: "label",
+		Terms: "label", Weight: "unit"
+	});
+});
+
+test("every id of a label domain is unique across all of them (<<term>> takes the first)", function() {
+	var seen = {},
+		twice = [];
+	domains().filter(function(d) { return d.type === "label"; }).forEach(function(d) {
+		d.entries.forEach(function(e) {
+			var id = e.id.toLowerCase();
+			if(seen[id]) {
+				twice.push(id + ": " + seen[id] + ", " + d.domain);
+			}
+			seen[id] = d.domain;
+		});
+	});
+	assert.deepEqual(twice, []);
 });
 
 test("every domain has an example for the settings tab", function() {
@@ -76,6 +103,13 @@ test("the 13 damage types, 6 abilities and 7 terms of the SRD 5.1", function() {
 	assert.equal(byName.Damage.entries.length, 13);
 	assert.deepEqual(byName.Ability.entries.map(function(e) { return e.id; }), ["str", "dex", "con", "int", "wis", "cha"]);
 	assert.deepEqual(byName.Terms.entries.map(function(e) { return e.id; }), ["ac", "hp", "dc", "cr", "xp", "gm", "pb"]);
+});
+
+test("the terms of the SRD 5.1 by group: conditions, actions, mechanics, spellcasting, senses, skills, creature types, sizes, alignments, schools, languages", function() {
+	var sizes = {};
+	domains().forEach(function(d) { sizes[d.domain] = d.entries ? d.entries.length : 0; });
+	assert.deepEqual([sizes.Condition, sizes.Action, sizes.Mechanics, sizes.Spellcasting, sizes.Sense, sizes.Skill,
+		sizes.CreatureType, sizes.Size, sizes.Alignment, sizes.School, sizes.Language], [15, 14, 18, 7, 6, 18, 14, 6, 9, 8, 16]);
 });
 
 CODES.forEach(function(code) {

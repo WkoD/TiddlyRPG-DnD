@@ -1,0 +1,59 @@
+created: 20261014200240000
+modified: 20261014200240000
+tags: $:/tags/tiddlyrpg/RulesDomain
+title: $:/tiddlyrpg/rules/domain/Condition
+type: application/json
+
+{
+    "domain": "Condition",
+    "type": "label",
+    "keys": "Rules/Term/",
+    "entries": [
+        {
+            "id": "blinded"
+        },
+        {
+            "id": "charmed"
+        },
+        {
+            "id": "deafened"
+        },
+        {
+            "id": "exhaustion"
+        },
+        {
+            "id": "frightened"
+        },
+        {
+            "id": "grappled"
+        },
+        {
+            "id": "incapacitated"
+        },
+        {
+            "id": "invisible"
+        },
+        {
+            "id": "paralyzed"
+        },
+        {
+            "id": "petrified"
+        },
+        {
+            "id": "poisoned"
+        },
+        {
+            "id": "prone"
+        },
+        {
+            "id": "restrained"
+        },
+        {
+            "id": "stunned"
+        },
+        {
+            "id": "unconscious"
+        }
+    ],
+    "example": "charmed"
+}

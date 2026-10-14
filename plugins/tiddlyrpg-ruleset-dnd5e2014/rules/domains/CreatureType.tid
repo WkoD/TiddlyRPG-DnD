@@ -1,0 +1,56 @@
+created: 20261014200240000
+modified: 20261014200240000
+tags: $:/tags/tiddlyrpg/RulesDomain
+title: $:/tiddlyrpg/rules/domain/CreatureType
+type: application/json
+
+{
+    "domain": "CreatureType",
+    "type": "label",
+    "keys": "Rules/Term/",
+    "entries": [
+        {
+            "id": "aberration"
+        },
+        {
+            "id": "beast"
+        },
+        {
+            "id": "celestial"
+        },
+        {
+            "id": "construct"
+        },
+        {
+            "id": "dragon"
+        },
+        {
+            "id": "elemental"
+        },
+        {
+            "id": "fey"
+        },
+        {
+            "id": "fiend"
+        },
+        {
+            "id": "giant"
+        },
+        {
+            "id": "humanoid"
+        },
+        {
+            "id": "monstrosity"
+        },
+        {
+            "id": "ooze"
+        },
+        {
+            "id": "plant"
+        },
+        {
+            "id": "undead"
+        }
+    ],
+    "example": "undead"
+}

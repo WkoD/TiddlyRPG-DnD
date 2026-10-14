@@ -1,9 +1,10 @@
 created: 20261009183319191
-modified: 20261009200000000
+modified: 20261014200240000
 title: $:/tiddlyrpg/language/en-GB/
 
 # Terms of the System Reference Document 5.1 (English, CC-BY-4.0, see the tab license), by hand;
-# page numbers of SRD_CC_v5.1.pdf. Variant name: the term written out.
+# page numbers of SRD_CC_v5.1.pdf. Variant name: the term written out, where the term is an
+# abbreviation; cover has the variants half, three-quarters and total. Names of the 2014 rules only.
 
 # Damage types: p. 97 ("Damage Types"); the phrase as after the dice in stat blocks, e.g.
 # p. 218 "7 (1d8 + 3) slashing damage plus 4 (1d8) necrotic damage"
@@ -75,3 +76,183 @@ Rules/Term/gm: GM
 Rules/Term/gm/name: game master
 Rules/Term/pb: PB
 Rules/Term/pb/name: proficiency bonus
+
+# Conditions: p. 358-359 (Appendix PH-A); lowercase as in running text, e.g. p. 358 "a blinded
+# creature", "the prone condition"
+Rules/Term/blinded: blinded
+Rules/Term/charmed: charmed
+Rules/Term/deafened: deafened
+Rules/Term/exhaustion: exhaustion
+Rules/Term/frightened: frightened
+Rules/Term/grappled: grappled
+Rules/Term/incapacitated: incapacitated
+Rules/Term/invisible: invisible
+Rules/Term/paralyzed: paralyzed
+Rules/Term/petrified: petrified
+Rules/Term/poisoned: poisoned
+Rules/Term/prone: prone
+Rules/Term/restrained: restrained
+Rules/Term/stunned: stunned
+Rules/Term/unconscious: unconscious
+
+# Actions: action p. 90 ("take one action"), bonus action p. 90 ("Bonus Actions"), reaction p. 91,
+# opportunity attack p. 95; the actions in combat p. 93-94 ("Actions in Combat"), capitalized as in
+# p. 93 "When you take the Dash action"
+Rules/Term/action: action
+Rules/Term/bonus-action: bonus action
+Rules/Term/reaction: reaction
+Rules/Term/opportunity-attack: opportunity attack
+Rules/Term/attack: Attack
+Rules/Term/cast-a-spell: Cast a Spell
+Rules/Term/dash: Dash
+Rules/Term/disengage: Disengage
+Rules/Term/dodge: Dodge
+Rules/Term/help: Help
+Rules/Term/hide: Hide
+Rules/Term/ready: Ready
+Rules/Term/search: Search
+Rules/Term/use-an-object: Use an Object
+
+# Rolls, rest, damage and cover: inspiration p. 59; advantage and disadvantage p. 76; proficiency
+# and ability check p. 77; saving throw p. 83; short and long rest p. 87 (p. 87 "spend one or more
+# Hit Dice at the end of a short rest", Hit Dice always capitalized); initiative p. 90; attack roll
+# p. 94; cover p. 96 (half, three-quarters and total cover), critical hit p. 96; resistance and
+# vulnerability p. 97 ("Damage Resistance and Vulnerability"), immunity p. 257 ("Vulnerabilities,
+# Resistances, and Immunities"); death saving throw and temporary hit points p. 98
+Rules/Term/advantage: advantage
+Rules/Term/disadvantage: disadvantage
+Rules/Term/ability-check: ability check
+Rules/Term/saving-throw: saving throw
+Rules/Term/attack-roll: attack roll
+Rules/Term/critical-hit: critical hit
+Rules/Term/initiative: initiative
+Rules/Term/inspiration: inspiration
+Rules/Term/proficiency: proficiency
+Rules/Term/death-saving-throw: death saving throw
+Rules/Term/hit-dice: Hit Dice
+Rules/Term/temporary-hit-points: temporary hit points
+Rules/Term/short-rest: short rest
+Rules/Term/long-rest: long rest
+Rules/Term/resistance: resistance
+Rules/Term/immunity: immunity
+Rules/Term/vulnerability: vulnerability
+Rules/Term/cover: cover
+Rules/Term/cover/half: half cover
+Rules/Term/cover/three-quarters: three-quarters cover
+Rules/Term/cover/total: total cover
+
+# Spellcasting: spellcasting focus p. 12; spell slot p. 100; cantrip and ritual p. 101; concentration
+# p. 102; spell attack p. 103 ("Attack Rolls": "Your attack bonus with a spell attack"); attunement
+# p. 206
+Rules/Term/cantrip: cantrip
+Rules/Term/ritual: ritual
+Rules/Term/concentration: concentration
+Rules/Term/spell-attack: spell attack
+Rules/Term/spell-slot: spell slot
+Rules/Term/spellcasting-focus: spellcasting focus
+Rules/Term/attunement: attunement
+
+# Senses: blindsight, darkvision and truesight p. 86; tremorsense and telepathy p. 257; passive
+# Perception as in stat blocks, e.g. p. 218 "passive Perception 13"
+Rules/Term/blindsight: blindsight
+Rules/Term/darkvision: darkvision
+Rules/Term/tremorsense: tremorsense
+Rules/Term/truesight: truesight
+Rules/Term/telepathy: telepathy
+Rules/Term/passive-perception: passive Perception
+
+# Skills: p. 78, the list by ability ("Strength • Athletics ...")
+Rules/Term/acrobatics: Acrobatics
+Rules/Term/animal-handling: Animal Handling
+Rules/Term/arcana: Arcana
+Rules/Term/athletics: Athletics
+Rules/Term/deception: Deception
+Rules/Term/history: History
+Rules/Term/insight: Insight
+Rules/Term/intimidation: Intimidation
+Rules/Term/investigation: Investigation
+Rules/Term/medicine: Medicine
+Rules/Term/nature: Nature
+Rules/Term/perception: Perception
+Rules/Term/performance: Performance
+Rules/Term/persuasion: Persuasion
+Rules/Term/religion: Religion
+Rules/Term/sleight-of-hand: Sleight of Hand
+Rules/Term/stealth: Stealth
+Rules/Term/survival: Survival
+
+# Creature types: p. 254 ("Type"); singular as in stat blocks, e.g. p. 261 "Deva Medium
+# celestial", "Medium humanoid" 39 times
+Rules/Term/aberration: aberration
+Rules/Term/beast: beast
+Rules/Term/celestial: celestial
+Rules/Term/construct: construct
+Rules/Term/dragon: dragon
+Rules/Term/elemental: elemental
+Rules/Term/fey: fey
+Rules/Term/fiend: fiend
+Rules/Term/giant: giant
+Rules/Term/humanoid: humanoid
+Rules/Term/monstrosity: monstrosity
+Rules/Term/ooze: ooze
+Rules/Term/plant: plant
+Rules/Term/undead: undead
+
+# Sizes: p. 92, table "Size Categories"
+Rules/Term/tiny: Tiny
+Rules/Term/small: Small
+Rules/Term/medium: Medium
+Rules/Term/large: Large
+Rules/Term/huge: Huge
+Rules/Term/gargantuan: Gargantuan
+
+# Alignments: p. 58-59, abbreviation in parentheses, e.g. p. 58 "Lawful good (LG) creatures";
+# name lowercase as in running text and stat blocks ("are lawful good")
+Rules/Term/lg: LG
+Rules/Term/lg/name: lawful good
+Rules/Term/ng: NG
+Rules/Term/ng/name: neutral good
+Rules/Term/cg: CG
+Rules/Term/cg/name: chaotic good
+Rules/Term/ln: LN
+Rules/Term/ln/name: lawful neutral
+Rules/Term/n: N
+Rules/Term/n/name: neutral
+Rules/Term/cn: CN
+Rules/Term/cn/name: chaotic neutral
+Rules/Term/le: LE
+Rules/Term/le/name: lawful evil
+Rules/Term/ne: NE
+Rules/Term/ne/name: neutral evil
+Rules/Term/ce: CE
+Rules/Term/ce/name: chaotic evil
+
+# Schools of magic: p. 103 ("The Schools of Magic"); lowercase as in the spell header, e.g. p. 144
+# "Fireball 3rd-level evocation"
+Rules/Term/abjuration: abjuration
+Rules/Term/conjuration: conjuration
+Rules/Term/divination: divination
+Rules/Term/enchantment: enchantment
+Rules/Term/evocation: evocation
+Rules/Term/illusion: illusion
+Rules/Term/necromancy: necromancy
+Rules/Term/transmutation: transmutation
+
+# Languages: p. 59, tables "Standard Languages" and "Exotic Languages"; the ids of Giant and
+# Celestial end in -language, giant and celestial are creature types
+Rules/Term/common: Common
+Rules/Term/dwarvish: Dwarvish
+Rules/Term/elvish: Elvish
+Rules/Term/giant-language: Giant
+Rules/Term/gnomish: Gnomish
+Rules/Term/goblin: Goblin
+Rules/Term/halfling: Halfling
+Rules/Term/orc: Orc
+Rules/Term/abyssal: Abyssal
+Rules/Term/celestial-language: Celestial
+Rules/Term/draconic: Draconic
+Rules/Term/deep-speech: Deep Speech
+Rules/Term/infernal: Infernal
+Rules/Term/primordial: Primordial
+Rules/Term/sylvan: Sylvan
+Rules/Term/undercommon: Undercommon

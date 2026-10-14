@@ -1,0 +1,38 @@
+created: 20261014200240000
+modified: 20261014200240000
+tags: $:/tags/tiddlyrpg/RulesDomain
+title: $:/tiddlyrpg/rules/domain/School
+type: application/json
+
+{
+    "domain": "School",
+    "type": "label",
+    "keys": "Rules/Term/",
+    "entries": [
+        {
+            "id": "abjuration"
+        },
+        {
+            "id": "conjuration"
+        },
+        {
+            "id": "divination"
+        },
+        {
+            "id": "enchantment"
+        },
+        {
+            "id": "evocation"
+        },
+        {
+            "id": "illusion"
+        },
+        {
+            "id": "necromancy"
+        },
+        {
+            "id": "transmutation"
+        }
+    ],
+    "example": "evocation"
+}

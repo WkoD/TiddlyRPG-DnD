@@ -1,0 +1,68 @@
+created: 20261014200240000
+modified: 20261014200240000
+tags: $:/tags/tiddlyrpg/RulesDomain
+title: $:/tiddlyrpg/rules/domain/Mechanics
+type: application/json
+
+{
+    "domain": "Mechanics",
+    "type": "label",
+    "keys": "Rules/Term/",
+    "entries": [
+        {
+            "id": "advantage"
+        },
+        {
+            "id": "disadvantage"
+        },
+        {
+            "id": "ability-check"
+        },
+        {
+            "id": "saving-throw"
+        },
+        {
+            "id": "attack-roll"
+        },
+        {
+            "id": "critical-hit"
+        },
+        {
+            "id": "initiative"
+        },
+        {
+            "id": "inspiration"
+        },
+        {
+            "id": "proficiency"
+        },
+        {
+            "id": "death-saving-throw"
+        },
+        {
+            "id": "hit-dice"
+        },
+        {
+            "id": "temporary-hit-points"
+        },
+        {
+            "id": "short-rest"
+        },
+        {
+            "id": "long-rest"
+        },
+        {
+            "id": "resistance"
+        },
+        {
+            "id": "immunity"
+        },
+        {
+            "id": "vulnerability"
+        },
+        {
+            "id": "cover"
+        }
+    ],
+    "example": "cover half"
+}

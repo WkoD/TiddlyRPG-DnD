@@ -1,9 +1,10 @@
 created: 20261009183319191
-modified: 20261009200000000
+modified: 20261014200240000
 title: $:/tiddlyrpg/language/de-DE/
 
 # Begriffe des Systemreferenzdokuments 5.1 (deutsch, CC-BY-4.0, siehe den Tab license), von Hand;
-# Seiten von SRD_CC_v5.1_DE.pdf. Variante name: der Begriff ausgeschrieben.
+# Seiten von SRD_CC_v5.1_DE.pdf. Variante name: der Begriff ausgeschrieben, wo er eine Abkürzung ist;
+# cover hat die Varianten half, three-quarters und total. Nur Namen der Regeln von 2014.
 
 # Schadensarten: S. 104-105 ("Schadensarten"); die Wendung wie nach den Würfeln in Werteblöcken,
 # z. B. S. 293 "10 (2W6+3) Hiebschaden plus 3 (1W6) Säureschaden"; adjektivische im Nominativ
@@ -75,3 +76,186 @@ Rules/Term/gm: SL
 Rules/Term/gm/name: Spielleiter
 Rules/Term/pb: ÜB
 Rules/Term/pb/name: Übungsbonus
+
+# Zustände: S. 402-403 (Anhang PH-A); klein wie im Fließtext, z. B. S. 10 "nicht länger bezaubert
+# oder verängstigt" (als Name des Zustands auch groß, S. 3 "Rettungswürfen gegen Bezaubert")
+Rules/Term/blinded: blind
+Rules/Term/charmed: bezaubert
+Rules/Term/deafened: taub
+Rules/Term/exhaustion: Erschöpfung
+Rules/Term/frightened: verängstigt
+Rules/Term/grappled: gepackt
+Rules/Term/incapacitated: kampfunfähig
+Rules/Term/invisible: unsichtbar
+Rules/Term/paralyzed: gelähmt
+Rules/Term/petrified: versteinert
+Rules/Term/poisoned: vergiftet
+Rules/Term/prone: liegend
+Rules/Term/restrained: festgesetzt
+Rules/Term/stunned: betäubt
+Rules/Term/unconscious: bewusstlos
+
+# Aktionen: Aktion S. 97 ("eine Aktion ausführen"), Bonusaktion und Reaktion S. 98, Gelegenheitsangriff
+# S. 103; die Aktionen im Kampf S. 100-101 ("Aktionen im Kampf"; "Gegenstand verwenden" als
+# Überschrift S. 100, im Text auch "Gegenstand benutzen", S. 49)
+Rules/Term/action: Aktion
+Rules/Term/bonus-action: Bonusaktion
+Rules/Term/reaction: Reaktion
+Rules/Term/opportunity-attack: Gelegenheitsangriff
+Rules/Term/attack: Angriff
+Rules/Term/cast-a-spell: Zauber wirken
+Rules/Term/dash: Spurt
+Rules/Term/disengage: Rückzug
+Rules/Term/dodge: Ausweichen
+Rules/Term/help: Helfen
+Rules/Term/hide: Verstecken
+Rules/Term/ready: Vorbereiten
+Rules/Term/search: Suchen
+Rules/Term/use-an-object: Gegenstand verwenden
+
+# Würfe, Rast, Schaden und Deckung: Inspiration S. 62; Vorteil und Nachteil S. 81; Übung und
+# Attributswurf S. 82 ("Übungsbonus", "Attributswürfe"; "Übung in" z. B. S. 13); Rettungswurf
+# S. 89; kurze und lange Rast S. 93-94 (S. 93 "am Ende einer kurzen Rast einen oder mehrere
+# Trefferwürfel"); Initiative S. 97; Angriffswurf S. 102; Deckung S. 103-104 (halbe Deckung,
+# Dreivierteldeckung, vollständige Deckung); kritischer Treffer S. 104; Resistenz und Anfälligkeit
+# S. 105 ("Schadensresistenz und -anfälligkeit"; S. 287 "Empfindlichkeiten", die Werteblöcke
+# "Schadensanfälligkeiten", 15-mal), Immunität S. 287; Todesrettungswurf und temporäre
+# Trefferpunkte S. 106
+Rules/Term/advantage: Vorteil
+Rules/Term/disadvantage: Nachteil
+Rules/Term/ability-check: Attributswurf
+Rules/Term/saving-throw: Rettungswurf
+Rules/Term/attack-roll: Angriffswurf
+Rules/Term/critical-hit: kritischer Treffer
+Rules/Term/initiative: Initiative
+Rules/Term/inspiration: Inspiration
+Rules/Term/proficiency: Übung
+Rules/Term/death-saving-throw: Todesrettungswurf
+Rules/Term/hit-dice: Trefferwürfel
+Rules/Term/temporary-hit-points: temporäre Trefferpunkte
+Rules/Term/short-rest: kurze Rast
+Rules/Term/long-rest: lange Rast
+Rules/Term/resistance: Resistenz
+Rules/Term/immunity: Immunität
+Rules/Term/vulnerability: Anfälligkeit
+Rules/Term/cover: Deckung
+Rules/Term/cover/half: halbe Deckung
+Rules/Term/cover/three-quarters: Dreivierteldeckung
+Rules/Term/cover/total: vollständige Deckung
+
+# Zauberwirken: Zauberfokus S. 12; Zauberplatz S. 109; Zaubertrick und Ritual S. 110; Konzentration
+# S. 111; Zauberangriff S. 113 ("Angriffswürfe": "Dein Angriffsbonus mit Zauberangriffen");
+# Einstimmung S. 226
+Rules/Term/cantrip: Zaubertrick
+Rules/Term/ritual: Ritual
+Rules/Term/concentration: Konzentration
+Rules/Term/spell-attack: Zauberangriff
+Rules/Term/spell-slot: Zauberplatz
+Rules/Term/spellcasting-focus: Zauberfokus
+Rules/Term/attunement: Einstimmung
+
+# Sinne: Blindsicht, Dunkelsicht und Wahrer Blick S. 92; Erschütterungssinn S. 287, Telepathie
+# S. 288; passive Wahrnehmung wie in den Werteblöcken, z. B. S. 237 "Passive Wahrnehmung 10" (dort
+# am Anfang der Angabe groß)
+Rules/Term/blindsight: Blindsicht
+Rules/Term/darkvision: Dunkelsicht
+Rules/Term/tremorsense: Erschütterungssinn
+Rules/Term/truesight: Wahrer Blick
+Rules/Term/telepathy: Telepathie
+Rules/Term/passive-perception: passive Wahrnehmung
+
+# Fertigkeiten: S. 83, die Liste nach Attributen ("Stärke • Athletik ...")
+Rules/Term/acrobatics: Akrobatik
+Rules/Term/animal-handling: Mit Tieren umgehen
+Rules/Term/arcana: Arkane Kunde
+Rules/Term/athletics: Athletik
+Rules/Term/deception: Täuschen
+Rules/Term/history: Geschichte
+Rules/Term/insight: Motiv erkennen
+Rules/Term/intimidation: Einschüchtern
+Rules/Term/investigation: Nachforschungen
+Rules/Term/medicine: Heilkunde
+Rules/Term/nature: Naturkunde
+Rules/Term/perception: Wahrnehmung
+Rules/Term/performance: Auftreten
+Rules/Term/persuasion: Überzeugen
+Rules/Term/religion: Religion
+Rules/Term/sleight-of-hand: Fingerfertigkeit
+Rules/Term/stealth: Heimlichkeit
+Rules/Term/survival: Überlebenskunst
+
+# Kreaturentypen: S. 284-285 ("Typ"; beasts sind dort Tiere); Singular wie in den Werteblöcken,
+# z. B. S. 259 "Mittelgroßer Untoter", S. 338 "Mittelgroßes celestisches Wesen", "Mittelgroßer
+# Humanoide" 37-mal
+Rules/Term/aberration: Aberration
+Rules/Term/beast: Tier
+Rules/Term/celestial: celestisches Wesen
+Rules/Term/construct: Konstrukt
+Rules/Term/dragon: Drache
+Rules/Term/elemental: Elementar
+Rules/Term/fey: Feenwesen
+Rules/Term/fiend: Unhold
+Rules/Term/giant: Riese
+Rules/Term/humanoid: Humanoide
+Rules/Term/monstrosity: Monstrosität
+Rules/Term/ooze: Schlick
+Rules/Term/plant: Pflanze
+Rules/Term/undead: Untoter
+
+# Größen: S. 99-100, Tabelle "Größenkategorien"
+Rules/Term/tiny: Winzig
+Rules/Term/small: Klein
+Rules/Term/medium: Mittelgroß
+Rules/Term/large: Groß
+Rules/Term/huge: Riesig
+Rules/Term/gargantuan: Gigantisch
+
+# Gesinnungen: S. 61, die Abkürzung in Klammern, z. B. "Rechtschaffen gute (RG) Kreaturen";
+# name klein wie im Fließtext und in Werteblöcken ("sind rechtschaffen gut")
+Rules/Term/lg: RG
+Rules/Term/lg/name: rechtschaffen gut
+Rules/Term/ng: NG
+Rules/Term/ng/name: neutral gut
+Rules/Term/cg: CG
+Rules/Term/cg/name: chaotisch gut
+Rules/Term/ln: RN
+Rules/Term/ln/name: rechtschaffen neutral
+Rules/Term/n: N
+Rules/Term/n/name: neutral
+Rules/Term/cn: CN
+Rules/Term/cn/name: chaotisch neutral
+Rules/Term/le: RB
+Rules/Term/le/name: rechtschaffen böse
+Rules/Term/ne: NB
+Rules/Term/ne/name: neutral böse
+Rules/Term/ce: CB
+Rules/Term/ce/name: chaotisch böse
+
+# Schulen der Magie: S. 113 ("Die Schulen der Magie"); als "-zauber" wie im Zauberkopf, z. B. S. 142
+# "Feuerball Hervorrufungszauber 3. Grades" (eine Form ohne "-zauber" fehlt für Bann)
+Rules/Term/abjuration: Bannzauber
+Rules/Term/conjuration: Beschwörungszauber
+Rules/Term/divination: Erkenntniszauber
+Rules/Term/enchantment: Verzauberungszauber
+Rules/Term/evocation: Hervorrufungszauber
+Rules/Term/illusion: Illusionszauber
+Rules/Term/necromancy: Nekromantiezauber
+Rules/Term/transmutation: Verwandlungszauber
+
+# Sprachen: S. 62, Tabellen "Standardsprachen" und "Exotische Sprachen"
+Rules/Term/common: Gemeinsprache
+Rules/Term/dwarvish: Zwergisch
+Rules/Term/elvish: Elfisch
+Rules/Term/giant-language: Riesisch
+Rules/Term/gnomish: Gnomisch
+Rules/Term/goblin: Goblinisch
+Rules/Term/halfling: Halblingisch
+Rules/Term/orc: Orkisch
+Rules/Term/abyssal: Abyssisch
+Rules/Term/celestial-language: Celestisch
+Rules/Term/draconic: Drakonisch
+Rules/Term/deep-speech: Tiefensprache
+Rules/Term/infernal: Infernalisch
+Rules/Term/primordial: Urtümlich
+Rules/Term/sylvan: Sylvanisch
+Rules/Term/undercommon: Gemeinsprache der Unterreiche

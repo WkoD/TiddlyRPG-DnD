@@ -1,0 +1,32 @@
+created: 20261014200240000
+modified: 20261014200240000
+tags: $:/tags/tiddlyrpg/RulesDomain
+title: $:/tiddlyrpg/rules/domain/Sense
+type: application/json
+
+{
+    "domain": "Sense",
+    "type": "label",
+    "keys": "Rules/Term/",
+    "entries": [
+        {
+            "id": "blindsight"
+        },
+        {
+            "id": "darkvision"
+        },
+        {
+            "id": "tremorsense"
+        },
+        {
+            "id": "truesight"
+        },
+        {
+            "id": "telepathy"
+        },
+        {
+            "id": "passive-perception"
+        }
+    ],
+    "example": "darkvision"
+}

@@ -1,0 +1,32 @@
+created: 20261014200240000
+modified: 20261014200240000
+tags: $:/tags/tiddlyrpg/RulesDomain
+title: $:/tiddlyrpg/rules/domain/Size
+type: application/json
+
+{
+    "domain": "Size",
+    "type": "label",
+    "keys": "Rules/Term/",
+    "entries": [
+        {
+            "id": "tiny"
+        },
+        {
+            "id": "small"
+        },
+        {
+            "id": "medium"
+        },
+        {
+            "id": "large"
+        },
+        {
+            "id": "huge"
+        },
+        {
+            "id": "gargantuan"
+        }
+    ],
+    "example": "large"
+}

@@ -1,0 +1,56 @@
+created: 20261014200240000
+modified: 20261014200240000
+tags: $:/tags/tiddlyrpg/RulesDomain
+title: $:/tiddlyrpg/rules/domain/Action
+type: application/json
+
+{
+    "domain": "Action",
+    "type": "label",
+    "keys": "Rules/Term/",
+    "entries": [
+        {
+            "id": "action"
+        },
+        {
+            "id": "bonus-action"
+        },
+        {
+            "id": "reaction"
+        },
+        {
+            "id": "opportunity-attack"
+        },
+        {
+            "id": "attack"
+        },
+        {
+            "id": "cast-a-spell"
+        },
+        {
+            "id": "dash"
+        },
+        {
+            "id": "disengage"
+        },
+        {
+            "id": "dodge"
+        },
+        {
+            "id": "help"
+        },
+        {
+            "id": "hide"
+        },
+        {
+            "id": "ready"
+        },
+        {
+            "id": "search"
+        },
+        {
+            "id": "use-an-object"
+        }
+    ],
+    "example": "bonus-action"
+}

@@ -14,7 +14,12 @@ with fifth edition, as plugin type `ruleset` for `tiddlyrpg-core`:
 
 - Rules domains (`$:/tiddlyrpg/rules/domain/...`): `Length` (sizes and distances) and `Weight`
   (units with the factors of the SRD 5.1: 1 in = 2.5 cm, 1 ft = 0.3 m, 1 mi = 1.6 km,
-  1 lb = 0.5 kg), `Dice`, `Damage` (the 13 damage types), `Ability` and `Terms`.
+  1 lb = 0.5 kg), `Dice`, `Damage` (the 13 damage types), `Ability` and `Terms`, and the
+  terms by group: `Condition`, `Action`, `Mechanics` (rolls, rest, damage, cover), `Spellcasting`,
+  `Sense`, `Skill`, `CreatureType`, `Size`, `Alignment`, `School` and `Language`. Each term is
+  written with its id, e.g. `<<term charmed>>`, `<<term cover variant:"half">>`,
+  `<<term lg variant:"name">>`; every id is unique across the domains (`giant` is the creature
+  type, `giant-language` the language).
 - Language keys `Rules/...` in en-GB and de-DE; the terms come from the System Reference Document
   5.1 in English and German (see "Sources and licenses").
 - `$:/tiddlyrpg/rules/system`: the name of the system; its prices are in gold pieces

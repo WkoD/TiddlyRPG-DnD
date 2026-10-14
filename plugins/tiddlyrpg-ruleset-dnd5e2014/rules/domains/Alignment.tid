@@ -1,0 +1,41 @@
+created: 20261014200240000
+modified: 20261014200240000
+tags: $:/tags/tiddlyrpg/RulesDomain
+title: $:/tiddlyrpg/rules/domain/Alignment
+type: application/json
+
+{
+    "domain": "Alignment",
+    "type": "label",
+    "keys": "Rules/Term/",
+    "entries": [
+        {
+            "id": "lg"
+        },
+        {
+            "id": "ng"
+        },
+        {
+            "id": "cg"
+        },
+        {
+            "id": "ln"
+        },
+        {
+            "id": "n"
+        },
+        {
+            "id": "cn"
+        },
+        {
+            "id": "le"
+        },
+        {
+            "id": "ne"
+        },
+        {
+            "id": "ce"
+        }
+    ],
+    "example": "ce name"
+}
