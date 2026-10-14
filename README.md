@@ -20,7 +20,7 @@ with fifth edition, as plugin type `ruleset` for `tiddlyrpg-core`:
 - `$:/tiddlyrpg/rules/system`: the name of the system; its prices are in gold pieces
   (`currency-reference: gp`).
 
-Lengths know the kinds `range`, `distance` and `size`: `<<unit "60 ft" range>>` shows whole feet
+Lengths know the kinds `range`, `distance` and `size`: `<<unit "60 ft" kind:"range">>` shows whole feet
 or metres with one decimal, `distance` miles or kilometres, `size` (bodies and things) feet and
 inches or centimetres and metres.
 <!-- /wiki -->
@@ -82,9 +82,9 @@ domains or per domain. The names of months and coins have their own setting unde
 
 | Macro | Shown (en / de) |
 |---|---|
-| `<<term wis>>`, `<<term wis save>>` (abilities str, dex, con, int, wis, cha; variants `save`, `name`) | WIS / WEI, WIS save / WEI-Rettungswurf |
-| `<<term ac>>`, `<<term pb name>>` (terms ac, hp, dc, cr, xp, pb; variant `name`) | AC / RK, proficiency bonus / Übungsbonus |
-| `<<unit "30 ft">>`, `<<unit "60 ft" range>>` (lengths with the kinds `range`, `distance` and `size`, weights) | 30 ft / 9 m |
+| `<<term wis>>`, `<<term wis variant:"save">>` (abilities str, dex, con, int, wis, cha; variants `save`, `name`) | WIS / WEI, WIS save / WEI-Rettungswurf |
+| `<<term ac>>`, `<<term pb variant:"name">>` (terms ac, hp, dc, cr, xp, pb; variant `name`) | AC / RK, proficiency bonus / Übungsbonus |
+| `<<unit "30 ft">>`, `<<unit "60 ft" kind:"range">>` (lengths with the kinds `range`, `distance` and `size`, weights) | 30 ft / 9 m |
 | `<<unit "50 gp">>` (coins cp, sp, ep, gp, pp) | 50 gp / 50 GM |
 
 The hubs "Ruleset" and "CampaignSetting" list every term and name in the language it is shown
