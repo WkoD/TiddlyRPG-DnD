@@ -41,9 +41,11 @@ npm test                     # all tests in test/
 npm run test-lang            # only test/lang/: language packs
 ```
 
-- `tiddlyrpg-core` comes from `node_modules/tiddlyrpg-plugins`. During development that is an
+- `tiddlyrpg-core` comes from `node_modules/tiddlyrpg-plugins`, pinned in `devDependencies` to a
+  tag of `TiddlyRPG-Plugins`; the CI (`npm ci`) uses that pin. During development it is an
   `npm link` to a checkout of `TiddlyRPG-Plugins`, so a change in core is tested here at once.
-  `npm install` removes the link; set it again right after every `npm install`.
+  `npm install` removes the link; set it again right after every `npm install`. Commit
+  `package-lock.json` only with the pin, never with a `file:` entry from the link.
 - `scripts/plugin-path.js` builds `TIDDLYWIKI_PLUGIN_PATH` for `scripts/tw.js` and the tests:
   `./plugins`, then `node_modules/tiddlyrpg-plugins/plugins`, then the pinned
   `node_modules/tw5-*/plugins`.
@@ -134,7 +136,8 @@ For now this repo keeps the version of `TiddlyRPG-Plugins` (`tiddlyrpg-core`), t
 versions fit together; the two may part later. A release here follows the one of the core.
 
 1. Raise `version` in `package.json` and in the `plugin.info` of every plugin to the version of
-   the core.
-2. `npm install`, then `npm link tiddlyrpg-plugins` again.
+   the core, and the pin of `tiddlyrpg-plugins` in `devDependencies` to its tag.
+2. `npm install`, once `npm ci && npm run smoke` without the link as the CI does, then
+   `npm link tiddlyrpg-plugins` again.
 3. `npm run smoke`, `npm test`.
 4. Commit and push; once the CI run is green, **tag == version** and create the release.
