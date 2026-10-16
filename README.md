@@ -58,9 +58,10 @@ are shown. This plugin is not needed for that.
 
 ## Using it in a wiki
 
-A wiki of the TiddlyRPG family already has `tiddlyrpg-plugins` in its `package.json`. Add this
-package next to it, add `tiddlyrpg-dnd` to the packages of its launcher `scripts/tw.js` (it
-builds `TIDDLYWIKI_PLUGIN_PATH` from `node_modules/<package>/plugins`) and the plugin to
+A wiki of the TiddlyRPG family already has `tiddlyrpg-plugins` in its `package.json`, and its
+launcher `scripts/tw.js` already lists `tiddlyrpg-dnd` among the packages whose `plugins` folder
+it loads. Add this package to `devDependencies`, pinned to a tag like `tiddlyrpg-plugins`
+(`"tiddlyrpg-dnd": "git+https://github.com/WkoD/TiddlyRPG-DnD.git#2.0.0"`), and the plugins to
 `tiddlywiki.info`:
 
 ```json
