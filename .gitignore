@@ -4,3 +4,6 @@ node_modules/
 
 # Runtime save state of the editions
 editions/*/tiddlers/
+
+# Downloaded source data of the content extraction (scripts/content/)
+scripts/content/*/cache/

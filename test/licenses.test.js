@@ -2,7 +2,8 @@
  * Readme and license of the plugins: the tabs come from README.md (its sections per plugin) and
  * LICENSE of this repo (files/tiddlywiki.files of each plugin); the ruleset carries the
  * attribution of the SRD 5.1 word for word and nothing else on Wizards of the Coast, the setting
- * the attribution and the notice of the Fan Content Policy.
+ * the attribution and the notice of the Fan Content Policy; the content package the attribution and
+ * the MIT License of the 5e-bits database it was converted from.
  */
 var test = require("node:test"),
 	assert = require("node:assert/strict"),
@@ -82,4 +83,15 @@ test("the setting: its readme, the coins from the SRD, the notice of the Fan Con
 	assert.doesNotMatch(license, /damage types/);
 	assert.ok(license.indexOf(FCP) !== -1, "notice of the Fan Content Policy");
 	assert.match(h.render(wiki, "text/html", "{{" + SETTING + "/license}}"), /<a class="tc-tiddlylink-external" href="https:\/\/company.wizards.com\/en\/legal\/fancontentpolicy"/);
+});
+
+test("the content package: the attribution of the SRD 5.1 and the MIT License of 5e-bits beside it, nothing else on Wizards", function() {
+	var notice = fs.readFileSync(path.join(root, "content", "dnd5e2014", "NOTICE.md"), "utf8").replace(/\s+/g, " "),
+		manifest = JSON.parse(fs.readFileSync(path.join(root, "content", "dnd5e2014", "manifest.json"), "utf8"));
+	assert.ok(notice.indexOf(SRD_EN) !== -1, "SRD attribution");
+	assert.match(notice, /Section 5 of CC-BY-4\.0 includes a Disclaimer of Warranties and Limitation of Liability\./);
+	assert.match(notice, /MIT License Copyright \(c\) \[2018-2020\] \[Adrian Padua, Christopher Ward\] Permission is hereby granted/);
+	assert.doesNotMatch(notice, /Not affiliated|Fan Content/);
+	assert.match(manifest.source, /SRD 5\.1/);
+	assert.match(manifest.source, /CC-BY-4\.0/);
 });

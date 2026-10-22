@@ -1,0 +1,12 @@
+{
+	"name": "SRD 5.1",
+	"ruleset": "$:/plugins/tiddlyrpg-ruleset-dnd5e2014",
+	"language": "en-GB",
+	"tiddlyrpg-core-version": ">=2.1.0",
+	"source": "[[SRD 5.1|https://dnd.wizards.com/resources/systems-reference-document]] (CC-BY-4.0)",
+	"files": [
+		"items.json",
+		"spells.json",
+		"creatures.json"
+	]
+}

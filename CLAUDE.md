@@ -75,7 +75,11 @@ npm run test-lang            # only test/lang/: language packs
     cases of the campaigns (Vandalia), GM/SL and XP/EP; `terms` also the hubs `Ruleset` and `CampaignSetting`
   - `licenses` - the tabs "readme" and "license" from `README.md` and `LICENSE`, the
     attribution of the SRD 5.1 word for word, the notice of the Fan Content Policy only in the
-    setting, CC0 in `package.json`
+    setting, CC0 in `package.json`; the notices beside the content package
+  - `content` - the content package: every value of every entry reads with the fields of its
+    type (en-GB, de-DE), ids and titles unique, `base` and `spells` name entries of the package,
+    header lines as in the SRD, no text runs wikitext the SRD does not have (only `<<term>>` of a
+    condition), cursed items locked
   - `lang/packs` - every language of every plugin complete against en-GB (keys only in
     `en-GB/names.multids` are proper names and may be missing; keys ending in `/Parse` are the
     words read in one language only, keys in `<code>/grammar.multids` the forms one language
@@ -103,6 +107,16 @@ of `TiddlyRPG-Plugins`. Every field name is hidden from the field list of the co
 (`config/form-fields-hidden.multids`), the form shows it as a field of the rules.
 - Tests here check the real data; the engines themselves are tested in `TiddlyRPG-Plugins`
   against fixture plugins. A test of the same topic has the same file name in both repos.
+
+**Content package** (`content/dnd5e2014/`, README "Content package SRD 5.1"): generated, never
+edited by hand - change `scripts/content/dnd5e2014/extract.js` (or `srd-tables.js` for what it
+reads from the SRD text, with pages) and run `npm run content`. The script pins the tag of the
+5e-bits database (`VERSION`) and caches its files in `scripts/content/dnd5e2014/cache/`
+(gitignored); a new tag is a decision of its own, checked against `npm test`. The format of the
+files and the manifest is in the module header of `modules/content-server.js` of
+`TiddlyRPG-Plugins`; `package.json` names the manifest under `"tiddlyrpg": {"content": [...]}`.
+What a value of the package must be is what the fields of the ruleset read - `test/content.test.js`
+reads every one. The notices of the sources stand in `content/dnd5e2014/NOTICE.md`.
 
 **Timestamps (`created`/`modified`):** every tiddler (`.tid`, `.multids` header) carries these
 fields in TiddlyWiki format (UTC, `YYYYMMDDHHMMSSmmm`). New file: `created` = `modified` = now;
