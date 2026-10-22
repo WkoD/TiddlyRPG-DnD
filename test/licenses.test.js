@@ -86,8 +86,8 @@ test("the setting: its readme, the coins from the SRD, the notice of the Fan Con
 });
 
 test("the content package: the attribution of the SRD 5.1 and the MIT License of 5e-bits beside it, nothing else on Wizards", function() {
-	var notice = fs.readFileSync(path.join(root, "content", "dnd5e2014", "NOTICE.md"), "utf8").replace(/\s+/g, " "),
-		manifest = JSON.parse(fs.readFileSync(path.join(root, "content", "dnd5e2014", "manifest.json"), "utf8"));
+	var notice = fs.readFileSync(path.join(root, "content", "dnd5e2014", "en-GB", "NOTICE.md"), "utf8").replace(/\s+/g, " "),
+		manifest = JSON.parse(fs.readFileSync(path.join(root, "content", "dnd5e2014", "en-GB", "manifest.json"), "utf8"));
 	assert.ok(notice.indexOf(SRD_EN) !== -1, "SRD attribution");
 	assert.match(notice, /Section 5 of CC-BY-4\.0 includes a Disclaimer of Warranties and Limitation of Liability\./);
 	assert.match(notice, /MIT License Copyright \(c\) \[2018-2020\] \[Adrian Padua, Christopher Ward\] Permission is hereby granted/);

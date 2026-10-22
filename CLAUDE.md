@@ -108,7 +108,7 @@ of `TiddlyRPG-Plugins`. Every field name is hidden from the field list of the co
 - Tests here check the real data; the engines themselves are tested in `TiddlyRPG-Plugins`
   against fixture plugins. A test of the same topic has the same file name in both repos.
 
-**Content package** (`content/dnd5e2014/`, README "Content package SRD 5.1"): generated, never
+**Content package** (`content/dnd5e2014/en-GB/`, README "Content package SRD 5.1 English"): generated, never
 edited by hand - change `scripts/content/dnd5e2014/extract.js` (or `srd-tables.js` for what it
 reads from the SRD text, with pages) and run `npm run content`. The script pins the tag of the
 5e-bits database (`VERSION`) and caches its files in `scripts/content/dnd5e2014/cache/`
@@ -116,7 +116,9 @@ reads from the SRD text, with pages) and run `npm run content`. The script pins 
 files and the manifest is in the module header of `modules/content-server.js` of
 `TiddlyRPG-Plugins`; `package.json` names the manifest under `"tiddlyrpg": {"content": [...]}`.
 What a value of the package must be is what the fields of the ruleset read - `test/content.test.js`
-reads every one. The notices of the sources stand in `content/dnd5e2014/NOTICE.md`.
+reads every one. The notices of the sources stand in `content/dnd5e2014/en-GB/NOTICE.md`. The folder is the language
+of the texts; the name of the manifest says it too ("SRD 5.1 (English)"), and its `tag` marks
+every taken tiddler.
 
 **Timestamps (`created`/`modified`):** every tiddler (`.tid`, `.multids` header) carries these
 fields in TiddlyWiki format (UTC, `YYYYMMDDHHMMSSmmm`). New file: `created` = `modified` = now;

@@ -2,7 +2,8 @@
 /*
  * The content package of tiddlyrpg-ruleset-dnd5e2014: the items, spells and creatures of the
  * SRD 5.1 (English) as entries for tiddlyrpg-core (module header of modules/content-server.js in
- * TiddlyRPG-Plugins), written to content/dnd5e2014/.
+ * TiddlyRPG-Plugins), written to content/dnd5e2014/en-GB/ - the language of the texts in the path,
+ * a package in another language would stand beside it.
  *
  * Source: the SRD data of 5e-bits (https://github.com/5e-bits/5e-database, MIT), tag VERSION,
  * fetched into the cache folder beside this script (not checked in). What 5e-bits does not have -
@@ -33,7 +34,7 @@ var fs = require("fs"),
 var VERSION = "v5.12.0",
 	BASE = "https://raw.githubusercontent.com/5e-bits/5e-database/" + VERSION + "/src/2014/en/",
 	CACHE = path.join(__dirname, "cache", VERSION),
-	OUT = path.join(__dirname, "..", "..", "..", "content", "dnd5e2014"),
+	OUT = path.join(__dirname, "..", "..", "..", "content", "dnd5e2014", "en-GB"),
 	FILES = ["Equipment", "Magic-Items", "Spells", "Monsters"];
 
 /* Fetching */
@@ -847,11 +848,12 @@ function main() {
 		write("spells", spells);
 		write("creatures", creatures);
 		fs.writeFileSync(path.join(OUT, "manifest.json"), JSON.stringify({
-			name: "SRD 5.1",
+			name: "SRD 5.1 (English)",
 			ruleset: "$:/plugins/tiddlyrpg-ruleset-dnd5e2014",
 			language: "en-GB",
 			"tiddlyrpg-core-version": ">=2.1.0",
-			source: "[[SRD 5.1|https://dnd.wizards.com/resources/systems-reference-document]] (CC-BY-4.0)",
+			tag: "SRD 5.1 English",
+			source: "[[SRD 5.1 (English)|https://dnd.wizards.com/resources/systems-reference-document]] (CC-BY-4.0)",
 			files: ["items.json", "spells.json", "creatures.json"]
 		}, null, "\t") + "\n");
 		console.log("items " + items.length + ", spells " + spells.length + ", creatures " + creatures.length);

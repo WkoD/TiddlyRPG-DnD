@@ -79,15 +79,19 @@ type `setting` for `tiddlyrpg-core`:
 are shown. This plugin is not needed for that.
 <!-- /wiki -->
 
-## Content package SRD 5.1 (`content/dnd5e2014/`)
+## Content package SRD 5.1 English (`content/dnd5e2014/en-GB/`)
 
-The items, spells and creatures of the SRD 5.1 (English) as entries for the ruleset: about 610
+The items, spells and creatures of the SRD 5.1 in English as entries for the ruleset: about 610
 items (equipment, magic items, trade goods, food and drink, poisons), 320 spells and 330
 creatures, each with its fields filled and its text. They are no tiddlers and no plugin: a wiki
 with this package in `node_modules` offers them while it runs on the Node server - in the
 search of the editor, in the choice of a relation, at a missing link and on the hub "Content" -
 and the DM takes one at a time into the wiki, where it becomes an ordinary tiddler. Without the
 package nothing of this shows.
+
+The wiki names the package "SRD 5.1 (English)"; every taken tiddler carries the tag
+`SRD 5.1 English`, and its text stays English whatever the language of the wiki. A package in
+another language would stand beside it in a folder of its own (`content/dnd5e2014/<code>/`).
 
 - Titles are unique in the package: an item before a creature before a spell ("Shield" is the
   armor, the spell is "Shield (Spell)").
@@ -183,9 +187,9 @@ The terms were entered by hand from the SRD 5.1 in English and German, with the 
 
 ### The content package
 
-`content/dnd5e2014/` is material of the SRD 5.1 (attribution above), converted from the data of
+`content/dnd5e2014/en-GB/` is material of the SRD 5.1 (attribution above), converted from the data of
 the [5e-bits database](https://github.com/5e-bits/5e-database) (MIT License); both notices are in
-`content/dnd5e2014/NOTICE.md`. A wiki that takes entries from it and is published carries the
+`content/dnd5e2014/en-GB/NOTICE.md`. A wiki that takes entries from it and is published carries the
 attribution of the SRD 5.1 as well; every taken entry names its source in the field `source`.
 
 ### The Forgotten Realms

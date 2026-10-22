@@ -1,5 +1,5 @@
 /*
- * The content package content/dnd5e2014 (scripts/content/dnd5e2014/extract.js): every value of
+ * The content package content/dnd5e2014/en-GB (scripts/content/dnd5e2014/extract.js): every value of
  * every entry reads with the fields of tiddlyrpg-ruleset-dnd5e2014 in both languages, ids and
  * titles are unique, base and spells name entries of the package, and no text runs wikitext the
  * SRD does not have (only <<term>> of a condition).
@@ -10,7 +10,7 @@ var test = require("node:test"),
 	path = require("path"),
 	h = require("./helpers");
 
-var DIR = path.join(__dirname, "..", "content", "dnd5e2014"),
+var DIR = path.join(__dirname, "..", "content", "dnd5e2014", "en-GB"),
 	// fields of the core, no schema fields
 	CORE = ["price", "base", "spells", "secret-fields"];
 
@@ -40,7 +40,9 @@ function values(entry) {
 
 test("the manifest: the ruleset of this repo, the files beside it; package.json names it", function() {
 	var pkg = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "package.json"), "utf8"));
-	assert.deepEqual(pkg.tiddlyrpg.content, ["content/dnd5e2014/manifest.json"]);
+	assert.deepEqual(pkg.tiddlyrpg.content, ["content/dnd5e2014/en-GB/manifest.json"]);
+	assert.equal(manifest.name, "SRD 5.1 (English)", "the name says the language of the texts");
+	assert.equal(manifest.tag, "SRD 5.1 English", "the tag of every taken tiddler");
 	assert.equal(manifest.ruleset, "$:/plugins/tiddlyrpg-ruleset-dnd5e2014");
 	assert.equal(manifest.language, "en-GB");
 	assert.ok(wiki.getTiddler(manifest.ruleset), "the ruleset plugin");
