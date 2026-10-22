@@ -1,5 +1,5 @@
 created: 20261022173330580
-modified: 20261022173330580
+modified: 20261022185857319
 tags: $:/tags/tiddlyrpg/RulesFields
 title: $:/tiddlyrpg/rules/fields
 type: application/json
@@ -15,7 +15,7 @@ type: application/json
         "damage": {"format": "damage", "when": {"category": ["weapon"]}},
         "damage-versatile": {"format": "dice", "when": {"category": ["weapon"]}},
         "range": {"format": "unit", "domain": "Length", "kind": "range", "words": "SpellWord", "only": ["self", "touch", "sight", "unlimited", "special"]},
-        "bonus": {"format": "number", "signed": true},
+        "bonus": {"format": "number", "signed": true, "filter": true},
 
         "ac": {"format": "number", "when": {"category": ["armor", "shield"]}, "derive": {"kind": "total", "parts": [{"field": "bonus"}]}},
         "ac-dex": {"format": "boolean", "when": {"category": ["armor"]}},
@@ -56,7 +56,7 @@ type: application/json
         "travel-speed": {"format": "unit", "domain": "Speed"},
         "healing": {"format": "dice", "derive": {"kind": "average"}},
 
-        "level": {"format": "number", "min": 0, "max": 9},
+        "level": {"format": "number", "min": 0, "max": 9, "filter": true},
         "school": {"format": "label", "domain": "School"},
         "ritual": {"format": "boolean"},
         "casting-time": {"format": "unit", "domain": "Time"},
