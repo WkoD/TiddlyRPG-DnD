@@ -59,11 +59,16 @@ npm run test-lang            # only test/lang/: language packs
     version of this repo equals the one of the core; the Forgotten Realms are the active setting
   - `calendar` - the Calendar of Harptos with the real data: months, festivals, era, Shieldmeet,
     length of a year, de-DE and en-GB, the rules domain `Calendar` and its display language
-  - `srd` - the SRD terms by hand: the 17 domains, the 13 damage types, 6 abilities, 7 terms and
+  - `srd` - the SRD terms by hand: the 31 domains, the 13 damage types, 6 abilities, 7 terms and
     the terms by group (conditions, actions, ...); every entry, unit and token has its keys in
-    every language, the abbreviations (`Ability`, `Alignment`, `Terms`) also their variant
-    `name`; every id of a label domain is unique across them; every key of `srd.multids` stands
-    below a comment with a page reference; the license tab
+    every language (under the `keys` of its domain), the abbreviations (`Ability`, `Alignment`,
+    `Terms`) also their variant `name`; every id that stands alone is unique across the label
+    domains, every trait names parents of its domain; every key of `srd.multids` stands below a
+    comment with a page reference; the license tab
+  - `fields` - the fields of the ruleset against the stat blocks of the SRD 5.1: what the rules
+    derive (proficiency bonus and XP by challenge rating, saving throws, skills with expertise,
+    passive Perception), categories as in the rulebook, the lines that join fields, the units of
+    `Time`, `Speed`, `Volume`
   - `currency` - the coins of the Forgotten Realms: labels EN/DE, the rates of the SRD 5.1, the reference
     coin gp matching the ruleset, the hub
   - `units`, `damage`, `terms` - the macros with the real data: the factors of the SRD 5.1, the
@@ -73,7 +78,8 @@ npm run test-lang            # only test/lang/: language packs
     setting, CC0 in `package.json`
   - `lang/packs` - every language of every plugin complete against en-GB (keys only in
     `en-GB/names.multids` are proper names and may be missing; keys ending in `/Parse` are the
-    words read in one language only)
+    words read in one language only, keys in `<code>/grammar.multids` the forms one language
+    needs for its header lines)
 
 **SRD terms by hand:** `tiddlyrpg-ruleset-dnd5e2014/language/<code>/srd.multids` holds the terms
 of the System Reference Document 5.1 (EN, DE). Every block of keys stands below `#` comments
@@ -81,8 +87,20 @@ with the page in the PDF (`.multids` skips lines starting with `#`); a new term 
 too (`test/srd.test.js` checks it). The PDFs are only read, never checked in. Only the names of
 the 2014 rules: a list of 2024 (such as the rules glossary of the Basic Rules 2024) can show which
 terms are missing, never their names. A term is written as in running text (`charmed`,
-`bezaubert`); a new id must not exist in another label domain (`<<term>>` takes the first). Units, dice and
-the damage grammar are in `rules.multids`, with the pages of the factors.
+`bezaubert`); a new id that stands alone must not exist in another label domain (`<<term>>`
+takes the first) - traits (`"for"`) may repeat one, their domain has keys of its own
+(`ItemCategory`: `Rules/Category/`). Units, dice, the damage grammar, the labels of the fields
+(`Rules/Field/...`) and the patterns of header lines and joined lines (`Rules/Summary/...`,
+`Rules/Line/...`) are in `rules.multids`. What only one language needs for its header lines -
+German declines the size by the gender of the creature type (`Rules/Term/<type>/Agree`,
+`Rules/Term/<size>/<gender>`), English the plural of a swarm - is in `<code>/grammar.multids`,
+with its pages as well.
+
+**Fields** (`rules/fields/`): `definitions.tid` defines every field once (format, domain,
+derive, when); one schema per type (`items`, `materials`, `spells`, `creatures`, `persons`) names
+its fields, groups and header line - the format is in the module header of `modules/fields.js`
+of `TiddlyRPG-Plugins`. Every field name is hidden from the field list of the core editor
+(`config/form-fields-hidden.multids`), the form shows it as a field of the rules.
 - Tests here check the real data; the engines themselves are tested in `TiddlyRPG-Plugins`
   against fixture plugins. A test of the same topic has the same file name in both repos.
 

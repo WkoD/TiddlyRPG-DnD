@@ -1,0 +1,29 @@
+created: 20261022173518303
+modified: 20261022173518303
+tags: $:/tags/tiddlyrpg/RulesDomain
+title: $:/tiddlyrpg/rules/domain/Area
+type: application/json
+
+{
+    "domain": "Area",
+    "type": "label",
+    "keys": "Rules/Term/",
+    "entries": [
+        {
+            "id": "cone"
+        },
+        {
+            "id": "cube"
+        },
+        {
+            "id": "cylinder"
+        },
+        {
+            "id": "line"
+        },
+        {
+            "id": "sphere"
+        }
+    ],
+    "example": "cone"
+}

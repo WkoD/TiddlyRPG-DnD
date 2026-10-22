@@ -1,0 +1,22 @@
+created: 20261022174256397
+modified: 20261022174256397
+tags: $:/tags/tiddlyrpg/RulesDomain
+title: $:/tiddlyrpg/rules/domain/Time
+type: application/json
+
+{
+    "domain": "Time",
+    "type": "unit",
+    "keys": "Rules/Unit/",
+    "units": {
+        "action": {"system": "none", "factor": 1},
+        "bonus-action": {"system": "none", "factor": 1},
+        "reaction": {"system": "none", "factor": 1},
+        "round": {"system": "none", "factor": 1},
+        "minute": {"system": "none", "factor": 10},
+        "hour": {"system": "none", "factor": 600},
+        "day": {"system": "none", "factor": 14400}
+    },
+    "defaults": ["action", "bonus-action", "reaction", "round", "minute", "hour", "day"],
+    "example": "10 minutes"
+}

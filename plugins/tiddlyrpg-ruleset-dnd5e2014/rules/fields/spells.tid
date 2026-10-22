@@ -1,0 +1,30 @@
+created: 20261022173330580
+modified: 20261022173330580
+tags: $:/tags/tiddlyrpg/RulesFields
+title: $:/tiddlyrpg/rules/fields/spells
+type: application/json
+
+{
+    "types": ["Spell"],
+    "fields": ["level", "school", "ritual", "casting-time", "casting-trigger", "range", "components", "duration", "concentration",
+        "area", "area-shape", "save", "save-success", "attack", "damage", "healing", "classes"],
+    "labels": {"classes": "Rules/Field/classes/spell"},
+    "summary": {
+        "key": "Rules/Summary/Spell",
+        "byValue": {"level": {"0": "Rules/Summary/Cantrip"}},
+        "flags": {"ritual": "Rules/Summary/Ritual"}
+    },
+    "groups": [
+        {"id": "casting", "fields": ["casting-time", "range", "components", "duration"],
+            "combine": [
+                {"fields": ["casting-time", "casting-trigger"], "key": "Rules/Line/casting"},
+                {"fields": ["duration", "concentration"], "key": "Rules/Line/duration", "flags": {"concentration": "Rules/Line/Concentration"}}
+            ]},
+        {"id": "effect", "fields": ["area", "save", "attack", "damage", "healing"],
+            "combine": [
+                {"fields": ["area", "area-shape"], "key": "Rules/Line/area"},
+                {"fields": ["save", "save-success"], "key": "Rules/Line/save"}
+            ]},
+        {"id": "lists", "fields": ["classes"]}
+    ]
+}

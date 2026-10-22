@@ -1,5 +1,5 @@
 created: 20261009183319191
-modified: 20261014200240000
+modified: 20261022175326591
 title: $:/tiddlyrpg/language/de-DE/
 
 # Einheiten, Würfel und die Schadensgrammatik von D&D 5e (2014) auf Deutsch; Belege der Faktoren siehe en-GB.
@@ -57,3 +57,179 @@ Rules/Damage/Extras: zusätzlich, zusätzlichen
 Rules/Damage/necrotic/Parse: nekrotischen Schaden, nekrotischem Schaden
 Rules/Damage/psychic/Parse: psychischen Schaden, psychischem Schaden
 Rules/Damage/radiant/Parse: gleißenden Schaden, gleißendem Schaden
+
+# Namen der Bereiche der Felder von Gegenständen, Zaubern und Kreaturen
+Rules/Domain/Area: Wirkungsbereiche
+Rules/Domain/Challenge: Herausforderungsgrade
+Rules/Domain/Class: Klassen
+Rules/Domain/Component: Komponenten
+Rules/Domain/DamageGroup: Schaden neben den Arten
+Rules/Domain/ItemCategory: Arten von Gegenständen
+Rules/Domain/Movement: Bewegungsarten
+Rules/Domain/Rarity: Seltenheit
+Rules/Domain/SaveSuccess: Ergebnisse von Rettungswürfen
+Rules/Domain/Speed: Geschwindigkeit
+Rules/Domain/SpellAttack: Zauberangriffe
+Rules/Domain/SpellWord: Wörter für Reichweite und Wirkungsdauer
+Rules/Domain/Time: Zeit
+Rules/Domain/Volume: Volumen
+
+# Zeit (ohne Umrechnung, nur Beschriftung): S. 142 "Zeitaufwand: 1 Aktion", S. 132 "1 Bonusaktion",
+# S. 141 "1 Reaktion", S. 130 "1 Runde", S. 142 "10 Minuten", S. 123 "8 Stunden", S. 212 "1 Tag"
+Rules/Unit/action: Aktion
+Rules/Unit/action/Plural: Aktionen
+Rules/Unit/action/Parse: Aktionen
+Rules/Unit/bonus-action: Bonusaktion
+Rules/Unit/bonus-action/Plural: Bonusaktionen
+Rules/Unit/bonus-action/Parse: Bonusaktionen
+Rules/Unit/reaction: Reaktion
+Rules/Unit/reaction/Plural: Reaktionen
+Rules/Unit/reaction/Parse: Reaktionen
+Rules/Unit/round: Runde
+Rules/Unit/round/Plural: Runden
+Rules/Unit/round/Parse: Runden
+Rules/Unit/minute: Minute
+Rules/Unit/minute/Plural: Minuten
+Rules/Unit/minute/Parse: Minuten, Min.
+Rules/Unit/hour: Stunde
+Rules/Unit/hour/Plural: Stunden
+Rules/Unit/hour/Parse: Stunden, Std.
+Rules/Unit/day: Tag
+Rules/Unit/day/Plural: Tage
+Rules/Unit/day/Parse: Tage, Tagen
+
+# Geschwindigkeit von Fahrzeugen: S. 76 "Galeere ... 6,4 km/h" (en S. 72 "4 mph": Faktor 1,6)
+Rules/Unit/mph: mph
+Rules/Unit/mph/Parse: Meilen pro Stunde
+Rules/Unit/kmh: km/h
+Rules/Unit/kmh/Parse: Kilometer pro Stunde, Stundenkilometer
+
+# Volumen: S. 74 "Krug oder Karaffe 4 Liter Flüssigkeit" (en S. 70 "1 gallon": Faktor 4), S. 249
+# Nimmervoller Beutel "1.792 Liter" (en S. 210 "64 cubic feet": Faktor 28)
+Rules/Unit/gal: gal
+Rules/Unit/gal/Parse: Gallone, Gallonen
+Rules/Unit/ft3: ft³
+Rules/Unit/ft3/Parse: Kubikfuß
+Rules/Unit/l: Liter
+Rules/Unit/l/Parse: Litern
+
+# Die Felder von Gegenständen, Zaubern und Kreaturen (Beschriftungen im Block); Werteblock S. 292,
+# Kopf des Zaubers S. 142, Rüstungs- und Waffentabelle S. 67 und 69
+Rules/Field/category: Art
+Rules/Field/rarity: Seltenheit
+Rules/Field/cursed: Verflucht
+Rules/Field/attunement: Einstimmung
+Rules/Field/classes: Klassen
+Rules/Field/classes/attunement: Einstimmung durch
+Rules/Field/classes/spell: Klassen
+Rules/Field/damage: Schaden
+Rules/Field/damage-versatile: Vielseitig
+Rules/Field/range: Reichweite
+Rules/Field/bonus: Bonus
+Rules/Field/ac: Rüstungsklasse
+Rules/Field/ac-dex: Plus GES-Modifikator
+Rules/Field/ac-dex-max: GES-Modifikator höchstens
+Rules/Field/strength-min: Stärke
+Rules/Field/stealth: Heimlichkeit
+Rules/Field/weight: Gewicht
+Rules/Field/charges: Ladungen
+Rules/Field/recharge: Erhält zurück
+Rules/Field/recharge-on: Erneuerung
+Rules/Field/save: Rettungswurf
+Rules/Field/save-dc: SG
+Rules/Field/save-success: Bei Erfolg
+Rules/Field/area: Wirkungsbereich
+Rules/Field/area-shape: Form
+Rules/Field/duration: Wirkungsdauer
+Rules/Field/concentration: Konzentration
+Rules/Field/ability: Attribut
+Rules/Field/ability-score: Wert
+Rules/Field/ability-max: Wert höchstens
+Rules/Field/spell-attack-bonus: Bonus auf Zauberangriffe
+Rules/Field/spell-dc-bonus: Bonus auf den Zauber-SG
+Rules/Field/saving-throw-bonus: Bonus auf Rettungswürfe
+Rules/Field/resistances: Schadensresistenzen
+Rules/Field/resistances/grants: Gewährt Resistenz
+Rules/Field/immunities: Schadensimmunitäten
+Rules/Field/immunities/grants: Gewährt Immunität
+Rules/Field/vulnerabilities: Schadensanfälligkeiten
+Rules/Field/vulnerabilities/grants: Macht anfällig
+Rules/Field/condition-immunities: Zustandsimmunitäten
+Rules/Field/condition-immunities/grants: Gewährt Zustandsimmunität
+Rules/Field/speed: Bewegungsrate
+Rules/Field/light-bright: Licht
+Rules/Field/light-dim: Dämmriges Licht
+Rules/Field/capacity: Fassungsvermögen
+Rules/Field/capacity-volume: Volumen
+Rules/Field/travel-speed: Geschwindigkeit
+Rules/Field/healing: Heilung
+Rules/Field/level: Grad
+Rules/Field/level/spell: Zaubergrad
+Rules/Field/school: Schule
+Rules/Field/ritual: Ritual
+Rules/Field/casting-time: Zeitaufwand
+Rules/Field/casting-trigger: Auslöser
+Rules/Field/components: Komponenten
+Rules/Field/attack: Angriff
+Rules/Field/size: Größe
+Rules/Field/creature-type: Typ
+Rules/Field/subtype: Untertyp
+Rules/Field/swarm: Schwarm aus
+Rules/Field/alignment: Gesinnung
+Rules/Field/hp: Trefferpunkte
+Rules/Field/str: STR
+Rules/Field/dex: GES
+Rules/Field/con: KON
+Rules/Field/int: INT
+Rules/Field/wis: WEI
+Rules/Field/cha: CHA
+Rules/Field/cr: Herausforderungsgrad
+Rules/Field/xp: EP
+Rules/Field/proficiency: Übungsbonus
+Rules/Field/saves: Rettungswürfe
+Rules/Field/skills: Fertigkeiten
+Rules/Field/expertise: Expertise
+Rules/Field/senses: Sinne
+Rules/Field/languages: Sprachen
+Rules/Field/carrying-capacity: Traglast
+Rules/Field/height: Körpergröße
+
+# Kopfzeilen: Gegenstand S. 228 "Wundersamer Gegenstand, selten (erfordert Einstimmung)"; Zauber
+# S. 142 "Hervorrufungszauber 3. Grades", S. 163 "Erkenntniszauber 1. Grades (Ritual)", S. 142
+# "Zaubertrick der Hervorrufung"; Kreatur S. 438 "Mittelgroßes Tier, gesinnungslos", S. 444
+# "Mittelgroßer Humanoide (jedes Volk), jede Gesinnung", S. 414 "Mittelgroßer Schwarm winziger
+# Tiere, gesinnungslos"
+Rules/Summary/Item: $category${, $rarity$}{ $attunement.flag$}{ $cursed.flag$}
+Rules/Summary/Attunement: (erfordert Einstimmung)
+Rules/Summary/Cursed: (verflucht)
+Rules/Summary/Spell: $school$ $level.ordinal$ Grades{ $ritual.flag$}
+Rules/Summary/Cantrip: Zaubertrick $school.cantrip$
+Rules/Summary/Ritual: (Ritual)
+Rules/Summary/Creature: $size.@creature-type$ $creature-type${ ($subtype$)}{, $alignment.name$}
+Rules/Summary/Swarm: $size.m$ Schwarm $swarm.genpl$ $creature-type.genpl${, $alignment.name$}
+Rules/Ordinal/1: 1.
+Rules/Ordinal/2: 2.
+Rules/Ordinal/3: 3.
+Rules/Ordinal/4: 4.
+Rules/Ordinal/5: 5.
+Rules/Ordinal/6: 6.
+Rules/Ordinal/7: 7.
+Rules/Ordinal/8: 8.
+Rules/Ordinal/9: 9.
+
+# Zeilen aus mehreren Feldern: S. 69 "Vielseitig (1W10)", S. 67 "11 + GES-Modifikator (max. 2)",
+# S. 168 "Konzentration, bis zu 1 Minute", S. 292 "Herausforderungsgrad 10 (5.900 EP)", S. 249
+# Nimmervoller Beutel "250 Kilogramm und maximal 1.792 Liter"
+Rules/Line/damage: $damage${, vielseitig ($damage-versatile$)}
+Rules/Line/ac: $ac${ + $ac-dex.flag$}{ (max. $ac-dex-max$)}
+Rules/Line/AcDex: GES-Modifikator
+Rules/Line/charges: $charges${, erhält $recharge$ zurück}{ (Erneuerung: $recharge-on$)}
+Rules/Line/save: $save.save${ SG $save-dc$}{, bei Erfolg $save-success$}
+Rules/Line/area: {$area-shape$ von }$area$
+Rules/Line/duration: {$concentration.flag$ }$duration$
+Rules/Line/Concentration: Konzentration, bis zu
+Rules/Line/ability: $ability.name${ $ability-score$}{ (max. $ability-max$)}
+Rules/Line/light: $light-bright$ hell{, dazu $light-dim$ dämmrig}
+Rules/Line/capacity: $capacity${, höchstens $capacity-volume$}
+Rules/Line/casting: $casting-time${, $casting-trigger$}
+Rules/Line/challenge: $cr${ ($xp$ EP)}

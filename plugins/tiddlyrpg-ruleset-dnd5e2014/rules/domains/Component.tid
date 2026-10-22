@@ -1,0 +1,23 @@
+created: 20261022173518303
+modified: 20261022173518303
+tags: $:/tags/tiddlyrpg/RulesDomain
+title: $:/tiddlyrpg/rules/domain/Component
+type: application/json
+
+{
+    "domain": "Component",
+    "type": "label",
+    "keys": "Rules/Term/",
+    "entries": [
+        {
+            "id": "v"
+        },
+        {
+            "id": "s"
+        },
+        {
+            "id": "m"
+        }
+    ],
+    "example": "v, s, m"
+}

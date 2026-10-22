@@ -1,5 +1,5 @@
 created: 20261014200240000
-modified: 20261014200240000
+modified: 20261022173518303
 tags: $:/tags/tiddlyrpg/RulesDomain
 title: $:/tiddlyrpg/rules/domain/Skill
 type: application/json
@@ -10,58 +10,76 @@ type: application/json
     "keys": "Rules/Term/",
     "entries": [
         {
-            "id": "acrobatics"
+            "id": "acrobatics",
+            "ability": "dex"
         },
         {
-            "id": "animal-handling"
+            "id": "animal-handling",
+            "ability": "wis"
         },
         {
-            "id": "arcana"
+            "id": "arcana",
+            "ability": "int"
         },
         {
-            "id": "athletics"
+            "id": "athletics",
+            "ability": "str"
         },
         {
-            "id": "deception"
+            "id": "deception",
+            "ability": "cha"
         },
         {
-            "id": "history"
+            "id": "history",
+            "ability": "int"
         },
         {
-            "id": "insight"
+            "id": "insight",
+            "ability": "wis"
         },
         {
-            "id": "intimidation"
+            "id": "intimidation",
+            "ability": "cha"
         },
         {
-            "id": "investigation"
+            "id": "investigation",
+            "ability": "int"
         },
         {
-            "id": "medicine"
+            "id": "medicine",
+            "ability": "wis"
         },
         {
-            "id": "nature"
+            "id": "nature",
+            "ability": "int"
         },
         {
-            "id": "perception"
+            "id": "perception",
+            "ability": "wis"
         },
         {
-            "id": "performance"
+            "id": "performance",
+            "ability": "cha"
         },
         {
-            "id": "persuasion"
+            "id": "persuasion",
+            "ability": "cha"
         },
         {
-            "id": "religion"
+            "id": "religion",
+            "ability": "int"
         },
         {
-            "id": "sleight-of-hand"
+            "id": "sleight-of-hand",
+            "ability": "dex"
         },
         {
-            "id": "stealth"
+            "id": "stealth",
+            "ability": "dex"
         },
         {
-            "id": "survival"
+            "id": "survival",
+            "ability": "wis"
         }
     ],
     "example": "perception"

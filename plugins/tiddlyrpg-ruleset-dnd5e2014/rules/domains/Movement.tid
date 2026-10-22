@@ -1,0 +1,33 @@
+created: 20261022173518303
+modified: 20261022173518303
+tags: $:/tags/tiddlyrpg/RulesDomain
+title: $:/tiddlyrpg/rules/domain/Movement
+type: application/json
+
+{
+    "domain": "Movement",
+    "type": "label",
+    "keys": "Rules/Term/",
+    "entries": [
+        {
+            "id": "walk",
+            "bare": true
+        },
+        {
+            "id": "burrow"
+        },
+        {
+            "id": "climb"
+        },
+        {
+            "id": "fly"
+        },
+        {
+            "id": "swim"
+        },
+        {
+            "id": "hover"
+        }
+    ],
+    "example": "walk 30 ft, fly 60 ft"
+}

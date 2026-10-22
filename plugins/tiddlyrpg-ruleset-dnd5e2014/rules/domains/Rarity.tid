@@ -1,0 +1,32 @@
+created: 20261022173518303
+modified: 20261022173518303
+tags: $:/tags/tiddlyrpg/RulesDomain
+title: $:/tiddlyrpg/rules/domain/Rarity
+type: application/json
+
+{
+    "domain": "Rarity",
+    "type": "label",
+    "keys": "Rules/Term/",
+    "entries": [
+        {
+            "id": "common-rarity"
+        },
+        {
+            "id": "uncommon"
+        },
+        {
+            "id": "rare"
+        },
+        {
+            "id": "very-rare"
+        },
+        {
+            "id": "legendary"
+        },
+        {
+            "id": "artifact"
+        }
+    ],
+    "example": "very rare"
+}

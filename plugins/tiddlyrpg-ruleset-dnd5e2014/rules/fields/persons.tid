@@ -1,0 +1,13 @@
+created: 20261022173330580
+modified: 20261022173330580
+tags: $:/tags/tiddlyrpg/RulesFields
+title: $:/tiddlyrpg/rules/fields/persons
+type: application/json
+
+{
+    "types": ["Person", "Player"],
+    "fields": ["height", "weight"],
+    "groups": [
+        {"id": "body", "layout": "inline", "fields": ["height", "weight"]}
+    ]
+}

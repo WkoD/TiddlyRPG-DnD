@@ -57,9 +57,9 @@ function needed() {
 			});
 		} else if(d.type === "label") {
 			d.entries.forEach(function(e) {
-				list.push("Rules/Term/" + e.id);
+				list.push((d.keys || "Rules/Term/") + e.id);
 				if(ABBREVIATED.indexOf(d.domain) !== -1) {
-					list.push("Rules/Term/" + e.id + "/name");
+					list.push((d.keys || "Rules/Term/") + e.id + "/name");
 				}
 			});
 		}
@@ -67,22 +67,24 @@ function needed() {
 	return list.filter(function(key, index) { return list.indexOf(key) === index; });
 }
 
-test("the 17 domains of the ruleset with their types", function() {
+test("the 31 domains of the ruleset with their types", function() {
 	var types = {};
 	domains().forEach(function(d) { types[d.domain] = d.type; });
 	assert.deepEqual(types, {
-		Ability: "label", Action: "label", Alignment: "label", Condition: "label", CreatureType: "label",
-		Damage: "damage", Dice: "tokens", Language: "label", Length: "unit", Mechanics: "label",
-		School: "label", Sense: "label", Size: "label", Skill: "label", Spellcasting: "label",
-		Terms: "label", Weight: "unit"
+		Ability: "label", Action: "label", Alignment: "label", Area: "label", Challenge: "label", Class: "label",
+		Component: "label", Condition: "label", CreatureType: "label", Damage: "damage", DamageGroup: "label",
+		Dice: "tokens", ItemCategory: "label", Language: "label", Length: "unit", Mechanics: "label",
+		Movement: "label", Rarity: "label", SaveSuccess: "label", School: "label", Sense: "label", Size: "label",
+		Skill: "label", Speed: "unit", SpellAttack: "label", SpellWord: "label", Spellcasting: "label",
+		Terms: "label", Time: "unit", Volume: "unit", Weight: "unit"
 	});
 });
 
-test("every id of a label domain is unique across all of them (<<term>> takes the first)", function() {
+test("every id that stands alone is unique across the label domains (<<term>> takes the first)", function() {
 	var seen = {},
 		twice = [];
 	domains().filter(function(d) { return d.type === "label"; }).forEach(function(d) {
-		d.entries.forEach(function(e) {
+		d.entries.filter(function(e) { return !e.for || e.main; }).forEach(function(e) {
 			var id = e.id.toLowerCase();
 			if(seen[id]) {
 				twice.push(id + ": " + seen[id] + ", " + d.domain);
@@ -91,6 +93,24 @@ test("every id of a label domain is unique across all of them (<<term>> takes th
 		});
 	});
 	assert.deepEqual(twice, []);
+});
+
+test("every trait names parents of its domain, and its domain has keys of its own", function() {
+	var wrong = [];
+	domains().filter(function(d) { return d.type === "label"; }).forEach(function(d) {
+		var ids = d.entries.map(function(e) { return e.id; });
+		d.entries.filter(function(e) { return e.for; }).forEach(function(e) {
+			e.for.forEach(function(parent) {
+				if(ids.indexOf(parent) === -1 || parent === e.id) {
+					wrong.push(d.domain + ": " + e.id + " for " + parent);
+				}
+			});
+		});
+		if(d.entries.some(function(e) { return e.for; }) && (!d.keys || d.keys === "Rules/Term/")) {
+			wrong.push(d.domain + ": traits share the keys of the terms");
+		}
+	});
+	assert.deepEqual(wrong, []);
 });
 
 test("every domain has an example for the settings tab", function() {
@@ -109,7 +129,7 @@ test("the terms of the SRD 5.1 by group: conditions, actions, mechanics, spellca
 	var sizes = {};
 	domains().forEach(function(d) { sizes[d.domain] = d.entries ? d.entries.length : 0; });
 	assert.deepEqual([sizes.Condition, sizes.Action, sizes.Mechanics, sizes.Spellcasting, sizes.Sense, sizes.Skill,
-		sizes.CreatureType, sizes.Size, sizes.Alignment, sizes.School, sizes.Language], [15, 14, 18, 7, 6, 18, 14, 6, 9, 8, 16]);
+		sizes.CreatureType, sizes.Size, sizes.Alignment, sizes.School, sizes.Language], [15, 14, 19, 7, 6, 18, 14, 6, 15, 8, 16]);
 });
 
 CODES.forEach(function(code) {

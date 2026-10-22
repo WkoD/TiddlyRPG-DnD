@@ -1,0 +1,35 @@
+created: 20261022173518303
+modified: 20261022173518303
+tags: $:/tags/tiddlyrpg/RulesDomain
+title: $:/tiddlyrpg/rules/domain/SpellWord
+type: application/json
+
+{
+    "domain": "SpellWord",
+    "type": "label",
+    "keys": "Rules/Term/",
+    "entries": [
+        {
+            "id": "self"
+        },
+        {
+            "id": "touch"
+        },
+        {
+            "id": "sight"
+        },
+        {
+            "id": "unlimited"
+        },
+        {
+            "id": "special"
+        },
+        {
+            "id": "instantaneous"
+        },
+        {
+            "id": "until-dispelled"
+        }
+    ],
+    "example": "touch"
+}

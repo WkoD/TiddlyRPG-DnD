@@ -1,0 +1,23 @@
+created: 20261022173330580
+modified: 20261022173330580
+tags: $:/tags/tiddlyrpg/RulesFields
+title: $:/tiddlyrpg/rules/fields/creatures
+type: application/json
+
+{
+    "types": ["Creature"],
+    "fields": ["size", "creature-type", "subtype", "swarm", "alignment", "ac", "hp", "speed",
+        "str", "dex", "con", "int", "wis", "cha", "saves", "skills", "expertise",
+        "vulnerabilities", "resistances", "immunities", "condition-immunities", "senses", "languages",
+        "cr", "xp", "proficiency", "carrying-capacity"],
+    "summary": {"key": "Rules/Summary/Creature", "ifSet": {"swarm": "Rules/Summary/Swarm"}},
+    "groups": [
+        {"id": "defense", "fields": ["ac", "hp", "speed"]},
+        {"id": "abilities", "layout": "row", "fields": ["str", "dex", "con", "int", "wis", "cha"]},
+        {"id": "details", "fields": ["saves", "skills", "vulnerabilities", "resistances", "immunities", "condition-immunities",
+            "senses", "languages", "cr", "proficiency"],
+            "combine": [{"fields": ["cr", "xp"], "key": "Rules/Line/challenge"}],
+            "relations": ["spells"]},
+        {"id": "trade", "layout": "inline", "fields": ["price", "carrying-capacity"]}
+    ]
+}

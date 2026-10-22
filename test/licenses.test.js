@@ -67,7 +67,7 @@ test("the ruleset: its readme, compatible with fifth edition, nothing else on Wi
 	assert.match(readme, /^\$:\/plugins\/tiddlyrpg-ruleset-dnd5e2014 - the rules system D&D 5e, rules of 2014, compatible with fifth edition/);
 	assert.match(readme, /Each plugin works on its own/);
 	assert.doesNotMatch(readme, /Calendar of Harptos as calendar data|npm/);
-	assert.match(license, /contains terms \(damage types, abilities, abbreviations, units and their factors\)/);
+	assert.match(license, /contains terms \(damage types, abilities, item categories, abbreviations,\s+units and their factors, the forms of header lines\)/);
 	assert.doesNotMatch(license, /Fan Content|endorsed|affiliated|coins/);
 	assert.match(wiki.getTiddler(RULESET).fields.description, /compatible with fifth edition/);
 });

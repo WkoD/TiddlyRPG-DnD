@@ -1,5 +1,5 @@
 created: 20261009183319191
-modified: 20261014200240000
+modified: 20261022175326591
 title: $:/tiddlyrpg/language/en-GB/
 
 # Units, dice and the damage grammar of D&D 5e (2014) in English; factors of the SRD 5.1 per pair:
@@ -61,3 +61,178 @@ Rules/Damage/Extras: extra
 Rules/Damage/bludgeoning/Parse: bludgeon
 Rules/Damage/piercing/Parse: pierce
 Rules/Damage/slashing/Parse: slash
+
+# Names of the domains of the fields of items, spells and creatures
+Rules/Domain/Area: Areas of effect
+Rules/Domain/Challenge: Challenge ratings
+Rules/Domain/Class: Classes
+Rules/Domain/Component: Components
+Rules/Domain/DamageGroup: Damage beside the types
+Rules/Domain/ItemCategory: Item categories
+Rules/Domain/Movement: Movement
+Rules/Domain/Rarity: Rarity
+Rules/Domain/SaveSuccess: Saving throw results
+Rules/Domain/Speed: Speed
+Rules/Domain/SpellAttack: Spell attacks
+Rules/Domain/SpellWord: Range and duration words
+Rules/Domain/Time: Time
+Rules/Domain/Volume: Volume
+
+# Time (no conversion, labels only): p. 144 "Casting Time: 1 action", p. 123 "1 bonus action",
+# p. 131 "1 reaction", p. 124 "1 round", p. 144 "10 minutes", p. 114 "8 hours", p. 117 "10 days"
+Rules/Unit/action: action
+Rules/Unit/action/Plural: actions
+Rules/Unit/action/Parse: actions
+Rules/Unit/bonus-action: bonus action
+Rules/Unit/bonus-action/Plural: bonus actions
+Rules/Unit/bonus-action/Parse: bonus actions
+Rules/Unit/reaction: reaction
+Rules/Unit/reaction/Plural: reactions
+Rules/Unit/reaction/Parse: reactions
+Rules/Unit/round: round
+Rules/Unit/round/Plural: rounds
+Rules/Unit/round/Parse: rounds, rd.
+Rules/Unit/minute: minute
+Rules/Unit/minute/Plural: minutes
+Rules/Unit/minute/Parse: minutes, min, min.
+Rules/Unit/hour: hour
+Rules/Unit/hour/Plural: hours
+Rules/Unit/hour/Parse: hours, hr
+Rules/Unit/day: day
+Rules/Unit/day/Plural: days
+Rules/Unit/day/Parse: days
+
+# Speed of vehicles: p. 72 "Galley ... 4 mph" (de p. 76 "6,4 km/h": factor 1.6)
+Rules/Unit/mph: mph
+Rules/Unit/mph/Parse: miles per hour, mile per hour
+Rules/Unit/kmh: km/h
+Rules/Unit/kmh/Parse: kilometers per hour, kilometres per hour, kph
+
+# Volume: p. 70 "Jug or pitcher 1 gallon liquid" (de p. 74 "4 Liter": factor 4), p. 210 Bag of
+# Holding "64 cubic feet" (de p. 249 "1.792 Liter": factor 28)
+Rules/Unit/gal: gal
+Rules/Unit/gal/Parse: gallon, gallons
+Rules/Unit/ft3: ft³
+Rules/Unit/ft3/Parse: cubic feet, cubic foot, cu ft, ft3
+Rules/Unit/l: l
+Rules/Unit/l/Parse: liter, liters, litre, litres
+
+# The fields of items, spells and creatures (the labels of their blocks); stat block p. 261, spell
+# header p. 144, armor and weapon tables p. 63 and 65
+Rules/Field/category: Category
+Rules/Field/rarity: Rarity
+Rules/Field/cursed: Cursed
+Rules/Field/attunement: Attunement
+Rules/Field/classes: Classes
+Rules/Field/classes/attunement: Attunement by
+Rules/Field/classes/spell: Classes
+Rules/Field/damage: Damage
+Rules/Field/damage-versatile: Versatile
+Rules/Field/range: Range
+Rules/Field/bonus: Bonus
+Rules/Field/ac: Armor Class
+Rules/Field/ac-dex: Plus Dex modifier
+Rules/Field/ac-dex-max: Dex modifier at most
+Rules/Field/strength-min: Strength
+Rules/Field/stealth: Stealth
+Rules/Field/weight: Weight
+Rules/Field/charges: Charges
+Rules/Field/recharge: Regains
+Rules/Field/recharge-on: Recharge
+Rules/Field/save: Saving Throw
+Rules/Field/save-dc: Save DC
+Rules/Field/save-success: On a success
+Rules/Field/area: Area of effect
+Rules/Field/area-shape: Shape
+Rules/Field/duration: Duration
+Rules/Field/concentration: Concentration
+Rules/Field/ability: Ability
+Rules/Field/ability-score: Score
+Rules/Field/ability-max: Score at most
+Rules/Field/spell-attack-bonus: Spell attack bonus
+Rules/Field/spell-dc-bonus: Spell save DC bonus
+Rules/Field/saving-throw-bonus: Saving throw bonus
+Rules/Field/resistances: Damage Resistances
+Rules/Field/resistances/grants: Grants resistance
+Rules/Field/immunities: Damage Immunities
+Rules/Field/immunities/grants: Grants immunity
+Rules/Field/vulnerabilities: Damage Vulnerabilities
+Rules/Field/vulnerabilities/grants: Gives vulnerability
+Rules/Field/condition-immunities: Condition Immunities
+Rules/Field/condition-immunities/grants: Grants condition immunity
+Rules/Field/speed: Speed
+Rules/Field/light-bright: Light
+Rules/Field/light-dim: Dim light
+Rules/Field/capacity: Capacity
+Rules/Field/capacity-volume: Volume
+Rules/Field/travel-speed: Speed
+Rules/Field/healing: Healing
+Rules/Field/level: Level
+Rules/Field/level/spell: Spell level
+Rules/Field/school: School
+Rules/Field/ritual: Ritual
+Rules/Field/casting-time: Casting Time
+Rules/Field/casting-trigger: Trigger
+Rules/Field/components: Components
+Rules/Field/attack: Attack
+Rules/Field/size: Size
+Rules/Field/creature-type: Type
+Rules/Field/subtype: Subtype
+Rules/Field/swarm: Swarm of
+Rules/Field/alignment: Alignment
+Rules/Field/hp: Hit Points
+Rules/Field/str: STR
+Rules/Field/dex: DEX
+Rules/Field/con: CON
+Rules/Field/int: INT
+Rules/Field/wis: WIS
+Rules/Field/cha: CHA
+Rules/Field/cr: Challenge
+Rules/Field/xp: XP
+Rules/Field/proficiency: Proficiency Bonus
+Rules/Field/saves: Saving Throws
+Rules/Field/skills: Skills
+Rules/Field/expertise: Expertise
+Rules/Field/senses: Senses
+Rules/Field/languages: Languages
+Rules/Field/carrying-capacity: Carrying capacity
+Rules/Field/height: Height
+
+# Header lines: item p. 207 "Wondrous item, rare (requires attunement)"; spell p. 144 "3rd-level
+# evocation", p. 134 "1st-level divination (ritual)", p. 144 "Evocation cantrip"; creature p. 393
+# "Medium beast, unaligned", p. 395 "Medium humanoid (any race), any alignment", p. 389 "Medium
+# swarm of Tiny beasts, unaligned"
+Rules/Summary/Item: $category${, $rarity$}{ $attunement.flag$}{ $cursed.flag$}
+Rules/Summary/Attunement: (requires attunement)
+Rules/Summary/Cursed: (cursed)
+Rules/Summary/Spell: $level.ordinal$-level $school${ $ritual.flag$}
+Rules/Summary/Cantrip: $school$ cantrip
+Rules/Summary/Ritual: (ritual)
+Rules/Summary/Creature: $size$ $creature-type${ ($subtype$)}{, $alignment.name$}
+Rules/Summary/Swarm: $size$ swarm of $swarm$ $creature-type.plural${, $alignment.name$}
+Rules/Ordinal/1: 1st
+Rules/Ordinal/2: 2nd
+Rules/Ordinal/3: 3rd
+Rules/Ordinal/4: 4th
+Rules/Ordinal/5: 5th
+Rules/Ordinal/6: 6th
+Rules/Ordinal/7: 7th
+Rules/Ordinal/8: 8th
+Rules/Ordinal/9: 9th
+
+# Lines that join fields: p. 65 "Versatile (1d10)", p. 63 "11 + Dex modifier (max 2)", p. 166
+# "Concentration, up to 1 minute", p. 261 "Challenge 10 (5,900 XP)", p. 210 Bag of Holding "500
+# pounds, not exceeding a volume of 64 cubic feet"
+Rules/Line/damage: $damage${, versatile ($damage-versatile$)}
+Rules/Line/ac: $ac${ + $ac-dex.flag$}{ (max $ac-dex-max$)}
+Rules/Line/AcDex: Dex modifier
+Rules/Line/charges: $charges${, regains $recharge$}{ (recharge: $recharge-on$)}
+Rules/Line/save: $save.save${ DC $save-dc$}{, $save-success$ on a success}
+Rules/Line/area: $area${ $area-shape$}
+Rules/Line/duration: {$concentration.flag$ }$duration$
+Rules/Line/Concentration: Concentration, up to
+Rules/Line/ability: $ability.name${ $ability-score$}{ (max $ability-max$)}
+Rules/Line/light: $light-bright$ bright{, $light-dim$ dim beyond}
+Rules/Line/capacity: $capacity${, at most $capacity-volume$}
+Rules/Line/casting: $casting-time${, $casting-trigger$}
+Rules/Line/challenge: $cr${ ($xp$ XP)}

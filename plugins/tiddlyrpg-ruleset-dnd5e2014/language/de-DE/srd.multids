@@ -1,5 +1,5 @@
 created: 20261009183319191
-modified: 20261014200240000
+modified: 20261022175326591
 title: $:/tiddlyrpg/language/de-DE/
 
 # Begriffe des Systemreferenzdokuments 5.1 (deutsch, CC-BY-4.0, siehe den Tab license), von Hand;
@@ -259,3 +259,222 @@ Rules/Term/infernal: Infernalisch
 Rules/Term/primordial: Urtümlich
 Rules/Term/sylvan: Sylvanisch
 Rules/Term/undercommon: Gemeinsprache der Unterreiche
+
+# Seltenheit magischer Gegenstände: S. 226-228 ("Seltenheit"), im Kopf des Gegenstands, z. B.
+# S. 228 "Wundersamer Gegenstand, selten (erfordert Einstimmung)", S. 270 "Trank, gewöhnlich",
+# S. 282 "Artefakt"; die ID von common ist common-rarity, common ist die Sprache
+Rules/Term/common-rarity: gewöhnlich
+Rules/Term/uncommon: ungewöhnlich
+Rules/Term/rare: selten
+Rules/Term/very-rare: sehr selten
+Rules/Term/legendary: legendär
+Rules/Term/artifact: Artefakt
+
+# Arten von Gegenständen: Waffen S. 67-70 (einfache Waffen und Kriegswaffen, Nahkampf- und
+# Fernkampfwaffen, Eigenschaften S. 68), Rüstung S. 66-67 (leichte, mittelschwere, schwere Rüstung;
+# Schild S. 67), Abenteurerausrüstung S. 70-73 (Munition, arkaner Fokus, druidischer Fokus, heiliges
+# Symbol S. 73), Ausrüstungspakete S. 74, Werkzeuge S. 74-75 (Handwerkszeug, Musikinstrument, Spiel),
+# Reittiere und Fahrzeuge S. 76 ("Sattel und Zaumzeug, Geschirr und Fuhrwerke", "Land- oder
+# Wasserfahrzeug"), Handelswaren S. 76, Verpflegung S. 78 ("Unterkunft und Verpflegung"), Gifte
+# S. 224 (Einnahme, Einatmen, Verletzung, Kontakt); magische Gegenstände S. 228-282 (Ring, Zepter,
+# Stab, Zauberstab, Trank, Schriftrolle, wundersamer Gegenstand). Waffengruppen: S. 68 "Schwerter,
+# Äxte und Stangenwaffen", S. 238 "Waffe (beliebiges Schwert)", S. 230 "beliebige Axt", S. 102
+# "Bogen oder einer Armbrust"; die Zuordnung der Waffen ist unsere Lesart. Die Eigenschaft
+# Geschosse (S. 68) heißt hier wie die Munition, weil eine ID nur einen Begriff hat. Munitionsarten
+# S. 73 ("Pfeile (20)", "Armbrustbolzen (20)", "Schleuderkugeln (20)", "Blasrohrpfeile (50)").
+# Kriegswaffe, Nahkampf- und Fernkampfwaffe gibt es nur als Wort mit der Waffe (S. 68)
+Rules/Category/weapon: Waffe
+Rules/Category/simple: einfach
+Rules/Category/simple/weapon: einfache Waffe
+Rules/Category/martial: Kriegswaffe
+Rules/Category/martial/weapon: Kriegswaffe
+Rules/Category/melee: Nahkampf
+Rules/Category/ranged: Fernkampf
+Rules/Category/sword: Schwert
+Rules/Category/axe: Axt
+Rules/Category/bow: Bogen
+Rules/Category/crossbow: Armbrust
+Rules/Category/mace: Streitkolben
+Rules/Category/hammer: Hammer
+Rules/Category/polearm: Stangenwaffe
+Rules/Category/spear: Speer
+Rules/Category/finesse: Finesse
+Rules/Category/heavy: schwer
+Rules/Category/heavy/armor: schwere Rüstung
+Rules/Category/light: leicht
+Rules/Category/light/armor: leichte Rüstung
+Rules/Category/medium: mittelschwer
+Rules/Category/medium/armor: mittelschwere Rüstung
+Rules/Category/loading: laden
+Rules/Category/reach: weitreichend
+Rules/Category/special: Besonders
+Rules/Category/thrown: Wurfwaffe
+Rules/Category/two-handed: zweihändig
+Rules/Category/versatile: vielseitig
+Rules/Category/armor: Rüstung
+Rules/Category/shield: Schild
+Rules/Category/ammunition: Munition
+Rules/Category/arrow: Pfeile
+Rules/Category/bolt: Armbrustbolzen
+Rules/Category/sling-bullet: Schleuderkugeln
+Rules/Category/blowgun-needle: Blasrohrpfeile
+Rules/Category/focus: Zauberfokus
+Rules/Category/arcane: arkan
+Rules/Category/arcane/focus: arkaner Fokus
+Rules/Category/druidic: druidisch
+Rules/Category/druidic/focus: druidischer Fokus
+Rules/Category/holy: heilig
+Rules/Category/holy/focus: heiliges Symbol
+Rules/Category/tool: Werkzeug
+Rules/Category/artisan: Handwerk
+Rules/Category/artisan/tool: Handwerkszeug
+Rules/Category/instrument: Instrument
+Rules/Category/instrument/tool: Musikinstrument
+Rules/Category/gaming: Spiel
+Rules/Category/gaming/tool: Spiel
+Rules/Category/vehicle: Fahrzeug
+Rules/Category/land: Land
+Rules/Category/land/vehicle: Landfahrzeug
+Rules/Category/water: Wasser
+Rules/Category/water/vehicle: Wasserfahrzeug
+Rules/Category/tack: Sattel und Zaumzeug
+Rules/Category/adventuring-gear: Abenteurerausrüstung
+Rules/Category/equipment-pack: Ausrüstungspaket
+Rules/Category/trade-good: Handelsware
+Rules/Category/food-and-drink: Verpflegung
+Rules/Category/poison: Gift
+Rules/Category/ingested: Einnahme
+Rules/Category/inhaled: Einatmen
+Rules/Category/injury: Verletzung
+Rules/Category/contact: Kontakt
+Rules/Category/wondrous-item: wundersamer Gegenstand
+Rules/Category/ring: Ring
+Rules/Category/rod: Zepter
+Rules/Category/staff: Stab
+Rules/Category/wand: Zauberstab
+Rules/Category/potion: Trank
+Rules/Category/scroll: Schriftrolle
+
+# Komponenten: S. 111 ("Komponenten": Verbal (V), Geste (G), Material (M)), wie im Kopf des
+# Zaubers, z. B. S. 142 "Komponenten: V, G, M"
+Rules/Term/v: V
+Rules/Term/s: G
+Rules/Term/m: M
+
+# Wirkungsbereiche: S. 112 (Kegel, Würfel, Zylinder, Linie, Sphäre - die Liste auf S. 112 sagt
+# Kugel, Überschrift und Zaubertexte Sphäre, z. B. S. 142 Feuerball)
+Rules/Term/cone: Kegel
+Rules/Term/cube: Würfel
+Rules/Term/cylinder: Zylinder
+Rules/Term/line: Linie
+Rules/Term/sphere: Sphäre
+
+# Wörter für Reichweite und Wirkungsdauer im Kopf des Zaubers: S. 142 "Reichweite: Selbst",
+# S. 123 "Berührung", S. 125 "Sicht", S. 199 "Unbegrenzt", S. 193 "Besonders", S. 142
+# "Wirkungsdauer: Unmittelbar", S. 126 "Bis der Zauber gebannt wird"
+Rules/Term/self: Selbst
+Rules/Term/touch: Berührung
+Rules/Term/sight: Sicht
+Rules/Term/unlimited: Unbegrenzt
+Rules/Term/special: Besonders
+Rules/Term/instantaneous: Unmittelbar
+Rules/Term/until-dispelled: Bis der Zauber gebannt wird
+
+# Ergebnis eines gelungenen Rettungswurfs: S. 224 "erleidet die Kreatur halb so viel Schaden",
+# S. 40 "bei einem Erfolg gar keinen Schaden" (im SRD keine Kurzform)
+Rules/Term/half: halb so viel Schaden
+Rules/Term/none: keinen Schaden
+
+# Zauberangriffe: S. 123 "Nahkampf-Zauberangriff", S. 142 "Fernkampf-Zauberangriff"
+Rules/Term/melee: Nahkampf-Zauberangriff
+Rules/Term/ranged: Fernkampf-Zauberangriff
+
+# Klassen: Kapitelüberschriften S. 8 Barbar, S. 11 Barde, S. 15 Druide, S. 20 Hexenmeister, S. 27
+# Kämpfer, S. 30 Kleriker, S. 34 Magier, S. 38 Mönch, S. 42 Paladin, S. 47 Schurke, S. 50
+# Waldläufer, S. 54 Zauberer; Zauberwirker S. 276 "erfordert Einstimmung durch einen Zauberwirker"
+Rules/Term/barbarian: Barbar
+Rules/Term/bard: Barde
+Rules/Term/cleric: Kleriker
+Rules/Term/druid: Druide
+Rules/Term/fighter: Kämpfer
+Rules/Term/monk: Mönch
+Rules/Term/paladin: Paladin
+Rules/Term/ranger: Waldläufer
+Rules/Term/rogue: Schurke
+Rules/Term/sorcerer: Zauberer
+Rules/Term/warlock: Hexenmeister
+Rules/Term/wizard: Magier
+Rules/Term/spellcaster: Zauberwirker
+
+# Schaden neben den Schadensarten in Werteblöcken: S. 444 "Hieb, Stich und Wucht durch
+# nichtmagische Angriffe", S. 388 "... ohne Silber", S. 345 "... ohne Adamant", S. 444 "Schaden
+# durch Zauber"
+Rules/Term/nonmagical: Hieb, Stich und Wucht durch nichtmagische Angriffe
+Rules/Term/nonmagical-silvered: Hieb, Stich und Wucht durch nichtmagische Angriffe ohne Silber
+Rules/Term/nonmagical-adamantine: Hieb, Stich und Wucht durch nichtmagische Angriffe ohne Adamant
+Rules/Term/spells: Schaden durch Zauber
+
+# Bewegungsarten in Werteblöcken: S. 286 ("Schrittbewegungsrate", Graben, Klettern, Fliegen,
+# Schwimmen, schweben), z. B. S. 293 "Bewegungsrate 9 m, Graben 3 m", S. 259 "Fliegen 18 m
+# (Schweben)"; die Schrittbewegungsrate steht als Zahl allein
+Rules/Term/walk: Schrittbewegungsrate
+Rules/Term/burrow: Graben
+Rules/Term/climb: Klettern
+Rules/Term/fly: Fliegen
+Rules/Term/swim: Schwimmen
+Rules/Term/hover: Schweben
+
+# Gesinnungen in Werteblöcken: S. 295 "gesinnungslos", S. 444 "jede Gesinnung", S. 442 "jede
+# nichtgute Gesinnung", S. 443 "jede nichtrechtschaffene Gesinnung", "jede chaotische Gesinnung",
+# S. 355 "jede böse Gesinnung"
+Rules/Term/unaligned: gesinnungslos
+Rules/Term/unaligned/name: gesinnungslos
+Rules/Term/any: jede
+Rules/Term/any/name: jede Gesinnung
+Rules/Term/any-non-good: jede nichtgute
+Rules/Term/any-non-good/name: jede nichtgute Gesinnung
+Rules/Term/any-non-lawful: jede nichtrechtschaffene
+Rules/Term/any-non-lawful/name: jede nichtrechtschaffene Gesinnung
+Rules/Term/any-chaotic: jede chaotische
+Rules/Term/any-chaotic/name: jede chaotische Gesinnung
+Rules/Term/any-evil: jede böse
+Rules/Term/any-evil/name: jede böse Gesinnung
+
+# Aufladen magischer Gegenstände: S. 229 "erhalten täglich im Morgengrauen ... zurück"
+Rules/Term/dawn: Morgengrauen
+
+# Herausforderungsgrade: S. 288, Tabelle "Erfahrungspunkte nach Herausforderungsgrad" (0 bis 30)
+Rules/Challenge/0: 0
+Rules/Challenge/1/8: 1/8
+Rules/Challenge/1/4: 1/4
+Rules/Challenge/1/2: 1/2
+Rules/Challenge/1: 1
+Rules/Challenge/2: 2
+Rules/Challenge/3: 3
+Rules/Challenge/4: 4
+Rules/Challenge/5: 5
+Rules/Challenge/6: 6
+Rules/Challenge/7: 7
+Rules/Challenge/8: 8
+Rules/Challenge/9: 9
+Rules/Challenge/10: 10
+Rules/Challenge/11: 11
+Rules/Challenge/12: 12
+Rules/Challenge/13: 13
+Rules/Challenge/14: 14
+Rules/Challenge/15: 15
+Rules/Challenge/16: 16
+Rules/Challenge/17: 17
+Rules/Challenge/18: 18
+Rules/Challenge/19: 19
+Rules/Challenge/20: 20
+Rules/Challenge/21: 21
+Rules/Challenge/22: 22
+Rules/Challenge/23: 23
+Rules/Challenge/24: 24
+Rules/Challenge/25: 25
+Rules/Challenge/26: 26
+Rules/Challenge/27: 27
+Rules/Challenge/28: 28
+Rules/Challenge/29: 29
+Rules/Challenge/30: 30

@@ -1,0 +1,53 @@
+created: 20261022173518303
+modified: 20261022173518303
+tags: $:/tags/tiddlyrpg/RulesDomain
+title: $:/tiddlyrpg/rules/domain/Class
+type: application/json
+
+{
+    "domain": "Class",
+    "type": "label",
+    "keys": "Rules/Term/",
+    "entries": [
+        {
+            "id": "barbarian"
+        },
+        {
+            "id": "bard"
+        },
+        {
+            "id": "cleric"
+        },
+        {
+            "id": "druid"
+        },
+        {
+            "id": "fighter"
+        },
+        {
+            "id": "monk"
+        },
+        {
+            "id": "paladin"
+        },
+        {
+            "id": "ranger"
+        },
+        {
+            "id": "rogue"
+        },
+        {
+            "id": "sorcerer"
+        },
+        {
+            "id": "warlock"
+        },
+        {
+            "id": "wizard"
+        },
+        {
+            "id": "spellcaster"
+        }
+    ],
+    "example": "wizard"
+}

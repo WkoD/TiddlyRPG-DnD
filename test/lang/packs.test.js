@@ -5,8 +5,10 @@
  * plugin: no keys missing in the language, no keys en-GB does not know, no titles outside
  * $:/tiddlyrpg/language/<code>/. Keys from en-GB/names.multids are proper names (month names, era)
  * that may fall back to en-GB on purpose; their absence is not reported. Keys ending in /Parse
- * are the words read in a language ("bludgeon", "nekrotischen Schaden"): each language has
- * its own or none, so they are neither missing nor unknown.
+ * are the words read in a language ("bludgeon", "nekrotischen Schaden"), keys from
+ * <code>/grammar.multids the forms a language needs for its header lines (German "Mittelgroßes
+ * Tier": the gender of a creature type, the size declined by it): each language has its own or
+ * none, so they are neither missing nor unknown.
  *
  * Keys are read from .multids files (title prefix + "key: value" lines) and from .tid files
  * (title field). Plugins and languages are found by folder, new ones are checked automatically.
@@ -29,6 +31,7 @@ function readKeys(dir, code) {
 	var prefix = "$:/tiddlyrpg/language/" + code + "/",
 		keys = {},
 		optional = {},
+		own = {},
 		outside = [];
 	fs.readdirSync(dir).forEach(function(file) {
 		var text = fs.readFileSync(path.join(dir, file), "utf8").replace(/\r\n/g, "\n"),
@@ -48,6 +51,9 @@ function readKeys(dir, code) {
 				if(file === "names.multids") {
 					optional[key] = true;
 				}
+				if(file === "grammar.multids") {
+					own[key] = true;
+				}
 			};
 		if(/\.multids$/.test(file)) {
 			text.split("\n\n").slice(1).join("\n\n").split("\n").forEach(function(line) {
@@ -60,7 +66,7 @@ function readKeys(dir, code) {
 			add(title);
 		}
 	});
-	return {keys: keys, optional: optional, outside: outside};
+	return {keys: keys, optional: optional, own: own, outside: outside};
 }
 
 fs.readdirSync(pluginsDir).forEach(function(plugin) {
@@ -88,10 +94,10 @@ fs.readdirSync(pluginsDir).forEach(function(plugin) {
 			}
 			var other = readKeys(path.join(langDir, code), code);
 			test(code + ": no missing keys", function() {
-				assert.deepEqual(Object.keys(base.keys).filter(function(key) { return !other.keys[key] && !base.optional[key] && !ownWords(key); }).sort(), []);
+				assert.deepEqual(Object.keys(base.keys).filter(function(key) { return !other.keys[key] && !base.optional[key] && !base.own[key] && !ownWords(key); }).sort(), []);
 			});
 			test(code + ": no keys unknown to " + BASE, function() {
-				assert.deepEqual(Object.keys(other.keys).filter(function(key) { return !base.keys[key] && !ownWords(key); }).sort(), []);
+				assert.deepEqual(Object.keys(other.keys).filter(function(key) { return !base.keys[key] && !other.own[key] && !ownWords(key); }).sort(), []);
 			});
 			test(code + ": titles inside $:/tiddlyrpg/language/" + code + "/", function() {
 				assert.deepEqual(other.outside, []);

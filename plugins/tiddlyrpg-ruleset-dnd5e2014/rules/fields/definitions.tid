@@ -1,0 +1,95 @@
+created: 20261022173330580
+modified: 20261022173330580
+tags: $:/tags/tiddlyrpg/RulesFields
+title: $:/tiddlyrpg/rules/fields
+type: application/json
+
+{
+    "definitions": {
+        "category": {"format": "labels", "domain": "ItemCategory"},
+        "rarity": {"format": "label", "domain": "Rarity"},
+        "cursed": {"format": "boolean"},
+        "attunement": {"format": "boolean"},
+        "classes": {"format": "labels", "domain": "Class"},
+
+        "damage": {"format": "damage", "when": {"category": ["weapon"]}},
+        "damage-versatile": {"format": "dice", "when": {"category": ["weapon"]}},
+        "range": {"format": "unit", "domain": "Length", "kind": "range", "words": "SpellWord", "only": ["self", "touch", "sight", "unlimited", "special"]},
+        "bonus": {"format": "number", "signed": true},
+
+        "ac": {"format": "number", "when": {"category": ["armor", "shield"]}, "derive": {"kind": "total", "parts": [{"field": "bonus"}]}},
+        "ac-dex": {"format": "boolean", "when": {"category": ["armor"]}},
+        "ac-dex-max": {"format": "number", "min": 0, "max": 10, "when": {"category": ["armor"]}},
+        "strength-min": {"format": "number", "min": 1, "max": 30, "when": {"category": ["armor"]}},
+        "stealth": {"format": "label", "domain": "Mechanics", "only": ["disadvantage"], "when": {"category": ["armor"]}},
+
+        "weight": {"format": "unit", "domain": "Weight"},
+        "charges": {"format": "number", "min": 0},
+        "recharge": {"format": "dice"},
+        "recharge-on": {"format": "label", "domain": "Mechanics", "only": ["dawn", "short-rest", "long-rest"]},
+
+        "save": {"format": "label", "domain": "Ability"},
+        "save-dc": {"format": "number", "min": 1, "max": 30},
+        "save-success": {"format": "label", "domain": "SaveSuccess"},
+        "area": {"format": "unit", "domain": "Length"},
+        "area-shape": {"format": "label", "domain": "Area"},
+        "duration": {"format": "unit", "domain": "Time", "words": "SpellWord", "only": ["instantaneous", "until-dispelled", "special"]},
+        "concentration": {"format": "boolean"},
+
+        "ability": {"format": "label", "domain": "Ability"},
+        "ability-score": {"format": "number", "min": -30, "max": 30},
+        "ability-max": {"format": "number", "min": 1, "max": 30},
+        "spell-attack-bonus": {"format": "number", "signed": true},
+        "spell-dc-bonus": {"format": "number", "signed": true},
+        "saving-throw-bonus": {"format": "number", "signed": true},
+
+        "resistances": {"format": "labels", "domain": ["Damage", "DamageGroup"]},
+        "immunities": {"format": "labels", "domain": ["Damage", "DamageGroup"]},
+        "vulnerabilities": {"format": "labels", "domain": ["Damage", "DamageGroup"]},
+        "condition-immunities": {"format": "labels", "domain": "Condition"},
+        "speed": {"format": "labels", "domain": "Movement", "value": {"format": "unit", "domain": "Length"}},
+
+        "light-bright": {"format": "unit", "domain": "Length"},
+        "light-dim": {"format": "unit", "domain": "Length"},
+        "capacity": {"format": "unit", "domain": "Weight"},
+        "capacity-volume": {"format": "unit", "domain": "Volume"},
+        "travel-speed": {"format": "unit", "domain": "Speed"},
+        "healing": {"format": "dice", "derive": {"kind": "average"}},
+
+        "level": {"format": "number", "min": 0, "max": 9},
+        "school": {"format": "label", "domain": "School"},
+        "ritual": {"format": "boolean"},
+        "casting-time": {"format": "unit", "domain": "Time"},
+        "casting-trigger": {"format": "text"},
+        "components": {"format": "labels", "domain": "Component"},
+        "attack": {"format": "label", "domain": "SpellAttack"},
+
+        "size": {"format": "label", "domain": "Size"},
+        "creature-type": {"format": "label", "domain": "CreatureType"},
+        "subtype": {"format": "text"},
+        "swarm": {"format": "label", "domain": "Size", "only": ["tiny", "small", "medium", "large"]},
+        "alignment": {"format": "label", "domain": "Alignment"},
+        "hp": {"format": "dice", "derive": {"kind": "average"}},
+        "str": {"format": "number", "min": 1, "max": 30, "derive": {"kind": "modifier", "base": 10, "step": 2}},
+        "dex": {"format": "number", "min": 1, "max": 30, "derive": {"kind": "modifier", "base": 10, "step": 2}},
+        "con": {"format": "number", "min": 1, "max": 30, "derive": {"kind": "modifier", "base": 10, "step": 2}},
+        "int": {"format": "number", "min": 1, "max": 30, "derive": {"kind": "modifier", "base": 10, "step": 2}},
+        "wis": {"format": "number", "min": 1, "max": 30, "derive": {"kind": "modifier", "base": 10, "step": 2}},
+        "cha": {"format": "number", "min": 1, "max": 30, "derive": {"kind": "modifier", "base": 10, "step": 2}},
+        "cr": {"format": "label", "domain": "Challenge"},
+        "xp": {"format": "number", "min": 0, "derive": {"kind": "lookup", "from": "cr", "column": "xp"}},
+        "proficiency": {"format": "number", "signed": true, "derive": {"kind": "lookup", "from": "cr", "column": "proficiency"}},
+        "saves": {"format": "labels", "domain": "Ability",
+            "value": {"format": "number", "signed": true, "derive": {"kind": "sum", "parts": [{"modifier": "$entry"}, {"field": "proficiency"}]}}},
+        "skills": {"format": "labels", "domain": "Skill",
+            "value": {"format": "number", "signed": true, "derive": {"kind": "sum", "parts": [{"modifier": "$entry.ability"}, {"field": "proficiency", "times": {"list": "expertise", "factor": 2}}]}}},
+        "expertise": {"format": "labels", "domain": "Skill", "view": false},
+        "senses": {"format": "labels", "domain": "Sense", "value": {"format": "unit", "domain": "Length"},
+            "values": {"passive-perception": {"format": "number"}},
+            "computed": {"passive-perception": {"kind": "sum", "parts": [{"number": 10}, {"entry": "skills", "id": "perception", "else": {"modifier": "wis"}}]}}},
+        "languages": {"format": "labels", "domain": "Language"},
+        "carrying-capacity": {"format": "unit", "domain": "Weight"},
+
+        "height": {"format": "unit", "domain": "Length", "kind": "size"}
+    }
+}

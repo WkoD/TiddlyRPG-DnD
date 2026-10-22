@@ -1,0 +1,22 @@
+created: 20261022174256397
+modified: 20261022174256397
+tags: $:/tags/tiddlyrpg/RulesDomain
+title: $:/tiddlyrpg/rules/domain/Speed
+type: application/json
+
+{
+    "domain": "Speed",
+    "type": "unit",
+    "keys": "Rules/Unit/",
+    "units": {
+        "mph": {"system": "imperial", "factor": 1},
+        "kmh": {"system": "metric", "factor": 1}
+    },
+    "pairs": [["mph", "kmh", 1.6]],
+    "defaults": ["mph", "kmh"],
+    "display": {
+        "imperial": {"steps": [{"unit": "mph", "decimals": 1}]},
+        "metric": {"steps": [{"unit": "kmh", "decimals": 1}]}
+    },
+    "example": "3 mph"
+}

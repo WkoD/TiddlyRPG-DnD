@@ -1,0 +1,23 @@
+created: 20261022175629749
+modified: 20261022175629749
+title: $:/tiddlyrpg/language/en-GB/
+
+# Grammar of English for the header lines (Rules/Summary/*): forms only this language needs. No
+# other language has the keys of this file (like the words in /Parse).
+
+# Creature types in the plural, for swarms: p. 389 "Medium swarm of Tiny beasts"; the others as
+# the plural of p. 254 ("Type")
+Rules/Term/aberration/plural: aberrations
+Rules/Term/beast/plural: beasts
+Rules/Term/celestial/plural: celestials
+Rules/Term/construct/plural: constructs
+Rules/Term/dragon/plural: dragons
+Rules/Term/elemental/plural: elementals
+Rules/Term/fey/plural: fey
+Rules/Term/fiend/plural: fiends
+Rules/Term/giant/plural: giants
+Rules/Term/humanoid/plural: humanoids
+Rules/Term/monstrosity/plural: monstrosities
+Rules/Term/ooze/plural: oozes
+Rules/Term/plant/plural: plants
+Rules/Term/undead/plural: undead

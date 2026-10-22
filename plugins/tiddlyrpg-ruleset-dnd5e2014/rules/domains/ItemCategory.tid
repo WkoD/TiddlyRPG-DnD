@@ -1,0 +1,341 @@
+created: 20261022173518303
+modified: 20261022173518303
+tags: $:/tags/tiddlyrpg/RulesDomain
+title: $:/tiddlyrpg/rules/domain/ItemCategory
+type: application/json
+
+{
+    "domain": "ItemCategory",
+    "type": "label",
+    "keys": "Rules/Category/",
+    "entries": [
+        {
+            "id": "weapon",
+            "main": true,
+            "tag": "Equipment"
+        },
+        {
+            "id": "simple",
+            "for": [
+                "weapon"
+            ]
+        },
+        {
+            "id": "martial",
+            "for": [
+                "weapon"
+            ]
+        },
+        {
+            "id": "melee",
+            "for": [
+                "weapon"
+            ]
+        },
+        {
+            "id": "ranged",
+            "for": [
+                "weapon"
+            ]
+        },
+        {
+            "id": "sword",
+            "for": [
+                "weapon"
+            ]
+        },
+        {
+            "id": "axe",
+            "for": [
+                "weapon"
+            ]
+        },
+        {
+            "id": "bow",
+            "for": [
+                "weapon"
+            ]
+        },
+        {
+            "id": "crossbow",
+            "for": [
+                "weapon"
+            ]
+        },
+        {
+            "id": "mace",
+            "for": [
+                "weapon"
+            ]
+        },
+        {
+            "id": "hammer",
+            "for": [
+                "weapon"
+            ]
+        },
+        {
+            "id": "polearm",
+            "for": [
+                "weapon"
+            ]
+        },
+        {
+            "id": "spear",
+            "for": [
+                "weapon"
+            ]
+        },
+        {
+            "id": "finesse",
+            "for": [
+                "weapon"
+            ]
+        },
+        {
+            "id": "heavy",
+            "for": [
+                "weapon",
+                "armor"
+            ]
+        },
+        {
+            "id": "light",
+            "for": [
+                "weapon",
+                "armor"
+            ]
+        },
+        {
+            "id": "loading",
+            "for": [
+                "weapon"
+            ]
+        },
+        {
+            "id": "reach",
+            "for": [
+                "weapon"
+            ]
+        },
+        {
+            "id": "special",
+            "for": [
+                "weapon"
+            ]
+        },
+        {
+            "id": "thrown",
+            "for": [
+                "weapon"
+            ]
+        },
+        {
+            "id": "two-handed",
+            "for": [
+                "weapon"
+            ]
+        },
+        {
+            "id": "versatile",
+            "for": [
+                "weapon"
+            ]
+        },
+        {
+            "id": "armor",
+            "main": true,
+            "tag": "Equipment"
+        },
+        {
+            "id": "medium",
+            "for": [
+                "armor"
+            ]
+        },
+        {
+            "id": "shield",
+            "main": true,
+            "tag": "Equipment"
+        },
+        {
+            "id": "ammunition",
+            "main": true,
+            "tag": "Consumable",
+            "for": [
+                "weapon"
+            ]
+        },
+        {
+            "id": "arrow",
+            "for": [
+                "ammunition"
+            ]
+        },
+        {
+            "id": "bolt",
+            "for": [
+                "ammunition"
+            ]
+        },
+        {
+            "id": "sling-bullet",
+            "for": [
+                "ammunition"
+            ]
+        },
+        {
+            "id": "blowgun-needle",
+            "for": [
+                "ammunition"
+            ]
+        },
+        {
+            "id": "focus",
+            "main": true,
+            "tag": "Equipment"
+        },
+        {
+            "id": "arcane",
+            "for": [
+                "focus"
+            ]
+        },
+        {
+            "id": "druidic",
+            "for": [
+                "focus"
+            ]
+        },
+        {
+            "id": "holy",
+            "for": [
+                "focus"
+            ]
+        },
+        {
+            "id": "tool",
+            "main": true
+        },
+        {
+            "id": "artisan",
+            "for": [
+                "tool"
+            ]
+        },
+        {
+            "id": "instrument",
+            "for": [
+                "tool"
+            ]
+        },
+        {
+            "id": "gaming",
+            "for": [
+                "tool"
+            ]
+        },
+        {
+            "id": "vehicle",
+            "main": true
+        },
+        {
+            "id": "land",
+            "for": [
+                "vehicle"
+            ]
+        },
+        {
+            "id": "water",
+            "for": [
+                "vehicle"
+            ]
+        },
+        {
+            "id": "tack",
+            "main": true
+        },
+        {
+            "id": "adventuring-gear",
+            "main": true
+        },
+        {
+            "id": "equipment-pack",
+            "main": true
+        },
+        {
+            "id": "trade-good",
+            "main": true
+        },
+        {
+            "id": "food-and-drink",
+            "main": true,
+            "tag": "Consumable"
+        },
+        {
+            "id": "poison",
+            "main": true,
+            "tag": "Consumable"
+        },
+        {
+            "id": "ingested",
+            "for": [
+                "poison"
+            ]
+        },
+        {
+            "id": "inhaled",
+            "for": [
+                "poison"
+            ]
+        },
+        {
+            "id": "injury",
+            "for": [
+                "poison"
+            ]
+        },
+        {
+            "id": "contact",
+            "for": [
+                "poison"
+            ]
+        },
+        {
+            "id": "wondrous-item",
+            "main": true,
+            "tag": "Equipment"
+        },
+        {
+            "id": "ring",
+            "main": true,
+            "tag": "Equipment"
+        },
+        {
+            "id": "rod",
+            "main": true,
+            "tag": "Equipment"
+        },
+        {
+            "id": "staff",
+            "main": true,
+            "tag": "Equipment"
+        },
+        {
+            "id": "wand",
+            "main": true,
+            "tag": "Equipment"
+        },
+        {
+            "id": "potion",
+            "main": true,
+            "tag": "Consumable"
+        },
+        {
+            "id": "scroll",
+            "main": true,
+            "tag": "Consumable"
+        }
+    ],
+    "example": "weapon, martial, melee, versatile"
+}

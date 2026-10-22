@@ -56,7 +56,9 @@ test("the hubs Ruleset and CampaignSetting: the system and the setting, each wit
 	assert.match(html, /<h2[^>]*>D&amp;D 5e \(2014, SRD 5\.1\)<\/h2>/);
 	["Attribute", "Schaden", "Würfel", "Länge", "Begriffe", "Gewicht", "Zustände", "Aktionen", "Spielmechanik",
 		"Zauberwirken", "Sinne", "Fertigkeiten", "Kreaturentypen", "Größenkategorien", "Gesinnungen",
-		"Schulen der Magie", "Sprachen"].forEach(function(name) {
+		"Schulen der Magie", "Sprachen", "Wirkungsbereiche", "Herausforderungsgrade", "Klassen", "Komponenten",
+		"Schaden neben den Arten", "Arten von Gegenständen", "Bewegungsarten", "Seltenheit", "Ergebnisse von Rettungswürfen",
+		"Geschwindigkeit", "Zauberangriffe", "Wörter für Reichweite und Wirkungsdauer", "Zeit", "Volumen"].forEach(function(name) {
 		assert.match(html, new RegExp("<h3[^>]*>" + name + "</h3>"), name);
 	});
 	assert.match(setting, /<h2[^>]*>Forgotten Realms<\/h2>/);
@@ -64,7 +66,8 @@ test("the hubs Ruleset and CampaignSetting: the system and the setting, each wit
 		assert.match(setting, new RegExp("<h3[^>]*>" + name + "</h3>"), name);
 		assert.doesNotMatch(html, new RegExp("<h3[^>]*>" + name + "</h3>"), name);
 	});
-	assert.equal((html.match(/<td><code>(acid|bludgeoning|cold|fire|force|lightning|necrotic|piercing|poison|psychic|radiant|slashing|thunder)<\/code><\/td>/g) || []).length, 13);
+	// poison is an item category too
+	assert.equal((html.match(/<td><code>(acid|bludgeoning|cold|fire|force|lightning|necrotic|piercing|psychic|radiant|slashing|thunder)<\/code><\/td>/g) || []).length, 12);
 });
 
 test("de-DE", function() {

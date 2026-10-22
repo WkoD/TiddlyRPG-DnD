@@ -1,5 +1,5 @@
 created: 20261014200240000
-modified: 20261014200240000
+modified: 20261022173518303
 tags: $:/tags/tiddlyrpg/RulesDomain
 title: $:/tiddlyrpg/rules/domain/Alignment
 type: application/json
@@ -35,6 +35,24 @@ type: application/json
         },
         {
             "id": "ce"
+        },
+        {
+            "id": "unaligned"
+        },
+        {
+            "id": "any"
+        },
+        {
+            "id": "any-non-good"
+        },
+        {
+            "id": "any-non-lawful"
+        },
+        {
+            "id": "any-chaotic"
+        },
+        {
+            "id": "any-evil"
         }
     ],
     "example": "ce name"

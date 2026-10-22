@@ -1,0 +1,42 @@
+created: 20261022173330580
+modified: 20261022173330580
+tags: $:/tags/tiddlyrpg/RulesFields
+title: $:/tiddlyrpg/rules/fields/items
+type: application/json
+
+{
+    "types": ["Item", "Artifact"],
+    "fields": ["category", "rarity", "attunement", "cursed", "classes",
+        "damage", "damage-versatile", "range", "ac", "ac-dex", "ac-dex-max", "strength-min", "stealth", "bonus",
+        "spell-attack-bonus", "spell-dc-bonus", "saving-throw-bonus",
+        "charges", "recharge", "recharge-on", "save", "save-dc", "save-success", "area", "area-shape",
+        "duration", "concentration", "ability", "ability-score", "ability-max", "healing", "light-bright", "light-dim",
+        "speed", "resistances", "immunities", "vulnerabilities", "condition-immunities",
+        "capacity", "capacity-volume", "travel-speed", "level", "weight"],
+    "labels": {"classes": "Rules/Field/classes/attunement", "level": "Rules/Field/level/spell",
+        "resistances": "Rules/Field/resistances/grants", "immunities": "Rules/Field/immunities/grants",
+        "vulnerabilities": "Rules/Field/vulnerabilities/grants", "condition-immunities": "Rules/Field/condition-immunities/grants"},
+    "summary": {"key": "Rules/Summary/Item", "flags": {"attunement": "Rules/Summary/Attunement", "cursed": "Rules/Summary/Cursed"}},
+    "groups": [
+        {"id": "combat", "fields": ["damage", "range", "ac", "strength-min", "stealth", "bonus", "spell-attack-bonus", "spell-dc-bonus", "saving-throw-bonus"],
+            "combine": [
+                {"fields": ["damage", "damage-versatile"], "key": "Rules/Line/damage"},
+                {"fields": ["ac", "ac-dex", "ac-dex-max"], "key": "Rules/Line/ac", "flags": {"ac-dex": "Rules/Line/AcDex"}}
+            ]},
+        {"id": "magic", "fields": ["charges", "save", "area", "duration", "ability", "healing", "light-bright", "speed",
+            "resistances", "immunities", "vulnerabilities", "condition-immunities", "classes"],
+            "combine": [
+                {"fields": ["charges", "recharge", "recharge-on"], "key": "Rules/Line/charges"},
+                {"fields": ["save", "save-dc", "save-success"], "key": "Rules/Line/save"},
+                {"fields": ["area", "area-shape"], "key": "Rules/Line/area"},
+                {"fields": ["duration", "concentration"], "key": "Rules/Line/duration", "flags": {"concentration": "Rules/Line/Concentration"}},
+                {"fields": ["ability", "ability-score", "ability-max"], "key": "Rules/Line/ability"},
+                {"fields": ["light-bright", "light-dim"], "key": "Rules/Line/light"}
+            ],
+            "relations": ["spells"]},
+        {"id": "properties", "fields": ["capacity", "travel-speed", "level"],
+            "combine": [{"fields": ["capacity", "capacity-volume"], "key": "Rules/Line/capacity"}],
+            "relations": ["base"]},
+        {"id": "trade", "layout": "inline", "fields": ["weight", "price"]}
+    ]
+}

@@ -1,0 +1,23 @@
+created: 20261022174256397
+modified: 20261022174256397
+tags: $:/tags/tiddlyrpg/RulesDomain
+title: $:/tiddlyrpg/rules/domain/Volume
+type: application/json
+
+{
+    "domain": "Volume",
+    "type": "unit",
+    "keys": "Rules/Unit/",
+    "units": {
+        "gal": {"system": "imperial", "factor": 1},
+        "ft3": {"system": "imperial", "factor": 7},
+        "l": {"system": "metric", "factor": 1}
+    },
+    "pairs": [["gal", "l", 4], ["ft3", "l", 28]],
+    "defaults": ["gal", "ft3", "l"],
+    "display": {
+        "imperial": {"steps": [{"unit": "gal", "decimals": 1}]},
+        "metric": {"steps": [{"unit": "l", "decimals": 1}]}
+    },
+    "example": "64 ft³"
+}

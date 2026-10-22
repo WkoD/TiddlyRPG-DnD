@@ -1,5 +1,5 @@
 created: 20261009183319191
-modified: 20261014200240000
+modified: 20261022175326591
 title: $:/tiddlyrpg/language/en-GB/
 
 # Terms of the System Reference Document 5.1 (English, CC-BY-4.0, see the tab license), by hand;
@@ -256,3 +256,218 @@ Rules/Term/infernal: Infernal
 Rules/Term/primordial: Primordial
 Rules/Term/sylvan: Sylvan
 Rules/Term/undercommon: Undercommon
+
+# Rarity of magic items: p. 206-207 ("Rarity"), in the item header, e.g. p. 207 "Wondrous item,
+# rare (requires attunement)", p. 233 "Potion, common", p. 252 "artifact"; the id of common is
+# common-rarity, common is the language
+Rules/Term/common-rarity: common
+Rules/Term/uncommon: uncommon
+Rules/Term/rare: rare
+Rules/Term/very-rare: very rare
+Rules/Term/legendary: legendary
+Rules/Term/artifact: artifact
+
+# Item categories: weapons p. 64-66 (simple and martial, melee and ranged, the properties p. 65),
+# armor p. 62-64 (light, medium, heavy armor; shield p. 64), adventuring gear p. 66-69 (ammunition,
+# arcane focus, druidic focus, holy symbol p. 69), equipment packs p. 70, tools p. 70 (artisan's
+# tools, gaming set, musical instrument), mounts and vehicles p. 71-72 ("Tack, Harness, and Drawn
+# Vehicles", "Waterborne Vehicles"), trade goods p. 72, food and drink p. 73 ("Food, Drink, and
+# Lodging"), poisons p. 204 (contact, ingested, inhaled, injury); magic items p. 207 ("Armor, potion,
+# ring, rod, scroll, staff, wand, weapon, or wondrous item"). Weapon groups: p. 64 "swords, axes,
+# and polearms", p. 223 "Weapon (any sword)", p. 211 "Weapon (any axe)", p. 95 "a bow or a
+# crossbow"; the groups of the weapons are our reading. Ammunition kinds p. 69 ("Arrows (20)",
+# "Crossbow bolts (20)", "Sling bullets (20)", "Blowgun needles (50)"). A trait with the id of its
+# parent after a slash replaces the label of the parent ("martial weapon", "medium armor").
+Rules/Category/weapon: weapon
+Rules/Category/simple: simple
+Rules/Category/simple/weapon: simple weapon
+Rules/Category/martial: martial
+Rules/Category/martial/weapon: martial weapon
+Rules/Category/melee: melee
+Rules/Category/ranged: ranged
+Rules/Category/sword: sword
+Rules/Category/axe: axe
+Rules/Category/bow: bow
+Rules/Category/crossbow: crossbow
+Rules/Category/mace: mace
+Rules/Category/hammer: hammer
+Rules/Category/polearm: polearm
+Rules/Category/spear: spear
+Rules/Category/finesse: finesse
+Rules/Category/heavy: heavy
+Rules/Category/heavy/armor: heavy armor
+Rules/Category/light: light
+Rules/Category/light/armor: light armor
+Rules/Category/medium: medium
+Rules/Category/medium/armor: medium armor
+Rules/Category/loading: loading
+Rules/Category/reach: reach
+Rules/Category/special: special
+Rules/Category/thrown: thrown
+Rules/Category/two-handed: two-handed
+Rules/Category/versatile: versatile
+Rules/Category/armor: armor
+Rules/Category/shield: shield
+Rules/Category/ammunition: ammunition
+Rules/Category/arrow: arrows
+Rules/Category/bolt: crossbow bolts
+Rules/Category/sling-bullet: sling bullets
+Rules/Category/blowgun-needle: blowgun needles
+Rules/Category/focus: spellcasting focus
+Rules/Category/arcane: arcane
+Rules/Category/arcane/focus: arcane focus
+Rules/Category/druidic: druidic
+Rules/Category/druidic/focus: druidic focus
+Rules/Category/holy: holy
+Rules/Category/holy/focus: holy symbol
+Rules/Category/tool: tool
+Rules/Category/artisan: artisan's
+Rules/Category/artisan/tool: artisan's tools
+Rules/Category/instrument: instrument
+Rules/Category/instrument/tool: musical instrument
+Rules/Category/gaming: gaming
+Rules/Category/gaming/tool: gaming set
+Rules/Category/vehicle: vehicle
+Rules/Category/land: land
+Rules/Category/land/vehicle: land vehicle
+Rules/Category/water: waterborne
+Rules/Category/water/vehicle: waterborne vehicle
+Rules/Category/tack: tack and harness
+Rules/Category/adventuring-gear: adventuring gear
+Rules/Category/equipment-pack: equipment pack
+Rules/Category/trade-good: trade good
+Rules/Category/food-and-drink: food and drink
+Rules/Category/poison: poison
+Rules/Category/ingested: ingested
+Rules/Category/inhaled: inhaled
+Rules/Category/injury: injury
+Rules/Category/contact: contact
+Rules/Category/wondrous-item: wondrous item
+Rules/Category/ring: ring
+Rules/Category/rod: rod
+Rules/Category/staff: staff
+Rules/Category/wand: wand
+Rules/Category/potion: potion
+Rules/Category/scroll: scroll
+
+# Spell components: p. 101-102 ("Components": Verbal (V), Somatic (S), Material (M)), as in the
+# spell header, e.g. p. 144 "Components: V, S, M"
+Rules/Term/v: V
+Rules/Term/s: S
+Rules/Term/m: M
+
+# Areas of effect: p. 103 ("Areas of Effect": cone, cube, cylinder, line, sphere)
+Rules/Term/cone: cone
+Rules/Term/cube: cube
+Rules/Term/cylinder: cylinder
+Rules/Term/line: line
+Rules/Term/sphere: sphere
+
+# Words of range and duration in the spell header: p. 144 "Range: Self", p. 119 "Range: Touch",
+# p. 165 "Sight", p. 177 "Unlimited", p. 138 "Special", p. 144 "Duration: Instantaneous", p. 119
+# "Until dispelled"
+Rules/Term/self: Self
+Rules/Term/touch: Touch
+Rules/Term/sight: Sight
+Rules/Term/unlimited: Unlimited
+Rules/Term/special: Special
+Rules/Term/instantaneous: Instantaneous
+Rules/Term/until-dispelled: Until dispelled
+
+# The result of a successful saving throw: p. 204 "the creature takes half damage", p. 40 "you
+# instead take no damage" (no short form in the SRD)
+Rules/Term/half: half damage
+Rules/Term/none: no damage
+
+# Spell attacks: p. 118 "melee spell attack", p. 144 "ranged spell attack"
+Rules/Term/melee: melee spell attack
+Rules/Term/ranged: ranged spell attack
+
+# Classes: p. 8-52, lowercase as in running text, e.g. p. 243 "requires attunement by a bard,
+# cleric, or druid"; spellcaster p. 248 "requires attunement by a spellcaster"
+Rules/Term/barbarian: barbarian
+Rules/Term/bard: bard
+Rules/Term/cleric: cleric
+Rules/Term/druid: druid
+Rules/Term/fighter: fighter
+Rules/Term/monk: monk
+Rules/Term/paladin: paladin
+Rules/Term/ranger: ranger
+Rules/Term/rogue: rogue
+Rules/Term/sorcerer: sorcerer
+Rules/Term/warlock: warlock
+Rules/Term/wizard: wizard
+Rules/Term/spellcaster: spellcaster
+
+# Damage beside the types in stat blocks: p. 261 "bludgeoning, piercing, and slashing from
+# nonmagical attacks", p. 274 "... that aren't silvered", p. 315 "... that aren't adamantine",
+# p. 395 "damage from spells"
+Rules/Term/nonmagical: bludgeoning, piercing, and slashing from nonmagical attacks
+Rules/Term/nonmagical-silvered: bludgeoning, piercing, and slashing from nonmagical attacks that aren't silvered
+Rules/Term/nonmagical-adamantine: bludgeoning, piercing, and slashing from nonmagical attacks that aren't adamantine
+Rules/Term/spells: damage from spells
+
+# Movement in stat blocks: p. 256 ("Speed": walking speed, burrow, climb, fly, swim, hover), e.g.
+# p. 264 "Speed 30 ft., burrow 10 ft.", p. 261 "fly 90 ft.", p. 264 "fly 60 ft. (hover)"; the
+# walking speed shows as the number alone
+Rules/Term/walk: walk
+Rules/Term/burrow: burrow
+Rules/Term/climb: climb
+Rules/Term/fly: fly
+Rules/Term/swim: swim
+Rules/Term/hover: hover
+
+# Alignments of stat blocks: p. 263 "unaligned", p. 395 "any alignment", p. 396 "any non-good
+# alignment", "any non-lawful alignment", p. 397 "any chaotic alignment", p. 325 "any evil
+# alignment"
+Rules/Term/unaligned: unaligned
+Rules/Term/unaligned/name: unaligned
+Rules/Term/any: any
+Rules/Term/any/name: any alignment
+Rules/Term/any-non-good: any non-good
+Rules/Term/any-non-good/name: any non-good alignment
+Rules/Term/any-non-lawful: any non-lawful
+Rules/Term/any-non-lawful/name: any non-lawful alignment
+Rules/Term/any-chaotic: any chaotic
+Rules/Term/any-chaotic/name: any chaotic alignment
+Rules/Term/any-evil: any evil
+Rules/Term/any-evil/name: any evil alignment
+
+# Recharge of magic items: p. 215 "regains 1d6 + 1 expended charges daily at dawn"
+Rules/Term/dawn: dawn
+
+# Challenge ratings: p. 258, table "Experience Points by Challenge Rating" (0 to 30)
+Rules/Challenge/0: 0
+Rules/Challenge/1/8: 1/8
+Rules/Challenge/1/4: 1/4
+Rules/Challenge/1/2: 1/2
+Rules/Challenge/1: 1
+Rules/Challenge/2: 2
+Rules/Challenge/3: 3
+Rules/Challenge/4: 4
+Rules/Challenge/5: 5
+Rules/Challenge/6: 6
+Rules/Challenge/7: 7
+Rules/Challenge/8: 8
+Rules/Challenge/9: 9
+Rules/Challenge/10: 10
+Rules/Challenge/11: 11
+Rules/Challenge/12: 12
+Rules/Challenge/13: 13
+Rules/Challenge/14: 14
+Rules/Challenge/15: 15
+Rules/Challenge/16: 16
+Rules/Challenge/17: 17
+Rules/Challenge/18: 18
+Rules/Challenge/19: 19
+Rules/Challenge/20: 20
+Rules/Challenge/21: 21
+Rules/Challenge/22: 22
+Rules/Challenge/23: 23
+Rules/Challenge/24: 24
+Rules/Challenge/25: 25
+Rules/Challenge/26: 26
+Rules/Challenge/27: 27
+Rules/Challenge/28: 28
+Rules/Challenge/29: 29
+Rules/Challenge/30: 30

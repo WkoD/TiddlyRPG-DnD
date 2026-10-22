@@ -1,0 +1,85 @@
+created: 20261022175629749
+modified: 20261022175629749
+title: $:/tiddlyrpg/language/de-DE/
+
+# Grammatik des Deutschen für die Kopfzeilen (Rules/Summary/*): Formen und Geschlechter, die nur
+# diese Sprache braucht. Die Schlüssel dieser Datei hat keine andere Sprache (wie die Wörter in /Parse).
+
+# Größe im Kopf des Werteblocks, stark gebeugt nach dem Geschlecht des Kreaturtyps (Agree): S. 297
+# "Winziges Tier", S. 302 "Winziger Unhold", S. 299 "Kleiner Unhold", S. 334 "Kleine Monstrosität",
+# S. 410 "Kleines Tier", S. 332 "Mittelgroßer Humanoide", S. 371 "Mittelgroße Aberration", S. 411
+# "Mittelgroßes Tier", S. 341 "Großer Riese", S. 292 "Große Aberration", S. 296 "Großes Konstrukt",
+# S. 305 "Riesiger Drache", S. 295 "Riesige Monstrosität", S. 303 "Riesiges Tier", S. 304
+# "Gigantischer Drache", S. 353 "Gigantische Monstrosität"; Winzige und Gigantisches kommen im SRD
+# nicht vor und folgen derselben Beugung
+Rules/Term/tiny/m: Winziger
+Rules/Term/tiny/f: Winzige
+Rules/Term/tiny/n: Winziges
+Rules/Term/small/m: Kleiner
+Rules/Term/small/f: Kleine
+Rules/Term/small/n: Kleines
+Rules/Term/medium/m: Mittelgroßer
+Rules/Term/medium/f: Mittelgroße
+Rules/Term/medium/n: Mittelgroßes
+Rules/Term/large/m: Großer
+Rules/Term/large/f: Große
+Rules/Term/large/n: Großes
+Rules/Term/huge/m: Riesiger
+Rules/Term/huge/f: Riesige
+Rules/Term/huge/n: Riesiges
+Rules/Term/gargantuan/m: Gigantischer
+Rules/Term/gargantuan/f: Gigantische
+Rules/Term/gargantuan/n: Gigantisches
+
+# Geschlecht der Kreaturtypen für die Größe davor, wie in den Köpfen der Werteblöcke: S. 292
+# Aberration (f), S. 438 Tier (n), S. 298 celestisches Wesen (n), S. 295 Konstrukt (n), S. 310
+# Drache (m), S. 333 Elementar (m), S. 332 Feenwesen (n), S. 388 Unhold (m), S. 368 Riese (m),
+# S. 444 Humanoide (m), S. 293 Monstrosität (f), S. 379 Schlick (m), S. 365 Pflanze (f), S. 355
+# Untoter (m)
+Rules/Term/aberration/Agree: f
+Rules/Term/beast/Agree: n
+Rules/Term/celestial/Agree: n
+Rules/Term/construct/Agree: n
+Rules/Term/dragon/Agree: m
+Rules/Term/elemental/Agree: m
+Rules/Term/fey/Agree: n
+Rules/Term/fiend/Agree: m
+Rules/Term/giant/Agree: m
+Rules/Term/humanoid/Agree: m
+Rules/Term/monstrosity/Agree: f
+Rules/Term/ooze/Agree: m
+Rules/Term/plant/Agree: f
+Rules/Term/undead/Agree: m
+
+# Schwärme: S. 414 "Mittelgroßer Schwarm winziger Tiere" - Größe und Typ im Genitiv Plural
+Rules/Term/tiny/genpl: winziger
+Rules/Term/small/genpl: kleiner
+Rules/Term/medium/genpl: mittelgroßer
+Rules/Term/large/genpl: großer
+Rules/Term/aberration/genpl: Aberrationen
+Rules/Term/beast/genpl: Tiere
+Rules/Term/celestial/genpl: celestischer Wesen
+Rules/Term/construct/genpl: Konstrukte
+Rules/Term/dragon/genpl: Drachen
+Rules/Term/elemental/genpl: Elementare
+Rules/Term/fey/genpl: Feenwesen
+Rules/Term/fiend/genpl: Unholde
+Rules/Term/giant/genpl: Riesen
+Rules/Term/humanoid/genpl: Humanoiden
+Rules/Term/monstrosity/genpl: Monstrositäten
+Rules/Term/ooze/genpl: Schlicke
+Rules/Term/plant/genpl: Pflanzen
+Rules/Term/undead/genpl: Untoter
+
+# Zaubertricks im Kopf: S. 142 "Zaubertrick der Hervorrufung", S. 135 "Zaubertrick des Banns",
+# S. 143 "der Beschwörung", S. 153 "der Erkenntnis", S. 150 "der Verzauberung", S. 158 "der
+# Nekromantie", S. 129 "der Verwandlung"; "der Illusion" kommt im SRD nicht vor (S. 135 Einfache
+# Illusion steht fälschlich als Bann)
+Rules/Term/abjuration/cantrip: des Banns
+Rules/Term/conjuration/cantrip: der Beschwörung
+Rules/Term/divination/cantrip: der Erkenntnis
+Rules/Term/enchantment/cantrip: der Verzauberung
+Rules/Term/evocation/cantrip: der Hervorrufung
+Rules/Term/illusion/cantrip: der Illusion
+Rules/Term/necromancy/cantrip: der Nekromantie
+Rules/Term/transmutation/cantrip: der Verwandlung

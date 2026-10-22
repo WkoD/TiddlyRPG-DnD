@@ -18,8 +18,31 @@ with fifth edition, as plugin type `ruleset` for `tiddlyrpg-core`:
   terms by group: `Condition`, `Action`, `Mechanics` (rolls, rest, damage, cover), `Spellcasting`,
   `Sense`, `Skill`, `CreatureType`, `Size`, `Alignment`, `School` and `Language`. Each term is
   written with its id, e.g. `<<term charmed>>`, `<<term cover variant:"half">>`,
-  `<<term lg variant:"name">>`; every id is unique across the domains (`giant` is the creature
-  type, `giant-language` the language).
+  `<<term lg variant:"name">>`; every id that stands alone is unique across the domains (`giant`
+  is the creature type, `giant-language` the language).
+- The domains of the fields below: `ItemCategory` (main entries such as `weapon`, `armor`,
+  `potion`, `wondrous-item`, each with its traits: `martial`, `melee`, `versatile`, `sword`,
+  `medium` ...), `Rarity`, `Class`, `Component`, `Area`, `SpellWord` (`self`, `touch`,
+  `instantaneous` ...), `SaveSuccess`, `SpellAttack`, `DamageGroup` (`nonmagical` ...),
+  `Movement`, `Challenge` (with the XP and proficiency bonus of each challenge rating), and the
+  units `Time` (action, round, minute ... - not converted), `Speed` (mph, km/h) and `Volume`
+  (gal, ft³, l).
+- Fields with schema (`$:/tiddlyrpg/rules/fields/...`): what an item, artifact, material, spell,
+  creature, person or player character holds as values, shown as a block like a stat block in the
+  rulebook, with a header line ("martial weapon (melee, sword, versatile), rare (requires
+  attunement)", "3rd-level evocation", "Medium beast, unaligned"):
+  - items: `category`, `rarity`, `attunement`, `cursed`, `classes`, `damage`,
+    `damage-versatile`, `range`, `ac`, `bonus`, `charges`, `recharge`, `save`, `area`, `duration`,
+    `light-bright`, `capacity`, `weight` ...;
+  - spells: `level`, `school`, `ritual`, `casting-time`, `range`, `components`, `duration`,
+    `concentration`, `area`, `save`, `attack`, `damage`, `healing`, `classes`;
+  - creatures: `size`, `creature-type`, `alignment`, `ac`, `hp`, `speed`, `str` ... `cha`,
+    `saves`, `skills`, `senses`, `languages`, `cr` ...;
+  - persons and player characters: `height`, `weight`.
+
+  What the rules derive is not written: the modifier of an ability, the average of hit points,
+  proficiency bonus and XP from the challenge rating, saving throws and skills (with
+  `expertise`), passive Perception - a written value wins.
 - Language keys `Rules/...` in en-GB and de-DE; the terms come from the System Reference Document
   5.1 in English and German (see "Sources and licenses").
 - `$:/tiddlyrpg/rules/system`: the name of the system; its prices are in gold pieces
@@ -108,8 +131,9 @@ material of others, under the terms below.
 ### Material from the SRD 5.1
 
 <!-- wiki tiddlyrpg-ruleset-dnd5e2014/license -->
-`tiddlyrpg-ruleset-dnd5e2014` contains terms (damage types, abilities, abbreviations, units and
-their factors) taken from the System Reference Document 5.1 and reformatted.
+`tiddlyrpg-ruleset-dnd5e2014` contains terms (damage types, abilities, item categories, abbreviations,
+units and their factors, the forms of header lines) taken from the System Reference Document 5.1
+and reformatted.
 <!-- /wiki -->
 
 <!-- wiki tiddlyrpg-setting-forgottenrealms/license -->

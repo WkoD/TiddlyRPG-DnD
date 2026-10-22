@@ -1,0 +1,26 @@
+created: 20261022173518303
+modified: 20261022173518303
+tags: $:/tags/tiddlyrpg/RulesDomain
+title: $:/tiddlyrpg/rules/domain/DamageGroup
+type: application/json
+
+{
+    "domain": "DamageGroup",
+    "type": "label",
+    "keys": "Rules/Term/",
+    "entries": [
+        {
+            "id": "nonmagical"
+        },
+        {
+            "id": "nonmagical-silvered"
+        },
+        {
+            "id": "nonmagical-adamantine"
+        },
+        {
+            "id": "spells"
+        }
+    ],
+    "example": "nonmagical"
+}
