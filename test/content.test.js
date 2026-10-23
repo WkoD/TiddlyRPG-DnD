@@ -233,6 +233,10 @@ test("the named parts of a text as sections: the parts of a stat block, the effe
 	assert.match(text("Adult Red Dragon"), /^<<legendary-action>> The dragon can take 3 legendary actions, choosing from the options below\.[^\n]*The dragon regains spent legendary actions at the start of its turn\.\n\n<<legendary-action "Detect">>/m,
 		"the intro of the legendary actions, which 5e-bits leaves out");
 	assert.match(text("Deck of Many Things"), /^<<effect "The Fates">> /m, "bold only");
+	assert.equal((text("Deck of Many Things").match(/^<<effect "/mg) || []).length, 22, "all 22 cards: 5e-bits ends at Skull, the rest from the SRD p. 217-218");
+	assert.match(text("Deck of Many Things"), /^<<effect "The Void">> This black card spells disaster\./m);
+	assert.match(text("Archmage"), /^''Damage Resistances:'' bludgeoning, piercing, and slashing from nonmagical attacks \(from stoneskin\)$/m,
+		"a resistance that is no damage type stays text, with its label");
 	assert.match(text("Djinni"), /\n\n\* At will: \[\[detect evil and good\|Detect Evil and Good\]\][^\n]*\n\* 3\/day each: \[\[create food and water \(can create wine instead of water\)\|Create Food and Water\]\]/,
 		"innate spellcasting: its lines one list, the spells as links");
 	assert.match(text("Cult Fanatic"), /\* Cantrips \(at will\): \[\[light\|Light\]\][^\n]*\n\* 1st level \(4 slots\): \[\[command\|Command\]\]/, "a paragraph of cantrips joins the list");

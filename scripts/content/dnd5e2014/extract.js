@@ -404,6 +404,17 @@ function tagsOf(category) {
 var KINDS = {"wondrous item": "wondrous-item", "wondrous items": "wondrous-item", "wondous item": "wondrous-item",
 	potion: "potion", ring: "ring", weapon: "weapon", armor: "armor", wand: "wand", staff: "staff", scroll: "scroll", rod: "rod"};
 
+// The cards of the Deck of Many Things after Skull, which 5e-bits cuts off: the text of the SRD
+// 5.1, p. 217-218
+var DECK_TAIL = [
+	"***Star.*** Increase one of your ability scores by 2. The score can exceed 20 but can't exceed 24.",
+	"***Sun.*** You gain 50,000 XP, and a wondrous item (which the GM determines randomly) appears in your hands.",
+	"***Talons.*** Every magic item you wear or carry disintegrates. Artifacts in your possession aren't destroyed but do vanish.",
+	"***Throne.*** You gain proficiency in the Persuasion skill, and you double your proficiency bonus on checks made with that skill. In addition, you gain rightful ownership of a small keep somewhere in the world. However, the keep is currently in the hands of monsters, which you must clear out before you can claim the keep as yours.",
+	"***Vizier.*** At any time you choose within one year of drawing this card, you can ask a question in meditation and mentally receive a truthful answer to that question. Besides information, the answer helps you solve a puzzling problem or other dilemma. In other words, the knowledge comes with wisdom on how to apply it.",
+	"***The Void.*** This black card spells disaster. Your soul is drawn from your body and contained in an object in a place of the GM's choice. One or more powerful beings guard the place. While your soul is trapped in this way, your body is incapacitated. A wish spell can't restore your soul, but the spell reveals the location of the object that holds it. You draw no more cards."
+];
+
 function magicItem(m, equipmentByName) {
 	if(m.variants && m.variants.length) {
 		return null;
@@ -415,6 +426,9 @@ function magicItem(m, equipmentByName) {
 		category = [];
 	if(!match) {
 		throw new Error("head of " + m.name + ": " + head);
+	}
+	if(m.index === "deck-of-many-things" && !desc.some(function(line) { return /^\*\*\*Star\.\*\*\*/.test(line); })) {
+		Array.prototype.push.apply(desc, DECK_TAIL);
 	}
 	var kind = KINDS[match[1].trim().toLowerCase()],
 		inner = (match[2] || "").trim(),
@@ -668,7 +682,9 @@ function modifier(score) {
 	return Math.floor((score - 10) / 2);
 }
 
-function damageList(list, rest) {
+// The damage types and groups of a list as ids; what reads as neither goes to the text, with the
+// label of the list ("Damage Resistances: ... (from stoneskin)")
+function damageList(list, rest, label) {
 	var ids = [];
 	(list || []).forEach(function(entry) {
 		if(DAMAGE.indexOf(entry) !== -1) {
@@ -679,7 +695,7 @@ function damageList(list, rest) {
 		if(group) {
 			ids.push(group[1]);
 		} else {
-			rest.push(entry);
+			rest.push(label + ": " + entry);
 		}
 	});
 	return ids.join(", ");
@@ -772,9 +788,9 @@ function creature(x) {
 	if(expertise.length) {
 		f.expertise = expertise.join(", ");
 	}
-	var vul = damageList(x.damage_vulnerabilities, rest),
-		res = damageList(x.damage_resistances, rest),
-		imm = damageList(x.damage_immunities, rest);
+	var vul = damageList(x.damage_vulnerabilities, rest, "Damage Vulnerabilities"),
+		res = damageList(x.damage_resistances, rest, "Damage Resistances"),
+		imm = damageList(x.damage_immunities, rest, "Damage Immunities");
 	if(vul) { f.vulnerabilities = vul; }
 	if(res) { f.resistances = res; }
 	if(imm) { f.immunities = imm; }
