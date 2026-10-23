@@ -1,5 +1,5 @@
 created: 20261022173518303
-modified: 20261022173518303
+modified: 20261023171323639
 tags: $:/tags/tiddlyrpg/RulesDomain
 title: $:/tiddlyrpg/rules/domain/Rarity
 type: application/json
@@ -10,7 +10,7 @@ type: application/json
     "keys": "Rules/Term/",
     "entries": [
         {
-            "id": "common-rarity"
+            "id": "common"
         },
         {
             "id": "uncommon"

@@ -1,5 +1,5 @@
 created: 20261009183319191
-modified: 20261022175326591
+modified: 20261023171323639
 title: $:/tiddlyrpg/language/en-GB/
 
 # Terms of the System Reference Document 5.1 (English, CC-BY-4.0, see the tab license), by hand;
@@ -238,9 +238,9 @@ Rules/Term/illusion: illusion
 Rules/Term/necromancy: necromancy
 Rules/Term/transmutation: transmutation
 
-# Languages: p. 59, tables "Standard Languages" and "Exotic Languages"; the ids of Giant and
-# Celestial end in -language, giant and celestial are creature types
-Rules/Term/common: Common
+# Languages: p. 59, tables "Standard Languages" and "Exotic Languages"; the ids of Common, Giant
+# and Celestial end in -language: common is a rarity, giant and celestial are creature types
+Rules/Term/common-language: Common
 Rules/Term/dwarvish: Dwarvish
 Rules/Term/elvish: Elvish
 Rules/Term/giant-language: Giant
@@ -258,9 +258,9 @@ Rules/Term/sylvan: Sylvan
 Rules/Term/undercommon: Undercommon
 
 # Rarity of magic items: p. 206-207 ("Rarity"), in the item header, e.g. p. 207 "Wondrous item,
-# rare (requires attunement)", p. 233 "Potion, common", p. 252 "artifact"; the id of common is
-# common-rarity, common is the language
-Rules/Term/common-rarity: common
+# rare (requires attunement)", p. 233 "Potion, common", p. 252 "artifact" (the language Common is
+# common-language)
+Rules/Term/common: common
 Rules/Term/uncommon: uncommon
 Rules/Term/rare: rare
 Rules/Term/very-rare: very rare

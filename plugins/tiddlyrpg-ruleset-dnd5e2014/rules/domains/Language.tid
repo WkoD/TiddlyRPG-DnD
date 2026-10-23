@@ -1,5 +1,5 @@
 created: 20261014200240000
-modified: 20261014200240000
+modified: 20261023171323639
 tags: $:/tags/tiddlyrpg/RulesDomain
 title: $:/tiddlyrpg/rules/domain/Language
 type: application/json
@@ -10,7 +10,7 @@ type: application/json
     "keys": "Rules/Term/",
     "entries": [
         {
-            "id": "common"
+            "id": "common-language"
         },
         {
             "id": "dwarvish"

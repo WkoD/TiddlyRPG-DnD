@@ -1,5 +1,5 @@
 created: 20261009183319191
-modified: 20261022175326591
+modified: 20261023171323639
 title: $:/tiddlyrpg/language/de-DE/
 
 # Begriffe des Systemreferenzdokuments 5.1 (deutsch, CC-BY-4.0, siehe den Tab license), von Hand;
@@ -242,8 +242,9 @@ Rules/Term/illusion: Illusionszauber
 Rules/Term/necromancy: Nekromantiezauber
 Rules/Term/transmutation: Verwandlungszauber
 
-# Sprachen: S. 62, Tabellen "Standardsprachen" und "Exotische Sprachen"
-Rules/Term/common: Gemeinsprache
+# Sprachen: S. 62, Tabellen "Standardsprachen" und "Exotische Sprachen"; die IDs von Common, Giant und
+# Celestial enden auf -language: common ist eine Seltenheit, giant und celestial sind Kreaturtypen
+Rules/Term/common-language: Gemeinsprache
 Rules/Term/dwarvish: Zwergisch
 Rules/Term/elvish: Elfisch
 Rules/Term/giant-language: Riesisch
@@ -262,8 +263,8 @@ Rules/Term/undercommon: Gemeinsprache der Unterreiche
 
 # Seltenheit magischer Gegenstände: S. 226-228 ("Seltenheit"), im Kopf des Gegenstands, z. B.
 # S. 228 "Wundersamer Gegenstand, selten (erfordert Einstimmung)", S. 270 "Trank, gewöhnlich",
-# S. 282 "Artefakt"; die ID von common ist common-rarity, common ist die Sprache
-Rules/Term/common-rarity: gewöhnlich
+# S. 282 "Artefakt" (die Sprache Common ist common-language)
+Rules/Term/common: gewöhnlich
 Rules/Term/uncommon: ungewöhnlich
 Rules/Term/rare: selten
 Rules/Term/very-rare: sehr selten
