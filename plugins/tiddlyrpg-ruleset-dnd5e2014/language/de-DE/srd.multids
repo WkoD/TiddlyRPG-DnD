@@ -479,3 +479,18 @@ Rules/Challenge/27: 27
 Rules/Challenge/28: 28
 Rules/Challenge/29: 29
 Rules/Challenge/30: 30
+
+# Abschnittsarten im Text, benannte Teile eines Gegenstands oder einer Kreatur (<<action "Biss">>):
+# besondere Merkmale, Zauberwirken, Aktionen, Reaktionen S. 289 ("Besondere Merkmale",
+# "Zauberwirken"), Hortaktionen und legendäre Aktionen S. 291, Bonusaktionen S. 98, der Fluch eines
+# Gegenstands S. 230 (Berserkeraxt); Effekt ist unser Wort für das, was ein Gegenstand tut, wenn er
+# benutzt wird (S. 227, "Einen Gegenstand aktivieren")
+Rules/Section/effect: Effekt
+Rules/Section/curse: Fluch
+Rules/Section/trait: Merkmal
+Rules/Section/spellcasting: Zauberwirken
+Rules/Section/action: Aktion
+Rules/Section/bonus-action: Bonusaktion
+Rules/Section/reaction: Reaktion
+Rules/Section/legendary-action: legendäre Aktion
+Rules/Section/lair-action: Hortaktion

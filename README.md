@@ -27,6 +27,13 @@ with fifth edition, as plugin type `ruleset` for `tiddlyrpg-core`:
   `Movement`, `Challenge` (with the XP and proficiency bonus of each challenge rating), and the
   units `Time` (action, round, minute ... - not converted), `Speed` (mph, km/h) and `Volume`
   (gal, ft³, l).
+- The kinds of sections of the text (`Section`): named parts of an item or a creature, each at the
+  start of its paragraph - `<<effect "Name">>` (what an item does), `<<curse "Curse">>` (seen
+  where the field `cursed` is: locked with `secret-fields: cursed`, the players see the curse when
+  the DM lifts the lock), `<<trait "Pack Tactics">>`, `<<spellcasting "Spellcasting">>`,
+  `<<action "Bite">>`, `<<bonus-action>>`, `<<reaction>>`, `<<legendary-action>>`,
+  `<<lair-action>>`; the block form `<$action name="Multiattack">...</$action>` for several
+  paragraphs.
 - Fields with schema (`$:/tiddlyrpg/rules/fields/...`): what an item, artifact, material, spell,
   creature, person or player character holds as values, shown as a block like a stat block in the
   rulebook, with a header line ("martial weapon (melee, sword, versatile), rare (requires

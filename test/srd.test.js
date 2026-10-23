@@ -55,6 +55,10 @@ function needed() {
 					list.push("Rules/Damage/" + e.id + "/Phrase");
 				}
 			});
+		} else if(d.type === "section") {
+			d.entries.forEach(function(e) {
+				list.push(d.keys + e.id);
+			});
 		} else if(d.type === "label") {
 			d.entries.forEach(function(e) {
 				list.push((d.keys || "Rules/Term/") + e.id);
@@ -67,14 +71,14 @@ function needed() {
 	return list.filter(function(key, index) { return list.indexOf(key) === index; });
 }
 
-test("the 31 domains of the ruleset with their types", function() {
+test("the 32 domains of the ruleset with their types", function() {
 	var types = {};
 	domains().forEach(function(d) { types[d.domain] = d.type; });
 	assert.deepEqual(types, {
 		Ability: "label", Action: "label", Alignment: "label", Area: "label", Challenge: "label", Class: "label",
 		Component: "label", Condition: "label", CreatureType: "label", Damage: "damage", DamageGroup: "label",
 		Dice: "tokens", ItemCategory: "label", Language: "label", Length: "unit", Mechanics: "label",
-		Movement: "label", Rarity: "label", SaveSuccess: "label", School: "label", Sense: "label", Size: "label",
+		Movement: "label", Rarity: "label", SaveSuccess: "label", School: "label", Section: "section", Sense: "label", Size: "label",
 		Skill: "label", Speed: "unit", SpellAttack: "label", SpellWord: "label", Spellcasting: "label",
 		Terms: "label", Time: "unit", Volume: "unit", Weight: "unit"
 	});
@@ -184,4 +188,11 @@ test("the plugin lists its license tab", function() {
 	var info = JSON.parse(fs.readFileSync(path.join(plugin, "plugin.info"), "utf8"));
 	assert.deepEqual(info.list.split(" "), ["readme", "license"]);
 	assert.ok(fs.existsSync(path.join(plugin, "license.tid")));
+});
+
+test("the kinds of sections: what an item does, its curse locked with cursed, what a creature has and does", function() {
+	var section = domains().filter(function(d) { return d.domain === "Section"; })[0];
+	assert.deepEqual(section.entries.map(function(e) { return e.id; }),
+		["effect", "curse", "trait", "spellcasting", "action", "bonus-action", "reaction", "legendary-action", "lair-action"]);
+	assert.equal(section.entries[1].lock, "cursed");
 });

@@ -59,7 +59,7 @@ npm run test-lang            # only test/lang/: language packs
     major and minor version of this repo equal those of the core; the Forgotten Realms are the active setting
   - `calendar` - the Calendar of Harptos with the real data: months, festivals, era, Shieldmeet,
     length of a year, de-DE and en-GB, the rules domain `Calendar` and its display language
-  - `srd` - the SRD terms by hand: the 31 domains, the 13 damage types, 6 abilities, 7 terms and
+  - `srd` - the SRD terms by hand: the 32 domains (with the kinds of sections), the 13 damage types, 6 abilities, 7 terms and
     the terms by group (conditions, actions, ...); every entry, unit and token has its keys in
     every language (under the `keys` of its domain), the abbreviations (`Ability`, `Alignment`,
     `Terms`) also their variant `name`; every id that stands alone is unique across the label

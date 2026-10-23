@@ -471,3 +471,18 @@ Rules/Challenge/27: 27
 Rules/Challenge/28: 28
 Rules/Challenge/29: 29
 Rules/Challenge/30: 30
+
+# Kinds of sections of the text, named parts of an item or a creature (<<action "Bite">>): the
+# special traits, spellcasting, actions, reactions p. 258-259 ("Special Traits", "Spellcasting",
+# "Actions", "Reactions"), legendary and lair actions p. 260, bonus actions p. 90, a curse of an
+# item p. 211 (Berserker Axe: "Curse."); effect is our word for what an item does when it is used
+# (p. 206, "Activating an Item")
+Rules/Section/effect: effect
+Rules/Section/curse: curse
+Rules/Section/trait: trait
+Rules/Section/spellcasting: spellcasting
+Rules/Section/action: action
+Rules/Section/bonus-action: bonus action
+Rules/Section/reaction: reaction
+Rules/Section/legendary-action: legendary action
+Rules/Section/lair-action: lair action
