@@ -355,7 +355,8 @@ function magicItem(m, equipmentByName) {
 				fields[name] = base.fields[name];
 			}
 		});
-		fields.base = base.title;
+		// a title list of one: in brackets when it has a space ("[[Plate Armor]]")
+		fields.base = /\s/.test(base.title) ? "[[" + base.title + "]]" : base.title;
 		category = base.fields.category.split(", ");
 		fields.rarity = rarity === "common" ? "common-rarity" : rarity;
 	}

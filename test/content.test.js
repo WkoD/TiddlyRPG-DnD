@@ -86,7 +86,9 @@ test("base and spells name entries of the package, by their titles", function() 
 		titles[e.title] = e.type;
 	});
 	entries.forEach(function(e) {
-		if(e.fields.base && titles[e.fields.base] !== "Item") {
+		// a title list, as the relation reads it: one title, in brackets when it has a space
+		var base = $tw.utils.parseStringArray(e.fields.base || "");
+		if(e.fields.base && (base.length !== 1 || titles[base[0]] !== "Item")) {
 			missing.push(e.title + " base " + e.fields.base);
 		}
 		$tw.utils.parseStringArray(e.fields.spells || "").forEach(function(title) {
