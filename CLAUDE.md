@@ -56,7 +56,7 @@ npm run test-lang            # only test/lang/: language packs
   One file per topic, a test that changes the wiki restores it:
   - `plugins` - every plugin: its type (`ruleset`/`setting`), dependency on the core only, no JS
     modules, the version of `package.json`, `tiddlyrpg-core-version` met by the linked core; the
-    version of this repo equals the one of the core; the Forgotten Realms are the active setting
+    major and minor version of this repo equal those of the core; the Forgotten Realms are the active setting
   - `calendar` - the Calendar of Harptos with the real data: months, festivals, era, Shieldmeet,
     length of a year, de-DE and en-GB, the rules domain `Calendar` and its display language
   - `srd` - the SRD terms by hand: the 31 domains, the 13 damage types, 6 abilities, 7 terms and
@@ -166,11 +166,14 @@ plugin" in its `CLAUDE.md`); the texts live only in `README.md` and `LICENSE`:
 
 ## Publishing a new version
 
-For now this repo keeps the version of `TiddlyRPG-Plugins` (`tiddlyrpg-core`), to show which
-versions fit together; the two may part later. A release here follows the one of the core.
+For now this repo keeps the major and minor version of `TiddlyRPG-Plugins` (`tiddlyrpg-core`),
+to show which versions fit together; the two may part later. The patch level (the third number)
+is each repo's own, so a fix is released alone (`2.1.1` here next to `2.1.0` of the core). A
+minor or major release here follows the one of the core.
 
-1. Raise `version` in `package.json` and in the `plugin.info` of every plugin to the version of
-   the core, and the pin of `tiddlyrpg-plugins` in `devDependencies` to its tag.
+1. Raise `version` in `package.json` and in the `plugin.info` of every plugin - to the version of
+   the core for a minor or major release, to the next patch level for a fix - and the pin of
+   `tiddlyrpg-plugins` in `devDependencies` to the tag of the core it needs.
 2. `npm install`, once `npm ci && npm run smoke` without the link as the CI does, then
    `npm link tiddlyrpg-plugins` again.
 3. `npm run smoke`, `npm test`.

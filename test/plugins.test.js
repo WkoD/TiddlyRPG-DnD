@@ -25,8 +25,9 @@ test.before(function() {
 
 var folders = fs.readdirSync(path.join(root, "plugins"));
 
-test("the version of this repo is the version of tiddlyrpg-core (kept the same for now)", function() {
-	assert.equal(pkg.version, pluginTypes.coreVersion(wiki));
+test("the major and minor version of this repo are those of tiddlyrpg-core; the patch level is its own", function() {
+	var minor = function(version) { return version.split(".").slice(0, 2).join("."); };
+	assert.equal(minor(pkg.version), minor(pluginTypes.coreVersion(wiki)));
 });
 
 test("every plugin folder is known to this test", function() {
