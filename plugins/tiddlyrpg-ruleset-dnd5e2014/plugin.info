@@ -9,6 +9,6 @@
   "dependents": [
     "$:/plugins/tiddlyrpg-core"
   ],
-  "tiddlyrpg-core-version": ">=2.1.0",
+  "tiddlyrpg-core-version": ">=2.2.0",
   "list": "readme license"
 }

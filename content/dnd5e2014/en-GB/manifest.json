@@ -2,7 +2,7 @@
 	"name": "SRD 5.1 (English)",
 	"ruleset": "$:/plugins/tiddlyrpg-ruleset-dnd5e2014",
 	"language": "en-GB",
-	"tiddlyrpg-core-version": ">=2.1.0",
+	"tiddlyrpg-core-version": ">=2.2.0",
 	"tag": "SRD 5.1 English",
 	"source": "[[SRD 5.1 (English)|https://dnd.wizards.com/resources/systems-reference-document]] (CC-BY-4.0)",
 	"files": [

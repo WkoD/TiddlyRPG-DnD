@@ -22,7 +22,10 @@
  *   - prices are numbers in gp (the reference coin of the ruleset; the core writes them in the
  *     coins of the setting), weights in lb;
  *   - texts are wikitext: the Markdown of 5e-bits converted, every character that would start
- *     markup of TiddlyWiki written as an entity, conditions as <<term>>.
+ *     markup of TiddlyWiki written as an entity, conditions as <<term>>;
+ *   - the named parts of a text are sections of the ruleset (domain Section): the special traits,
+ *     spellcasting, actions, reactions, legendary actions of a creature, the effects and the curse
+ *     of an item; the spells of a spellcasting link to their entries.
  */
 "use strict";
 
@@ -154,6 +157,54 @@ function wikitext(lines) {
 }
 
 /* Values */
+
+/* Sections: named parts of a text (the domain Section of the ruleset) */
+
+// A named part of a text as a section of the ruleset: the short form at the start of its
+// paragraph, the block form around more than one paragraph, a list or a table. <name> is wikitext
+// already (escaped)
+function section(kind, name, body) {
+	var quoted = name.indexOf("\"") === -1 ? "\"" + name + "\"" : "'" + name + "'";
+	if(!/\n/.test(body)) {
+		return "<<" + kind + " " + quoted + ">> " + body;
+	}
+	return "<$" + kind + " name=" + quoted + ">\n\n" + body + "\n\n</$" + kind + ">";
+}
+
+// The named paragraphs of an item ("''//Spells.//'' ...") as sections: every one an effect, the
+// curse a curse that runs to the end of the text - the paragraphs after it belong to it (SRD
+// p. 209-242)
+function itemSections(text) {
+	var paragraphs = text.split("\n\n"),
+		out = [];
+	for(var i = 0; i < paragraphs.length; i++) {
+		var m = /^''\/\/(.+?)\.\/\/'' ([^]*)$/.exec(paragraphs[i]);
+		if(!m) {
+			out.push(paragraphs[i]);
+		} else if(m[1] === "Curse") {
+			out.push(section("curse", m[1], [m[2]].concat(paragraphs.slice(i + 1)).join("\n\n")));
+			break;
+		} else {
+			out.push(section("effect", m[1], m[2]));
+		}
+	}
+	return out.join("\n\n");
+}
+
+// The spells of the lists of a spellcasting section ("* 1st level (4 slots): detect magic, shield")
+// as links to their entries in the package, by the titles there ("Shield (Spell)"); a name that is
+// no spell of the package stays text
+function linkSpells(text, titles) {
+	return text.replace(/(<\$spellcasting [^>]*>)([^]*?)(<\/\$spellcasting>)/g, function(all, open, inner, close) {
+		return open + inner.replace(/^(\* [^:\n]+: )(.+)$/mg, function(line, head, list) {
+			return head + list.split(", ").map(function(name) {
+				var key = name.replace(/\*+$/, "").replace(/ \(.*\)$/, "").trim().toLowerCase(),
+					title = titles[key];
+				return title ? "[[" + name + "|" + title + "]]" : name;
+			}).join(", ");
+		}) + close;
+	});
+}
 
 function priceOf(cost) {
 	if(!cost || !cost.quantity) {
@@ -387,7 +438,7 @@ function magicItem(m, equipmentByName) {
 		}
 	}
 	return {id: "item:" + m.index, title: m.name, type: "Item", tags: tagsOf(category), fields: fields,
-		text: wikitext(desc), spellText: text};
+		text: itemSections(wikitext(desc)), spellText: text};
 }
 
 var CLASSES = ["barbarian", "bard", "cleric", "druid", "fighter", "monk", "paladin", "ranger", "rogue", "sorcerer", "warlock", "wizard", "spellcaster"];
@@ -730,11 +781,15 @@ function creature(x) {
 	if(rest.length) {
 		sections.push(rest.map(function(r) { return "''" + escape(r.split(":")[0]) + ":''" + escape(r.slice(r.indexOf(":") + 1)); }).join("\n\n"));
 	}
-	[["special_abilities", null], ["actions", "Actions"], ["reactions", "Reactions"], ["legendary_actions", "Legendary Actions"]].forEach(function(part) {
+	// The parts of the stat block as sections: special traits (spellcasting as a kind of its own),
+	// actions, reactions, legendary actions (SRD p. 258-260); the headings stay
+	[["special_abilities", null, "trait"], ["actions", "Actions", "action"], ["reactions", "Reactions", "reaction"],
+		["legendary_actions", "Legendary Actions", "legendary-action"]].forEach(function(part) {
 		var list = x[part[0]];
 		if(list && list.length) {
 			sections.push((part[1] ? "!! " + part[1] + "\n\n" : "") + list.map(function(a) {
-				return "''//" + escape(a.name) + ".//'' " + wikitext([a.desc]);
+				var kind = part[2] === "trait" && /spellcasting/i.test(a.name) ? "spellcasting" : part[2];
+				return section(kind, escape(a.name), wikitext([a.desc]));
 			}).join("\n\n"));
 		}
 	});
@@ -856,6 +911,10 @@ function main() {
 			taken[e.title.toLowerCase()] = true;
 			spellTitles[e.title.replace(/ \(Spell\)$/, "").toLowerCase()] = e.title;
 		});
+		// The spells of the spellcasting of a creature as links
+		creatures.forEach(function(e) {
+			e.text = linkSpells(e.text, spellTitles);
+		});
 		// The spells an item names, by their titles in the package
 		items.forEach(function(e) {
 			var names = e.spellText ? spellsNamed(e.spellText, Object.keys(spellTitles)).map(function(n) { return spellTitles[n]; }) : [];
@@ -877,7 +936,7 @@ function main() {
 			name: "SRD 5.1 (English)",
 			ruleset: "$:/plugins/tiddlyrpg-ruleset-dnd5e2014",
 			language: "en-GB",
-			"tiddlyrpg-core-version": ">=2.1.0",
+			"tiddlyrpg-core-version": ">=2.2.0",
 			tag: "SRD 5.1 English",
 			source: "[[SRD 5.1 (English)|https://dnd.wizards.com/resources/systems-reference-document]] (CC-BY-4.0)",
 			files: ["items.json", "spells.json", "creatures.json"]

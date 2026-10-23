@@ -2,7 +2,8 @@
  * The content package content/dnd5e2014/en-GB (scripts/content/dnd5e2014/extract.js): every value of
  * every entry reads with the fields of tiddlyrpg-ruleset-dnd5e2014 in both languages, ids and
  * titles are unique, base and spells name entries of the package, and no text runs wikitext the
- * SRD does not have (only <<term>> of a condition).
+ * SRD does not have (only <<term>> of a condition, the sections of the ruleset, the spells of a
+ * spellcasting as links); the named parts of a stat block and of an item as sections.
  */
 var test = require("node:test"),
 	assert = require("node:assert/strict"),
@@ -178,22 +179,55 @@ test("headers in the form of the SRD (de p. 438, 414, 142)", function() {
 	assert.equal(header("Detect Magic"), "1st-level divination (ritual)");
 });
 
-test("no text runs wikitext the SRD does not have: only <<term>> of a condition", function() {
+test("no text runs wikitext the SRD does not have: <<term>> of a condition, the sections of the ruleset, spells of a spellcasting as links", function() {
 	var conditions = JSON.parse(wiki.getTiddlerText("$:/tiddlyrpg/rules/domain/Condition")).entries.map(function(e) { return e.id; }),
+		kinds = JSON.parse(wiki.getTiddlerText("$:/tiddlyrpg/rules/domain/Section")).entries.map(function(e) { return e.id; }),
+		spells = {},
 		wrong = [];
 	entries.forEach(function(e) {
+		if(e.type === "Spell") {
+			spells[e.title] = true;
+		}
+	});
+	entries.forEach(function(e) {
 		var text = e.text || "";
+		// the links of a spellcasting, to spells of the package
+		text = text.replace(/(<\$spellcasting [^>]*>)([^]*?)(<\/\$spellcasting>)/g, function(all, open, inner, close) {
+			return open + inner.replace(/\[\[([^|\]]+)\|([^\]]+)\]\]/g, function(link, shown, title) {
+				if(!spells[title]) {
+					wrong.push(e.title + ": a link to " + title);
+				}
+				return shown;
+			}) + close;
+		});
 		(text.match(/<<[^>]*>>/g) || []).forEach(function(call) {
-			var m = /^<<term ([a-z]+)>>$/.exec(call);
-			if(!m || conditions.indexOf(m[1]) === -1) {
+			var term = /^<<term ([a-z]+)>>$/.exec(call),
+				section = /^<<([a-z-]+) "[^"]+">>$/.exec(call);
+			if(!(term && conditions.indexOf(term[1]) !== -1) && !(section && kinds.indexOf(section[1]) !== -1)) {
 				wrong.push(e.title + ": " + call);
 			}
 		});
-		if(/\[\[|\{\{|<\$|<</.test(text.replace(/<<term [a-z]+>>/g, ""))) {
-			wrong.push(e.title + ": link, transclusion or widget");
+		(text.match(/<\/?\$[^>]*>/g) || []).forEach(function(tag) {
+			var block = /^<\/?\$([a-z-]+)(?: name="[^"]+")?>$/.exec(tag);
+			if(!block || kinds.indexOf(block[1]) === -1) {
+				wrong.push(e.title + ": " + tag);
+			}
+		});
+		if(/\[\[|\{\{/.test(text)) {
+			wrong.push(e.title + ": link or transclusion");
 		}
 	});
 	assert.deepEqual(wrong, []);
+});
+
+test("the named parts of a text as sections: the parts of a stat block, the effects and the curse of an item", function() {
+	var text = function(title) { return entries.filter(function(e) { return e.title === title; })[0].text; };
+	assert.match(text("Wolf"), /^<<trait "Pack Tactics">> The wolf has advantage/m);
+	assert.match(text("Wolf"), /^<<action "Bite">> Melee Weapon Attack/m);
+	assert.match(text("Mage"), /<\$spellcasting name="Spellcasting">\n\nThe mage is a 9th-level spellcaster[^]*\* 1st level \(4 slots\): \[\[detect magic\|Detect Magic\]\][^]*\[\[shield\|Shield \(Spell\)\]\][^]*\n\n<\/\$spellcasting>/,
+		"a list: the block form; the spells as links by their titles in the package");
+	assert.match(text("Berserker Axe"), /<\$curse name="Curse">\n\nThis axe is Cursed[^]*Whenever a Hostile creature[^]*<\/\$curse>$/, "the curse runs to the end");
+	assert.match(text("Staff of Power"), /^<<effect "Retributive Strike">> /m);
 });
 
 test("a text renders as written: no link the SRD does not have", function() {
