@@ -79,8 +79,16 @@ test("lines that join fields", function() {
 	assert.equal(line({cr: "1/4"}, "Rules/Line/challenge", ["cr", "xp"]), "1/4 (50 XP)");
 	assert.equal(line({damage: "1d8 bludgeoning plus 1d8 cold", "damage-versatile": "1d10 bludgeoning plus 1d8 cold", category: "weapon"},
 		"Rules/Line/damage", ["damage", "damage-versatile"]),
-		"1d8 bludgeoning damage plus 1d8 cold damage, versatile (1d10 bludgeoning damage plus 1d8 cold damage)",
-		"versatile damage reads like damage: types, several parts");
+		"1d8 bludgeoning + 1d8 cold, versatile (1d10 bludgeoning + 1d8 cold)",
+		"versatile damage reads like damage: types, several parts; the short form of the weapon tables");
+	h.setLanguage(wiki, "de-DE");
+	try {
+		assert.equal(line({damage: "1d8 bludgeoning plus 1d8 cold", "damage-versatile": "1d10 bludgeoning plus 1d8 cold", category: "weapon"},
+			"Rules/Line/damage", ["damage", "damage-versatile"]),
+			"1W8 Wucht + 1W8 Kälte, vielseitig (1W10 Wucht + 1W8 Kälte)");
+	} finally {
+		h.setLanguage(wiki, "en-GB");
+	}
 });
 
 test("units of the new domains: time without conversion, speed and volume as the German SRD", function() {
