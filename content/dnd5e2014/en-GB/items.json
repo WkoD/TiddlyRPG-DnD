@@ -118,7 +118,7 @@
 			],
 			"fields": {
 				"damage": "1d6 bludgeoning",
-				"damage-versatile": "1d8",
+				"damage-versatile": "1d8 bludgeoning",
 				"category": "weapon, simple, melee, versatile",
 				"weight": "4 lb",
 				"price": 0.2
@@ -149,7 +149,7 @@
 			],
 			"fields": {
 				"damage": "1d6 piercing",
-				"damage-versatile": "1d8",
+				"damage-versatile": "1d8 piercing",
 				"range": "20/60 ft",
 				"category": "weapon, simple, melee, spear, thrown, versatile",
 				"weight": "3 lb",
@@ -229,7 +229,7 @@
 			],
 			"fields": {
 				"damage": "1d8 slashing",
-				"damage-versatile": "1d10",
+				"damage-versatile": "1d10 slashing",
 				"category": "weapon, martial, melee, axe, versatile",
 				"weight": "4 lb",
 				"price": 10
@@ -335,7 +335,7 @@
 			],
 			"fields": {
 				"damage": "1d8 slashing",
-				"damage-versatile": "1d10",
+				"damage-versatile": "1d10 slashing",
 				"category": "weapon, martial, melee, sword, versatile",
 				"weight": "3 lb",
 				"price": 15
@@ -441,7 +441,7 @@
 			],
 			"fields": {
 				"damage": "1d6 piercing",
-				"damage-versatile": "1d8",
+				"damage-versatile": "1d8 piercing",
 				"range": "20/60 ft",
 				"category": "weapon, martial, melee, spear, thrown, versatile",
 				"weight": "4 lb",
@@ -473,7 +473,7 @@
 			],
 			"fields": {
 				"damage": "1d8 bludgeoning",
-				"damage-versatile": "1d10",
+				"damage-versatile": "1d10 bludgeoning",
 				"category": "weapon, martial, melee, hammer, versatile",
 				"weight": "2 lb",
 				"price": 15
@@ -4859,7 +4859,7 @@
 				"rarity": "very-rare",
 				"attunement": "yes",
 				"damage": "1d8 bludgeoning",
-				"damage-versatile": "1d10",
+				"damage-versatile": "1d10 bludgeoning",
 				"category": "weapon, martial, melee, hammer, versatile, thrown",
 				"weight": "2 lb",
 				"base": "Warhammer",
@@ -8025,7 +8025,7 @@
 				"rarity": "rare",
 				"attunement": "yes",
 				"damage": "1d8 slashing",
-				"damage-versatile": "1d10",
+				"damage-versatile": "1d10 slashing",
 				"category": "weapon, martial, melee, sword, versatile",
 				"weight": "3 lb",
 				"base": "Longsword",
@@ -8171,7 +8171,7 @@
 				"rarity": "uncommon",
 				"attunement": "yes",
 				"damage": "1d6 piercing",
-				"damage-versatile": "1d8",
+				"damage-versatile": "1d8 piercing",
 				"range": "20/60 ft",
 				"category": "weapon, martial, melee, spear, thrown, versatile",
 				"weight": "4 lb",

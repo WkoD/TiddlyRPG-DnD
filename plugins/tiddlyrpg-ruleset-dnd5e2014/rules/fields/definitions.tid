@@ -1,5 +1,5 @@
 created: 20261022173330580
-modified: 20261022185857319
+modified: 20261023170410365
 tags: $:/tags/tiddlyrpg/RulesFields
 title: $:/tiddlyrpg/rules/fields
 type: application/json
@@ -13,7 +13,7 @@ type: application/json
         "classes": {"format": "labels", "domain": "Class"},
 
         "damage": {"format": "damage", "when": {"category": ["weapon"]}},
-        "damage-versatile": {"format": "dice", "when": {"category": ["weapon"]}},
+        "damage-versatile": {"format": "damage", "when": {"category": ["weapon"]}},
         "range": {"format": "unit", "domain": "Length", "kind": "range", "words": "SpellWord", "only": ["self", "touch", "sight", "unlimited", "special"]},
         "bonus": {"format": "number", "signed": true, "filter": true},
 
@@ -41,6 +41,7 @@ type: application/json
         "ability-max": {"format": "number", "min": 1, "max": 30},
         "spell-attack-bonus": {"format": "number", "signed": true},
         "spell-dc-bonus": {"format": "number", "signed": true},
+        "spell-damage-bonus": {"format": "number", "signed": true},
         "saving-throw-bonus": {"format": "number", "signed": true},
 
         "resistances": {"format": "labels", "domain": ["Damage", "DamageGroup"]},

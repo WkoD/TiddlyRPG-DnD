@@ -215,7 +215,7 @@ function equipment(e) {
 			fields.damage = e.damage.damage_dice + " " + e.damage.damage_type.index;
 		}
 		if(e.two_handed_damage) {
-			fields["damage-versatile"] = e.two_handed_damage.damage_dice;
+			fields["damage-versatile"] = e.two_handed_damage.damage_dice + " " + e.two_handed_damage.damage_type.index;
 		}
 		var range = e.weapon_range === "Ranged" ? e.range : e.throw_range;
 		if(range && range.long) {

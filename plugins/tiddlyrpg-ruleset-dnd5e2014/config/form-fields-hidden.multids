@@ -1,5 +1,5 @@
 created: 20261022173526298
-modified: 20261022173526298
+modified: 20261023170421207
 title: $:/config/EditTemplateFields/Visibility/
 
 ability: hide
@@ -63,6 +63,7 @@ skills: hide
 speed: hide
 spell-attack-bonus: hide
 spell-dc-bonus: hide
+spell-damage-bonus: hide
 stealth: hide
 str: hide
 strength-min: hide

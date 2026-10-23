@@ -77,6 +77,10 @@ test("lines that join fields", function() {
 	assert.equal(line({duration: "1 minute", concentration: "yes"}, "Rules/Line/duration", ["duration", "concentration"], {concentration: "Rules/Line/Concentration"}),
 		"Concentration, up to 1 minute");
 	assert.equal(line({cr: "1/4"}, "Rules/Line/challenge", ["cr", "xp"]), "1/4 (50 XP)");
+	assert.equal(line({damage: "1d8 bludgeoning plus 1d8 cold", "damage-versatile": "1d10 bludgeoning plus 1d8 cold", category: "weapon"},
+		"Rules/Line/damage", ["damage", "damage-versatile"]),
+		"1d8 bludgeoning damage plus 1d8 cold damage, versatile (1d10 bludgeoning damage plus 1d8 cold damage)",
+		"versatile damage reads like damage: types, several parts");
 });
 
 test("units of the new domains: time without conversion, speed and volume as the German SRD", function() {

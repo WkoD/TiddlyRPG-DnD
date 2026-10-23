@@ -1,5 +1,5 @@
 created: 20261022173330580
-modified: 20261022173330580
+modified: 20261023170410365
 tags: $:/tags/tiddlyrpg/RulesFields
 title: $:/tiddlyrpg/rules/fields/items
 type: application/json
@@ -8,7 +8,7 @@ type: application/json
     "types": ["Item", "Artifact"],
     "fields": ["category", "rarity", "attunement", "cursed", "classes",
         "damage", "damage-versatile", "range", "ac", "ac-dex", "ac-dex-max", "strength-min", "stealth", "bonus",
-        "spell-attack-bonus", "spell-dc-bonus", "saving-throw-bonus",
+        "spell-attack-bonus", "spell-dc-bonus", "spell-damage-bonus", "saving-throw-bonus",
         "charges", "recharge", "recharge-on", "save", "save-dc", "save-success", "area", "area-shape",
         "duration", "concentration", "ability", "ability-score", "ability-max", "healing", "light-bright", "light-dim",
         "speed", "resistances", "immunities", "vulnerabilities", "condition-immunities",
@@ -18,7 +18,7 @@ type: application/json
         "vulnerabilities": "Rules/Field/vulnerabilities/grants", "condition-immunities": "Rules/Field/condition-immunities/grants"},
     "summary": {"key": "Rules/Summary/Item", "flags": {"attunement": "Rules/Summary/Attunement", "cursed": "Rules/Summary/Cursed"}},
     "groups": [
-        {"id": "combat", "fields": ["damage", "range", "ac", "strength-min", "stealth", "bonus", "spell-attack-bonus", "spell-dc-bonus", "saving-throw-bonus"],
+        {"id": "combat", "fields": ["damage", "range", "ac", "strength-min", "stealth", "bonus", "spell-attack-bonus", "spell-dc-bonus", "spell-damage-bonus", "saving-throw-bonus"],
             "combine": [
                 {"fields": ["damage", "damage-versatile"], "key": "Rules/Line/damage"},
                 {"fields": ["ac", "ac-dex", "ac-dex-max"], "key": "Rules/Line/ac", "flags": {"ac-dex": "Rules/Line/AcDex"}}

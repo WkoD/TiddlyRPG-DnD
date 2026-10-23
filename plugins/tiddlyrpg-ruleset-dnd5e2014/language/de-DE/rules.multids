@@ -1,5 +1,5 @@
 created: 20261009183319191
-modified: 20261022175326591
+modified: 20261023170410365
 title: $:/tiddlyrpg/language/de-DE/
 
 # Einheiten, Würfel und die Schadensgrammatik von D&D 5e (2014) auf Deutsch; Belege der Faktoren siehe en-GB.
@@ -147,6 +147,7 @@ Rules/Field/ability-score: Wert
 Rules/Field/ability-max: Wert höchstens
 Rules/Field/spell-attack-bonus: Bonus auf Zauberangriffe
 Rules/Field/spell-dc-bonus: Bonus auf den Zauber-SG
+Rules/Field/spell-damage-bonus: Bonus auf Zauberschaden
 Rules/Field/saving-throw-bonus: Bonus auf Rettungswürfe
 Rules/Field/resistances: Schadensresistenzen
 Rules/Field/resistances/grants: Gewährt Resistenz
