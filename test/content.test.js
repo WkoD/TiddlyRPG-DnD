@@ -3,7 +3,8 @@
  * every entry reads with the fields of tiddlyrpg-ruleset-dnd5e2014 in both languages, ids and
  * titles are unique, base and spells name entries of the package, and no text runs wikitext the
  * SRD does not have (only <<term>> of a condition, the sections of the ruleset, the spells of a
- * spellcasting as links); the named parts of a stat block and of an item as sections.
+ * spellcasting as links); the named parts of a stat block and of an item as sections, the intro of
+ * the legendary actions.
  */
 var test = require("node:test"),
 	assert = require("node:assert/strict"),
@@ -191,28 +192,25 @@ test("no text runs wikitext the SRD does not have: <<term>> of a condition, the 
 	});
 	entries.forEach(function(e) {
 		var text = e.text || "";
-		// the links of a spellcasting, to spells of the package
-		text = text.replace(/(<\$spellcasting [^>]*>)([^]*?)(<\/\$spellcasting>)/g, function(all, open, inner, close) {
-			return open + inner.replace(/\[\[([^|\]]+)\|([^\]]+)\]\]/g, function(link, shown, title) {
+		// the links of a spellcasting (a section runs to the next marker), to spells of the package
+		text = text.split(/\n\n(?=<<)/).map(function(part) {
+			return /^<<spellcasting[ >]/.test(part) ? part.replace(/\[\[([^|\]]+)\|([^\]]+)\]\]/g, function(link, shown, title) {
 				if(!spells[title]) {
 					wrong.push(e.title + ": a link to " + title);
 				}
 				return shown;
-			}) + close;
-		});
+			}) : part;
+		}).join("\n\n");
 		(text.match(/<<[^>]*>>/g) || []).forEach(function(call) {
 			var term = /^<<term ([a-z]+)>>$/.exec(call),
-				section = /^<<([a-z-]+) "[^"]+">>$/.exec(call);
+				section = /^<<([a-z-]+)(?: "[^"]+")?>>$/.exec(call);
 			if(!(term && conditions.indexOf(term[1]) !== -1) && !(section && kinds.indexOf(section[1]) !== -1)) {
 				wrong.push(e.title + ": " + call);
 			}
 		});
-		(text.match(/<\/?\$[^>]*>/g) || []).forEach(function(tag) {
-			var block = /^<\/?\$([a-z-]+)(?: name="[^"]+")?>$/.exec(tag);
-			if(!block || kinds.indexOf(block[1]) === -1) {
-				wrong.push(e.title + ": " + tag);
-			}
-		});
+		if(/<\/?\$/.test(text)) {
+			wrong.push(e.title + ": a widget or block");
+		}
 		if(/\[\[|\{\{/.test(text)) {
 			wrong.push(e.title + ": link or transclusion");
 		}
@@ -224,9 +222,13 @@ test("the named parts of a text as sections: the parts of a stat block, the effe
 	var text = function(title) { return entries.filter(function(e) { return e.title === title; })[0].text; };
 	assert.match(text("Wolf"), /^<<trait "Pack Tactics">> The wolf has advantage/m);
 	assert.match(text("Wolf"), /^<<action "Bite">> Melee Weapon Attack/m);
-	assert.match(text("Mage"), /<\$spellcasting name="Spellcasting">\n\nThe mage is a 9th-level spellcaster[^]*\* 1st level \(4 slots\): \[\[detect magic\|Detect Magic\]\][^]*\[\[shield\|Shield \(Spell\)\]\][^]*\n\n<\/\$spellcasting>/,
-		"a list: the block form; the spells as links by their titles in the package");
-	assert.match(text("Berserker Axe"), /<\$curse name="Curse">\n\nThis axe is Cursed[^]*Whenever a Hostile creature[^]*<\/\$curse>$/, "the curse runs to the end");
+	assert.match(text("Mage"), /^<<spellcasting "Spellcasting">> The mage is a 9th-level spellcaster[^]*\* 1st level \(4 slots\): \[\[detect magic\|Detect Magic\]\][^]*\[\[shield\|Shield \(Spell\)\]\]/m,
+		"a list belongs to the section; the spells as links by their titles in the package");
+	assert.match(text("Berserker Axe"), /^<<curse "Curse">> This axe is Cursed[^]*\n\nWhenever a Hostile creature/m, "the curse with the paragraph after it");
+	assert.match(text("Adult Red Dragon"), /^<<legendary-action>> The dragon can take 3 legendary actions, choosing from the options below\.[^\n]*The dragon regains spent legendary actions at the start of its turn\.\n\n<<legendary-action "Detect">>/m,
+		"the intro of the legendary actions, which 5e-bits leaves out");
+	assert.match(text("Deck of Many Things"), /^<<effect "The Fates">> /m, "bold only");
+	assert.doesNotMatch(entries.map(function(e) { return e.text || ""; }).join("\n"), /^!! /m, "the headings come from the ruleset");
 	assert.match(text("Staff of Power"), /^<<effect "Retributive Strike">> /m);
 });
 

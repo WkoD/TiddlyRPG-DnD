@@ -486,3 +486,11 @@ Rules/Section/bonus-action: bonus action
 Rules/Section/reaction: reaction
 Rules/Section/legendary-action: legendary action
 Rules/Section/lair-action: lair action
+
+# The headings of the kinds of sections, in the stat blocks p. 259 ("Actions", "Reactions"), p. 260
+# ("Legendary Actions", "Lair Actions"), bonus actions p. 90
+Rules/Section/action/Heading: Actions
+Rules/Section/bonus-action/Heading: Bonus Actions
+Rules/Section/reaction/Heading: Reactions
+Rules/Section/legendary-action/Heading: Legendary Actions
+Rules/Section/lair-action/Heading: Lair Actions

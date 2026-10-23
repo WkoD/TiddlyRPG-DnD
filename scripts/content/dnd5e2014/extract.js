@@ -23,9 +23,11 @@
  *     coins of the setting), weights in lb;
  *   - texts are wikitext: the Markdown of 5e-bits converted, every character that would start
  *     markup of TiddlyWiki written as an entity, conditions as <<term>>;
- *   - the named parts of a text are sections of the ruleset (domain Section): the special traits,
- *     spellcasting, actions, reactions, legendary actions of a creature, the effects and the curse
- *     of an item; the spells of a spellcasting link to their entries.
+ *   - the named parts of a text are sections of the ruleset (domain Section), short forms that run
+ *     to the next one: the special traits, spellcasting, actions, reactions, legendary actions
+ *     with their intro (5e-bits leaves it out) of a creature, the effects and the curse of an
+ *     item; the spells of a spellcasting link to their entries. The headings come from the
+ *     ruleset.
  */
 "use strict";
 
@@ -160,50 +162,61 @@ function wikitext(lines) {
 
 /* Sections: named parts of a text (the domain Section of the ruleset) */
 
-// A named part of a text as a section of the ruleset: the short form at the start of its
-// paragraph, the block form around more than one paragraph, a list or a table. <name> is wikitext
-// already (escaped)
+// A named part of a text as a section of the ruleset: its short form at the start of its first
+// paragraph - it runs to the next marker, so the paragraphs, lists and tables after it belong to
+// it. <name> is wikitext already (escaped); empty: the intro of the kind
 function section(kind, name, body) {
-	var quoted = name.indexOf("\"") === -1 ? "\"" + name + "\"" : "'" + name + "'";
-	if(!/\n/.test(body)) {
-		return "<<" + kind + " " + quoted + ">> " + body;
-	}
-	return "<$" + kind + " name=" + quoted + ">\n\n" + body + "\n\n</$" + kind + ">";
+	var call = "<<" + kind + (name ? " " + (name.indexOf("\"") === -1 ? "\"" + name + "\"" : "'" + name + "'") : "") + ">>";
+	// a body that begins with a list or a table: the marker stands alone before it
+	return /^[*#|!]/.test(body) ? call + "\n\n" + body : call + " " + body;
 }
 
-// The named paragraphs of an item ("''//Spells.//'' ...") as sections: every one an effect, the
-// curse a curse that runs to the end of the text - the paragraphs after it belong to it (SRD
-// p. 209-242)
+// The named paragraphs of an item ("''//Spells.//'' ...", in the Deck of Many Things also bold
+// only: "''The Fates.''") as sections: every one an effect, the curse a curse (SRD p. 209-242);
+// the paragraphs after a named one belong to it
 function itemSections(text) {
-	var paragraphs = text.split("\n\n"),
-		out = [];
-	for(var i = 0; i < paragraphs.length; i++) {
-		var m = /^''\/\/(.+?)\.\/\/'' ([^]*)$/.exec(paragraphs[i]);
-		if(!m) {
-			out.push(paragraphs[i]);
-		} else if(m[1] === "Curse") {
-			out.push(section("curse", m[1], [m[2]].concat(paragraphs.slice(i + 1)).join("\n\n")));
-			break;
-		} else {
-			out.push(section("effect", m[1], m[2]));
-		}
-	}
-	return out.join("\n\n");
+	return text.split("\n\n").map(function(paragraph) {
+		var m = /^''(?:\/\/)?([^'\/]+?)\.(?:\/\/)?'' ([^]*)$/.exec(paragraph);
+		return m ? section(m[1] === "Curse" ? "curse" : "effect", m[1], m[2]) : paragraph;
+	}).join("\n\n");
+}
+
+// The short name a creature has in its actions ("The dragon makes ...")
+function shortName(x) {
+	var count = {},
+		best = "";
+	(x.legendary_actions || []).concat(x.actions || []).forEach(function(a) {
+		(String(a.desc).match(/\bThe ([a-z][a-z ]*?) (?:makes|can|beats|uses|moves|casts|regains|becomes|teleports|swings|emits|exhales|targets|touches|takes|attacks)\b/g) || []).forEach(function(found) {
+			var name = /^The (.+?) \S+$/.exec(found)[1];
+			count[name] = (count[name] || 0) + 1;
+			best = !best || count[name] > count[best] ? name : best;
+		});
+	});
+	return best || x.name.toLowerCase();
+}
+
+// The intro of the legendary actions, which 5e-bits leaves out: the sentences of the SRD, the same
+// for every legendary creature, always 3 actions (p. 260 and the stat blocks)
+function legendaryIntro(x) {
+	var name = shortName(x);
+	return "The " + name + " can take 3 legendary actions, choosing from the options below. Only one legendary action option " +
+		"can be used at a time and only at the end of another creature's turn. The " + name + " regains spent legendary actions at " +
+		"the start of its turn.";
 }
 
 // The spells of the lists of a spellcasting section ("* 1st level (4 slots): detect magic, shield")
 // as links to their entries in the package, by the titles there ("Shield (Spell)"); a name that is
-// no spell of the package stays text
+// no spell of the package stays text. A section runs to the next marker
 function linkSpells(text, titles) {
-	return text.replace(/(<\$spellcasting [^>]*>)([^]*?)(<\/\$spellcasting>)/g, function(all, open, inner, close) {
-		return open + inner.replace(/^(\* [^:\n]+: )(.+)$/mg, function(line, head, list) {
+	return text.split(/\n\n(?=<<)/).map(function(part) {
+		return /^<<spellcasting[ >]/.test(part) ? part.replace(/^(\* [^:\n]+: )(.+)$/mg, function(line, head, list) {
 			return head + list.split(", ").map(function(name) {
 				var key = name.replace(/\*+$/, "").replace(/ \(.*\)$/, "").trim().toLowerCase(),
 					title = titles[key];
 				return title ? "[[" + name + "|" + title + "]]" : name;
 			}).join(", ");
-		}) + close;
-	});
+		}) : part;
+	}).join("\n\n");
 }
 
 function priceOf(cost) {
@@ -782,13 +795,16 @@ function creature(x) {
 		sections.push(rest.map(function(r) { return "''" + escape(r.split(":")[0]) + ":''" + escape(r.slice(r.indexOf(":") + 1)); }).join("\n\n"));
 	}
 	// The parts of the stat block as sections: special traits (spellcasting as a kind of its own),
-	// actions, reactions, legendary actions (SRD p. 258-260); the headings stay
-	[["special_abilities", null, "trait"], ["actions", "Actions", "action"], ["reactions", "Reactions", "reaction"],
-		["legendary_actions", "Legendary Actions", "legendary-action"]].forEach(function(part) {
+	// actions, reactions, legendary actions with their intro (SRD p. 258-260); the headings come
+	// from the ruleset
+	[["special_abilities", "trait"], ["actions", "action"], ["reactions", "reaction"], ["legendary_actions", "legendary-action"]].forEach(function(part) {
 		var list = x[part[0]];
 		if(list && list.length) {
-			sections.push((part[1] ? "!! " + part[1] + "\n\n" : "") + list.map(function(a) {
-				var kind = part[2] === "trait" && /spellcasting/i.test(a.name) ? "spellcasting" : part[2];
+			if(part[1] === "legendary-action") {
+				sections.push(section("legendary-action", "", legendaryIntro(x)));
+			}
+			sections.push(list.map(function(a) {
+				var kind = part[1] === "trait" && /spellcasting/i.test(a.name) ? "spellcasting" : part[1];
 				return section(kind, escape(a.name), wikitext([a.desc]));
 			}).join("\n\n"));
 		}

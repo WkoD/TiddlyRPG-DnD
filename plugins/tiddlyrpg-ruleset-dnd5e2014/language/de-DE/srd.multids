@@ -494,3 +494,11 @@ Rules/Section/bonus-action: Bonusaktion
 Rules/Section/reaction: Reaktion
 Rules/Section/legendary-action: legendäre Aktion
 Rules/Section/lair-action: Hortaktion
+
+# Die Überschriften der Abschnittsarten, in den Wertekästen S. 289 ("Aktionen", "Reaktionen"),
+# S. 291 ("Legendäre Aktionen", "Hortaktionen"), Bonusaktionen S. 98
+Rules/Section/action/Heading: Aktionen
+Rules/Section/bonus-action/Heading: Bonusaktionen
+Rules/Section/reaction/Heading: Reaktionen
+Rules/Section/legendary-action/Heading: Legendäre Aktionen
+Rules/Section/lair-action/Heading: Hortaktionen

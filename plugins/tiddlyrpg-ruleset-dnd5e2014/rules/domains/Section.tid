@@ -1,5 +1,5 @@
 created: 20261023183549339
-modified: 20261023183549339
+modified: 20261023192426434
 tags: $:/tags/tiddlyrpg/RulesDomain
 title: $:/tiddlyrpg/rules/domain/Section
 type: application/json
@@ -23,19 +23,26 @@ type: application/json
             "id": "spellcasting"
         },
         {
-            "id": "action"
+            "id": "action",
+            "heading": true
         },
         {
-            "id": "bonus-action"
+            "id": "bonus-action",
+            "heading": true
         },
         {
-            "id": "reaction"
+            "id": "reaction",
+            "heading": true
         },
         {
-            "id": "legendary-action"
+            "id": "legendary-action",
+            "heading": true,
+            "intro": true
         },
         {
-            "id": "lair-action"
+            "id": "lair-action",
+            "heading": true,
+            "intro": true
         }
     ],
     "example": "action"

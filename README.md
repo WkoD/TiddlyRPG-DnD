@@ -32,8 +32,11 @@ with fifth edition, as plugin type `ruleset` for `tiddlyrpg-core`:
   where the field `cursed` is: locked with `secret-fields: cursed`, the players see the curse when
   the DM lifts the lock), `<<trait "Pack Tactics">>`, `<<spellcasting "Spellcasting">>`,
   `<<action "Bite">>`, `<<bonus-action>>`, `<<reaction>>`, `<<legendary-action>>`,
-  `<<lair-action>>`; the block form `<$action name="Multiattack">...</$action>` for several
-  paragraphs.
+  `<<lair-action>>`. Each runs to the next one (a list belongs to the spellcasting before it) and
+  shows in this order, as in a stat block: effects, curse; traits, spellcasting, then actions,
+  bonus actions, reactions, legendary and lair actions under their headings. Legendary and lair
+  actions start with their introduction, a section without a name: `<<legendary-action>> The
+  dragon can take 3 legendary actions ...`.
 - Fields with schema (`$:/tiddlyrpg/rules/fields/...`): what an item, artifact, material, spell,
   creature, person or player character holds as values, shown as a block like a stat block in the
   rulebook, with a header line ("martial weapon (melee, sword, versatile), rare (requires
