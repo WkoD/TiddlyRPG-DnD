@@ -132,6 +132,12 @@ test("the terms of the SRD 5.1 by group: conditions, actions, mechanics, spellca
 		sizes.CreatureType, sizes.Size, sizes.Alignment, sizes.School, sizes.Language], [15, 14, 19, 7, 6, 18, 14, 6, 15, 8, 16]);
 });
 
+test("every language id ends in -language: common is a rarity, giant and celestial are creature types", function() {
+	var language = domains().filter(function(d) { return d.domain === "Language"; })[0];
+	assert.deepEqual(language.entries.filter(function(e) { return !/-language$/.test(e.id); }), []);
+	assert.match(language.example, /-language$/);
+});
+
 CODES.forEach(function(code) {
 	test(code + ": every entry, unit and token has its keys", function() {
 		var have = keys(code);

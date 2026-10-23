@@ -242,24 +242,24 @@ Rules/Term/illusion: Illusionszauber
 Rules/Term/necromancy: Nekromantiezauber
 Rules/Term/transmutation: Verwandlungszauber
 
-# Sprachen: S. 62, Tabellen "Standardsprachen" und "Exotische Sprachen"; die IDs von Common, Giant und
-# Celestial enden auf -language: common ist eine Seltenheit, giant und celestial sind Kreaturtypen
+# Sprachen: S. 62, Tabellen "Standardsprachen" und "Exotische Sprachen"; jede ID endet auf -language
+# (common ist eine Seltenheit, giant und celestial sind Kreaturtypen, elvish liest sich als eigenes Wort)
 Rules/Term/common-language: Gemeinsprache
-Rules/Term/dwarvish: Zwergisch
-Rules/Term/elvish: Elfisch
+Rules/Term/dwarvish-language: Zwergisch
+Rules/Term/elvish-language: Elfisch
 Rules/Term/giant-language: Riesisch
-Rules/Term/gnomish: Gnomisch
-Rules/Term/goblin: Goblinisch
-Rules/Term/halfling: Halblingisch
-Rules/Term/orc: Orkisch
-Rules/Term/abyssal: Abyssisch
+Rules/Term/gnomish-language: Gnomisch
+Rules/Term/goblin-language: Goblinisch
+Rules/Term/halfling-language: Halblingisch
+Rules/Term/orc-language: Orkisch
+Rules/Term/abyssal-language: Abyssisch
 Rules/Term/celestial-language: Celestisch
-Rules/Term/draconic: Drakonisch
-Rules/Term/deep-speech: Tiefensprache
-Rules/Term/infernal: Infernalisch
-Rules/Term/primordial: Urtümlich
-Rules/Term/sylvan: Sylvanisch
-Rules/Term/undercommon: Gemeinsprache der Unterreiche
+Rules/Term/draconic-language: Drakonisch
+Rules/Term/deep-speech-language: Tiefensprache
+Rules/Term/infernal-language: Infernalisch
+Rules/Term/primordial-language: Urtümlich
+Rules/Term/sylvan-language: Sylvanisch
+Rules/Term/undercommon-language: Gemeinsprache der Unterreiche
 
 # Seltenheit magischer Gegenstände: S. 226-228 ("Seltenheit"), im Kopf des Gegenstands, z. B.
 # S. 228 "Wundersamer Gegenstand, selten (erfordert Einstimmung)", S. 270 "Trank, gewöhnlich",

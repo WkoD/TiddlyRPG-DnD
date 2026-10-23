@@ -238,24 +238,24 @@ Rules/Term/illusion: illusion
 Rules/Term/necromancy: necromancy
 Rules/Term/transmutation: transmutation
 
-# Languages: p. 59, tables "Standard Languages" and "Exotic Languages"; the ids of Common, Giant
-# and Celestial end in -language: common is a rarity, giant and celestial are creature types
+# Languages: p. 59, tables "Standard Languages" and "Exotic Languages"; every id ends in -language
+# (common is a rarity, giant and celestial are creature types, elvish reads as a word of its own)
 Rules/Term/common-language: Common
-Rules/Term/dwarvish: Dwarvish
-Rules/Term/elvish: Elvish
+Rules/Term/dwarvish-language: Dwarvish
+Rules/Term/elvish-language: Elvish
 Rules/Term/giant-language: Giant
-Rules/Term/gnomish: Gnomish
-Rules/Term/goblin: Goblin
-Rules/Term/halfling: Halfling
-Rules/Term/orc: Orc
-Rules/Term/abyssal: Abyssal
+Rules/Term/gnomish-language: Gnomish
+Rules/Term/goblin-language: Goblin
+Rules/Term/halfling-language: Halfling
+Rules/Term/orc-language: Orc
+Rules/Term/abyssal-language: Abyssal
 Rules/Term/celestial-language: Celestial
-Rules/Term/draconic: Draconic
-Rules/Term/deep-speech: Deep Speech
-Rules/Term/infernal: Infernal
-Rules/Term/primordial: Primordial
-Rules/Term/sylvan: Sylvan
-Rules/Term/undercommon: Undercommon
+Rules/Term/draconic-language: Draconic
+Rules/Term/deep-speech-language: Deep Speech
+Rules/Term/infernal-language: Infernal
+Rules/Term/primordial-language: Primordial
+Rules/Term/sylvan-language: Sylvan
+Rules/Term/undercommon-language: Undercommon
 
 # Rarity of magic items: p. 206-207 ("Rarity"), in the item header, e.g. p. 207 "Wondrous item,
 # rare (requires attunement)", p. 233 "Potion, common", p. 252 "artifact" (the language Common is

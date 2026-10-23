@@ -564,10 +564,10 @@ function spell(s) {
 
 /* Creatures */
 
-var LANGUAGES = {common: "common-language", dwarvish: "dwarvish", elvish: "elvish", giant: "giant-language", gnomish: "gnomish",
-	goblin: "goblin", halfling: "halfling", orc: "orc", abyssal: "abyssal", celestial: "celestial-language",
-	draconic: "draconic", "deep speech": "deep-speech", infernal: "infernal", primordial: "primordial", sylvan: "sylvan",
-	undercommon: "undercommon"};
+var LANGUAGES = {common: "common-language", dwarvish: "dwarvish-language", elvish: "elvish-language", giant: "giant-language", gnomish: "gnomish-language",
+	goblin: "goblin-language", halfling: "halfling-language", orc: "orc-language", abyssal: "abyssal-language", celestial: "celestial-language",
+	draconic: "draconic-language", "deep speech": "deep-speech-language", infernal: "infernal-language", primordial: "primordial-language", sylvan: "sylvan-language",
+	undercommon: "undercommon-language"};
 var DAMAGE = ["acid", "bludgeoning", "cold", "fire", "force", "lightning", "necrotic", "piercing", "poison", "psychic", "radiant", "slashing", "thunder"];
 var GROUP_PHRASES = [
 	[/^bludgeoning, piercing, and slashing from nonmagical (?:weapons|attacks) (?:that aren't silvered|not made with silvered weapons)$/i, "nonmagical-silvered"],

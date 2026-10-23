@@ -1,5 +1,5 @@
 created: 20261014200240000
-modified: 20261023171323639
+modified: 20261023173229501
 tags: $:/tags/tiddlyrpg/RulesDomain
 title: $:/tiddlyrpg/rules/domain/Language
 type: application/json
@@ -13,50 +13,50 @@ type: application/json
             "id": "common-language"
         },
         {
-            "id": "dwarvish"
+            "id": "dwarvish-language"
         },
         {
-            "id": "elvish"
+            "id": "elvish-language"
         },
         {
             "id": "giant-language"
         },
         {
-            "id": "gnomish"
+            "id": "gnomish-language"
         },
         {
-            "id": "goblin"
+            "id": "goblin-language"
         },
         {
-            "id": "halfling"
+            "id": "halfling-language"
         },
         {
-            "id": "orc"
+            "id": "orc-language"
         },
         {
-            "id": "abyssal"
+            "id": "abyssal-language"
         },
         {
             "id": "celestial-language"
         },
         {
-            "id": "draconic"
+            "id": "draconic-language"
         },
         {
-            "id": "deep-speech"
+            "id": "deep-speech-language"
         },
         {
-            "id": "infernal"
+            "id": "infernal-language"
         },
         {
-            "id": "primordial"
+            "id": "primordial-language"
         },
         {
-            "id": "sylvan"
+            "id": "sylvan-language"
         },
         {
-            "id": "undercommon"
+            "id": "undercommon-language"
         }
     ],
-    "example": "elvish"
+    "example": "elvish-language"
 }
