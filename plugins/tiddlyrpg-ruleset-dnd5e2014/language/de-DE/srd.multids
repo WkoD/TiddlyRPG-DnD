@@ -145,12 +145,14 @@ Rules/Term/cover/total: vollständige Deckung
 
 # Zauberwirken: Zauberfokus S. 12; Zauberplatz S. 109; Zaubertrick und Ritual S. 110; Konzentration
 # S. 111; Zauberangriff S. 113 ("Angriffswürfe": "Dein Angriffsbonus mit Zauberangriffen");
-# Einstimmung S. 226
+# Einstimmung S. 226; ein Zauberplatz mit seinem Grad, wie die Zauber ihn schreiben, S. 125
+# "Zauberplatz des 3. Grades" (<<term spell-slot variant:"level" value:3>>)
 Rules/Term/cantrip: Zaubertrick
 Rules/Term/ritual: Ritual
 Rules/Term/concentration: Konzentration
 Rules/Term/spell-attack: Zauberangriff
 Rules/Term/spell-slot: Zauberplatz
+Rules/Term/spell-slot/level: Zauberplatz des $value.ordinal$ Grades
 Rules/Term/spellcasting-focus: Zauberfokus
 Rules/Term/attunement: Einstimmung
 

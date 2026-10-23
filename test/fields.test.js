@@ -105,3 +105,15 @@ test("units of the new domains: time without conversion, speed and volume as the
 		h.setLanguage(wiki, "en-GB");
 	}
 });
+
+test("a spell slot with its level, as the spells of the SRD write it (EN p. 114, DE S. 125)", function() {
+	var rules = $tw.modules.execute("$:/plugins/tiddlyrpg-core/modules/rules.js");
+	assert.equal(rules.term(wiki, "spell-slot", "level", "3").text, "spell slot of 3rd level");
+	h.setLanguage(wiki, "de-DE");
+	try {
+		assert.equal(rules.term(wiki, "spell-slot", "level", "3").text, "Zauberplatz des 3. Grades");
+		assert.equal(rules.term(wiki, "spell-slot").text, "Zauberplatz");
+	} finally {
+		h.setLanguage(wiki, "en-GB");
+	}
+});

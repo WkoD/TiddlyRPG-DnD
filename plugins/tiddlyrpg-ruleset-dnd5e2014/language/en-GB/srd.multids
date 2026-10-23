@@ -143,12 +143,14 @@ Rules/Term/cover/total: total cover
 
 # Spellcasting: spellcasting focus p. 12; spell slot p. 100; cantrip and ritual p. 101; concentration
 # p. 102; spell attack p. 103 ("Attack Rolls": "Your attack bonus with a spell attack"); attunement
-# p. 206
+# p. 206; a spell slot with its level as the spells write it, p. 114 "a spell slot of 3rd level"
+# (<<term spell-slot variant:"level" value:3>>)
 Rules/Term/cantrip: cantrip
 Rules/Term/ritual: ritual
 Rules/Term/concentration: concentration
 Rules/Term/spell-attack: spell attack
 Rules/Term/spell-slot: spell slot
+Rules/Term/spell-slot/level: spell slot of $value.ordinal$ level
 Rules/Term/spellcasting-focus: spellcasting focus
 Rules/Term/attunement: attunement
 
