@@ -31,8 +31,8 @@ with fifth edition, as plugin type `ruleset` for `tiddlyrpg-core`:
   start of its paragraph - `<<effect "Name">>` (what an item does), `<<curse "Curse">>` (seen
   where the field `cursed` is: locked with `secret-fields: cursed`, the players see the curse when
   the DM lifts the lock), `<<trait "Pack Tactics">>`, `<<spellcasting "Spellcasting">>`,
-  `<<action "Bite">>`, `<<bonus-action>>`, `<<reaction>>`, `<<legendary-action>>`,
-  `<<lair-action>>`. Each runs to the next one (a list belongs to the spellcasting before it) and
+  `<<action "Bite">>`, `<<bonus-action "Name">>`, `<<reaction "Parry">>`,
+  `<<legendary-action "Tail Attack">>`, `<<lair-action "Name">>`. Each runs to the next one (a list belongs to the spellcasting before it) and
   shows in this order, as in a stat block: effects, curse; traits, spellcasting, then actions,
   bonus actions, reactions, legendary and lair actions under their headings. Legendary and lair
   actions start with their introduction, a section without a name: `<<legendary-action>> The

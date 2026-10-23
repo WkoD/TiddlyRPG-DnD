@@ -182,7 +182,9 @@ test("headers in the form of the SRD (de p. 438, 414, 142)", function() {
 
 test("no text runs wikitext the SRD does not have: <<term>> of a condition, the sections of the ruleset, spells of a spellcasting as links", function() {
 	var conditions = JSON.parse(wiki.getTiddlerText("$:/tiddlyrpg/rules/domain/Condition")).entries.map(function(e) { return e.id; }),
-		kinds = JSON.parse(wiki.getTiddlerText("$:/tiddlyrpg/rules/domain/Section")).entries.map(function(e) { return e.id; }),
+		section = JSON.parse(wiki.getTiddlerText("$:/tiddlyrpg/rules/domain/Section")).entries,
+		kinds = section.map(function(e) { return e.id; }),
+		intros = section.filter(function(e) { return e.intro; }).map(function(e) { return e.id; }),
 		spells = {},
 		wrong = [];
 	entries.forEach(function(e) {
@@ -203,8 +205,11 @@ test("no text runs wikitext the SRD does not have: <<term>> of a condition, the 
 		}).join("\n\n");
 		(text.match(/<<[^>]*>>/g) || []).forEach(function(call) {
 			var term = /^<<term ([a-z]+)>>$/.exec(call),
-				section = /^<<([a-z-]+)(?: "[^"]+")?>>$/.exec(call);
-			if(!(term && conditions.indexOf(term[1]) !== -1) && !(section && kinds.indexOf(section[1]) !== -1)) {
+				named = /^<<([a-z-]+) (?:"[^"]+"|'[^']+')>>$/.exec(call),
+				intro = /^<<([a-z-]+)>>$/.exec(call);
+			// a section has a name; without one only the intro of a kind that has one
+			if(!(term && conditions.indexOf(term[1]) !== -1) && !(named && kinds.indexOf(named[1]) !== -1) &&
+				!(intro && intros.indexOf(intro[1]) !== -1)) {
 				wrong.push(e.title + ": " + call);
 			}
 		});
@@ -228,6 +233,18 @@ test("the named parts of a text as sections: the parts of a stat block, the effe
 	assert.match(text("Adult Red Dragon"), /^<<legendary-action>> The dragon can take 3 legendary actions, choosing from the options below\.[^\n]*The dragon regains spent legendary actions at the start of its turn\.\n\n<<legendary-action "Detect">>/m,
 		"the intro of the legendary actions, which 5e-bits leaves out");
 	assert.match(text("Deck of Many Things"), /^<<effect "The Fates">> /m, "bold only");
+	assert.match(text("Djinni"), /\n\n\* At will: \[\[detect evil and good\|Detect Evil and Good\]\][^\n]*\n\* 3\/day each: \[\[create food and water \(can create wine instead of water\)\|Create Food and Water\]\]/,
+		"innate spellcasting: its lines one list, the spells as links");
+	assert.match(text("Cult Fanatic"), /\* Cantrips \(at will\): \[\[light\|Light\]\][^\n]*\n\* 1st level \(4 slots\): \[\[command\|Command\]\]/, "a paragraph of cantrips joins the list");
+	var unlinked = entries.filter(function(e) {
+		return (e.text || "").split(/\n\n(?=<<)/).some(function(part) {
+			return /^<<spellcasting[ >]/.test(part) && /(?:^|\s)(?:At will|\d+\/day(?: each)?|Cantrips \(at will\)|\d+(?:st|nd|rd|th) level \([^)]*\)): (?!\[\[)/m.test(part);
+		});
+	}).map(function(e) { return e.title; });
+	assert.deepEqual(unlinked, [], "every spell list of a spellcasting links its spells (a mephit names one spell in its sentence)");
+	assert.match(text("Lamia"), /requiring no material components\.\n\n\* At will: \[\[disguise self \(any humanoid form\)\|Disguise Self\]\][^\n]*\n\* 3\/day each: [^\n]*\n\* 1\/day: \[\[geas\|Geas\]\]/,
+		"a list run into its sentence");
+	assert.match(text("Archmage"), /\* 9th level \(1 slot\): \[\[time stop\|Time Stop\]\]\n\* The archmage casts these spells on itself before combat\./, "the footnote stays in the list");
 	assert.doesNotMatch(entries.map(function(e) { return e.text || ""; }).join("\n"), /^!! /m, "the headings come from the ruleset");
 	assert.match(text("Staff of Power"), /^<<effect "Retributive Strike">> /m);
 });

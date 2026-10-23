@@ -58,6 +58,9 @@ function needed() {
 		} else if(d.type === "section") {
 			d.entries.forEach(function(e) {
 				list.push(d.keys + e.id);
+				if(e.heading) {
+					list.push(d.keys + e.id + "/Heading");
+				}
 			});
 		} else if(d.type === "label") {
 			d.entries.forEach(function(e) {

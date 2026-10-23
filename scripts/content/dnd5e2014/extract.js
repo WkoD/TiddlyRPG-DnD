@@ -204,18 +204,42 @@ function legendaryIntro(x) {
 		"the start of its turn.";
 }
 
-// The spells of the lists of a spellcasting section ("* 1st level (4 slots): detect magic, shield")
-// as links to their entries in the package, by the titles there ("Shield (Spell)"); a name that is
-// no spell of the package stays text. A section runs to the next marker
+// The lines of the spell lists of a spellcasting: "1st level (4 slots): ...", "Cantrips (at will):
+// ...", "At will: ...", "3/day each: ..." - 5e-bits writes the innate ones as paragraphs
+var SPELL_LINE = /^(?:\* )?((?:Cantrips \(at will\)|\d+(?:st|nd|rd|th) level \([^)]*\)|At will|\d+\/day(?: each)?): )(.+)$/;
+
+// The spell lists of a spellcasting section as one list each, the spells as links to their entries
+// in the package, by the titles there ("Shield (Spell)"); a name that is no spell of the package
+// stays text. A section runs to the next marker
 function linkSpells(text, titles) {
+	var link = function(line) {
+		var m = SPELL_LINE.exec(line);
+		return "* " + m[1] + m[2].split(", ").map(function(name) {
+			var key = name.replace(/\*+$/, "").replace(/ \(.*\)$/, "").trim().toLowerCase(),
+				title = titles[key];
+			return title ? "[[" + name + "|" + title + "]]" : name;
+		}).join(", ");
+	};
 	return text.split(/\n\n(?=<<)/).map(function(part) {
-		return /^<<spellcasting[ >]/.test(part) ? part.replace(/^(\* [^:\n]+: )(.+)$/mg, function(line, head, list) {
-			return head + list.split(", ").map(function(name) {
-				var key = name.replace(/\*+$/, "").replace(/ \(.*\)$/, "").trim().toLowerCase(),
-					title = titles[key];
-				return title ? "[[" + name + "|" + title + "]]" : name;
-			}).join(", ");
-		}) : part;
+		if(!/^<<spellcasting[ >]/.test(part)) {
+			return part;
+		}
+		var out = [];
+		// a list run into the sentence before it ("... components. At will: x 3/day each: y")
+		part = part.replace(/ (?=(?:At will|\d+\/day(?: each)?): )/g, "\n\n");
+		part.split("\n\n").forEach(function(paragraph) {
+			var lines = paragraph.split("\n"),
+				// a list: lines of spells, other list items with them (the footnote of the Archmage)
+				list = lines.some(function(line) { return SPELL_LINE.test(line); }) &&
+					lines.every(function(line) { return SPELL_LINE.test(line) || /^\* /.test(line); }),
+				text = lines.map(function(line) { return SPELL_LINE.test(line) ? link(line) : line; }).join("\n");
+			if(list && out.length && out[out.length - 1].list) {
+				out[out.length - 1].text += "\n" + text;
+			} else {
+				out.push({list: list, text: list ? text : paragraph});
+			}
+		});
+		return out.map(function(p) { return p.text; }).join("\n\n");
 	}).join("\n\n");
 }
 
