@@ -21,7 +21,7 @@ with fifth edition, as plugin type `ruleset` for `tiddlyrpg-core`:
   `<<term lg variant:"name">>`; every id that stands alone is unique across the domains (`giant`
   is the creature type, `giant-language` the language).
 - The domains of the fields below: `ItemCategory` (main entries such as `weapon`, `armor`,
-  `potion`, `wondrous-item`, each with its traits: `martial`, `melee`, `versatile`, `sword`,
+  `potion`, `wondrous-item`, each with its properties: `martial`, `melee`, `versatile`, `sword`,
   `medium` ...), `Rarity`, `Class`, `Component`, `Area`, `SpellWord` (`self`, `touch`,
   `instantaneous` ...), `SaveSuccess`, `SpellAttack`, `DamageGroup` (`nonmagical` ...),
   `Movement`, `Challenge` (with the XP and proficiency bonus of each challenge rating), and the

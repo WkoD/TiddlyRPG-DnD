@@ -63,7 +63,7 @@ npm run test-lang            # only test/lang/: language packs
     the terms by group (conditions, actions, ...); every entry, unit and token has its keys in
     every language (under the `keys` of its domain), the abbreviations (`Ability`, `Alignment`,
     `Terms`) also their variant `name`; every id that stands alone is unique across the label
-    domains, every trait names parents of its domain; every key of `srd.multids` stands below a
+    domains, every property names parents of its domain; every key of `srd.multids` stands below a
     comment with a page reference; the license tab
   - `fields` - the fields of the ruleset against the stat blocks of the SRD 5.1: what the rules
     derive (proficiency bonus and XP by challenge rating, saving throws, skills with expertise,
@@ -92,7 +92,7 @@ too (`test/srd.test.js` checks it). The PDFs are only read, never checked in. On
 the 2014 rules: a list of 2024 (such as the rules glossary of the Basic Rules 2024) can show which
 terms are missing, never their names. A term is written as in running text (`charmed`,
 `bezaubert`); a new id that stands alone must not exist in another label domain (`<<term>>`
-takes the first) - traits (`"for"`) may repeat one, their domain has keys of its own
+takes the first) - properties (`"for"`) may repeat one, their domain has keys of its own
 (`ItemCategory`: `Rules/Category/`). Units, dice, the damage grammar, the labels of the fields
 (`Rules/Field/...`) and the patterns of header lines and joined lines (`Rules/Summary/...`,
 `Rules/Line/...`) are in `rules.multids`. What only one language needs for its header lines -

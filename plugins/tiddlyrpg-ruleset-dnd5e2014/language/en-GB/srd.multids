@@ -1,5 +1,5 @@
 created: 20261009183319191
-modified: 20261023171323639
+modified: 20261023181956562
 title: $:/tiddlyrpg/language/en-GB/
 
 # Terms of the System Reference Document 5.1 (English, CC-BY-4.0, see the tab license), by hand;
@@ -276,8 +276,8 @@ Rules/Term/artifact: artifact
 # ring, rod, scroll, staff, wand, weapon, or wondrous item"). Weapon groups: p. 64 "swords, axes,
 # and polearms", p. 223 "Weapon (any sword)", p. 211 "Weapon (any axe)", p. 95 "a bow or a
 # crossbow"; the groups of the weapons are our reading. Ammunition kinds p. 69 ("Arrows (20)",
-# "Crossbow bolts (20)", "Sling bullets (20)", "Blowgun needles (50)"). A trait with the id of its
-# parent after a slash replaces the label of the parent ("martial weapon", "medium armor").
+# "Crossbow bolts (20)", "Sling bullets (20)", "Blowgun needles (50)"). A property with the id of
+# its parent after a slash replaces the label of the parent ("martial weapon", "medium armor").
 Rules/Category/weapon: weapon
 Rules/Category/simple: simple
 Rules/Category/simple/weapon: simple weapon

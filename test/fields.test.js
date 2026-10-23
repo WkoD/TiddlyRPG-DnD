@@ -49,7 +49,7 @@ test("hit points as in the stat block", function() {
 	assert.equal(read({hp: "19d12 + 133"}, "hp"), "256 (19d12 + 133)");
 });
 
-test("categories as in the rulebook: the trait names the kind", function() {
+test("categories as in the rulebook: the property names the kind", function() {
 	assert.equal(read({category: "weapon, martial, melee, sword, versatile"}, "category"), "martial weapon (melee, sword, versatile)");
 	assert.equal(read({category: "armor, heavy"}, "category"), "heavy armor");
 	assert.equal(read({category: "weapon, simple, ranged, ammunition, arrow"}, "category"), "simple weapon (ranged, ammunition: arrows)");

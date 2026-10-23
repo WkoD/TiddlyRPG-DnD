@@ -95,7 +95,7 @@ test("every id that stands alone is unique across the label domains (<<term>> ta
 	assert.deepEqual(twice, []);
 });
 
-test("every trait names parents of its domain, and its domain has keys of its own", function() {
+test("every property names parents of its domain, and its domain has keys of its own", function() {
 	var wrong = [];
 	domains().filter(function(d) { return d.type === "label"; }).forEach(function(d) {
 		var ids = d.entries.map(function(e) { return e.id; });
@@ -107,7 +107,7 @@ test("every trait names parents of its domain, and its domain has keys of its ow
 			});
 		});
 		if(d.entries.some(function(e) { return e.for; }) && (!d.keys || d.keys === "Rules/Term/")) {
-			wrong.push(d.domain + ": traits share the keys of the terms");
+			wrong.push(d.domain + ": properties share the keys of the terms");
 		}
 	});
 	assert.deepEqual(wrong, []);
