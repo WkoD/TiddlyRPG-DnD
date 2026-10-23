@@ -1,5 +1,5 @@
 created: 20261022173330580
-modified: 20261023170410365
+modified: 20261023171347781
 tags: $:/tags/tiddlyrpg/RulesFields
 title: $:/tiddlyrpg/rules/fields
 type: application/json
@@ -12,7 +12,7 @@ type: application/json
         "attunement": {"format": "boolean"},
         "classes": {"format": "labels", "domain": "Class"},
 
-        "damage": {"format": "damage", "when": {"category": ["weapon"]}},
+        "damage": {"format": "damage", "when": {"category": ["weapon", "poison"]}},
         "damage-versatile": {"format": "damage", "when": {"category": ["weapon"]}},
         "range": {"format": "unit", "domain": "Length", "kind": "range", "words": "SpellWord", "only": ["self", "touch", "sight", "unlimited", "special"]},
         "bonus": {"format": "number", "signed": true, "filter": true},

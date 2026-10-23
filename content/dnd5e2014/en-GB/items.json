@@ -1759,9 +1759,14 @@
 			"id": "item:poison-basic-vial",
 			"title": "Poison, basic (vial)",
 			"type": "Item",
-			"tags": [],
+			"tags": [
+				"Consumable"
+			],
 			"fields": {
-				"category": "adventuring-gear",
+				"damage": "1d4 poison",
+				"save": "con",
+				"save-dc": "10",
+				"category": "poison, injury",
 				"price": 100
 			},
 			"text": "You can use the poison in this vial to coat one slashing or piercing weapon or up to three pieces of ammunition. Applying the poison takes an action. A creature hit by the poisoned weapon or ammunition must make a DC 10 Constitution saving throw or take 1d4 poison damage. Once applied, the poison retains potency for 1 minute before drying."
@@ -3295,7 +3300,9 @@
 				"category": "poison, ingested",
 				"price": 150,
 				"save": "con",
-				"save-dc": "10"
+				"save-dc": "10",
+				"damage": "1d12 poison",
+				"save-success": "half"
 			},
 			"text": "A creature subjected to this poison must make a DC 10 Constitution saving throw. On a failed save, it takes 6 (1d12) poison damage and is <<term poisoned>> for 24 hours. On a successful save, the creature takes half damage and isn't poisoned."
 		},
@@ -3310,7 +3317,8 @@
 				"category": "poison, inhaled",
 				"price": 500,
 				"save": "con",
-				"save-dc": "13"
+				"save-dc": "13",
+				"damage": "3d6 poison"
 			},
 			"text": "A creature subjected to this poison must succeed on a DC 13 Constitution saving throw or take 10 (3d6) poison damage, and must repeat the saving throw at the start of each of its turns. On each successive failed save, the character takes 3 (1d6) poison damage. After three successful saves, the poison ends."
 		},
@@ -3385,7 +3393,9 @@
 				"category": "poison, ingested",
 				"price": 1500,
 				"save": "con",
-				"save-dc": "17"
+				"save-dc": "17",
+				"damage": "9d6 poison",
+				"save-success": "half"
 			},
 			"text": "A creature that ingests this poison suffers no effect until the stroke of midnight. If the poison has not been neutralized before then, the creature must succeed on a DC 17 Constitution saving throw, taking 31 (9d6) poison damage on a failed save, or half as much damage on a successful one."
 		},
@@ -3415,7 +3425,8 @@
 				"category": "poison, ingested",
 				"price": 250,
 				"save": "con",
-				"save-dc": "16"
+				"save-dc": "16",
+				"damage": "1d6 poison"
 			},
 			"text": "A creature subjected to this poison must succeed on a DC 16 Constitution saving throw or take 3 (1d6) poison damage and become <<term poisoned>>. The poisoned creature must repeat the saving throw every 24 hours, taking 3 (1d6) poison damage on a failed save. Until this poison ends, the damage the poison deals can't be healed by any means. After seven successful saving throws, the effect ends and the creature can heal normally."
 		},
@@ -3430,7 +3441,9 @@
 				"category": "poison, injury",
 				"price": 2000,
 				"save": "con",
-				"save-dc": "19"
+				"save-dc": "19",
+				"damage": "12d6 poison",
+				"save-success": "half"
 			},
 			"text": "This poison must be harvested from a dead or incapacitated purple worm. A creature subjected to this poison must make a DC 19 Constitution saving throw, taking 42 (12d6) poison damage on a failed save, or half as much damage on a successful one."
 		},
@@ -3445,7 +3458,9 @@
 				"category": "poison, injury",
 				"price": 200,
 				"save": "con",
-				"save-dc": "11"
+				"save-dc": "11",
+				"damage": "3d6 poison",
+				"save-success": "half"
 			},
 			"text": "This poison must be harvested from a dead or incapacitated giant poisonous snake. A creature subjected to this poison must succeed on a DC 11 Constitution saving throw, taking 10 (3d6) poison damage on a failed save, or half as much damage on a successful one."
 		},
@@ -3491,7 +3506,9 @@
 				"category": "poison, injury",
 				"price": 1200,
 				"save": "con",
-				"save-dc": "15"
+				"save-dc": "15",
+				"damage": "7d6 poison",
+				"save-success": "half"
 			},
 			"text": "This poison must be harvested from a dead or incapacitated wyvern. A creature subjected to this poison must make a DC 15 Constitution saving throw, taking 24 (7d6) poison damage on a failed save, or half as much damage on a successful one."
 		},
@@ -6427,7 +6444,7 @@
 				"Consumable"
 			],
 			"fields": {
-				"rarity": "common-rarity",
+				"rarity": "common",
 				"category": "potion"
 			},
 			"text": "When you drink this potion, you gain a climbing speed equal to your walking speed for 1 hour. During this time, you have advantage on Strength (Athletics) checks you make to climb. The potion is separated into brown, silver, and gray layers resembling bands of stone. Shaking the bottle fails to mix the colors."
@@ -6573,7 +6590,7 @@
 				"Consumable"
 			],
 			"fields": {
-				"rarity": "common-rarity",
+				"rarity": "common",
 				"category": "potion"
 			},
 			"text": "You regain 2d4 + 2 hit points when you drink this potion. The potion's red liquid glimmers when agitated."
@@ -7626,7 +7643,7 @@
 				"Consumable"
 			],
 			"fields": {
-				"rarity": "common-rarity",
+				"rarity": "common",
 				"category": "scroll"
 			},
 			"text": "A spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is uninterrupted, the scroll is not lost.\n\nIf the spell is on your class's spell list but of a higher level than you can normally cast, you must make an ability check using your spellcasting ability to determine whether you cast it successfully. The DC equals 10 + the spell's level. On a failed check, the spell disappears from the scroll with no other effect.\n\nThis scroll contains a cantrip. The spell's saving throw is 13 and the attack bonus is +5."
@@ -7639,7 +7656,7 @@
 				"Consumable"
 			],
 			"fields": {
-				"rarity": "common-rarity",
+				"rarity": "common",
 				"category": "scroll"
 			},
 			"text": "A spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is uninterrupted, the scroll is not lost.\n\nIf the spell is on your class's spell list but of a higher level than you can normally cast, you must make an ability check using your spellcasting ability to determine whether you cast it successfully. The DC equals 10 + the spell's level. On a failed check, the spell disappears from the scroll with no other effect.\n\nThis scroll contains a 1st level spell. The spell's saving throw is 13 and the attack bonus is +5.\n\nA wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on an Intelligence (Arcana) check with a DC equal to 11. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed."

@@ -75,7 +75,7 @@
 				"expertise": "perception",
 				"immunities": "acid",
 				"senses": "blindsight 60 ft, darkvision 120 ft",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''Armor Class:'' 19 (natural)\n\n''//Amphibious.//'' The dragon can breathe air and water.\n\n''//Legendary Resistance.//'' If the dragon fails a saving throw, it can choose to succeed instead.\n\n!! Actions\n\n''//Multiattack.//'' The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.\n\n''//Bite.//'' Melee Weapon Attack: +11 to hit, reach 10 ft., one target. Hit: 17 (2d10 + 6) piercing damage plus 4 (1d8) acid damage.\n\n''//Claw.//'' Melee Weapon Attack: +11 to hit, reach 5 ft., one target. Hit: 13 (2d6 + 6) slashing damage.\n\n''//Tail.//'' Melee Weapon Attack: +11 to hit, reach 15 ft., one target. Hit: 15 (2d8 + 6) bludgeoning damage.\n\n''//Frightful Presence.//'' Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 16 Wisdom saving throw or become <<term frightened>> for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.\n\n''//Acid Breath.//'' The dragon exhales acid in a 60-foot line that is 5 feet wide. Each creature in that line must make a DC 18 Dexterity saving throw, taking 54 (12d8) acid damage on a failed save, or half as much damage on a successful one.\n\n!! Legendary Actions\n\n''//Detect.//'' The dragon makes a Wisdom (Perception) check.\n\n''//Tail Attack.//'' The dragon makes a tail attack.\n\n''//Wing Attack (Costs 2 Actions).//'' The dragon beats its wings. Each creature within 10 ft. of the dragon must succeed on a DC 19 Dexterity saving throw or take 13 (2d6 + 6) bludgeoning damage and be knocked <<term prone>>. The dragon can then fly up to half its flying speed."
 		},
@@ -103,7 +103,7 @@
 				"expertise": "perception",
 				"immunities": "lightning",
 				"senses": "blindsight 60 ft, darkvision 120 ft",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''Armor Class:'' 19 (natural)\n\n''//Legendary Resistance.//'' If the dragon fails a saving throw, it can choose to succeed instead.\n\n!! Actions\n\n''//Multiattack.//'' The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.\n\n''//Bite.//'' Melee Weapon Attack: +12 to hit, reach 10 ft., one target. Hit: 18 (2d10 + 7) piercing damage plus 5 (1d10) lightning damage.\n\n''//Claw.//'' Melee Weapon Attack: +12 to hit, reach 5 ft., one target. Hit: 14 (2d6 + 7) slashing damage.\n\n''//Tail.//'' Melee Weapon Attack: +12 to hit, reach 15 ft., one target. Hit: 16 (2d8 + 7) bludgeoning damage.\n\n''//Frightful Presence.//'' Each creature of the dragon's choice that is within 120 ft. of the dragon and aware of it must succeed on a DC 17 Wisdom saving throw or become <<term frightened>> for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.\n\n''//Lightning Breath.//'' The dragon exhales lightning in a 90-foot line that is 5 ft. wide. Each creature in that line must make a DC 19 Dexterity saving throw, taking 66 (12d10) lightning damage on a failed save, or half as much damage on a successful one.\n\n!! Legendary Actions\n\n''//Detect.//'' The dragon makes a Wisdom (Perception) check.\n\n''//Tail Attack.//'' The dragon makes a tail attack.\n\n''//Wing Attack (Costs 2 Actions).//'' The dragon beats its wings. Each creature within 10 ft. of the dragon must succeed on a DC 20 Dexterity saving throw or take 14 (2d6 + 7) bludgeoning damage and be knocked <<term prone>>. The dragon can then fly up to half its flying speed."
 		},
@@ -131,7 +131,7 @@
 				"expertise": "perception",
 				"immunities": "fire",
 				"senses": "blindsight 60 ft, darkvision 120 ft",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''Armor Class:'' 18 (natural)\n\n''//Legendary Resistance.//'' If the dragon fails a saving throw, it can choose to succeed instead.\n\n!! Actions\n\n''//Multiattack.//'' The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.\n\n''//Bite.//'' Melee Weapon Attack: +11 to hit, reach 10 ft., one target. Hit: 17 (2d10 + 6) piercing damage.\n\n''//Claw.//'' Melee Weapon Attack: +11 to hit, reach 5 ft., one target. Hit: 13 (2d6 + 6) slashing damage.\n\n''//Tail.//'' Melee Weapon Attack: +11 to hit, reach 15 ft., one target. Hit: 15 (2d8 + 6) bludgeoning damage.\n\n''//Frightful Presence.//'' Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 16 Wisdom saving throw or become <<term frightened>> for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours .\n\n''//Breath Weapons.//'' The dragon uses one of the following breath weapons.\n\nFire Breath. The dragon exhales fire in an 60-foot line that is 5 feet wide. Each creature in that line must make a DC 18 Dexterity saving throw, taking 45 (13d6) fire damage on a failed save, or half as much damage on a successful one.\n\nSleep Breath. The dragon exhales sleep gas in a 60-foot cone. Each creature in that area must succeed on a DC 18 Constitution saving throw or fall unconscious for 10 minutes. This effect ends for a creature if the creature takes damage or someone uses an action to wake it.\n\n!! Legendary Actions\n\n''//Detect.//'' The dragon makes a Wisdom (Perception) check.\n\n''//Tail Attack.//'' The dragon makes a tail attack.\n\n''//Wing Attack (Costs 2 Actions).//'' The dragon beats its wings. Each creature within 10 ft. of the dragon must succeed on a DC 19 Dexterity saving throw or take 13 (2d6 + 6) bludgeoning damage and be knocked <<term prone>>. The dragon can then fly up to half its flying speed."
 		},
@@ -159,7 +159,7 @@
 				"expertise": "perception",
 				"immunities": "lightning",
 				"senses": "blindsight 60 ft, darkvision 120 ft",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''Armor Class:'' 19 (natural)\n\n''//Amphibious.//'' The dragon can breathe air and water.\n\n''//Legendary Resistance.//'' If the dragon fails a saving throw, it can choose to succeed instead.\n\n!! Actions\n\n''//Multiattack.//'' The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.\n\n''//Bite.//'' Melee Weapon Attack: +12 to hit, reach 10 ft., one target. Hit: 18 (2d10 + 7) piercing damage.\n\n''//Claw.//'' Melee Weapon Attack: +12 to hit, reach 5 ft., one target. Hit: 14 (2d6 + 7) slashing damage.\n\n''//Tail.//'' Melee Weapon Attack: +12 to hit, reach 15 ft., one target. Hit: 16 (2d8 + 7) bludgeoning damage.\n\n''//Frightful Presence.//'' Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 17 Wisdom saving throw or become <<term frightened>> for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.\n\n''//Breath Weapons.//'' The dragon uses one of the following breath weapons.\n\nLightning Breath. The dragon exhales lightning in a 90-foot line that is 5 feet wide. Each creature in that line must make a DC 19 Dexterity saving throw, taking 66 (12d10) lightning damage on a failed save, or half as much damage on a successful one.\n\nRepulsion Breath. The dragon exhales repulsion energy in a 30-foot cone. Each creature in that area must succeed on a DC 19 Strength saving throw. On a failed save, the creature is pushed 60 feet away from the dragon.\n\n!! Legendary Actions\n\n''//Detect.//'' The dragon makes a Wisdom (Perception) check.\n\n''//Tail Attack.//'' The dragon makes a tail attack.\n\n''//Wing Attack (Costs 2 Actions).//'' The dragon beats its wings. Each creature within 10 ft. of the dragon must succeed on a DC 20 Dexterity saving throw or take 14 (2d6 + 7) bludgeoning damage and be knocked <<term prone>>. The dragon can then fly up to half its flying speed."
 		},
@@ -187,7 +187,7 @@
 				"expertise": "perception",
 				"immunities": "acid",
 				"senses": "blindsight 60 ft, darkvision 120 ft",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''Armor Class:'' 18 (natural)\n\n''//Legendary Resistance.//'' If the dragon fails a saving throw, it can choose to succeed instead.\n\n!! Actions\n\n''//Multiattack.//'' The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.\n\n''//Bite.//'' Melee Weapon Attack: +11 to hit, reach 10 ft., one target. Hit: 17 (2d10 + 6) piercing damage.\n\n''//Claw.//'' Melee Weapon Attack: +11 to hit, reach 5 ft., one target. Hit: 13 (2d6 + 6) slashing damage.\n\n''//Tail.//'' Melee Weapon Attack: +11 to hit, reach 15 ft., one target. Hit: 15 (2d8 + 6) bludgeoning damage.\n\n''//Frightful Presence.//'' Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 16 Wisdom saving throw or become <<term frightened>> for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.\n\n''//Breath Weapons.//'' The dragon uses one of the following breath weapons.\n\nAcid Breath. The dragon exhales acid in an 60-foot line that is 5 feet wide. Each creature in that line must make a DC 18 Dexterity saving throw, taking 54 (12d8) acid damage on a failed save, or half as much damage on a successful one.\n\nSlowing Breath. The dragon exhales gas in a 60-foot cone. Each creature in that area must succeed on a DC 18 Constitution saving throw. On a failed save, the creature can't use reactions, its speed is halved, and it can't make more than one attack on its turn. In addition, the creature can use either an action or a bonus action on its turn, but not both. These effects last for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself with a successful save.\n\n!! Legendary Actions\n\n''//Detect.//'' The dragon makes a Wisdom (Perception) check.\n\n''//Tail Attack.//'' The dragon makes a tail attack.\n\n''//Wing Attack (Costs 2 Actions).//'' The dragon beats its wings. Each creature within 10 ft. of the dragon must succeed on a DC 19 Dexterity saving throw or take 13 (2d6 + 6) bludgeoning damage and be knocked <<term prone>>. The dragon can then fly up to half its flying speed."
 		},
@@ -215,7 +215,7 @@
 				"expertise": "perception",
 				"immunities": "fire",
 				"senses": "blindsight 60 ft, darkvision 120 ft",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''Armor Class:'' 19 (natural)\n\n''//Amphibious.//'' The dragon can breathe air and water.\n\n''//Legendary Resistance.//'' If the dragon fails a saving throw, it can choose to succeed instead.\n\n!! Actions\n\n''//Multiattack.//'' The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.\n\n''//Bite.//'' Melee Weapon Attack: +14 to hit, reach 10 ft., one target. Hit: 19 (2d10 + 8) piercing damage.\n\n''//Claw.//'' Melee Weapon Attack: +14 to hit, reach 5 ft., one target. Hit: 15 (2d6 + 8) slashing damage.\n\n''//Tail.//'' Melee Weapon Attack: +14 to hit, reach 15 ft., one target. Hit: 17 (2d8 + 8) bludgeoning damage.\n\n''//Frightful Presence.//'' Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 21 Wisdom saving throw or become <<term frightened>> for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.\n\n''//Breath Weapons.//'' The dragon uses one of the following breath weapons.\n\nFire Breath. The dragon exhales fire in a 60-foot cone. Each creature in that area must make a DC 21 Dexterity saving throw, taking 66 (12d10) fire damage on a failed save, or half as much damage on a successful one.\n\nWeakening Breath. The dragon exhales gas in a 60-foot cone. Each creature in that area must succeed on a DC 21 Strength saving throw or have disadvantage on Strength-based attack rolls, Strength checks, and Strength saving throws for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.\n\n!! Legendary Actions\n\n''//Detect.//'' The dragon makes a Wisdom (Perception) check.\n\n''//Tail Attack.//'' The dragon makes a tail attack.\n\n''//Wing Attack (Costs 2 Actions).//'' The dragon beats its wings. Each creature within 10 ft. of the dragon must succeed on a DC 22 Dexterity saving throw or take 15 (2d6 + 8) bludgeoning damage and be knocked <<term prone>>. The dragon can then fly up to half its flying speed."
 		},
@@ -244,7 +244,7 @@
 				"immunities": "poison",
 				"condition-immunities": "poisoned",
 				"senses": "blindsight 60 ft, darkvision 120 ft",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''Armor Class:'' 19 (natural)\n\n''//Amphibious.//'' The dragon can breathe air and water.\n\n''//Legendary Resistance.//'' If the dragon fails a saving throw, it can choose to succeed instead.\n\n!! Actions\n\n''//Multiattack.//'' The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.\n\n''//Bite.//'' Melee Weapon Attack: +11 to hit, reach 10 ft., one target. Hit: 17 (2d10 + 6) piercing damage plus 7 (2d6) poison damage.\n\n''//Claw.//'' Melee Weapon Attack: +11 to hit, reach 5 ft., one target. Hit: 13 (2d6 + 6) slashing damage.\n\n''//Tail.//'' Melee Weapon Attack: +11 to hit, reach 15 ft., one target. Hit: 15 (2d8 + 6) bludgeoning damage.\n\n''//Frightful Presence.//'' Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 16 Wisdom saving throw or become <<term frightened>> for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours .\n\n''//Poison Breath.//'' The dragon exhales poisonous gas in a 60-foot cone. Each creature in that area must make a DC 18 Constitution saving throw, taking 56 (16d6) poison damage on a failed save, or half as much damage on a successful one.\n\n!! Legendary Actions\n\n''//Detect.//'' The dragon makes a Wisdom (Perception) check.\n\n''//Tail Attack.//'' The dragon makes a tail attack.\n\n''//Wing Attack (Costs 2 Actions).//'' The dragon beats its wings. Each creature within 10 ft. of the dragon must succeed on a DC 19 Dexterity saving throw or take 13 (2d6 + 6) bludgeoning damage and be knocked <<term prone>>. The dragon can then fly up to half its flying speed."
 		},
@@ -272,7 +272,7 @@
 				"expertise": "perception",
 				"immunities": "fire",
 				"senses": "blindsight 60 ft, darkvision 120 ft",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''Armor Class:'' 19 (natural)\n\n''//Legendary Resistance.//'' If the dragon fails a saving throw, it can choose to succeed instead.\n\n!! Actions\n\n''//Multiattack.//'' The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.\n\n''//Bite.//'' Melee Weapon Attack: +14 to hit, reach 10 ft., one target. Hit: 19 (2d10 + 8) piercing damage plus 7 (2d6) fire damage.\n\n''//Claw.//'' Melee Weapon Attack: +14 to hit, reach 5 ft., one target. Hit: 15 (2d6 + 8) slashing damage.\n\n''//Tail.//'' Melee Weapon Attack: +14 to hit, reach 15 ft., one target. Hit: 17 (2d8 + 8) bludgeoning damage.\n\n''//Frightful Presence.//'' Each creature of the dragon's choice that is within 120 ft. of the dragon and aware of it must succeed on a DC 19 Wisdom saving throw or become <<term frightened>> for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.\n\n''//Fire Breath.//'' The dragon exhales fire in a 60-foot cone. Each creature in that area must make a DC 21 Dexterity saving throw, taking 63 (18d6) fire damage on a failed save, or half as much damage on a successful one.\n\n!! Legendary Actions\n\n''//Detect.//'' The dragon makes a Wisdom (Perception) check.\n\n''//Tail Attack.//'' The dragon makes a tail attack.\n\n''//Wing Attack (Costs 2 Actions).//'' The dragon beats its wings. Each creature within 10 ft. of the dragon must succeed on a DC 22 Dexterity saving throw or take 15 (2d6 + 8) bludgeoning damage and be knocked <<term prone>>. The dragon can then fly up to half its flying speed."
 		},
@@ -300,7 +300,7 @@
 				"expertise": "perception",
 				"immunities": "cold",
 				"senses": "blindsight 60 ft, darkvision 120 ft",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''Armor Class:'' 19 (natural)\n\n''//Legendary Resistance.//'' If the dragon fails a saving throw, it can choose to succeed instead.\n\n!! Actions\n\n''//Multiattack.//'' The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.\n\n''//Bite.//'' Melee Weapon Attack: +13 to hit, reach 10 ft., one target. Hit: 19 (2d10 + 8) piercing damage.\n\n''//Claw.//'' Melee Weapon Attack: +13 to hit, reach 5 ft., one target. Hit: 15 (2d6 + 8) slashing damage.\n\n''//Tail.//'' Melee Weapon Attack: +13 to hit, reach 15 ft., one target. Hit: 17 (2d8 + 8) bludgeoning damage.\n\n''//Frightful Presence.//'' Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 18 Wisdom saving throw or become <<term frightened>> for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.\n\n''//Breath Weapons.//'' The dragon uses one of the following breath weapons.\n\nCold Breath. The dragon exhales an icy blast in a 60-foot cone. Each creature in that area must make a DC 20 Constitution saving throw, taking 58 (13d8) cold damage on a failed save, or half as much damage on a successful one.\n\nParalyzing Breath. The dragon exhales paralyzing gas in a 60-foot cone. Each creature in that area must succeed on a DC 20 Constitution saving throw or be <<term paralyzed>> for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.\n\n!! Legendary Actions\n\n''//Detect.//'' The dragon makes a Wisdom (Perception) check.\n\n''//Tail Attack.//'' The dragon makes a tail attack.\n\n''//Wing Attack (Costs 2 Actions).//'' The dragon beats its wings. Each creature within 10 ft. of the dragon must succeed on a DC 22 Dexterity saving throw or take 15 (2d6 + 8) bludgeoning damage and be knocked <<term prone>>. The dragon can then fly up to half its flying speed."
 		},
@@ -328,7 +328,7 @@
 				"expertise": "perception",
 				"immunities": "cold",
 				"senses": "blindsight 60 ft, darkvision 120 ft",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''Armor Class:'' 18 (natural)\n\n''//Ice Walk.//'' The dragon can move across and climb icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow doesn't cost it extra movement.\n\n''//Legendary Resistance.//'' If the dragon fails a saving throw, it can choose to succeed instead.\n\n!! Actions\n\n''//Multiattack.//'' The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.\n\n''//Bite.//'' Melee Weapon Attack: +11 to hit, reach 10 ft., one target. Hit: 17 (2d10 + 6) piercing damage plus 4 (1d8) cold damage.\n\n''//Claw.//'' Melee Weapon Attack: +11 to hit, reach 5 ft., one target. Hit: 13 (2d6 + 6) slashing damage.\n\n''//Tail.//'' Melee Weapon Attack: +11 to hit, reach 15 ft., one target. Hit: 15 (2d8 + 6) bludgeoning damage.\n\n''//Frightful Presence.//'' Each creature of the dragon's choice that is within 120 ft. of the dragon and aware of it must succeed on a DC 14 Wisdom saving throw or become <<term frightened>> for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.\n\n''//Cold Breath.//'' The dragon exhales an icy blast in a 60-foot cone. Each creature in that area must make a DC 19 Constitution saving throw, taking 54 (12d8) cold damage on a failed save, or half as much damage on a successful one.\n\n!! Legendary Actions\n\n''//Detect.//'' The dragon makes a Wisdom (Perception) check.\n\n''//Tail Attack.//'' The dragon makes a tail attack.\n\n''//Wing Attack (Costs 2 Actions).//'' The dragon beats its wings. Each creature within 10 ft. of the dragon must succeed on a DC 19 Dexterity saving throw or take 13 (2d6 + 6) bludgeoning damage and be knocked <<term prone>>. The dragon can then fly up to half its flying speed."
 		},
@@ -382,7 +382,7 @@
 				"expertise": "perception",
 				"immunities": "acid",
 				"senses": "blindsight 60 ft, darkvision 120 ft",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''Armor Class:'' 22 (natural)\n\n''//Amphibious.//'' The dragon can breathe air and water.\n\n''//Legendary Resistance.//'' If the dragon fails a saving throw, it can choose to succeed instead.\n\n!! Actions\n\n''//Multiattack.//'' The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.\n\n''//Bite.//'' Melee Weapon Attack: +15 to hit, reach 15 ft., one target. Hit: 19 (2d10 + 8) piercing damage plus 9 (2d8) acid damage.\n\n''//Claw.//'' Melee Weapon Attack: +15 to hit, reach 10 ft., one target. Hit: 15 (2d6 + 8) slashing damage.\n\n''//Tail.//'' Melee Weapon Attack: +15 to hit, reach 20 ft., one target. Hit: 17 (2d8 + 8) bludgeoning damage.\n\n''//Frightful Presence.//'' Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 19 Wisdom saving throw or become <<term frightened>> for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.\n\n''//Acid Breath.//'' The dragon exhales acid in a 90-foot line that is 10 feet wide. Each creature in that line must make a DC 22 Dexterity saving throw, taking 67 (15d8) acid damage on a failed save, or half as much damage on a successful one.\n\n!! Legendary Actions\n\n''//Detect.//'' The dragon makes a Wisdom (Perception) check.\n\n''//Tail Attack.//'' The dragon makes a tail attack.\n\n''//Wing Attack (Costs 2 Actions).//'' The dragon beats its wings. Each creature within 15 ft. of the dragon must succeed on a DC 23 Dexterity saving throw or take 15 (2d6 + 8) bludgeoning damage and be knocked <<term prone>>. The dragon can then fly up to half its flying speed."
 		},
@@ -410,7 +410,7 @@
 				"expertise": "perception",
 				"immunities": "lightning",
 				"senses": "blindsight 60 ft, darkvision 120 ft",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''Armor Class:'' 22 (natural)\n\n''//Legendary Resistance.//'' If the dragon fails a saving throw, it can choose to succeed instead.\n\n!! Actions\n\n''//Multiattack.//'' The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.\n\n''//Bite.//'' Melee Weapon Attack: +16 to hit, reach 15 ft., one target. Hit: 20 (2d10 + 9) piercing damage plus 11 (2d10) lightning damage.\n\n''//Claw.//'' Melee Weapon Attack: +16 to hit, reach 10 ft., one target. Hit: 16 (2d6 + 9) slashing damage.\n\n''//Tail.//'' Melee Weapon Attack: +16 to hit, reach 20 ft., one target. Hit: 18 (2d8 + 9) bludgeoning damage.\n\n''//Frightful Presence.//'' Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 20 Wisdom saving throw or become <<term frightened>> for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.\n\n''//Lightning Breath.//'' The dragon exhales lightning in a 120-foot line that is 10 feet wide. Each creature in that line must make a DC 23 Dexterity saving throw, taking 88 (16d10) lightning damage on a failed save, or half as much damage on a successful one.\n\n!! Legendary Actions\n\n''//Detect.//'' The dragon makes a Wisdom (Perception) check.\n\n''//Tail Attack.//'' The dragon makes a tail attack.\n\n''//Wing Attack (Costs 2 Actions).//'' The dragon beats its wings. Each creature within 15 ft. of the dragon must succeed on a DC 24 Dexterity saving throw or take 16 (2d6 + 9) bludgeoning damage and be knocked <<term prone>>. The dragon can then fly up to half its flying speed."
 		},
@@ -438,7 +438,7 @@
 				"expertise": "perception",
 				"immunities": "fire",
 				"senses": "blindsight 60 ft, darkvision 120 ft",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''Armor Class:'' 20 (natural)\n\n''//Legendary Resistance.//'' If the dragon fails a saving throw, it can choose to succeed instead.\n\n!! Actions\n\n''//Multiattack.//'' The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.\n\n''//Bite.//'' Melee Weapon Attack: +14 to hit, reach 15 ft., one target. Hit: 19 (2d10 + 8) piercing damage.\n\n''//Claw.//'' Melee Weapon Attack: +14 to hit, reach 10 ft., one target. Hit: 15 (2d6 + 8) slashing damage.\n\n''//Tail.//'' Melee Weapon Attack: +14 to hit, reach 20 ft., one target. Hit: 17 (2d8 + 8) bludgeoning damage.\n\n''//Frightful Presence.//'' Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 18 Wisdom saving throw or become <<term frightened>> for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.\n\n''//Breath Weapons.//'' The dragon uses one of the following breath weapons:\n\nFire Breath. The dragon exhales fire in an 90-foot line that is 10 feet wide. Each creature in that line must make a DC 21 Dexterity saving throw, taking 56 (16d6) fire damage on a failed save, or half as much damage on a successful one.\n\nSleep Breath. The dragon exhales sleep gas in a 90-foot cone. Each creature in that area must succeed on a DC 21 Constitution saving throw or fall unconscious for 10 minutes. This effect ends for a creature if the creature takes damage or someone uses an action to wake it.\n\n''//Change Shape.//'' The dragon magically polymorphs into a humanoid or beast that has a challenge rating no higher than its own, or back into its true form. It reverts to its true form if it dies. Any equipment it is wearing or carrying is absorbed or borne by the new form (the dragon's choice).\n\nIn a new form, the dragon retains its alignment, hit points, Hit Dice, ability to speak, proficiencies, Legendary Resistance, lair actions, and Intelligence, Wisdom, and Charisma scores, as well as this action. Its statistics and capabilities are otherwise replaced by those of the new form, except any class features or legendary actions of that form.\n\n!! Legendary Actions\n\n''//Detect.//'' The dragon makes a Wisdom (Perception) check.\n\n''//Tail Attack.//'' The dragon makes a tail attack.\n\n''//Wing Attack (Costs 2 Actions).//'' The dragon beats its wings. Each creature within 15 ft. of the dragon must succeed on a DC 22 Dexterity saving throw or take 15 (2d6 + 8) bludgeoning damage and be knocked <<term prone>>. The dragon can then fly up to half its flying speed."
 		},
@@ -466,7 +466,7 @@
 				"expertise": "perception",
 				"immunities": "lightning",
 				"senses": "blindsight 60 ft, darkvision 120 ft",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''Armor Class:'' 22 (natural)\n\n''//Amphibious.//'' The dragon can breathe air and water.\n\n''//Legendary Resistance.//'' If the dragon fails a saving throw, it can choose to succeed instead.\n\n!! Actions\n\n''//Multiattack.//'' The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.\n\n''//Bite.//'' Melee Weapon Attack: +16 to hit, reach 15 ft., one target. Hit: 20 (2d10 + 9) piercing damage.\n\n''//Claw.//'' Melee Weapon Attack: +16 to hit, reach 10 ft., one target. Hit: 16 (2d6 + 9) slashing damage.\n\n''//Tail.//'' Melee Weapon Attack: +16 to hit, reach 20 ft., one target. Hit: 18 (2d8 + 9) bludgeoning damage.\n\n''//Frightful Presence.//'' Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 20 Wisdom saving throw or become <<term frightened>> for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.\n\n''//Breath Weapons.//'' The dragon uses one of the following breath weapons.\n\nLightning Breath. The dragon exhales lightning in a 120-foot line that is 10 feet wide. Each creature in that line must make a DC 23 Dexterity saving throw, taking 88 (16d10) lightning damage on a failed save, or half as much damage on a successful one.\n\nRepulsion Breath. The dragon exhales repulsion energy in a 30-foot cone. Each creature in that area must succeed on a DC 23 Strength saving throw. On a failed save, the creature is pushed 60 feet away from the dragon.\n\n''//Change Shape.//'' The dragon magically polymorphs into a humanoid or beast that has a challenge rating no higher than its own, or back into its true form. It reverts to its true form if it dies. Any equipment it is wearing or carrying is absorbed or borne by the new form (the dragon's choice).\n\nIn a new form, the dragon retains its alignment, hit points, Hit Dice, ability to speak, proficiencies, Legendary Resistance, lair actions, and Intelligence, Wisdom, and Charisma scores, as well as this action. Its statistics and capabilities are otherwise replaced by those of the new form, except any class features or legendary actions of that form.\n\n!! Legendary Actions\n\n''//Detect.//'' The dragon makes a Wisdom (Perception) check.\n\n''//Tail Attack.//'' The dragon makes a tail attack.\n\n''//Wing Attack (Costs 2 Actions).//'' The dragon beats its wings. Each creature within 15 ft. of the dragon must succeed on a DC 24 Dexterity saving throw or take 16 (2d6 + 9) bludgeoning damage and be knocked <<term prone>>. The dragon can then fly up to half its flying speed."
 		},
@@ -494,7 +494,7 @@
 				"expertise": "perception",
 				"immunities": "acid",
 				"senses": "blindsight 60 ft, darkvision 120 ft",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''Armor Class:'' 21 (natural)\n\n''//Legendary Resistance.//'' If the dragon fails a saving throw, it can choose to succeed instead.\n\n!! Actions\n\n''//Multiattack.//'' The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.\n\n''//Bite.//'' Melee Weapon Attack: +15 to hit, reach 15 ft., one target. Hit: 19 (2d10 + 8) piercing damage.\n\n''//Claw.//'' Melee Weapon Attack: +15 to hit, reach 10 ft., one target. Hit: 15 (2d6 + 8) slashing damage.\n\n''//Tail.//'' Melee Weapon Attack: +15 to hit, reach 20 ft., one target. Hit: 17 (2d8 + 8) bludgeoning damage.\n\n''//Frightful Presence.//'' Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 19 Wisdom saving throw or become <<term frightened>> for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.\n\n''//Breath Weapons.//'' The dragon uses one of the following breath weapons.\n\nAcid Breath. The dragon exhales acid in an 90-foot line that is 10 feet wide. Each creature in that line must make a DC 22 Dexterity saving throw, taking 63 (14d8) acid damage on a failed save, or half as much damage on a successful one.\n\nSlowing Breath. The dragon exhales gas in a 90-foot cone. Each creature in that area must succeed on a DC 22 Constitution saving throw. On a failed save, the creature can't use reactions, its speed is halved, and it can't make more than one attack on its turn. In addition, the creature can use either an action or a bonus action on its turn, but not both. These effects last for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself with a successful save.\n\n''//Change Shape.//'' The dragon magically polymorphs into a humanoid or beast that has a challenge rating no higher than its own, or back into its true form. It reverts to its true form if it dies. Any equipment it is wearing or carrying is absorbed or borne by the new form (the dragon's choice).\n\nIn a new form, the dragon retains its alignment, hit points, Hit Dice, ability to speak, proficiencies, Legendary Resistance, lair actions, and Intelligence, Wisdom, and Charisma scores, as well as this action. Its statistics and capabilities are otherwise replaced by those of the new form, except any class features or legendary actions of that form.\n\n!! Legendary Actions\n\n''//Detect.//'' The dragon makes a Wisdom (Perception) check.\n\n''//Tail Attack.//'' The dragon makes a tail attack.\n\n''//Wing Attack (Costs 2 Actions).//'' The dragon beats its wings. Each creature within 15 ft. of the dragon must succeed on a DC 23 Dexterity saving throw or take 15 (2d6 + 8) bludgeoning damage and be knocked <<term prone>>. The dragon can then fly up to half its flying speed."
 		},
@@ -522,7 +522,7 @@
 				"expertise": "perception",
 				"immunities": "fire",
 				"senses": "blindsight 60 ft, darkvision 120 ft",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''Armor Class:'' 22 (natural)\n\n''//Amphibious.//'' The dragon can breathe air and water.\n\n''//Legendary Resistance.//'' If the dragon fails a saving throw, it can choose to succeed instead.\n\n!! Actions\n\n''//Multiattack.//'' The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.\n\n''//Bite.//'' Melee Weapon Attack: +17 to hit, reach 15 ft., one target. Hit: 21 (2d10 + 10) piercing damage.\n\n''//Claw.//'' Melee Weapon Attack: +17 to hit, reach 10 ft., one target. Hit: 17 (2d6 + 10) slashing damage.\n\n''//Tail.//'' Melee Weapon Attack: +17 to hit, reach 20 ft., one target. Hit: 19 (2d8 + 10) bludgeoning damage.\n\n''//Frightful Presence.//'' Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 24 Wisdom saving throw or become <<term frightened>> for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.\n\n''//Breath Weapons.//'' The dragon uses one of the following breath weapons.\n\nFire Breath. The dragon exhales fire in a 90-foot cone. Each creature in that area must make a DC 24 Dexterity saving throw, taking 71 (13d10) fire damage on a failed save, or half as much damage on a successful one.\n\nWeakening Breath. The dragon exhales gas in a 90-foot cone. Each creature in that area must succeed on a DC 24 Strength saving throw or have disadvantage on Strength-based attack rolls, Strength checks, and Strength saving throws for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.\n\n''//Change Shape.//'' The dragon magically polymorphs into a humanoid or beast that has a challenge rating no higher than its own, or back into its true form. It reverts to its true form if it dies. Any equipment it is wearing or carrying is absorbed or borne by the new form (the dragon's choice).\n\nIn a new form, the dragon retains its alignment, hit points, Hit Dice, ability to speak, proficiencies, Legendary Resistance, lair actions, and Intelligence, Wisdom, and Charisma scores, as well as this action. Its statistics and capabilities are otherwise replaced by those of the new form, except any class features or legendary actions of that form.\n\n!! Legendary Actions\n\n''//Detect.//'' The dragon makes a Wisdom (Perception) check.\n\n''//Tail Attack.//'' The dragon makes a tail attack.\n\n''//Wing Attack (Costs 2 Actions).//'' The dragon beats its wings. Each creature within 15 ft. of the dragon must succeed on a DC 25 Dexterity saving throw or take 17 (2d6 + 10) bludgeoning damage and be knocked <<term prone>>. The dragon can then fly up to half its flying speed."
 		},
@@ -551,7 +551,7 @@
 				"immunities": "poison",
 				"condition-immunities": "poisoned",
 				"senses": "blindsight 60 ft, darkvision 120 ft",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''Armor Class:'' 21 (natural)\n\n''//Amphibious.//'' The dragon can breathe air and water.\n\n''//Legendary Resistance.//'' If the dragon fails a saving throw, it can choose to succeed instead.\n\n!! Actions\n\n''//Multiattack.//'' The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.\n\n''//Bite.//'' Melee Weapon Attack: +15 to hit, reach 15 ft., one target. Hit: 19 (2d10 + 8) piercing damage plus 10 (3d6) poison damage.\n\n''//Claw.//'' Melee Weapon Attack: +15 to hit, reach 10 ft., one target. Hit: 22 (4d6 + 8) slashing damage.\n\n''//Tail.//'' Melee Weapon Attack: +15 to hit, reach 20 ft., one target. Hit: 17 (2d8 + 8) bludgeoning damage.\n\n''//Frightful Presence.//'' Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 19 Wisdom saving throw or become <<term frightened>> for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.\n\n''//Poison Breath.//'' The dragon exhales poisonous gas in a 90-foot cone. Each creature in that area must make a DC 22 Constitution saving throw, taking 77 (22d6) poison damage on a failed save, or half as much damage on a successful one.\n\n!! Legendary Actions\n\n''//Detect.//'' The dragon makes a Wisdom (Perception) check.\n\n''//Tail Attack.//'' The dragon makes a tail attack.\n\n''//Wing Attack (Costs 2 Actions).//'' The dragon beats its wings. Each creature within 15 ft. of the dragon must succeed on a DC 23 Dexterity saving throw or take 15 (2d6 + 8) bludgeoning damage and be knocked <<term prone>>. The dragon can then fly up to half its flying speed."
 		},
@@ -579,7 +579,7 @@
 				"expertise": "perception",
 				"immunities": "fire",
 				"senses": "blindsight 60 ft, darkvision 120 ft",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''Armor Class:'' 22 (natural)\n\n''//Legendary Resistance.//'' If the dragon fails a saving throw, it can choose to succeed instead.\n\n!! Actions\n\n''//Multiattack.//'' The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.\n\n''//Bite.//'' Melee Weapon Attack: +17 to hit, reach 15 ft., one target. Hit: 21 (2d10 + 10) piercing damage plus 14 (4d6) fire damage.\n\n''//Claw.//'' Melee Weapon Attack: +17 to hit, reach 10 ft., one target. Hit: 17 (2d6 + 10) slashing damage.\n\n''//Tail.//'' Melee Weapon Attack: +17 to hit, reach 20 ft., one target. Hit: 19 (2d8 + 10) bludgeoning damage.\n\n''//Frightful Presence.//'' Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 21 Wisdom saving throw or become <<term frightened>> for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.\n\n''//Fire Breath.//'' The dragon exhales fire in a 90-foot cone. Each creature in that area must make a DC 24 Dexterity saving throw, taking 91 (26d6) fire damage on a failed save, or half as much damage on a successful one.\n\n!! Legendary Actions\n\n''//Detect.//'' The dragon makes a Wisdom (Perception) check.\n\n''//Tail Attack.//'' The dragon makes a tail attack.\n\n''//Wing Attack (Costs 2 Actions).//'' The dragon beats its wings. Each creature within 15 ft. of the dragon must succeed on a DC 25 Dexterity saving throw or take 17 (2d6 + 10) bludgeoning damage and be knocked <<term prone>>. The dragon can then fly up to half its flying speed."
 		},
@@ -607,7 +607,7 @@
 				"expertise": "perception",
 				"immunities": "cold",
 				"senses": "blindsight 60 ft, darkvision 120 ft",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''Armor Class:'' 22 (natural)\n\n''//Legendary Resistance.//'' If the dragon fails a saving throw, it can choose to succeed instead.\n\n!! Actions\n\n''//Multiattack.//'' The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.\n\n''//Bite.//'' Melee Weapon Attack: +17 to hit, reach 15 ft., one target. Hit: 21 (2d10 + 10) piercing damage.\n\n''//Claw.//'' Melee Weapon Attack: +17 to hit, reach 10 ft., one target. Hit: 17 (2d6 + 10) slashing damage.\n\n''//Tail.//'' Melee Weapon Attack: +17 to hit, reach 20 ft., one target. Hit: 19 (2d8 + 10) bludgeoning damage.\n\n''//Frightful Presence.//'' Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 21 Wisdom saving throw or become <<term frightened>> for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.\n\n''//Breath Weapons.//'' The dragon uses one of the following breath weapons.\n\nCold Breath. The dragon exhales an icy blast in a 90-foot cone. Each creature in that area must make a DC 24 Constitution saving throw, taking 67 (15d8) cold damage on a failed save, or half as much damage on a successful one.\n\nParalyzing Breath. The dragon exhales paralyzing gas in a 90-foot cone. Each creature in that area must succeed on a DC 24 Constitution saving throw or be <<term paralyzed>> for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.\n\n''//Change Shape.//'' The dragon magically polymorphs into a humanoid or beast that has a challenge rating no higher than its own, or back into its true form. It reverts to its true form if it dies. Any equipment it is wearing or carrying is absorbed or borne by the new form (the dragon's choice).\n\nIn a new form, the dragon retains its alignment, hit points, Hit Dice, ability to speak, proficiencies, Legendary Resistance, lair actions, and Intelligence, Wisdom, and Charisma scores, as well as this action. Its statistics and capabilities are otherwise replaced by those of the new form, except any class features or legendary actions of that form.\n\n!! Legendary Actions\n\n''//Detect.//'' The dragon makes a Wisdom (Perception) check.\n\n''//Tail Attack.//'' The dragon makes a tail attack.\n\n''//Wing Attack (Costs 2 Actions).//'' The dragon beats its wings. Each creature within 15 ft. of the dragon must succeed on a DC 25 Dexterity saving throw or take 17 (2d6 + 10) bludgeoning damage and be knocked <<term prone>>. The dragon can then fly up to half its flying speed."
 		},
@@ -635,7 +635,7 @@
 				"expertise": "perception",
 				"immunities": "cold",
 				"senses": "blindsight 60 ft, darkvision 120 ft",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''Armor Class:'' 20 (natural)\n\n''//Ice Walk.//'' The dragon can move across and climb icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow doesn't cost it extra movement.\n\n''//Legendary Resistance.//'' If the dragon fails a saving throw, it can choose to succeed instead.\n\n!! Actions\n\n''//Multiattack.//'' The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.\n\n''//Bite.//'' Melee Weapon Attack: +14 to hit, reach 15 ft., one target. Hit: 19 (2d10 + 8) piercing damage plus 9 (2d8) cold damage.\n\n''//Claw.//'' Melee Weapon Attack: +14 to hit, reach 10 ft., one target. Hit: 15 (2d6 + 8) slashing damage.\n\n''//Tail.//'' Melee Weapon Attack: +14 to hit, reach 20 ft., one target. Hit: 17 (2d8 + 8) bludgeoning damage.\n\n''//Frightful Presence.//'' Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 16 Wisdom saving throw or become <<term frightened>> for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours .\n\n''//Cold Breath.//'' The dragon exhales an icy blast in a 90-foot cone. Each creature in that area must make a DC 22 Constitution saving throw, taking 72 (16d8) cold damage on a failed save, or half as much damage on a successful one.\n\n!! Legendary Actions\n\n''//Detect.//'' The dragon makes a Wisdom (Perception) check.\n\n''//Tail Attack.//'' The dragon makes a tail attack.\n\n''//Wing Attack (Costs 2 Actions).//'' The dragon beats its wings. Each creature within 15 ft. of the dragon must succeed on a DC 22 Dexterity saving throw or take 15 (2d6 + 8) bludgeoning damage and be knocked <<term prone>>. The dragon can then fly up to half its flying speed."
 		},
@@ -664,7 +664,7 @@
 				"immunities": "psychic, nonmagical",
 				"condition-immunities": "charmed, frightened",
 				"senses": "truesight 120 ft",
-				"languages": "common"
+				"languages": "common-language"
 			},
 			"text": "''Armor Class:'' 17 (natural)\n\n''Languages:'' Sphinx\n\n''//Inscrutable.//'' The sphinx is immune to any effect that would sense its emotions or read its thoughts, as well as any divination spell that it refuses. Wisdom (Insight) checks made to ascertain the sphinx's intentions or sincerity have disadvantage.\n\n''//Magic Weapons.//'' The sphinx's weapon attacks are magical.\n\n''//Spellcasting.//'' The sphinx is a 12th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 18, +10 to hit with spell attacks). It requires no material components to cast its spells. The sphinx has the following cleric spells prepared:\n\n* Cantrips (at will): sacred flame, spare the dying, thaumaturgy\n* 1st level (4 slots): command, detect evil and good, detect magic\n* 2nd level (3 slots): lesser restoration, zone of truth\n* 3rd level (3 slots): dispel magic, tongues\n* 4th level (3 slots): banishment, freedom of movement\n* 5th level (2 slots): flame strike, greater restoration\n* 6th level (1 slot): heroes' feast\n\n!! Actions\n\n''//Multiattack.//'' The sphinx makes two claw attacks.\n\n''//Claw.//'' Melee Weapon Attack: +12 to hit, reach 5 ft., one target. Hit: 17 (2d10 + 6) slashing damage.\n\n''//Roar.//'' The sphinx emits a magical roar. Each time it roars before finishing a long rest, the roar is louder and the effect is different, as detailed below. Each creature within 500 feet of the sphinx and able to hear the roar must make a saving throw.\n\nFirst Roar. Each creature that fails a DC 18 Wisdom saving throw is <<term frightened>> for 1 minute. A frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.\n\nSecond Roar. Each creature that fails a DC 18 Wisdom saving throw is <<term deafened>> and frightened for 1 minute. A frightened creature is <<term paralyzed>> and can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.\n\nThird Roar. Each creature makes a DC 18 Constitution saving throw. On a failed save, a creature takes 44 (8d10) thunder damage and is knocked <<term prone>>. On a successful save, the creature takes half as much damage and isn't knocked <<term prone>>.\n\n!! Legendary Actions\n\n''//Claw Attack.//'' The sphinx makes one claw attack.\n\n''//Teleport (Costs 2 Actions).//'' The sphinx magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see.\n\n''//Cast a Spell (Costs 3 Actions).//'' The sphinx casts a spell from its list of prepared spells, using a spell slot as normal."
 		},
@@ -1470,7 +1470,7 @@
 				"skills": "stealth, survival",
 				"expertise": "stealth",
 				"senses": "darkvision 60 ft",
-				"languages": "common, goblin"
+				"languages": "common-language, goblin"
 			},
 			"text": "''Armor Class:'' 16 (shield, hide armor)\n\n''//Brute.//'' A melee weapon deals one extra die of its damage when the bugbear hits with it (included in the attack).\n\n''//Surprise Attack.//'' If the bugbear surprises a creature and hits it with an attack during the first round of combat, the target takes an extra 7 (2d6) damage from the attack.\n\n!! Actions\n\n''//Morningstar.//'' Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 11 (2d8 + 2) piercing damage.\n\n''//Javelin.//'' Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 9 (2d6 + 2) piercing damage in melee or 5 (1d6 + 2) piercing damage at range."
 		},
@@ -1721,7 +1721,7 @@
 				"cr": "9",
 				"saves": "con, wis, cha",
 				"skills": "insight, perception",
-				"languages": "common, giant-language"
+				"languages": "common-language, giant-language"
 			},
 			"text": "''Alignment:'' neutral good (50%) or neutral evil (50%)\n\n''Armor Class:'' 14 (natural)\n\n''//Keen Smell.//'' The giant has advantage on Wisdom (Perception) checks that rely on smell.\n\n''//Innate Spellcasting.//'' The giant's innate spellcasting ability is Charisma. It can innately cast the following spells, requiring no material components:\n\nAt will: detect magic, fog cloud, light\n\n3/day each: feather fall, fly, misty step, telekinesis\n\n1/day each: control weather, gaseous form\n\n!! Actions\n\n''//Multiattack.//'' The giant makes two morningstar attacks.\n\n''//Morningstar.//'' Melee Weapon Attack: +12 to hit, reach 10 ft., one target. Hit: 21 (3d8 + 8) piercing damage.\n\n''//Rock.//'' Ranged Weapon Attack: +12 to hit, range 60/240 ft., one target. Hit: 30 (4d10 + 8) bludgeoning damage."
 		},
@@ -2139,7 +2139,7 @@
 				"expertise": "deception",
 				"condition-immunities": "charmed",
 				"senses": "darkvision 60 ft",
-				"languages": "common"
+				"languages": "common-language"
 			},
 			"text": "''//Shapechanger.//'' The doppelganger can use its action to polymorph into a Small or Medium humanoid it has seen, or back into its true form. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.\n\n''//Ambusher.//'' In the first round of combat, the doppelganger has advantage on attack rolls against any creature it has surprised.\n\n''//Surprise Attack.//'' If the doppelganger surprises a creature and hits it with an attack during the first round of combat, the target takes an extra 10 (3d6) damage from the attack.\n\n!! Actions\n\n''//Multiattack.//'' The doppelganger makes two melee attacks.\n\n''//Slam.//'' Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 7 (1d6 + 4) bludgeoning damage.\n\n''//Read Thoughts.//'' The doppelganger magically reads the surface thoughts of one creature within 60 ft. of it. The effect can penetrate barriers, but 3 ft. of wood or dirt, 2 ft. of stone, 2 inches of metal, or a thin sheet of lead blocks it. While the target is in range, the doppelganger can continue reading its thoughts, as long as the doppelganger's concentration isn't broken (as if concentrating on a spell). While reading the target's mind, the doppelganger has advantage on Wisdom (Insight) and Charisma (Deception, Intimidation, and Persuasion) checks against the target."
 		},
@@ -2826,7 +2826,7 @@
 				"immunities": "poison",
 				"condition-immunities": "poisoned, charmed, exhaustion",
 				"senses": "darkvision 60 ft",
-				"languages": "common"
+				"languages": "common-language"
 			},
 			"text": "''//Stench.//'' Any creature that starts its turn within 5 ft. of the ghast must succeed on a DC 10 Constitution saving throw or be <<term poisoned>> until the start of its next turn. On a successful saving throw, the creature is immune to the ghast's Stench for 24 hours.\n\n''//Turn Defiance.//'' The ghast and any ghouls within 30 ft. of it have advantage on saving throws against effects that turn undead.\n\n!! Actions\n\n''//Bite.//'' Melee Weapon Attack: +3 to hit, reach 5 ft., one creature. Hit: 12 (2d8 + 3) piercing damage.\n\n''//Claws.//'' Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) slashing damage. If the target is a creature other than an undead, it must succeed on a DC 10 Constitution saving throw or be <<term paralyzed>> for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 		},
@@ -2878,7 +2878,7 @@
 				"immunities": "poison",
 				"condition-immunities": "poisoned, charmed, exhaustion",
 				"senses": "darkvision 60 ft",
-				"languages": "common"
+				"languages": "common-language"
 			},
 			"text": "!! Actions\n\n''//Bite.//'' Melee Weapon Attack: +2 to hit, reach 5 ft., one creature. Hit: 9 (2d6 + 2) piercing damage.\n\n''//Claws.//'' Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 7 (2d4 + 2) slashing damage. If the target is a creature other than an elf or undead, it must succeed on a DC 10 Constitution saving throw or be <<term paralyzed>> for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 		},
@@ -3711,7 +3711,7 @@
 				"skills": "stealth",
 				"expertise": "stealth",
 				"senses": "darkvision 60 ft",
-				"languages": "common, goblin"
+				"languages": "common-language, goblin"
 			},
 			"text": "''Armor Class:'' 15 (leather armor, shield)\n\n''//Nimble Escape.//'' The goblin can take the Disengage or Hide action as a bonus action on each of its turns.\n\n!! Actions\n\n''//Scimitar.//'' Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) slashing damage.\n\n''//Shortbow.//'' Ranged Weapon Attack: +4 to hit, range 80/320 ft., one target. Hit: 5 (1d6 + 2) piercing damage."
 		},
@@ -3845,7 +3845,7 @@
 				"cr": "3",
 				"skills": "arcana, deception, perception, stealth",
 				"senses": "darkvision 60 ft",
-				"languages": "common, draconic, sylvan"
+				"languages": "common-language, draconic, sylvan"
 			},
 			"text": "''Armor Class:'' 17 (natural)\n\n''//Amphibious.//'' The hag can breathe air and water.\n\n''//Innate Spellcasting.//'' The hag's innate spellcasting ability is Charisma (spell save DC 12). She can innately cast the following spells, requiring no material components:\n\nAt will: dancing lights, minor illusion, vicious mockery\n\n''//Mimicry.//'' The hag can mimic animal sounds and humanoid voices. A creature that hears the sounds can tell they are imitations with a successful DC 14 Wisdom (Insight) check.\n\n!! Actions\n\n''//Claws.//'' Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) slashing damage.\n\n''//Illusory Appearance.//'' The hag covers herself and anything she is wearing or carrying with a magical illusion that makes her look like another creature of her general size and humanoid shape. The illusion ends if the hag takes a bonus action to end it or if she dies.\n\nThe changes wrought by this effect fail to hold up to physical inspection. For example, the hag could appear to have smooth skin, but someone touching her would feel her rough flesh. Otherwise, a creature must take an action to visually inspect the illusion and succeed on a DC 20 Intelligence (Investigation) check to discern that the hag is disguised.\n\n''//Invisible Passage.//'' The hag magically turns invisible until she attacks or casts a spell, or until her concentration ends (as if concentrating on a spell). While invisible, she leaves no physical evidence of her passage, so she can be tracked only by magic. Any equipment she wears or carries is <<term invisible>> with her."
 		},
@@ -3973,7 +3973,7 @@
 				"immunities": "poison",
 				"condition-immunities": "charmed, poisoned",
 				"senses": "darkvision 60 ft",
-				"languages": "celestial-language, common"
+				"languages": "celestial-language, common-language"
 			},
 			"text": "''Armor Class:'' 18 (natural)\n\n''//Rejuvenation.//'' If it dies, the naga returns to life in 1d6 days and regains all its hit points. Only a wish spell can prevent this trait from functioning.\n\n''//Spellcasting.//'' The naga is an 11th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 16, +8 to hit with spell attacks), and it needs only verbal components to cast its spells. It has the following cleric spells prepared:\n\n* Cantrips (at will): mending, sacred flame, thaumaturgy\n* 1st level (4 slots): command, cure wounds, shield of faith\n* 2nd level (3 slots): calm emotions, hold person\n* 3rd level (3 slots): bestow curse, clairvoyance\n* 4th level (3 slots): banishment, freedom of movement\n* 5th level (2 slots): flame strike, geas\n* 6th level (1 slot): true seeing\n\n!! Actions\n\n''//Bite.//'' Melee Weapon Attack: +8 to hit, reach 10 ft., one creature. Hit: 8 (1d8 + 4) piercing damage, and the target must make a DC 15 Constitution saving throw, taking 45 (10d8) poison damage on a failed save, or half as much damage on a successful one.\n\n''//Spit Poison.//'' Ranged Weapon Attack: +8 to hit, range 15/30 ft., one creature. Hit: The target must make a DC 15 Constitution saving throw, taking 45 (10d8) poison damage on a failed save, or half as much damage on a successful one."
 		},
@@ -4002,7 +4002,7 @@
 				"immunities": "psychic",
 				"condition-immunities": "charmed, frightened",
 				"senses": "truesight 120 ft",
-				"languages": "common"
+				"languages": "common-language"
 			},
 			"text": "''Armor Class:'' 17 (natural)\n\n''Languages:'' Sphinx\n\n''//Inscrutable.//'' The sphinx is immune to any effect that would sense its emotions or read its thoughts, as well as any divination spell that it refuses. Wisdom (Insight) checks made to ascertain the sphinx's intentions or sincerity have disadvantage.\n\n''//Magic Weapons.//'' The sphinx's weapon attacks are magical.\n\n''//Spellcasting.//'' The sphinx is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 16, +8 to hit with spell attacks). It requires no material components to cast its spells. The sphinx has the following wizard spells prepared:\n\n* Cantrips (at will): mage hand, minor illusion, prestidigitation\n* 1st level (4 slots): detect magic, identify, shield\n* 2nd level (3 slots): darkness, locate object, suggestion\n* 3rd level (3 slots): dispel magic, remove curse, tongues\n* 4th level (3 slots): banishment, greater invisibility\n* 5th level (1 slot): legend lore\n\n!! Actions\n\n''//Multiattack.//'' The sphinx makes two claw attacks.\n\n''//Claw.//'' Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) slashing damage.\n\n!! Legendary Actions\n\n''//Claw Attack.//'' The sphinx makes one claw attack.\n\n''//Teleport (Costs 2 Actions).//'' The sphinx magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see.\n\n''//Cast a Spell (Costs 3 Actions).//'' The sphinx casts a spell from its list of prepared spells, using a spell slot as normal."
 		},
@@ -4028,7 +4028,7 @@
 				"cr": "5",
 				"resistances": "fire",
 				"senses": "blindsight 10 ft, darkvision 60 ft, passive-perception 12",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''Armor Class:'' 18 (plate armor)\n\n!! Actions\n\n''//Multiattack.//'' The veteran makes two longsword attacks. If it has a shortsword drawn, it can also make a shortsword attack.\n\n''//Longsword.//'' Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) slashing damage, or 8 (1d10 + 3) slashing damage if used with two hands.\n\n''//Shortsword.//'' Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) piercing damage.\n\n''//Heavy Crossbow.//'' Ranged Weapon Attack: +3 to hit, range 100/400 ft., one target. Hit: 6 (1d10 + 1) piercing damage.\n\n''//Fire Breath.//'' The veteran exhales fire in a 15-foot cone. Each creature in that area must make a DC 15 Dexterity saving throw, taking 24 (7d6) fire damage on a failed save, or half as much damage on a successful one."
 		},
@@ -4051,7 +4051,7 @@
 				"wis": "10",
 				"cha": "13",
 				"cr": "1",
-				"languages": "common"
+				"languages": "common-language"
 			},
 			"text": "!! Actions\n\n''//Multiattack.//'' The harpy makes two attacks: one with its claws and one with its club.\n\n''//Claws.//'' Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 6 (2d4 + 1) slashing damage.\n\n''//Club.//'' Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 3 (1d4 + 1) bludgeoning damage.\n\n''//Luring Song.//'' The harpy sings a magical melody. Every humanoid and giant within 300 ft. of the harpy that can hear the song must succeed on a DC 11 Wisdom saving throw or be <<term charmed>> until the song ends. The harpy must take a bonus action on its subsequent turns to continue singing. It can stop singing at any time. The song ends if the harpy is <<term incapacitated>>.\n\nWhile charmed by the harpy, a target is <<term incapacitated>> and ignores the songs of other harpies. If the charmed target is more than 5 ft. away from the harpy, the must move on its turn toward the harpy by the most direct route. It doesn't avoid opportunity attacks, but before moving into damaging terrain, such as lava or a pit, and whenever it takes damage from a source other than the harpy, a target can repeat the saving throw. A creature can also repeat the saving throw at the end of each of its turns. If a creature's saving throw is successful, the effect ends on it.\n\nA target that successfully saves is immune to this harpy's song for the next 24 hours."
 		},
@@ -4202,7 +4202,7 @@
 				"cha": "9",
 				"cr": "1/2",
 				"senses": "darkvision 60 ft",
-				"languages": "common, goblin"
+				"languages": "common-language, goblin"
 			},
 			"text": "''Armor Class:'' 18 (chain mail, shield)\n\n''//Martial Advantage.//'' Once per turn, the hobgoblin can deal an extra 7 (2d6) damage to a creature it hits with a weapon attack if that creature is within 5 ft. of an ally of the hobgoblin that isn't incapacitated.\n\n!! Actions\n\n''//Longsword.//'' Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 5 (1d8 + 1) slashing damage, or 6 (1d10 + 1) slashing damage if used with two hands.\n\n''//Longbow.//'' Ranged Weapon Attack: +3 to hit, range 150/600 ft., one target. Hit: 5 (1d8 + 1) piercing damage."
 		},
@@ -4413,7 +4413,7 @@
 				"immunities": "fire, poison",
 				"condition-immunities": "poisoned",
 				"senses": "darkvision 120 ft",
-				"languages": "infernal, common"
+				"languages": "infernal, common-language"
 			},
 			"text": "''//Shapechanger.//'' The imp can use its action to polymorph into a beast form that resembles a rat (speed 20 ft.), a raven (20 ft., fly 60 ft.), or a spider (20 ft., climb 20 ft.), or back into its true form. Its statistics are the same in each form, except for the speed changes noted. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.\n\n''//Devil's Sight.//'' Magical darkness doesn't impede the imp's darkvision.\n\n''//Magic Resistance.//'' The imp has advantage on saving throws against spells and other magical effects.\n\n!! Actions\n\n''//Sting (Bite in Beast Form).//'' Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 5 (1d4 + 3) piercing damage, and the target must make on a DC 11 Constitution saving throw, taking 10 (3d6) poison damage on a failed save, or half as much damage on a successful one.\n\n''//Invisibility.//'' The imp magically turns invisible until it attacks, or until its concentration ends (as if concentrating on a spell). Any equipment the imp wears or carries is <<term invisible>> with it."
 		},
@@ -4562,7 +4562,7 @@
 				"cha": "8",
 				"cr": "1/8",
 				"senses": "darkvision 60 ft",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''//Sunlight Sensitivity.//'' While in sunlight, the kobold has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.\n\n''//Pack Tactics.//'' The kobold has advantage on an attack roll against a creature if at least one of the kobold's allies is within 5 ft. of the creature and the ally isn't incapacitated.\n\n!! Actions\n\n''//Dagger.//'' Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4 + 2) piercing damage.\n\n''//Sling.//'' Ranged Weapon Attack: +4 to hit, range 30/120 ft., one target. Hit: 4 (1d4 + 2) bludgeoning damage."
 		},
@@ -4616,7 +4616,7 @@
 				"skills": "deception, insight, stealth",
 				"expertise": "deception",
 				"senses": "darkvision 60 ft",
-				"languages": "abyssal, common"
+				"languages": "abyssal, common-language"
 			},
 			"text": "''Armor Class:'' 13 (natural)\n\n''//Innate Spellcasting.//'' The lamia's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast the following spells, requiring no material components. At will: disguise self (any humanoid form), major image 3/day each: charm person, mirror image, scrying, suggestion 1/day: geas\n\n!! Actions\n\n''//Multiattack.//'' The lamia makes two attacks: one with its claws and one with its dagger or Intoxicating Touch.\n\n''//Claws.//'' Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 14 (2d10 + 3) slashing damage.\n\n''//Dagger.//'' Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 5 (1d4 + 3) piercing damage.\n\n''//Intoxicating Touch.//'' Melee Spell Attack: +5 to hit, reach 5 ft., one creature. Hit: The target is magically cursed for 1 hour. Until the curse ends, the target has disadvantage on Wisdom saving throws and all ability checks."
 		},
@@ -4945,7 +4945,7 @@
 				"cr": "6",
 				"skills": "deception, insight, perception, stealth",
 				"senses": "darkvision 60 ft",
-				"languages": "common"
+				"languages": "common-language"
 			},
 			"text": "''Armor Class:'' 15 (natural)\n\n''//Petrifying Gaze.//'' When a creature that can see the medusa's eyes starts its turn within 30 ft. of the medusa, the medusa can force it to make a DC 14 Constitution saving throw if the medusa isn't incapacitated and can see the creature. If the saving throw fails by 5 or more, the creature is instantly petrified. Otherwise, a creature that fails the save begins to turn to stone and is <<term restrained>>. The restrained creature must repeat the saving throw at the end of its next turn, becoming petrified on a failure or ending the effect on a success. The petrification lasts until the creature is freed by the greater restoration spell or other magic.\n\nUnless surprised, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it can't see the medusa until the start of its next turn, when it can avert its eyes again. If the creature looks at the medusa in the meantime, it must immediately make the save.\n\nIf the medusa sees itself reflected on a polished surface within 30 ft. of it and in an area of bright light, the medusa is, due to its curse, affected by its own gaze.\n\n!! Actions\n\n''//Multiattack.//'' The medusa makes either three melee attacks--one with its snake hair and two with its shortsword--or two ranged attacks with its longbow.\n\n''//Snake Hair.//'' Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: 4 (1d4 + 2) piercing damage plus 14 (4d6) poison damage.\n\n''//Shortsword.//'' Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage.\n\n''//Longbow.//'' Ranged Weapon Attack: +5 to hit, range 150/600 ft., one target. Hit: 6 (1d8 + 2) piercing damage plus 7 (2d6) poison damage."
 		},
@@ -4970,7 +4970,7 @@
 				"cha": "12",
 				"cr": "1/8",
 				"skills": "perception",
-				"languages": "common"
+				"languages": "common-language"
 			},
 			"text": "''Languages:'' Aquan\n\n''//Amphibious.//'' The merfolk can breathe air and water.\n\n!! Actions\n\n''//Spear.//'' Melee or Ranged Weapon Attack: +2 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 3 (1d6) piercing damage, or 4 (1d8) piercing damage if used with two hands to make a melee attack."
 		},
@@ -5210,7 +5210,7 @@
 				"resistances": "cold, fire, nonmagical-silvered",
 				"condition-immunities": "charmed",
 				"senses": "darkvision 120 ft",
-				"languages": "abyssal, common, infernal, primordial"
+				"languages": "abyssal, common-language, infernal, primordial"
 			},
 			"text": "''Armor Class:'' 17 (natural)\n\n''//Innate Spellcasting.//'' The hag's innate spellcasting ability is Charisma (spell save DC 14, +6 to hit with spell attacks). She can innately cast the following spells, requiring no material components:\n\nAt will: detect magic, magic missile\n\n2/day each: plane shift (self only), ray of enfeeblement, sleep\n\n''//Magic Resistance.//'' The hag has advantage on saving throws against spells and other magical effects.\n\n''//Night Hag Items.//'' A night hag carries two very rare magic items that she must craft for herself If either object is lost, the night hag will go to great lengths to retrieve it, as creating a new tool takes time and effort.\n\nHeartstone: This lustrous black gem allows a night hag to become ethereal while it is in her possession. The touch of a heartstone also cures any disease. Crafting a heartstone takes 30 days.\n\nSoul Bag: When an evil humanoid dies as a result of a night hag's Nightmare Haunting, the hag catches the soul in this black sack made of stitched flesh. A soul bag can hold only one evil soul at a time, and only the night hag who crafted the bag can catch a soul with it. Crafting a soul bag takes 7 days and a humanoid sacrifice (whose flesh is used to make the bag).\n\n!! Actions\n\n''//Claws (Hag Form Only).//'' Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) slashing damage.\n\n''//Change Shape.//'' The hag magically polymorphs into a Small or Medium female humanoid, or back into her true form. Her statistics are the same in each form. Any equipment she is wearing or carrying isn't transformed. She reverts to her true form if she dies.\n\n''//Etherealness.//'' The hag magically enters the Ethereal Plane from the Material Plane, or vice versa. To do so, the hag must have a heartstone in her possession.\n\n''//Nightmare Haunting.//'' While on the Ethereal Plane, the hag magically touches a sleeping humanoid on the Material Plane. A protection from evil and good spell cast on the target prevents this contact, as does a magic circle. As long as the contact persists, the target has dreadful visions. If these visions last for at least 1 hour, the target gains no benefit from its rest, and its hit point maximum is reduced by 5 (1d10). If this effect reduces the target's hit point maximum to 0, the target dies, and if the target was evil, its soul is trapped in the hag's soul bag. The reduction to the target's hit point maximum lasts until removed by the greater restoration spell or similar magic."
 		},
@@ -5234,7 +5234,7 @@
 				"cha": "15",
 				"cr": "3",
 				"immunities": "fire",
-				"languages": "common"
+				"languages": "common-language"
 			},
 			"text": "''Armor Class:'' 13 (natural)\n\n''Languages:'' understands Abyssal, and Infernal but can't speak\n\n''//Confer Fire Resistance.//'' The nightmare can grant resistance to fire damage to anyone riding it.\n\n''//Illumination.//'' The nightmare sheds bright light in a 10-foot radius and dim light for an additional 10 feet.\n\n!! Actions\n\n''//Hooves.//'' Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) bludgeoning damage plus 7 (2d6) fire damage.\n\n''//Ethereal Stride.//'' The nightmare and up to three willing creatures within 5 feet of it magically enter the Ethereal Plane from the Material Plane, or vice versa."
 		},
@@ -5332,7 +5332,7 @@
 				"cha": "7",
 				"cr": "2",
 				"senses": "darkvision 60 ft",
-				"languages": "common, giant-language"
+				"languages": "common-language, giant-language"
 			},
 			"text": "''Armor Class:'' 11 (hide armor)\n\n!! Actions\n\n''//Greatclub.//'' Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) bludgeoning damage.\n\n''//Javelin.//'' Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 11 (2d6 + 4) piercing damage."
 		},
@@ -5385,7 +5385,7 @@
 				"skills": "arcana, deception, perception",
 				"expertise": "deception",
 				"senses": "darkvision 60 ft",
-				"languages": "common, giant-language"
+				"languages": "common-language, giant-language"
 			},
 			"text": "''Armor Class:'' 16 (chain mail)\n\n''//Innate Spellcasting.//'' The oni's innate spellcasting ability is Charisma (spell save DC 13). The oni can innately cast the following spells, requiring no material components:\n\nAt will: darkness, invisibility\n\n1/day each: charm person, cone of cold, gaseous form, sleep\n\n''//Magic Weapons.//'' The oni's weapon attacks are magical.\n\n''//Regeneration.//'' The oni regains 10 hit points at the start of its turn if it has at least 1 hit point.\n\n!! Actions\n\n''//Multiattack.//'' The oni makes two attacks, either with its claws or its glaive.\n\n''//Claw (Oni Form Only).//'' Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 8 (1d8 + 4) slashing damage.\n\n''//Glaive.//'' Melee Weapon Attack: +7 to hit, reach 10 ft., one target. Hit: 15 (2d10 + 4) slashing damage, or 9 (1d10 + 4) slashing damage in Small or Medium form.\n\n''//Change Shape.//'' The oni magically polymorphs into a Small or Medium humanoid, into a Large giant, or back into its true form. Other than its size, its statistics are the same in each form. The only equipment that is transformed is its glaive, which shrinks so that it can be wielded in humanoid form. If the oni dies, it reverts to its true form, and its glaive reverts to its normal size."
 		},
@@ -5411,7 +5411,7 @@
 				"cr": "1/2",
 				"skills": "intimidation",
 				"senses": "darkvision 60 ft",
-				"languages": "common, orc"
+				"languages": "common-language, orc"
 			},
 			"text": "''Armor Class:'' 13 (hide armor)\n\n''//Aggressive.//'' As a bonus action, the orc can move up to its speed toward a hostile creature that it can see.\n\n!! Actions\n\n''//Greataxe.//'' Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 9 (1d12 + 3) slashing damage.\n\n''//Javelin.//'' Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 6 (1d6 + 3) piercing damage."
 		},
@@ -5533,7 +5533,7 @@
 				"saves": "dex, wis, cha",
 				"skills": "perception",
 				"expertise": "perception",
-				"languages": "common, elvish"
+				"languages": "common-language, elvish"
 			},
 			"text": "''Languages:'' understands Celestial, and Sylvan but can't speak\n\n!! Actions\n\n''//Hooves.//'' Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) bludgeoning damage."
 		},
@@ -5809,7 +5809,7 @@
 				"immunities": "poison",
 				"condition-immunities": "poisoned",
 				"senses": "darkvision 120 ft",
-				"languages": "abyssal, common"
+				"languages": "abyssal, common-language"
 			},
 			"text": "''//Shapechanger.//'' The quasit can use its action to polymorph into a beast form that resembles a bat (speed 10 ft. fly 40 ft.), a centipede (40 ft., climb 40 ft.), or a toad (40 ft., swim 40 ft.), or back into its true form . Its statistics are the same in each form, except for the speed changes noted. Any equipment it is wearing or carrying isn't transformed . It reverts to its true form if it dies.\n\n''//Magic Resistance.//'' The quasit has advantage on saving throws against spells and other magical effects.\n\n!! Actions\n\n''//Claw (Bite in Beast Form).//'' Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d4 + 3) piercing damage, and the target must succeed on a DC 10 Constitution saving throw or take 5 (2d4) poison damage and become <<term poisoned>> for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.\n\n''//Scare.//'' One creature of the quasit's choice within 20 ft. of it must succeed on a DC 10 Wisdom saving throw or be <<term frightened>> for 1 minute. The target can repeat the saving throw at the end of each of its turns, with disadvantage if the quasit is within line of sight, ending the effect on itself on a success.\n\n''//Invisibility.//'' The quasit magically turns invisible until it attacks or uses Scare, or until its concentration ends (as if concentrating on a spell). Any equipment the quasit wears or carries is <<term invisible>> with it."
 		},
@@ -5858,7 +5858,7 @@
 				"skills": "deception, insight",
 				"immunities": "nonmagical",
 				"senses": "darkvision 60 ft",
-				"languages": "common, infernal"
+				"languages": "common-language, infernal"
 			},
 			"text": "''Armor Class:'' 16 (natural)\n\n''piercing from magic weapons wielded by good creatures:''piercing from magic weapons wielded by good creatures\n\n''//Limited Magic Immunity.//'' The rakshasa can't be affected or detected by spells of 6th level or lower unless it wishes to be. It has advantage on saving throws against all other spells and magical effects.\n\n''//Innate Spellcasting.//'' The rakshasa's innate spellcasting ability is Charisma (spell save DC 18, +10 to hit with spell attacks). The rakshasa can innately cast the following spells, requiring no material components:\n\nAt will: detect thoughts, disguise self, mage hand, minor illusion\n\n3/day each: charm person, detect magic, invisibility, major image, suggestion\n\n1/day each: dominate person, fly, plane shift, true seeing\n\n!! Actions\n\n''//Multiattack.//'' The rakshasa makes two claw attacks\n\n''//Claw.//'' Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 9 (2d6 + 2) slashing damage, and the target is cursed if it is a creature. The magical curse takes effect whenever the target takes a short or long rest, filling the target's thoughts with horrible images and dreams. The cursed target gains no benefit from finishing a short or long rest. The curse lasts until it is lifted by a remove curse spell or similar magic."
 		},
@@ -6224,7 +6224,7 @@
 				"cr": "1/2",
 				"skills": "perception, performance, stealth",
 				"expertise": "performance",
-				"languages": "common, elvish, sylvan"
+				"languages": "common-language, elvish, sylvan"
 			},
 			"text": "''Armor Class:'' 14 (leather armor)\n\n''//Magic Resistance.//'' The satyr has advantage on saving throws against spells and other magical effects.\n\n!! Actions\n\n''//Ram.//'' Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 6 (2d4 + 1) bludgeoning damage.\n\n''//Shortsword.//'' Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) piercing damage.\n\n''//Shortbow.//'' Ranged Weapon Attack: +5 to hit, range 80/320 ft., one target. Hit: 6 (1d6 + 3) piercing damage."
 		},
@@ -6296,7 +6296,7 @@
 				"cha": "13",
 				"cr": "2",
 				"senses": "darkvision 60 ft",
-				"languages": "common, giant-language"
+				"languages": "common-language, giant-language"
 			},
 			"text": "''Armor Class:'' 14 (natural)\n\n''Languages:'' Aquan\n\n''//Amphibious.//'' The hag can breathe air and water.\n\n''//Horrific Appearance.//'' Any humanoid that starts its turn within 30 feet of the hag and can see the hag's true form must make a DC 11 Wisdom saving throw. On a failed save, the creature is <<term frightened>> for 1 minute. A creature can repeat the saving throw at the end of each of its turns, with disadvantage if the hag is within line of sight, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the hag's Horrific Appearance for the next 24 hours.\n\nUnless the target is surprised or the revelation of the hag's true form is sudden, the target can avert its eyes and avoid making the initial saving throw. Until the start of its next turn, a creature that averts its eyes has disadvantage on attack rolls against the hag.\n\n!! Actions\n\n''//Claws.//'' Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) slashing damage.\n\n''//Death Glare.//'' The hag targets one frightened creature she can see within 30 ft. of her. If the target can see the hag, it must succeed on a DC 11 Wisdom saving throw against this magic or drop to 0 hit points.\n\n''//Illusory Appearance.//'' The hag covers herself and anything she is wearing or carrying with a magical illusion that makes her look like an ugly creature of her general size and humanoid shape. The effect ends if the hag takes a bonus action to end it or if she dies.\n\nThe changes wrought by this effect fail to hold up to physical inspection. For example, the hag could appear to have no claws, but someone touching her hand might feel the claws. Otherwise, a creature must take an action to visually inspect the illusion and succeed on a DC 16 Intelligence (Investigation) check to discern that the hag is disguised."
 		},
@@ -6582,7 +6582,7 @@
 				"immunities": "poison",
 				"condition-immunities": "charmed, poisoned",
 				"senses": "darkvision 60 ft",
-				"languages": "abyssal, common"
+				"languages": "abyssal, common-language"
 			},
 			"text": "''Armor Class:'' 15 (natural)\n\n''//Rejuvenation.//'' If it dies, the naga returns to life in 1d6 days and regains all its hit points. Only a wish spell can prevent this trait from functioning.\n\n''//Spellcasting.//'' The naga is a 10th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks), and it needs only verbal components to cast its spells. It has the following wizard spells prepared:\n\n* Cantrips (at will): mage hand, minor illusion, ray of frost\n* 1st level (4 slots): charm person, detect magic, sleep\n* 2nd level (3 slots): detect thoughts, hold person\n* 3rd level (3 slots): lightning bolt, water breathing\n* 4th level (3 slots): blight, dimension door\n* 5th level (2 slots): dominate person\n\n!! Actions\n\n''//Bite.//'' Melee Weapon Attack: +7 to hit, reach 10 ft., one creature. Hit: 7 (1d6 + 4) piercing damage, and the target must make a DC 13 Constitution saving throw, taking 31 (7d8) poison damage on a failed save, or half as much damage on a successful one."
 		},
@@ -6607,7 +6607,7 @@
 				"cr": "1/4",
 				"skills": "perception, stealth",
 				"expertise": "stealth",
-				"languages": "common, elvish, sylvan"
+				"languages": "common-language, elvish, sylvan"
 			},
 			"text": "''Armor Class:'' 15 (leather armor)\n\n!! Actions\n\n''//Longsword.//'' Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 1 slashing damage.\n\n''//Shortbow.//'' Ranged Weapon Attack: +6 to hit, range 40/160 ft., one target. Hit: 1 piercing damage, and the target must succeed on a DC 10 Constitution saving throw or become <<term poisoned>> for 1 minute. If its saving throw result is 5 or lower, the poisoned target falls <<term unconscious>> for the same duration, or until it takes damage or another creature takes an action to shake it awake.\n\n''//Heart Sight.//'' The sprite touches a creature and magically knows the creature's current emotional state. If the target fails a DC 10 Charisma saving throw, the sprite also knows the creature's alignment. Celestials, fiends, and undead automatically fail the saving throw.\n\n''//Invisibility.//'' The sprite magically turns invisible until it attacks or casts a spell, or until its concentration ends (as if concentrating on a spell). Any equipment the sprite wears or carries is <<term invisible>> with it."
 		},
@@ -6759,7 +6759,7 @@
 				"skills": "arcana, athletics, history, perception",
 				"resistances": "cold",
 				"immunities": "lightning, thunder",
-				"languages": "common, giant-language"
+				"languages": "common-language, giant-language"
 			},
 			"text": "''Armor Class:'' 16 (scale mail)\n\n''//Amphibious.//'' The giant can breathe air and water.\n\n''//Innate Spellcasting.//'' The giant's innate spellcasting ability is Charisma (spell save DC 17). It can innately cast the following spells, requiring no material components:\n\nAt will: detect magic, feather fall, levitate, light\n\n3/day each: control weather, water breathing\n\n!! Actions\n\n''//Multiattack.//'' The giant makes two greatsword attacks.\n\n''//Greatsword.//'' Melee Weapon Attack: +14 to hit, reach 10 ft., one target. Hit: 30 (6d6 + 9) slashing damage.\n\n''//Rock.//'' Ranged Weapon Attack: +14 to hit, range 60/240 ft., one target. Hit: 35 (4d12 + 9) bludgeoning damage.\n\n''//Lightning Strike.//'' The giant hurls a magical lightning bolt at a point it can see within 500 feet of it. Each creature within 10 feet of that point must make a DC 17 Dexterity saving throw, taking 54 (12d8) lightning damage on a failed save, or half as much damage on a successful one."
 		},
@@ -6787,7 +6787,7 @@
 				"expertise": "deception, insight, perception, persuasion, stealth",
 				"resistances": "cold, fire, lightning, poison, nonmagical",
 				"senses": "darkvision 60 ft, telepathy 60 ft",
-				"languages": "abyssal, common, infernal"
+				"languages": "abyssal, common-language, infernal"
 			},
 			"text": "''Armor Class:'' 15 (natural)\n\n''//Telepathic Bond.//'' The fiend ignores the range restriction on its telepathy when communicating with a creature it has charmed. The two don't even need to be on the same plane of existence.\n\n''//Shapechanger.//'' The fiend can use its action to polymorph into a Small or Medium humanoid, or back into its true form. Without wings, the fiend loses its flying speed. Other than its size and speed, its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.\n\n!! Actions\n\n''//Claw (Fiend Form Only).//'' Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) slashing damage.\n\n''//Charm.//'' One humanoid the fiend can see within 30 feet of it must succeed on a DC 15 Wisdom saving throw or be magically charmed for 1 day. The charmed target obeys the fiend's verbal or telepathic commands. If the target suffers any harm or receives a suicidal command, it can repeat the saving throw, ending the effect on a success. If the target successfully saves against the effect, or if the effect on it ends, the target is immune to this fiend's Charm for the next 24 hours.\n\nThe fiend can have only one target charmed at a time. If it charms another, the effect on the previous target ends.\n\n''//Draining Kiss.//'' The fiend kisses a creature charmed by it or a willing creature. The target must make a DC 15 Constitution saving throw against this magic, taking 32 (5d10 + 5) psychic damage on a failed save, or half as much damage on a successful one. The target's hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.\n\n''//Etherealness.//'' The fiend magically enters the Ethereal Plane from the Material Plane, or vice versa."
 		},
@@ -7148,7 +7148,7 @@
 				"cr": "9",
 				"vulnerabilities": "fire",
 				"resistances": "bludgeoning, piercing",
-				"languages": "common, elvish, sylvan"
+				"languages": "common-language, elvish, sylvan"
 			},
 			"text": "''Armor Class:'' 16 (natural)\n\n''Languages:'' Druidic\n\n''//False Appearance.//'' While the treant remains motionless, it is indistinguishable from a normal tree.\n\n''//Siege Monster.//'' The treant deals double damage to objects and structures.\n\n!! Actions\n\n''//Multiattack.//'' The treant makes two slam attacks.\n\n''//Slam.//'' Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 16 (3d6 + 6) bludgeoning damage.\n\n''//Rock.//'' Ranged Weapon Attack: +10 to hit, range 60/180 ft., one target. Hit: 28 (4d10 + 6) bludgeoning damage.\n\n''//Animate Trees.//'' The treant magically animates one or two trees it can see within 60 feet of it. These trees have the same statistics as a treant, except they have Intelligence and Charisma scores of 1, they can't speak, and they have only the Slam action option. An animated tree acts as an ally of the treant. The tree remains animate for 1 day or until it dies; until the treant dies or is more than 120 feet from the tree; or until the treant takes a bonus action to turn it back into an inanimate tree. The tree then takes root if possible."
 		},
@@ -7626,7 +7626,7 @@
 				"skills": "perception",
 				"expertise": "perception",
 				"immunities": "nonmagical-silvered",
-				"languages": "common"
+				"languages": "common-language"
 			},
 			"text": "''//Shapechanger.//'' The werebear can use its action to polymorph into a Large bear-humanoid hybrid or into a Large bear, or back into its true form, which is humanoid. Its statistics, other than its size and AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.\n\n''//Keen Smell.//'' The werebear has advantage on Wisdom (Perception) checks that rely on smell.\n\n!! Actions\n\n''//Multiattack.//'' In bear form, the werebear makes two claw attacks. In humanoid form, it makes two greataxe attacks. In hybrid form, it can attack like a bear or a humanoid.\n\n''//Greataxe.//'' Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 10 (1d12 + 4) slashing damage."
 		},
@@ -7653,7 +7653,7 @@
 				"skills": "perception",
 				"expertise": "perception",
 				"immunities": "nonmagical-silvered",
-				"languages": "common"
+				"languages": "common-language"
 			},
 			"text": "''Armor Class:'' 11 (natural)\n\n''//Shapechanger.//'' The werebear can use its action to polymorph into a Large bear-humanoid hybrid or into a Large bear, or back into its true form, which is humanoid. Its statistics, other than its size and AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.\n\n''//Keen Smell.//'' The werebear has advantage on Wisdom (Perception) checks that rely on smell.\n\n!! Actions\n\n''//Multiattack.//'' In bear form, the werebear makes two claw attacks. In humanoid form, it makes two greataxe attacks. In hybrid form, it can attack like a bear or a humanoid.\n\n''//Bite.//'' Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 15 (2d10 + 4) piercing damage. If the target is a humanoid, it must succeed on a DC 14 Constitution saving throw or be cursed with werebear lycanthropy.\n\n''//Claw.//'' Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) slashing damage.\n\n''//Greataxe.//'' Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 10 (1d12 + 4) slashing damage."
 		},
@@ -7729,7 +7729,7 @@
 				"cr": "4",
 				"skills": "perception",
 				"immunities": "nonmagical-silvered",
-				"languages": "common"
+				"languages": "common-language"
 			},
 			"text": "''Armor Class:'' 11 (natural)\n\n''//Shapechanger.//'' The wereboar can use its action to polymorph into a boar-humanoid hybrid or into a boar, or back into its true form, which is humanoid. Its statistics, other than its AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.\n\n''//Charge (Boar or Hybrid Form Only).//'' If the wereboar moves at least 15 feet straight toward a target and then hits it with its tusks on the same turn, the target takes an extra 7 (2d6) slashing damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked <<term prone>>.\n\n''//Relentless.//'' If the wereboar takes 14 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead.\n\n!! Actions\n\n''//Multiattack.//'' The wereboar makes two attacks, only one of which can be with its tusks.\n\n''//Maul.//'' Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) bludgeoning damage.\n\n''//Tusks.//'' Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) slashing damage. If the target is a humanoid, it must succeed on a DC 12 Constitution saving throw or be cursed with wereboar lycanthropy."
 		},
@@ -7755,7 +7755,7 @@
 				"cr": "2",
 				"skills": "perception, stealth",
 				"immunities": "nonmagical-silvered",
-				"languages": "common"
+				"languages": "common-language"
 			},
 			"text": "''//Shapechanger.//'' The wererat can use its action to polymorph into a rat-humanoid hybrid or into a giant rat, or back into its true form, which is humanoid. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.\n\n''//Keen Smell.//'' The wererat has advantage on Wisdom (Perception) checks that rely on smell.\n\n!! Actions\n\n''//Multiattack.//'' The wererat makes two attacks, only one of which can be a bite.\n\n''//Shortsword.//'' Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage.\n\n''//Hand Crossbow.//'' Ranged Weapon Attack: +4 to hit, range 30/120 ft., one target. Hit: 5 (1d6 + 2) piercing damage."
 		},
@@ -7781,7 +7781,7 @@
 				"cr": "2",
 				"skills": "perception, stealth",
 				"immunities": "nonmagical-silvered",
-				"languages": "common"
+				"languages": "common-language"
 			},
 			"text": "''Armor Class:'' 12 (natural)\n\n''//Shapechanger.//'' The wererat can use its action to polymorph into a rat-humanoid hybrid or into a giant rat, or back into its true form, which is humanoid. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.\n\n''//Keen Smell.//'' The wererat has advantage on Wisdom (Perception) checks that rely on smell.\n\n!! Actions\n\n''//Multiattack.//'' The wererat makes two attacks, only one of which can be a bite.\n\n''//Bite.//'' Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4 + 2) piercing damage. If the target is a humanoid, it must succeed on a DC 11 Constitution saving throw or be cursed with wererat lycanthropy.\n\n''//Shortsword.//'' Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage.\n\n''//Hand Crossbow.//'' Ranged Weapon Attack: +4 to hit, range 30/120 ft., one target. Hit: 5 (1d6 + 2) piercing damage."
 		},
@@ -7835,7 +7835,7 @@
 				"expertise": "perception",
 				"immunities": "nonmagical-silvered",
 				"senses": "darkvision 60 ft",
-				"languages": "common"
+				"languages": "common-language"
 			},
 			"text": "''//Shapechanger.//'' The weretiger can use its action to polymorph into a tiger-humanoid hybrid or into a tiger, or back into its true form, which is humanoid. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.\n\n''//Keen Hearing and Smell.//'' The weretiger has advantage on Wisdom (Perception) checks that rely on hearing or smell.\n\n!! Actions\n\n''//Multiattack.//'' In humanoid form, the weretiger makes two scimitar attacks or two longbow attacks. In hybrid form, it can attack like a humanoid or make two claw attacks.\n\n''//Scimitar.//'' Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) slashing damage.\n\n''//Longbow.//'' Ranged Weapon Attack: +4 to hit, range 150/600 ft., one target. Hit: 6 (1d8 + 2) piercing damage."
 		},
@@ -7863,7 +7863,7 @@
 				"expertise": "perception",
 				"immunities": "nonmagical-silvered",
 				"senses": "darkvision 60 ft",
-				"languages": "common"
+				"languages": "common-language"
 			},
 			"text": "''//Shapechanger.//'' The weretiger can use its action to polymorph into a tiger-humanoid hybrid or into a tiger, or back into its true form, which is humanoid. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.\n\n''//Keen Hearing and Smell.//'' The weretiger has advantage on Wisdom (Perception) checks that rely on hearing or smell.\n\n''//Pounce.//'' If the weretiger moves at least 15 feet straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 14 Strength saving throw or be knocked <<term prone>>. If the target is <<term prone>>, the weretiger can make one bite attack against it as a bonus action.\n\n!! Actions\n\n''//Multiattack.//'' In humanoid form, the weretiger makes two scimitar attacks or two longbow attacks. In hybrid form, it can attack like a humanoid or make two claw attacks.\n\n''//Bite.//'' Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 8 (1d10 + 3) piercing damage. If the target is a humanoid, it must succeed on a DC 13 Constitution saving throw or be cursed with weretiger lycanthropy.\n\n''//Claw.//'' Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) slashing damage.\n\n''//Scimitar.//'' Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) slashing damage.\n\n''//Longbow.//'' Ranged Weapon Attack: +4 to hit, range 150/600 ft., one target. Hit: 6 (1d8 + 2) piercing damage."
 		},
@@ -7917,7 +7917,7 @@
 				"skills": "perception",
 				"expertise": "perception",
 				"immunities": "nonmagical-silvered",
-				"languages": "common"
+				"languages": "common-language"
 			},
 			"text": "''//Shapechanger.//'' The werewolf can use its action to polymorph into a wolf-humanoid hybrid or into a wolf, or back into its true form, which is humanoid. Its statistics, other than its AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.\n\n''//Keen Hearing and Smell.//'' The werewolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.\n\n!! Actions\n\n''//Multiattack.//'' The werewolf makes two attacks: two with its spear (humanoid form) or one with its bite and one with its claws (hybrid form).\n\n''//Spear.//'' Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one creature. Hit: 5 (1d6 + 2) piercing damage, or 6 (1d8 + 2) piercing damage if used with two hands to make a melee attack."
 		},
@@ -7944,7 +7944,7 @@
 				"skills": "perception",
 				"expertise": "perception",
 				"immunities": "nonmagical-silvered",
-				"languages": "common"
+				"languages": "common-language"
 			},
 			"text": "''Armor Class:'' 12 (natural)\n\n''//Shapechanger.//'' The werewolf can use its action to polymorph into a wolf-humanoid hybrid or into a wolf, or back into its true form, which is humanoid. Its statistics, other than its AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.\n\n''//Keen Hearing and Smell.//'' The werewolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.\n\n!! Actions\n\n''//Multiattack.//'' The werewolf makes two attacks: two with its spear (humanoid form) or one with its bite and one with its claws (hybrid form).\n\n''//Bite.//'' Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) piercing damage. If the target is a humanoid, it must succeed on a DC 12 Constitution saving throw or be cursed with werewolf lycanthropy.\n\n''//Claws.//'' Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 7 (2d4 + 2) slashing damage."
 		},
@@ -8077,7 +8077,7 @@
 				"skills": "perception, stealth",
 				"expertise": "perception",
 				"immunities": "cold",
-				"languages": "common, giant-language"
+				"languages": "common-language, giant-language"
 			},
 			"text": "''Armor Class:'' 13 (natural)\n\n''Languages:'' Winter Wolf\n\n''//Keen Hearing and Smell.//'' The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.\n\n''//Pack Tactics.//'' The wolf has advantage on an attack roll against a creature if at least one of the wolf's allies is within 5 ft. of the creature and the ally isn't incapacitated.\n\n''//Snow Camouflage.//'' The wolf has advantage on Dexterity (Stealth) checks made to hide in snowy terrain.\n\n!! Actions\n\n''//Bite.//'' Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) piercing damage. If the target is a creature, it must succeed on a DC 14 Strength saving throw or be knocked <<term prone>>.\n\n''//Cold Breath.//'' The wolf exhales a blast of freezing wind in a 15-foot cone. Each creature in that area must make a DC 12 Dexterity saving throw, taking 18 (4d8) cold damage on a failed save, or half as much damage on a successful one."
 		},
@@ -8229,7 +8229,7 @@
 				"expertise": "perception",
 				"immunities": "acid",
 				"senses": "blindsight 30 ft, darkvision 120 ft",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''Armor Class:'' 18 (natural)\n\n''//Amphibious.//'' The dragon can breathe air and water.\n\n!! Actions\n\n''//Multiattack.//'' The dragon makes three attacks: one with its bite and two with its claws.\n\n''//Bite.//'' Melee Weapon Attack: +7 to hit, reach 10 ft., one target. Hit: 15 (2d10 + 4) piercing damage plus 4 (1d8) acid damage.\n\n''//Claw.//'' Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) slashing damage.\n\n''//Acid Breath.//'' The dragon exhales acid in a 30-foot line that is 5 feet wide. Each creature in that line must make a DC 14 Dexterity saving throw, taking 49 (11d8) acid damage on a failed save, or half as much damage on a successful one."
 		},
@@ -8257,7 +8257,7 @@
 				"expertise": "perception",
 				"immunities": "lightning",
 				"senses": "blindsight 30 ft, darkvision 120 ft",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''Armor Class:'' 18 (natural)\n\n!! Actions\n\n''//Multiattack.//'' The dragon makes three attacks: one with its bite and two with its claws.\n\n''//Bite.//'' Melee Weapon Attack: +9 to hit, reach 10 ft., one target. Hit: 16 (2d10 + 5) piercing damage plus 5 (1d10) lightning damage.\n\n''//Claw.//'' Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 12 (2d6 + 5) slashing damage.\n\n''//Lightning Breath.//'' The dragon exhales lightning in a 60-foot line that is 5 feet wide. Each creature in that line must make a DC 16 Dexterity saving throw, taking 55 (10d10) lightning damage on a failed save, or half as much damage on a successful one."
 		},
@@ -8285,7 +8285,7 @@
 				"expertise": "perception",
 				"immunities": "fire",
 				"senses": "blindsight 30 ft, darkvision 120 ft",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''Armor Class:'' 17 (natural)\n\n!! Actions\n\n''//Multiattack.//'' The dragon makes three attacks: one with its bite and two with its claws.\n\n''//Bite.//'' Melee Weapon Attack: +7 to hit, reach 10 ft., one target. Hit: 15 (2d10 + 4) piercing damage.\n\n''//Claw.//'' Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) slashing damage.\n\n''//Breath Weapons.//'' The dragon uses one of the following breath weapons.\n\nFire Breath. The dragon exhales fire in a 40-foot line that is 5 feet wide. Each creature in that line must make a DC 14 Dexterity saving throw, taking 42 (12d6) fire damage on a failed save, or half as much damage on a successful one.\n\nSleep Breath. The dragon exhales sleep gas in a 30-foot cone. Each creature in that area must succeed on a DC 14 Constitution saving throw or fall unconscious for 5 minutes. This effect ends for a creature if the creature takes damage or someone uses an action to wake it."
 		},
@@ -8313,7 +8313,7 @@
 				"expertise": "perception",
 				"immunities": "lightning",
 				"senses": "blindsight 30 ft, darkvision 120 ft",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''Armor Class:'' 18 (natural)\n\n''//Amphibious.//'' The dragon can breathe air and water.\n\n!! Actions\n\n''//Multiattack.//'' The dragon makes three attacks: one with its bite and two with its claws.\n\n''//Bite.//'' Melee Weapon Attack: +8 to hit, reach 10 ft., one target. Hit: 16 (2d10 + 5) piercing damage.\n\n''//Claw.//'' Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 12 (2d6 + 5) slashing damage.\n\n''//Breath Weapons.//'' The dragon uses one of the following breath weapons.\n\nLightning Breath. The dragon exhales lightning in a 60-foot line that is 5 feet wide. Each creature in that line must make a DC 15 Dexterity saving throw, taking 55 (10d10) lightning damage on a failed save, or half as much damage on a successful one.\n\nRepulsion Breath. The dragon exhales repulsion energy in a 30-foot cone. Each creature in that area must succeed on a DC 15 Strength saving throw. On a failed save, the creature is pushed 40 feet away from the dragon."
 		},
@@ -8341,7 +8341,7 @@
 				"expertise": "perception",
 				"immunities": "acid",
 				"senses": "blindsight 30 ft, darkvision 120 ft",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''Armor Class:'' 17 (natural)\n\n!! Actions\n\n''//Multiattack.//'' The dragon makes three attacks: one with its bite and two with its claws.\n\n''//Bite.//'' Melee Weapon Attack: +7 to hit, reach 10 ft., one target. Hit: 15 (2d10 + 4) piercing damage.\n\n''//Claw.//'' Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) slashing damage.\n\n''//Breath Weapons.//'' The dragon uses one of the following breath weapons.\n\nAcid Breath. The dragon exhales acid in an 40-foot line that is 5 feet wide. Each creature in that line must make a DC 14 Dexterity saving throw, taking 40 (9d8) acid damage on a failed save, or half as much damage on a successful one.\n\nSlowing Breath. The dragon exhales gas in a 30-foot cone. Each creature in that area must succeed on a DC 14 Constitution saving throw. On a failed save, the creature can't use reactions, its speed is halved, and it can't make more than one attack on its turn. In addition, the creature can use either an action or a bonus action on its turn, but not both. These effects last for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself with a successful save."
 		},
@@ -8369,7 +8369,7 @@
 				"expertise": "perception",
 				"immunities": "fire",
 				"senses": "blindsight 30 ft, darkvision 120 ft",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''Armor Class:'' 18 (natural)\n\n''//Amphibious.//'' The dragon can breathe air and water.\n\n!! Actions\n\n''//Multiattack.//'' The dragon makes three attacks: one with its bite and two with its claws.\n\n''//Bite.//'' Melee Weapon Attack: +10 to hit, reach 10 ft., one target. Hit: 17 (2d10 + 6) piercing damage.\n\n''//Claw.//'' Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 13 (2d6 + 6) slashing damage.\n\n''//Breath Weapons.//'' The dragon uses one of the following breath weapons.\n\nFire Breath. The dragon exhales fire in a 30-foot cone. Each creature in that area must make a DC 17 Dexterity saving throw, taking 55 (10d10) fire damage on a failed save, or half as much damage on a successful one.\n\nWeakening Breath. The dragon exhales gas in a 30-foot cone. Each creature in that area must succeed on a DC 17 Strength saving throw or have disadvantage on Strength-based attack rolls, Strength checks, and Strength saving throws for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 		},
@@ -8398,7 +8398,7 @@
 				"immunities": "poison",
 				"condition-immunities": "poisoned",
 				"senses": "blindsight 30 ft, darkvision 120 ft",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''Armor Class:'' 18 (natural)\n\n''//Amphibious.//'' The dragon can breathe air and water.\n\n!! Actions\n\n''//Multiattack.//'' The dragon makes three attacks: one with its bite and two with its claws.\n\n''//Bite.//'' Melee Weapon Attack: +7 to hit, reach 10 ft., one target. Hit: 15 (2d10 + 4) piercing damage plus 7 (2d6) poison damage.\n\n''//Claw.//'' Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) slashing damage.\n\n''//Poison Breath.//'' The dragon exhales poisonous gas in a 30-foot cone. Each creature in that area must make a DC 14 Constitution saving throw, taking 42 (12d6) poison damage on a failed save, or half as much damage on a successful one."
 		},
@@ -8426,7 +8426,7 @@
 				"expertise": "perception",
 				"immunities": "fire",
 				"senses": "blindsight 30 ft, darkvision 120 ft",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''Armor Class:'' 18 (natural)\n\n!! Actions\n\n''//Multiattack.//'' The dragon makes three attacks: one with its bite and two with its claws.\n\n''//Bite.//'' Melee Weapon Attack: +10 to hit, reach 10 ft., one target. Hit: 17 (2d10 + 6) piercing damage plus 3 (1d6) fire damage.\n\n''//Claw.//'' Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 13 (2d6 + 6) slashing damage.\n\n''//Fire Breath.//'' The dragon exhales fire in a 30-foot cone. Each creature in that area must make a DC 17 Dexterity saving throw, taking 56 (16d6) fire damage on a failed save, or half as much damage on a successful one."
 		},
@@ -8454,7 +8454,7 @@
 				"expertise": "perception",
 				"immunities": "cold",
 				"senses": "blindsight 30 ft, darkvision 120 ft",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''Armor Class:'' 18 (natural)\n\n!! Actions\n\n''//Multiattack.//'' The dragon makes three attacks: one with its bite and two with its claws.\n\n''//Bite.//'' Melee Weapon Attack: +10 to hit, reach 10 ft., one target. Hit: 17 (2d10 + 6) piercing damage.\n\n''//Claw.//'' Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 13 (2d6 + 6) slashing damage.\n\n''//Breath Weapons.//'' The dragon uses one of the following breath weapons.\n\nCold Breath. The dragon exhales an icy blast in a 30-foot cone. Each creature in that area must make a DC 17 Constitution saving throw, taking 54 (12d8) cold damage on a failed save, or half as much damage on a successful one.\n\nParalyzing Breath. The dragon exhales paralyzing gas in a 30-foot cone. Each creature in that area must succeed on a DC 17 Constitution saving throw or be <<term paralyzed>> for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 		},
@@ -8482,7 +8482,7 @@
 				"expertise": "perception",
 				"immunities": "cold",
 				"senses": "blindsight 30 ft, darkvision 120 ft",
-				"languages": "common, draconic"
+				"languages": "common-language, draconic"
 			},
 			"text": "''Armor Class:'' 17 (natural)\n\n''//Ice Walk.//'' The dragon can move across and climb icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow doesn't cost it extra movement.\n\n!! Actions\n\n''//Multiattack.//'' The dragon makes three attacks: one with its bite and two with its claws.\n\n''//Bite.//'' Melee Weapon Attack: +7 to hit, reach 10 ft., one target. Hit: 15 (2d10 + 4) piercing damage plus 4 (1d8) cold damage.\n\n''//Claw.//'' Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) slashing damage.\n\n''//Cold Breath.//'' The dragon exhales an icy blast in a 30-foot cone. Each creature in that area must make a DC 15 Constitution saving throw, taking 45 (10d8) cold damage on a failed save, or half as much damage on a successful one."
 		},

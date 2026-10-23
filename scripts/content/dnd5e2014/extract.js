@@ -253,6 +253,10 @@ function equipment(e) {
 			category = ["focus", "druidic"];
 		} else if(gear === "holy-symbols") {
 			category = ["focus", "holy"];
+		} else if(e.index === "poison-basic-vial") {
+			// a poison like those of the SRD text, not gear
+			category = ["poison", "injury"];
+			poisonValues((e.desc || []).join(" "), fields);
 		} else if(gear === "equipment-packs") {
 			category = ["equipment-pack"];
 		} else {
@@ -337,7 +341,7 @@ function magicItem(m, equipmentByName) {
 		}
 	}
 	var rarity = match[3].trim().toLowerCase().replace(/ /g, "-");
-	fields.rarity = rarity === "common" ? "common-rarity" : rarity;
+	fields.rarity = rarity;
 	if(match[4]) {
 		fields.attunement = "yes";
 		var by = /^ by an? (.*)$/.exec(match[5] || "");
@@ -358,7 +362,7 @@ function magicItem(m, equipmentByName) {
 		// a title list of one: in brackets when it has a space ("[[Plate Armor]]")
 		fields.base = /\s/.test(base.title) ? "[[" + base.title + "]]" : base.title;
 		category = base.fields.category.split(", ");
-		fields.rarity = rarity === "common" ? "common-rarity" : rarity;
+		fields.rarity = rarity;
 	}
 	fields.category = category.join(", ");
 	var text = desc.join("\n");
@@ -560,7 +564,7 @@ function spell(s) {
 
 /* Creatures */
 
-var LANGUAGES = {common: "common", dwarvish: "dwarvish", elvish: "elvish", giant: "giant-language", gnomish: "gnomish",
+var LANGUAGES = {common: "common-language", dwarvish: "dwarvish", elvish: "elvish", giant: "giant-language", gnomish: "gnomish",
 	goblin: "goblin", halfling: "halfling", orc: "orc", abyssal: "abyssal", celestial: "celestial-language",
 	draconic: "draconic", "deep speech": "deep-speech", infernal: "infernal", primordial: "primordial", sylvan: "sylvan",
 	undercommon: "undercommon"};
@@ -742,6 +746,27 @@ var SKILL_ABILITY = {athletics: "strength", acrobatics: "dexterity", "sleight-of
 	"animal-handling": "wisdom", insight: "wisdom", medicine: "wisdom", perception: "wisdom", survival: "wisdom",
 	deception: "charisma", intimidation: "charisma", performance: "charisma", persuasion: "charisma"};
 
+/* Poisons */
+
+// Damage, save and what a success does, from the fixed sentences of the SRD: "a DC 10 Constitution
+// saving throw", "takes 6 (1d12) poison damage" / "take 1d4 poison damage", "half damage" / "half
+// as much damage on a successful one"
+function poisonValues(text, fields) {
+	var damage = /tak(?:es?|ing) (?:\d+ \()?(\d+d\d+)\)? poison damage/.exec(text),
+		dc = /DC (\d+) Constitution saving throw/.exec(text);
+	if(damage) {
+		fields.damage = damage[1] + " poison";
+	}
+	if(dc) {
+		fields.save = "con";
+		fields["save-dc"] = dc[1];
+	}
+	if(/half as much damage on a successful one|takes half damage/.test(text)) {
+		fields["save-success"] = "half";
+	}
+	return fields;
+}
+
 /* From the SRD text (srd-tables.js) */
 
 function slug(name) {
@@ -763,7 +788,7 @@ function tableItems() {
 	});
 	tables.poisons.forEach(function(t) {
 		out.push({id: "item:" + slug(t.name), title: t.name, type: "Item", tags: tagsOf(["poison"]),
-			fields: {category: "poison, " + t.type, price: t.price, save: "con", "save-dc": String(t.dc)},
+			fields: poisonValues(t.desc, {category: "poison, " + t.type, price: t.price, save: "con", "save-dc": String(t.dc)}),
 			text: wikitext([t.desc]), spellText: t.desc});
 	});
 	return out;

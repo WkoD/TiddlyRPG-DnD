@@ -105,6 +105,22 @@ test("base and spells name entries of the package, by their titles", function() 
 	assert.equal(thrower.fields.price, undefined, "never the price of the base");
 });
 
+test("poisons with their damage, save and what a success does (SRD p. 204-205)", function() {
+	var poison = function(title) { return entries.filter(function(e) { return e.title === title; })[0].fields; };
+	assert.equal(poison("Assassin's Blood").damage, "1d12 poison");
+	assert.equal(poison("Assassin's Blood")["save-success"], "half");
+	assert.equal(poison("Burnt Othur Fumes")["save-success"], undefined, "no half on a success");
+	assert.equal(poison("Malice").damage, undefined, "no damage: blinded");
+	assert.equal(poison("Poison, basic (vial)").category, "poison, injury");
+	assert.equal(poison("Poison, basic (vial)").damage, "1d4 poison");
+});
+
+test("the language Common is common-language, the rarity common", function() {
+	var languages = entries.filter(function(e) { return / common-language|^common-language/.test(e.fields.languages || ""); });
+	assert.ok(languages.length > 50);
+	assert.equal(entries.filter(function(e) { return e.title === "Potion of Healing"; })[0].fields.rarity, "common");
+});
+
 test("a cursed item comes locked: players see the curse when the DM lifts the lock", function() {
 	var cursed = entries.filter(function(e) { return e.fields.cursed; });
 	assert.ok(cursed.length > 0);
