@@ -251,6 +251,8 @@ test("the named parts of a text as sections: the parts of a stat block, the effe
 	assert.match(text("Archmage"), /\* 9th level \(1 slot\): \[\[time stop\|Time Stop\]\]\n\* The archmage casts these spells on itself before combat\./, "the footnote stays in the list");
 	assert.doesNotMatch(entries.map(function(e) { return e.text || ""; }).join("\n"), /^!! /m, "the headings come from the ruleset");
 	assert.match(text("Staff of Power"), /^<<effect "Retributive Strike">> /m);
+	assert.match(text("Staff of the Woodlands"), /without using any charges\.\n\n<<effect "Tree Form">> You can use an action to plant/,
+		"a part 5e-bits glues to the paragraph before, without its bold name: its own as in the SRD p. 245");
 });
 
 test("a text renders as written: no link the SRD does not have", function() {

@@ -415,11 +415,38 @@ var DECK_TAIL = [
 	"***The Void.*** This black card spells disaster. Your soul is drawn from your body and contained in an object in a place of the GM's choice. One or more powerful beings guard the place. While your soul is trapped in this way, your body is incapacitated. A wish spell can't restore your soul, but the spell reveals the location of the object that holds it. You draw no more cards."
 ];
 
+// Named parts that 5e-bits glues to the end of the paragraph before, without the bold name: the
+// paragraph is split before the name, which then starts its own as in the SRD 5.1 (Staff of the
+// Woodlands, "Tree Form.": p. 245)
+var UNMARKED = {"staff-of-the-woodlands": "Tree Form."};
+
+function unmarked(index, desc) {
+	var name = UNMARKED[index];
+	if(!name) {
+		return desc;
+	}
+	var found = false,
+		out = [];
+	desc.forEach(function(line) {
+		var at = line.indexOf(" " + name + " ");
+		if(at === -1) {
+			out.push(line);
+			return;
+		}
+		found = true;
+		out.push(line.slice(0, at), "***" + name + "*** " + line.slice(at + name.length + 2));
+	});
+	if(!found && !desc.some(function(line) { return line.indexOf("***" + name + "***") === 0; })) {
+		throw new Error(index + ": \"" + name + "\" not found - check UNMARKED against the source");
+	}
+	return out;
+}
+
 function magicItem(m, equipmentByName) {
 	if(m.variants && m.variants.length) {
 		return null;
 	}
-	var desc = m.desc.slice(),
+	var desc = unmarked(m.index, m.desc.slice()),
 		head = desc.shift(),
 		match = /^([^,(]+?)\s*(?:\(([^)]*)\))?\s*,\s*([a-z ]+?)\s*(?:\((requires attunement([^)]*))\))?\s*$/i.exec(head),
 		fields = {},
