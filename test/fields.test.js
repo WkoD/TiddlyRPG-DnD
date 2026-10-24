@@ -1,8 +1,8 @@
 /*
  * The fields of tiddlyrpg-ruleset-dnd5e2014 against the stat blocks of the SRD 5.1: what the rules
  * derive (proficiency and XP by challenge rating p. 256-258, saving throws and skills with
- * expertise, passive Perception), categories as in the rulebook, the lines that join fields. The
- * engine itself: tests of TiddlyRPG-Plugins.
+ * expertise, passive Perception), categories as in the rulebook, the lines that join fields, the
+ * values of a folk. The engine itself: tests of TiddlyRPG-Plugins.
  */
 var test = require("node:test"),
 	assert = require("node:assert/strict"),
@@ -115,5 +115,17 @@ test("a spell slot with its level, as the spells of the SRD write it (EN p. 114,
 		assert.equal(rules.term(wiki, "spell-slot").text, "Zauberplatz");
 	} finally {
 		h.setLanguage(wiki, "en-GB");
+	}
+});
+
+test("a folk (Information Folk): size, speed, senses, languages - no stat block, no passive Perception without Wisdom", function() {
+	wiki.addTiddler(new $tw.Tiddler({title: "Nichny", tags: "Information Folk", size: "medium", speed: "walk 30 ft, climb 30 ft",
+		senses: "darkvision 60 ft", languages: "common-language, elvish-language", text: "Cat folk."}));
+	try {
+		var block = h.render(wiki, "text/plain", "{{Nichny||$:/plugins/tiddlyrpg-core/viewtemplates/fields}}");
+		assert.equal(block, "Size MediumSpeed 30 ft, climb 30 ftSenses darkvision 60 ftLanguages Common, Elvish");
+		assert.deepEqual(Array.from(fields.forTiddler(wiki, "Nichny").fields), ["size", "speed", "senses", "languages"]);
+	} finally {
+		wiki.deleteTiddler("Nichny");
 	}
 });

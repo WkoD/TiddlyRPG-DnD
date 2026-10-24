@@ -102,7 +102,8 @@ German declines the size by the gender of the creature type (`Rules/Term/<type>/
 with its pages as well.
 
 **Fields** (`rules/fields/`): `definitions.tid` defines every field once (format, domain,
-derive, when); one schema per type (`items`, `materials`, `spells`, `creatures`, `persons`) names
+derive, when); one schema per type (`items`, `materials`, `spells`, `creatures`, `persons`,
+`folks` - a folk of the category `Folk`, no stat block) names
 its fields, groups and header line - the format is in the module header of `modules/fields.js`
 of `TiddlyRPG-Plugins`. Every field name is hidden from the field list of the core editor
 (`config/form-fields-hidden.multids`), the form shows it as a field of the rules.

@@ -38,7 +38,7 @@ with fifth edition, as plugin type `ruleset` for `tiddlyrpg-core`:
   actions start with their introduction, a section without a name: `<<legendary-action>> The
   dragon can take 3 legendary actions ...`.
 - Fields with schema (`$:/tiddlyrpg/rules/fields/...`): what an item, artifact, material, spell,
-  creature, person or player character holds as values, shown as a block like a stat block in the
+  creature, folk, person or player character holds as values, shown as a block like a stat block in the
   rulebook, with a header line ("martial weapon (melee, sword, versatile), rare (requires
   attunement)", "3rd-level evocation", "Medium beast, unaligned"):
   - items: `category`, `rarity`, `attunement`, `cursed`, `classes`, `damage`,
@@ -48,7 +48,8 @@ with fifth edition, as plugin type `ruleset` for `tiddlyrpg-core`:
     `concentration`, `area`, `save`, `attack`, `damage`, `healing`, `classes`;
   - creatures: `size`, `creature-type`, `alignment`, `ac`, `hp`, `speed`, `str` ... `cha`,
     `saves`, `skills`, `senses`, `languages`, `cr` ...;
-  - persons and player characters: `height`, `weight`.
+  - persons and player characters: `height`, `weight`;
+  - folks (`Information Folk`): `size`, `speed`, `senses`, `languages`.
 
   What the rules derive is not written: the modifier of an ability, the average of hit points,
   proficiency bonus and XP from the challenge rating, saving throws and skills (with
