@@ -24,8 +24,8 @@ with fifth edition, as plugin type `ruleset` for `tiddlyrpg-core`:
   `potion`, `wondrous-item`, each with its properties: `martial`, `melee`, `versatile`, `sword`,
   `medium` ...), `Rarity`, `Class`, `Component`, `Area`, `SpellWord` (`self`, `touch`,
   `instantaneous` ...), `SaveSuccess`, `SpellAttack`, `DamageGroup` (`nonmagical` ...),
-  `Movement`, `Challenge` (with the XP and proficiency bonus of each challenge rating), and the
-  units `Time` (action, round, minute ... - not converted), `Speed` (mph, km/h) and `Volume`
+  `Movement`, `Challenge` (with the XP and proficiency bonus of each challenge rating), the table
+  `Level` (the XP of each level, "Character Advancement"), and the units `Time` (action, round, minute ... - not converted), `Speed` (mph, km/h) and `Volume`
   (gal, ft³, l).
 - The kinds of sections of the text (`Section`): named parts of an item or a creature, each at the
   start of its paragraph - `<<effect "Name">>` (what an item does), `<<curse "Curse">>` (seen
@@ -49,11 +49,14 @@ with fifth edition, as plugin type `ruleset` for `tiddlyrpg-core`:
   - creatures: `size`, `creature-type`, `alignment`, `ac`, `hp`, `speed`, `str` ... `cha`,
     `saves`, `skills`, `senses`, `languages`, `cr` ...;
   - persons and player characters: `height`, `weight`;
+  - player characters: `xp` - the level (`player-level`) and the XP of the next level (`xp-next`)
+    derive from it and are never written; the card of the hub `Player` shows the level ("Level 13"),
+    also of a former player character with `xp`;
   - folks (`Information Folk`): `size`, `speed`, `senses`, `languages`.
 
   What the rules derive is not written: the modifier of an ability, the average of hit points,
   proficiency bonus and XP from the challenge rating, saving throws and skills (with
-  `expertise`), passive Perception - a written value wins.
+  `expertise`), passive Perception, the level from the XP - a written value wins.
 - Language keys `Rules/...` in en-GB and de-DE; the terms come from the System Reference Document
   5.1 in English and German (see "Sources and licenses").
 - `$:/tiddlyrpg/rules/system`: the name of the system; its prices are in gold pieces

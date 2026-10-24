@@ -1,5 +1,5 @@
 created: 20261022173330580
-modified: 20261023171347781
+modified: 20261024170244155
 tags: $:/tags/tiddlyrpg/RulesFields
 title: $:/tiddlyrpg/rules/fields
 type: application/json
@@ -79,6 +79,8 @@ type: application/json
         "cha": {"format": "number", "min": 1, "max": 30, "derive": {"kind": "modifier", "base": 10, "step": 2}},
         "cr": {"format": "label", "domain": "Challenge"},
         "xp": {"format": "number", "min": 0, "derive": {"kind": "lookup", "from": "cr", "column": "xp"}},
+        "player-level": {"format": "number", "edit": false, "derive": {"kind": "band", "from": "xp", "domain": "Level", "column": "xp"}},
+        "xp-next": {"format": "number", "edit": false, "derive": {"kind": "band", "from": "xp", "domain": "Level", "column": "xp", "next": true}},
         "proficiency": {"format": "number", "signed": true, "derive": {"kind": "lookup", "from": "cr", "column": "proficiency"}},
         "saves": {"format": "labels", "domain": "Ability",
             "value": {"format": "number", "signed": true, "derive": {"kind": "sum", "parts": [{"modifier": "$entry"}, {"field": "proficiency"}]}}},

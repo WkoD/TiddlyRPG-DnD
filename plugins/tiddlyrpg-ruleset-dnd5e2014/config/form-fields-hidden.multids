@@ -1,5 +1,5 @@
 created: 20261022173526298
-modified: 20261023170421207
+modified: 20261024170244155
 title: $:/config/EditTemplateFields/Visibility/
 
 ability: hide
@@ -74,3 +74,5 @@ vulnerabilities: hide
 weight: hide
 wis: hide
 xp: hide
+player-level: hide
+xp-next: hide

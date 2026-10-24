@@ -1,5 +1,5 @@
 created: 20261009183319191
-modified: 20261023170410365
+modified: 20261024170244155
 title: $:/tiddlyrpg/language/en-GB/
 
 # Units, dice and the damage grammar of D&D 5e (2014) in English; factors of the SRD 5.1 per pair:
@@ -70,6 +70,7 @@ Rules/Domain/Class: Classes
 Rules/Domain/Component: Components
 Rules/Domain/DamageGroup: Damage beside the types
 Rules/Domain/ItemCategory: Item categories
+Rules/Domain/Level: Character advancement
 Rules/Domain/Movement: Movement
 Rules/Domain/Rarity: Rarity
 Rules/Domain/SaveSuccess: Saving throw results
@@ -191,6 +192,9 @@ Rules/Field/wis: WIS
 Rules/Field/cha: CHA
 Rules/Field/cr: Challenge
 Rules/Field/xp: XP
+# The level of a player character by its XP: p. 56, table "Character Advancement" (domain Level)
+Rules/Field/player-level: Level
+Rules/Field/xp-next: Next level
 Rules/Field/proficiency: Proficiency Bonus
 Rules/Field/saves: Saving Throws
 Rules/Field/skills: Skills

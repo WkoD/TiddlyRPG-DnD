@@ -74,13 +74,13 @@ function needed() {
 	return list.filter(function(key, index) { return list.indexOf(key) === index; });
 }
 
-test("the 32 domains of the ruleset with their types", function() {
+test("the 33 domains of the ruleset with their types", function() {
 	var types = {};
 	domains().forEach(function(d) { types[d.domain] = d.type; });
 	assert.deepEqual(types, {
 		Ability: "label", Action: "label", Alignment: "label", Area: "label", Challenge: "label", Class: "label",
 		Component: "label", Condition: "label", CreatureType: "label", Damage: "damage", DamageGroup: "label",
-		Dice: "tokens", ItemCategory: "label", Language: "label", Length: "unit", Mechanics: "label",
+		Dice: "tokens", ItemCategory: "label", Language: "label", Length: "unit", Level: "table", Mechanics: "label",
 		Movement: "label", Rarity: "label", SaveSuccess: "label", School: "label", Section: "section", Sense: "label", Size: "label",
 		Skill: "label", Speed: "unit", SpellAttack: "label", SpellWord: "label", Spellcasting: "label",
 		Terms: "label", Time: "unit", Volume: "unit", Weight: "unit"
@@ -120,8 +120,8 @@ test("every property names parents of its domain, and its domain has keys of its
 	assert.deepEqual(wrong, []);
 });
 
-test("every domain has an example for the settings tab", function() {
-	assert.deepEqual(domains().filter(function(d) { return !d.example; }).map(function(d) { return d.domain; }), []);
+test("every domain has an example for the settings tab (a table is not in it)", function() {
+	assert.deepEqual(domains().filter(function(d) { return !d.example && d.type !== "table"; }).map(function(d) { return d.domain; }), []);
 });
 
 test("the 13 damage types, 6 abilities and 7 terms of the SRD 5.1", function() {

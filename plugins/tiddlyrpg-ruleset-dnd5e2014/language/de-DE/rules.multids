@@ -1,5 +1,5 @@
 created: 20261009183319191
-modified: 20261023170410365
+modified: 20261024170244155
 title: $:/tiddlyrpg/language/de-DE/
 
 # Einheiten, Würfel und die Schadensgrammatik von D&D 5e (2014) auf Deutsch; Belege der Faktoren siehe en-GB.
@@ -66,6 +66,7 @@ Rules/Domain/Class: Klassen
 Rules/Domain/Component: Komponenten
 Rules/Domain/DamageGroup: Schaden neben den Arten
 Rules/Domain/ItemCategory: Arten von Gegenständen
+Rules/Domain/Level: Charakterentwicklung
 Rules/Domain/Movement: Bewegungsarten
 Rules/Domain/Rarity: Seltenheit
 Rules/Domain/SaveSuccess: Ergebnisse von Rettungswürfen
@@ -187,6 +188,9 @@ Rules/Field/wis: WEI
 Rules/Field/cha: CHA
 Rules/Field/cr: Herausforderungsgrad
 Rules/Field/xp: EP
+# Die Stufe einer Spielfigur nach ihren EP: S. 58, Tabelle "Charakterentwicklung" (Bereich Level)
+Rules/Field/player-level: Stufe
+Rules/Field/xp-next: Nächste Stufe
 Rules/Field/proficiency: Übungsbonus
 Rules/Field/saves: Rettungswürfe
 Rules/Field/skills: Fertigkeiten

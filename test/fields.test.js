@@ -1,8 +1,8 @@
 /*
  * The fields of tiddlyrpg-ruleset-dnd5e2014 against the stat blocks of the SRD 5.1: what the rules
  * derive (proficiency and XP by challenge rating p. 256-258, saving throws and skills with
- * expertise, passive Perception), categories as in the rulebook, the lines that join fields, the
- * values of a folk. The engine itself: tests of TiddlyRPG-Plugins.
+ * expertise, passive Perception, the level of a player character by its XP p. 56), categories as
+ * in the rulebook, the lines that join fields, the values of a folk. The engine itself: tests of TiddlyRPG-Plugins.
  */
 var test = require("node:test"),
 	assert = require("node:assert/strict"),
@@ -127,5 +127,35 @@ test("a folk (Information Folk): size, speed, senses, languages - no stat block,
 		assert.deepEqual(Array.from(fields.forTiddler(wiki, "Nichny").fields), ["size", "speed", "senses", "languages"]);
 	} finally {
 		wiki.deleteTiddler("Nichny");
+	}
+});
+
+// Character Advancement, p. 56: the level by the XP, every threshold; the XP of the next level
+test("the level of a player character by its XP, as the table Character Advancement", function() {
+	var thresholds = [0, 300, 900, 2700, 6500, 14000, 23000, 34000, 48000, 64000, 85000, 100000, 120000,
+		140000, 165000, 195000, 225000, 265000, 305000, 355000];
+	thresholds.forEach(function(xp, i) {
+		assert.equal(read({xp: String(xp)}, "player-level"), String(i + 1), xp + " XP");
+		if(xp > 0) {
+			assert.equal(read({xp: String(xp - 1)}, "player-level"), String(i), (xp - 1) + " XP");
+		}
+		assert.equal(read({xp: String(xp)}, "xp-next"), i + 1 < thresholds.length ? String(thresholds[i + 1]) : "");
+	});
+	assert.equal(read({xp: "24500"}, "player-level"), "7");
+	assert.equal(read({}, "player-level"), "");
+});
+
+test("a player character: level, XP and the next level in its block, the level on its card", function() {
+	h.add(wiki, {title: "Held", tags: "Player", player: "Tom", xp: "128500"});
+	try {
+		assert.deepEqual(Array.from(h.filter(wiki, "[[Held]trpgfieldsections[]]")), ["advancement"]);
+		assert.deepEqual(Array.from(h.filter(wiki, "[[Held]trpgfieldlines[advancement]]")), ["player-level", "xp", "xp-next"]);
+		assert.deepEqual(Array.from(h.filter(wiki, "[[Held]trpgfieldcard[]]")), ["Level 13"]);
+		h.setLanguage(wiki, "de-DE");
+		assert.deepEqual(Array.from(h.filter(wiki, "[[Held]trpgfieldcard[]]")), ["Stufe 13"]);
+		assert.equal(read({xp: "128500"}, "xp-next"), "140000");
+	} finally {
+		h.setLanguage(wiki, "en-GB");
+		wiki.deleteTiddler("Held");
 	}
 });

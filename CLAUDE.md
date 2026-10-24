@@ -59,7 +59,7 @@ npm run test-lang            # only test/lang/: language packs
     major and minor version of this repo equal those of the core; the Forgotten Realms are the active setting
   - `calendar` - the Calendar of Harptos with the real data: months, festivals, era, Shieldmeet,
     length of a year, de-DE and en-GB, the rules domain `Calendar` and its display language
-  - `srd` - the SRD terms by hand: the 32 domains (with the kinds of sections), the 13 damage types, 6 abilities, 7 terms and
+  - `srd` - the SRD terms by hand: the 33 domains (with the kinds of sections and the table `Level`), the 13 damage types, 6 abilities, 7 terms and
     the terms by group (conditions, actions, ...); every entry, unit and token has its keys in
     every language (under the `keys` of its domain), the abbreviations (`Ability`, `Alignment`,
     `Terms`) also their variant `name`; every id that stands alone is unique across the label
@@ -67,7 +67,7 @@ npm run test-lang            # only test/lang/: language packs
     comment with a page reference; the license tab
   - `fields` - the fields of the ruleset against the stat blocks of the SRD 5.1: what the rules
     derive (proficiency bonus and XP by challenge rating, saving throws, skills with expertise,
-    passive Perception), categories as in the rulebook, the lines that join fields, the units of
+    passive Perception, the level of a player character by its XP), categories as in the rulebook, the lines that join fields, the units of
     `Time`, `Speed`, `Volume`
   - `currency` - the coins of the Forgotten Realms: labels EN/DE, the rates of the SRD 5.1, the reference
     coin gp matching the ruleset, the hub
@@ -103,6 +103,7 @@ with its pages as well.
 
 **Fields** (`rules/fields/`): `definitions.tid` defines every field once (format, domain,
 derive, when); one schema per type (`items`, `materials`, `spells`, `creatures`, `persons`,
+`characters` - the XP of a player character, its level derived, and the line of its card -,
 `folks` - a folk of the category `Folk`, no stat block) names
 its fields, groups and header line - the format is in the module header of `modules/fields.js`
 of `TiddlyRPG-Plugins`. Every field name is hidden from the field list of the core editor
