@@ -14,11 +14,16 @@
  *     with the classes that have it; an invocation that needs a pact belongs to the pact;
  *   - the damage type of a dragon ancestor comes from its name in 5e-bits ("Red - Fire Damage",
  *     the table of SRD p. 44), the breath of a draconic ancestry from its trait (table p. 5);
+ *   - a choice whose text 5e-bits only repeats from its feature (a dragon ancestor, a land) or
+ *     that has none (a favored enemy, a terrain, a draconic ancestry) gets a sentence of our own
+ *     from its values;
  *   - Spellcaster ("requires attunement by a spellcaster") belongs to every class with the
  *     feature Spellcasting or Pact Magic;
  *   - a class shows its proficiencies, multiclassing (p. 56-57), its table and its features as
  *     sections <<feature>>, the Spellcasting with its parts; what a character chooses when it is
  *     made - equipment, skills, ability scores, languages - is left out;
+ *   - a draconic ancestry is a subfolk of the dragonborn named in full, "Black Dragonborn" (the
+ *     table "Draconic Ancestry", p. 5) - the card of a player character shows the subfolk alone;
  *   - Darkvision of a folk is its field senses; every other trait is an entry of the category Trait
  *     that names the folks and subfolks it belongs to (folk: Dwarf, folk: [[High Elf]]);
  *   - a folk names its languages without choice in the relation languages of the core, a language
@@ -194,12 +199,14 @@ exports.classes = function(data, h, spellTitle) {
 			entry.title = "Dragon Ancestor: " + m[1];
 			entry.fields["damage-type"] = m[2].toLowerCase();
 			// 5e-bits repeats the text of the feature: the choice is its dragon and damage type
-			entry.text = "";
+			entry.text = "The dragon ancestor of a sorcerer of the Draconic Bloodline is a " + m[1].toLowerCase() +
+				" dragon; the damage type of the features of the bloodline is " + m[2].toLowerCase() + ".";
 		} else if(parent === "circle-of-the-land") {
 			entry.fields.spells = titles((subclassOf.land.spells || []).filter(function(x) {
 				return x.prerequisites.some(function(p) { return p.index === f.index; });
 			}).map(function(x) { return spellTitle(x.spell.name); }).filter(Boolean));
-			entry.text = "";
+			entry.text = "The land of a druid of the Circle of the Land: " + f.name.replace(/^Circle of the Land: /, "").toLowerCase() +
+				". It gives the circle spells of that land.";
 		} else if(/fighting-style$/.test(parent)) {
 			var style = styles[f.name];
 			if(style) {
@@ -235,10 +242,12 @@ exports.classes = function(data, h, spellTitle) {
 		return spec[kind].from.options;
 	};
 	options("favored-enemy-1-type", "enemy_type_options").forEach(function(o) {
-		out.push({id: "class:favored-enemy-" + o, title: "Favored Enemy: " + capital(o), type: "Class", tags: ["Information"], fields: {classes: "Ranger"}, text: ""});
+		out.push({id: "class:favored-enemy-" + o, title: "Favored Enemy: " + capital(o), type: "Class", tags: ["Information"], fields: {classes: "Ranger"},
+			text: "A favored enemy of the ranger: " + o + "."});
 	});
 	options("natural-explorer-1-terrain-type", "terrain_type_options").forEach(function(o) {
-		out.push({id: "class:natural-explorer-" + o, title: "Natural Explorer: " + capital(o), type: "Class", tags: ["Information"], fields: {classes: "Ranger"}, text: ""});
+		out.push({id: "class:natural-explorer-" + o, title: "Natural Explorer: " + capital(o), type: "Class", tags: ["Information"], fields: {classes: "Ranger"},
+			text: "A favored terrain of the ranger: " + o + "."});
 	});
 
 	// Spellcaster: every class with Spellcasting or Pact Magic (attunement by a spellcaster, p. 206)
@@ -294,8 +303,15 @@ exports.folks = function(data, h) {
 		if(breath.dc && breath.dc.dc_type) {
 			fields.save = breath.dc.dc_type.index;
 		}
-		out.push({id: "folk:" + t.index, title: t.name.replace(/^Draconic Ancestry \((\w+)\)$/, "Draconic Ancestry: $1"), type: "Folk",
-			tags: ["Information"], fields: fields, text: ""});
+		var colour = t.name.replace(/^Draconic Ancestry \((\w+)\)$/, "$1").toLowerCase(),
+			damage = spec.damage_type.index,
+			text = "A dragonborn descended from a " + colour + " dragon: the breath weapon deals " + damage + " damage";
+		if(area.size) {
+			text += " in a " + area.size + "-foot " + area.type;
+		}
+		text += ", and the dragonborn has resistance to " + damage + " damage.";
+		out.push({id: "folk:" + t.index, title: t.name.replace(/^Draconic Ancestry \((\w+)\)$/, "$1 Dragonborn"), type: "Folk",
+			tags: ["Information"], fields: fields, text: text});
 	});
 	return out;
 };

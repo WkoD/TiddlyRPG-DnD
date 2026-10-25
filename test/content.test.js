@@ -315,7 +315,7 @@ test("the folks: a folk with its values, a subfolk and a draconic ancestry in it
 	assert.equal(get("Dwarven Toughness").fields.folk, "[[Hill Dwarf]]");
 	assert.deepEqual(entries.filter(function(e) { return e.type === "Trait" && /^Darkvision/.test(e.title); }), [], "Darkvision is the field senses, no trait");
 	assert.deepEqual(get("Hill Dwarf").fields, {folk: "Dwarf", "ability-bonuses": "wis +1"});
-	assert.deepEqual(get("Draconic Ancestry: Black").fields, {folk: "Dragonborn", "damage-type": "acid", area: "30 ft", "area-shape": "line", save: "dex"});
+	assert.deepEqual(get("Black Dragonborn").fields, {folk: "Dragonborn", "damage-type": "acid", area: "30 ft", "area-shape": "line", save: "dex"});
 });
 
 test("languages, the feat and the glossary: their values and terms", function() {

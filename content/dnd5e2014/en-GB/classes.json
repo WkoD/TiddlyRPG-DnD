@@ -322,7 +322,7 @@
 				"classes": "[[Circle of the Land]]",
 				"spells": "[[Hold Person]] [[Spike Growth]] [[Sleet Storm]] Slow [[Freedom of Movement]] [[Ice Storm]] [[Commune With Nature]] [[Cone of Cold]]"
 			},
-			"text": ""
+			"text": "The land of a druid of the Circle of the Land: arctic. It gives the circle spells of that land."
 		},
 		{
 			"id": "class:circle-of-the-land-coast",
@@ -335,7 +335,7 @@
 				"classes": "[[Circle of the Land]]",
 				"spells": "[[Mirror Image]] [[Misty Step]] [[Water Breathing]] [[Water Walk]] [[Control Water]] [[Freedom of Movement]] [[Conjure Elemental]] Scrying"
 			},
-			"text": ""
+			"text": "The land of a druid of the Circle of the Land: coast. It gives the circle spells of that land."
 		},
 		{
 			"id": "class:circle-of-the-land-desert",
@@ -348,7 +348,7 @@
 				"classes": "[[Circle of the Land]]",
 				"spells": "Blur Silence [[Create Food and Water]] [[Protection From Energy]] Blight [[Hallucinatory Terrain]] [[Insect Plague]] [[Wall of Stone]]"
 			},
-			"text": ""
+			"text": "The land of a druid of the Circle of the Land: desert. It gives the circle spells of that land."
 		},
 		{
 			"id": "class:circle-of-the-land-forest",
@@ -361,7 +361,7 @@
 				"classes": "[[Circle of the Land]]",
 				"spells": "Barkskin [[Spider Climb]] [[Call Lightning]] [[Plant Growth]] Divination [[Freedom of Movement]] [[Commune With Nature]] [[Tree Stride]]"
 			},
-			"text": ""
+			"text": "The land of a druid of the Circle of the Land: forest. It gives the circle spells of that land."
 		},
 		{
 			"id": "class:circle-of-the-land-grassland",
@@ -374,7 +374,7 @@
 				"classes": "[[Circle of the Land]]",
 				"spells": "Invisibility [[Pass Without Trace]] Daylight Haste Divination [[Freedom of Movement]] Dream [[Insect Plague]]"
 			},
-			"text": ""
+			"text": "The land of a druid of the Circle of the Land: grassland. It gives the circle spells of that land."
 		},
 		{
 			"id": "class:circle-of-the-land-mountain",
@@ -387,7 +387,7 @@
 				"classes": "[[Circle of the Land]]",
 				"spells": "[[Spider Climb]] [[Spike Growth]] [[Lightning Bolt]] [[Meld Into Stone]] [[Stone Shape]] Stoneskin Passwall [[Wall of Stone]]"
 			},
-			"text": ""
+			"text": "The land of a druid of the Circle of the Land: mountain. It gives the circle spells of that land."
 		},
 		{
 			"id": "class:circle-of-the-land-swamp",
@@ -400,7 +400,7 @@
 				"classes": "[[Circle of the Land]]",
 				"spells": "[[Acid Arrow]] Darkness [[Water Walk]] [[Stinking Cloud]] [[Freedom of Movement]] [[Locate Creature]] [[Insect Plague]] Scrying"
 			},
-			"text": ""
+			"text": "The land of a druid of the Circle of the Land: swamp. It gives the circle spells of that land."
 		},
 		{
 			"id": "class:fighting-style-archery",
@@ -617,7 +617,7 @@
 				"classes": "[[Draconic Bloodline]]",
 				"damage-type": "acid"
 			},
-			"text": ""
+			"text": "The dragon ancestor of a sorcerer of the Draconic Bloodline is a black dragon; the damage type of the features of the bloodline is acid."
 		},
 		{
 			"id": "class:dragon-ancestor-blue---lightning-damage",
@@ -630,7 +630,7 @@
 				"classes": "[[Draconic Bloodline]]",
 				"damage-type": "lightning"
 			},
-			"text": ""
+			"text": "The dragon ancestor of a sorcerer of the Draconic Bloodline is a blue dragon; the damage type of the features of the bloodline is lightning."
 		},
 		{
 			"id": "class:dragon-ancestor-brass---fire-damage",
@@ -643,7 +643,7 @@
 				"classes": "[[Draconic Bloodline]]",
 				"damage-type": "fire"
 			},
-			"text": ""
+			"text": "The dragon ancestor of a sorcerer of the Draconic Bloodline is a brass dragon; the damage type of the features of the bloodline is fire."
 		},
 		{
 			"id": "class:dragon-ancestor-bronze---lightning-damage",
@@ -656,7 +656,7 @@
 				"classes": "[[Draconic Bloodline]]",
 				"damage-type": "lightning"
 			},
-			"text": ""
+			"text": "The dragon ancestor of a sorcerer of the Draconic Bloodline is a bronze dragon; the damage type of the features of the bloodline is lightning."
 		},
 		{
 			"id": "class:dragon-ancestor-copper---acid-damage",
@@ -669,7 +669,7 @@
 				"classes": "[[Draconic Bloodline]]",
 				"damage-type": "acid"
 			},
-			"text": ""
+			"text": "The dragon ancestor of a sorcerer of the Draconic Bloodline is a copper dragon; the damage type of the features of the bloodline is acid."
 		},
 		{
 			"id": "class:dragon-ancestor-gold---fire-damage",
@@ -682,7 +682,7 @@
 				"classes": "[[Draconic Bloodline]]",
 				"damage-type": "fire"
 			},
-			"text": ""
+			"text": "The dragon ancestor of a sorcerer of the Draconic Bloodline is a gold dragon; the damage type of the features of the bloodline is fire."
 		},
 		{
 			"id": "class:dragon-ancestor-green---poison-damage",
@@ -695,7 +695,7 @@
 				"classes": "[[Draconic Bloodline]]",
 				"damage-type": "poison"
 			},
-			"text": ""
+			"text": "The dragon ancestor of a sorcerer of the Draconic Bloodline is a green dragon; the damage type of the features of the bloodline is poison."
 		},
 		{
 			"id": "class:dragon-ancestor-red---fire-damage",
@@ -708,7 +708,7 @@
 				"classes": "[[Draconic Bloodline]]",
 				"damage-type": "fire"
 			},
-			"text": ""
+			"text": "The dragon ancestor of a sorcerer of the Draconic Bloodline is a red dragon; the damage type of the features of the bloodline is fire."
 		},
 		{
 			"id": "class:dragon-ancestor-silver---cold-damage",
@@ -721,7 +721,7 @@
 				"classes": "[[Draconic Bloodline]]",
 				"damage-type": "cold"
 			},
-			"text": ""
+			"text": "The dragon ancestor of a sorcerer of the Draconic Bloodline is a silver dragon; the damage type of the features of the bloodline is cold."
 		},
 		{
 			"id": "class:dragon-ancestor-white---cold-damage",
@@ -734,7 +734,7 @@
 				"classes": "[[Draconic Bloodline]]",
 				"damage-type": "cold"
 			},
-			"text": ""
+			"text": "The dragon ancestor of a sorcerer of the Draconic Bloodline is a white dragon; the damage type of the features of the bloodline is cold."
 		},
 		{
 			"id": "class:metamagic-careful-spell",
@@ -1262,7 +1262,7 @@
 			"fields": {
 				"classes": "Ranger"
 			},
-			"text": ""
+			"text": "A favored enemy of the ranger: aberrations."
 		},
 		{
 			"id": "class:favored-enemy-beasts",
@@ -1274,7 +1274,7 @@
 			"fields": {
 				"classes": "Ranger"
 			},
-			"text": ""
+			"text": "A favored enemy of the ranger: beasts."
 		},
 		{
 			"id": "class:favored-enemy-celestials",
@@ -1286,7 +1286,7 @@
 			"fields": {
 				"classes": "Ranger"
 			},
-			"text": ""
+			"text": "A favored enemy of the ranger: celestials."
 		},
 		{
 			"id": "class:favored-enemy-constructs",
@@ -1298,7 +1298,7 @@
 			"fields": {
 				"classes": "Ranger"
 			},
-			"text": ""
+			"text": "A favored enemy of the ranger: constructs."
 		},
 		{
 			"id": "class:favored-enemy-dragons",
@@ -1310,7 +1310,7 @@
 			"fields": {
 				"classes": "Ranger"
 			},
-			"text": ""
+			"text": "A favored enemy of the ranger: dragons."
 		},
 		{
 			"id": "class:favored-enemy-elementals",
@@ -1322,7 +1322,7 @@
 			"fields": {
 				"classes": "Ranger"
 			},
-			"text": ""
+			"text": "A favored enemy of the ranger: elementals."
 		},
 		{
 			"id": "class:favored-enemy-fey",
@@ -1334,7 +1334,7 @@
 			"fields": {
 				"classes": "Ranger"
 			},
-			"text": ""
+			"text": "A favored enemy of the ranger: fey."
 		},
 		{
 			"id": "class:favored-enemy-fiends",
@@ -1346,7 +1346,7 @@
 			"fields": {
 				"classes": "Ranger"
 			},
-			"text": ""
+			"text": "A favored enemy of the ranger: fiends."
 		},
 		{
 			"id": "class:favored-enemy-giants",
@@ -1358,7 +1358,7 @@
 			"fields": {
 				"classes": "Ranger"
 			},
-			"text": ""
+			"text": "A favored enemy of the ranger: giants."
 		},
 		{
 			"id": "class:favored-enemy-monstrosities",
@@ -1370,7 +1370,7 @@
 			"fields": {
 				"classes": "Ranger"
 			},
-			"text": ""
+			"text": "A favored enemy of the ranger: monstrosities."
 		},
 		{
 			"id": "class:favored-enemy-oozes",
@@ -1382,7 +1382,7 @@
 			"fields": {
 				"classes": "Ranger"
 			},
-			"text": ""
+			"text": "A favored enemy of the ranger: oozes."
 		},
 		{
 			"id": "class:favored-enemy-plants",
@@ -1394,7 +1394,7 @@
 			"fields": {
 				"classes": "Ranger"
 			},
-			"text": ""
+			"text": "A favored enemy of the ranger: plants."
 		},
 		{
 			"id": "class:favored-enemy-undead",
@@ -1406,7 +1406,7 @@
 			"fields": {
 				"classes": "Ranger"
 			},
-			"text": ""
+			"text": "A favored enemy of the ranger: undead."
 		},
 		{
 			"id": "class:favored-enemy-humanoids",
@@ -1418,7 +1418,7 @@
 			"fields": {
 				"classes": "Ranger"
 			},
-			"text": ""
+			"text": "A favored enemy of the ranger: humanoids."
 		},
 		{
 			"id": "class:natural-explorer-arctic",
@@ -1430,7 +1430,7 @@
 			"fields": {
 				"classes": "Ranger"
 			},
-			"text": ""
+			"text": "A favored terrain of the ranger: arctic."
 		},
 		{
 			"id": "class:natural-explorer-coast",
@@ -1442,7 +1442,7 @@
 			"fields": {
 				"classes": "Ranger"
 			},
-			"text": ""
+			"text": "A favored terrain of the ranger: coast."
 		},
 		{
 			"id": "class:natural-explorer-desert",
@@ -1454,7 +1454,7 @@
 			"fields": {
 				"classes": "Ranger"
 			},
-			"text": ""
+			"text": "A favored terrain of the ranger: desert."
 		},
 		{
 			"id": "class:natural-explorer-forest",
@@ -1466,7 +1466,7 @@
 			"fields": {
 				"classes": "Ranger"
 			},
-			"text": ""
+			"text": "A favored terrain of the ranger: forest."
 		},
 		{
 			"id": "class:natural-explorer-grassland",
@@ -1478,7 +1478,7 @@
 			"fields": {
 				"classes": "Ranger"
 			},
-			"text": ""
+			"text": "A favored terrain of the ranger: grassland."
 		},
 		{
 			"id": "class:natural-explorer-mountain",
@@ -1490,7 +1490,7 @@
 			"fields": {
 				"classes": "Ranger"
 			},
-			"text": ""
+			"text": "A favored terrain of the ranger: mountain."
 		},
 		{
 			"id": "class:natural-explorer-swamp",
@@ -1502,7 +1502,7 @@
 			"fields": {
 				"classes": "Ranger"
 			},
-			"text": ""
+			"text": "A favored terrain of the ranger: swamp."
 		},
 		{
 			"id": "class:spellcaster",

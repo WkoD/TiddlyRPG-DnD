@@ -142,8 +142,8 @@ another language would stand beside it in a folder of its own (`content/dnd5e201
   `spells`; a spell names its classes only. What a character chooses when it is made
   (equipment, skills) is left out.
 - **Folks** (`Information Folk`): the 9 folks with their values, texts and languages, the 4
-  subfolks with `folk: <folk>`, the 10 draconic ancestries of the dragonborn as "Draconic Ancestry:
-  Black" with their breath (table p. 5).
+  subfolks with `folk: <folk>`, the 10 draconic ancestries of the dragonborn as "Black Dragonborn"
+  (`folk: Dragonborn`) with their breath (table p. 5).
 - **Traits** (`Information Trait`): every trait of a folk or subfolk with `folk: <folks>` (Fey
   Ancestry belongs to Elf and Half-Elf); Darkvision is the field `senses` of the folk.
 - **Languages** (`Information Language`): the 16 of the SRD (p. 59) as "Common (Language)" -

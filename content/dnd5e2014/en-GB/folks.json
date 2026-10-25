@@ -195,7 +195,7 @@
 		},
 		{
 			"id": "folk:draconic-ancestry-black",
-			"title": "Draconic Ancestry: Black",
+			"title": "Black Dragonborn",
 			"type": "Folk",
 			"tags": [
 				"Information"
@@ -207,11 +207,11 @@
 				"area-shape": "line",
 				"save": "dex"
 			},
-			"text": ""
+			"text": "A dragonborn descended from a black dragon: the breath weapon deals acid damage in a 30-foot line, and the dragonborn has resistance to acid damage."
 		},
 		{
 			"id": "folk:draconic-ancestry-blue",
-			"title": "Draconic Ancestry: Blue",
+			"title": "Blue Dragonborn",
 			"type": "Folk",
 			"tags": [
 				"Information"
@@ -223,11 +223,11 @@
 				"area-shape": "line",
 				"save": "dex"
 			},
-			"text": ""
+			"text": "A dragonborn descended from a blue dragon: the breath weapon deals lightning damage in a 30-foot line, and the dragonborn has resistance to lightning damage."
 		},
 		{
 			"id": "folk:draconic-ancestry-brass",
-			"title": "Draconic Ancestry: Brass",
+			"title": "Brass Dragonborn",
 			"type": "Folk",
 			"tags": [
 				"Information"
@@ -239,11 +239,11 @@
 				"area-shape": "line",
 				"save": "dex"
 			},
-			"text": ""
+			"text": "A dragonborn descended from a brass dragon: the breath weapon deals fire damage in a 30-foot line, and the dragonborn has resistance to fire damage."
 		},
 		{
 			"id": "folk:draconic-ancestry-bronze",
-			"title": "Draconic Ancestry: Bronze",
+			"title": "Bronze Dragonborn",
 			"type": "Folk",
 			"tags": [
 				"Information"
@@ -255,11 +255,11 @@
 				"area-shape": "line",
 				"save": "dex"
 			},
-			"text": ""
+			"text": "A dragonborn descended from a bronze dragon: the breath weapon deals lightning damage in a 30-foot line, and the dragonborn has resistance to lightning damage."
 		},
 		{
 			"id": "folk:draconic-ancestry-copper",
-			"title": "Draconic Ancestry: Copper",
+			"title": "Copper Dragonborn",
 			"type": "Folk",
 			"tags": [
 				"Information"
@@ -271,11 +271,11 @@
 				"area-shape": "line",
 				"save": "dex"
 			},
-			"text": ""
+			"text": "A dragonborn descended from a copper dragon: the breath weapon deals acid damage in a 30-foot line, and the dragonborn has resistance to acid damage."
 		},
 		{
 			"id": "folk:draconic-ancestry-gold",
-			"title": "Draconic Ancestry: Gold",
+			"title": "Gold Dragonborn",
 			"type": "Folk",
 			"tags": [
 				"Information"
@@ -287,11 +287,11 @@
 				"area-shape": "cone",
 				"save": "dex"
 			},
-			"text": ""
+			"text": "A dragonborn descended from a gold dragon: the breath weapon deals fire damage in a 15-foot cone, and the dragonborn has resistance to fire damage."
 		},
 		{
 			"id": "folk:draconic-ancestry-green",
-			"title": "Draconic Ancestry: Green",
+			"title": "Green Dragonborn",
 			"type": "Folk",
 			"tags": [
 				"Information"
@@ -303,11 +303,11 @@
 				"area-shape": "cone",
 				"save": "con"
 			},
-			"text": ""
+			"text": "A dragonborn descended from a green dragon: the breath weapon deals poison damage in a 15-foot cone, and the dragonborn has resistance to poison damage."
 		},
 		{
 			"id": "folk:draconic-ancestry-red",
-			"title": "Draconic Ancestry: Red",
+			"title": "Red Dragonborn",
 			"type": "Folk",
 			"tags": [
 				"Information"
@@ -319,11 +319,11 @@
 				"area-shape": "cone",
 				"save": "dex"
 			},
-			"text": ""
+			"text": "A dragonborn descended from a red dragon: the breath weapon deals fire damage in a 15-foot cone, and the dragonborn has resistance to fire damage."
 		},
 		{
 			"id": "folk:draconic-ancestry-silver",
-			"title": "Draconic Ancestry: Silver",
+			"title": "Silver Dragonborn",
 			"type": "Folk",
 			"tags": [
 				"Information"
@@ -335,11 +335,11 @@
 				"area-shape": "cone",
 				"save": "con"
 			},
-			"text": ""
+			"text": "A dragonborn descended from a silver dragon: the breath weapon deals cold damage in a 15-foot cone, and the dragonborn has resistance to cold damage."
 		},
 		{
 			"id": "folk:draconic-ancestry-white",
-			"title": "Draconic Ancestry: White",
+			"title": "White Dragonborn",
 			"type": "Folk",
 			"tags": [
 				"Information"
@@ -351,7 +351,7 @@
 				"area-shape": "cone",
 				"save": "con"
 			},
-			"text": ""
+			"text": "A dragonborn descended from a white dragon: the breath weapon deals cold damage in a 15-foot cone, and the dragonborn has resistance to cold damage."
 		}
 	]
 }
