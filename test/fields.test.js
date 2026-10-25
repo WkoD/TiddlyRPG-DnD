@@ -154,9 +154,9 @@ test("a player character: level, XP and the next level in its block, the level o
 	try {
 		assert.deepEqual(Array.from(h.filter(wiki, "[[Held]trpgfieldsections[]]")), ["advancement"]);
 		assert.deepEqual(Array.from(h.filter(wiki, "[[Held]trpgfieldlines[advancement]]")), ["character-level", "xp", "xp-next"]);
-		assert.deepEqual(Array.from(h.filter(wiki, "[[Held]trpgfieldcard[]]")), ["Level 13"]);
+		assert.deepEqual(Array.from(h.filter(wiki, "[[Held]trpgcardlines[]]")), ["Level 13"]);
 		h.setLanguage(wiki, "de-DE");
-		assert.deepEqual(Array.from(h.filter(wiki, "[[Held]trpgfieldcard[]]")), ["Stufe 13"]);
+		assert.deepEqual(Array.from(h.filter(wiki, "[[Held]trpgcardlines[]]")), ["Stufe 13"]);
 		assert.equal(read({xp: "128500"}, "xp-next"), "140.000", "the thousands separator of the wiki language");
 	} finally {
 		h.setLanguage(wiki, "en-GB");
