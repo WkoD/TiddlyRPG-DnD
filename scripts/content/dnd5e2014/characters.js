@@ -20,7 +20,12 @@
  *   - Spellcaster ("requires attunement by a spellcaster") belongs to every class with the
  *     feature Spellcasting or Pact Magic;
  *   - a class shows its proficiencies, multiclassing (p. 56-57), its table and its features as
- *     sections <<feature>>, the Spellcasting with its parts; what a character chooses when it is
+ *     sections <<feature>>, the Spellcasting with its parts;
+ *   - the table of a class has the columns of the SRD (CLASS_COLUMNS, p. 8-54), not every number
+ *     of 5e-bits (no "Brutal Critical Dice", "Metamagic Known", "Mystic Arcanum Level 6" ...), its
+ *     cells written as there ("Unlimited", "+2", "+10 ft."); the spell slots per spell level are a
+ *     table of their own below it, so that it fits the width of a tiddler - the warlock keeps
+ *     "Spell Slots" and "Slot Level" in its table, as in the SRD; what a character chooses when it is
  *     made - equipment, skills, ability scores, languages - is left out;
  *   - a draconic ancestry is a subfolk of the dragonborn named in full, "Black Dragonborn" (the
  *     table "Draconic Ancestry", p. 5) - the card of a player character shows the subfolk alone;
@@ -49,6 +54,27 @@ var CHOICES = {"dragon-ancestor": "draconic", "circle-of-the-land": "land", "fig
 function titles(list) {
 	return list.map(function(t) { return /\s/.test(t) ? "[[" + t + "]]" : t; }).join(" ");
 }
+
+// The columns of the table of a class after Level, Proficiency Bonus and Features, in the order
+// of the SRD: [key in class_specific or spellcasting of 5e-bits, label, cell]; pact-slots and
+// pact-slot-level from the spell slots of the warlock
+var CLASS_COLUMNS = {
+	barbarian: [["rage_count", "Rages", function(v) { return v === 9999 ? "Unlimited" : String(v); }],
+		["rage_damage_bonus", "Rage Damage", function(v) { return "+" + v; }]],
+	bard: [["cantrips_known", "Cantrips Known"], ["spells_known", "Spells Known"]],
+	cleric: [["cantrips_known", "Cantrips Known"]],
+	druid: [["cantrips_known", "Cantrips Known"]],
+	fighter: [],
+	monk: [["martial_arts", "Martial Arts"], ["ki_points", "Ki Points"],
+		["unarmored_movement", "Unarmored Movement", function(v) { return "+" + v + " ft."; }]],
+	paladin: [],
+	ranger: [["spells_known", "Spells Known"]],
+	rogue: [["sneak_attack", "Sneak Attack"]],
+	sorcerer: [["sorcery_points", "Sorcery Points"], ["cantrips_known", "Cantrips Known"], ["spells_known", "Spells Known"]],
+	warlock: [["cantrips_known", "Cantrips Known"], ["spells_known", "Spells Known"], ["pact-slots", "Spell Slots"],
+		["pact-slot-level", "Slot Level"], ["invocations_known", "Invocations Known"]],
+	wizard: [["cantrips_known", "Cantrips Known"]]
+};
 
 function ordinal(n) {
 	return n + ({1: "st", 2: "nd", 3: "rd"}[n] || "th");
@@ -117,44 +143,59 @@ exports.classes = function(data, h, spellTitle) {
 		}
 		var mcProfs = (mc.proficiencies || []).map(function(p) { return p.name; });
 		parts.push("''Multiclassing:'' " + h.escape(prereq) + (mcProfs.length ? "; proficiencies gained: " + h.escape(mcProfs.join("; ")) : ""));
-		// The table of the class: level, proficiency bonus, features, its own columns, spellcasting
+		// The table of the class: level, proficiency bonus, features, the columns of the SRD; the
+		// spell slots per spell level a table of their own (not the warlock)
 		var levels = data.Levels.filter(function(l) { return l.class.index === c.index && !l.subclass; }).sort(function(a, b) { return a.level - b.level; });
-		var own = [];
-		levels.forEach(function(l) {
-			Object.keys(l.class_specific || {}).forEach(function(k) {
-				var v = l.class_specific[k];
-				if(own.indexOf(k) === -1 && (typeof v === "number" || (v && typeof v === "object" && v.dice_count !== undefined))) {
-					own.push(k);
-				}
-			});
-		});
-		var casting = [];
-		levels.forEach(function(l) {
-			Object.keys(l.spellcasting || {}).forEach(function(k) {
-				if(casting.indexOf(k) === -1 && l.spellcasting[k]) {
-					casting.push(k);
-				}
-			});
-		});
-		casting.sort(function(a, b) {
-			var rank = function(k) { return k === "cantrips_known" ? 0 : k === "spells_known" ? 1 : 2 + Number((/(\d)$/.exec(k) || [0, 9])[1]); };
-			return rank(a) - rank(b);
-		});
-		var label = function(k) {
-			var slot = /^spell_slots_level_(\d)$/.exec(k);
-			return slot ? ordinal(Number(slot[1])) : k.split("_").map(capital).join(" ");
+		var columns = CLASS_COLUMNS[c.index];
+		if(!columns) {
+			throw new Error("No columns of the SRD for the class " + c.index);
+		}
+		var slotsOf = function(l) {
+			return [1, 2, 3, 4, 5, 6, 7, 8, 9].map(function(n) { return (l.spellcasting || {})["spell_slots_level_" + n] || 0; });
 		};
-		var cell = function(v) {
-			return v && typeof v === "object" ? v.dice_count + "d" + v.dice_value : (v === 0 || v === undefined ? "-" : String(v));
+		var value = function(l, k) {
+			var slots = slotsOf(l),
+				level = slots.findIndex(function(n) { return n > 0; });
+			if(k === "pact-slots") {
+				return level === -1 ? 0 : slots[level];
+			}
+			if(k === "pact-slot-level") {
+				return level === -1 ? 0 : ordinal(level + 1);
+			}
+			var own = l.class_specific || {};
+			return k in own ? own[k] : (l.spellcasting || {})[k];
 		};
-		var rows = ["|!Level |!Proficiency Bonus |!Features |" + own.concat(casting).map(function(k) { return "!" + label(k) + " |"; }).join("")];
+		var cell = function(v, format) {
+			if(v === 0 || v === undefined || v === null) {
+				return "-";
+			}
+			return v && typeof v === "object" ? v.dice_count + "d" + v.dice_value : format ? format(v) : String(v);
+		};
+		var rows = ["|!Level |!Proficiency Bonus |!Features |" + columns.map(function(col) { return "!" + col[1] + " |"; }).join("")];
 		levels.forEach(function(l) {
 			var names = l.features.map(function(f) { return (features[f.index] || f).name.replace(new RegExp(": " + c.name + "$"), ""); });
 			rows.push("|" + ordinal(l.level) + " |+" + l.prof_bonus + " |" + (names.length ? h.escape(names.join(", ")) : "-") + " |" +
-				own.map(function(k) { return cell(l.class_specific[k]) + " |"; }).join("") +
-				casting.map(function(k) { return cell(l.spellcasting[k]) + " |"; }).join(""));
+				columns.map(function(col) { return cell(value(l, col[0]), col[2]) + " |"; }).join(""));
 		});
 		parts.push(rows.join("\n"));
+		var highest = 0;
+		levels.forEach(function(l) {
+			slotsOf(l).forEach(function(n, i) {
+				if(n) {
+					highest = Math.max(highest, i + 1);
+				}
+			});
+		});
+		if(highest && c.index !== "warlock") {
+			var range = [1, 2, 3, 4, 5, 6, 7, 8, 9].slice(0, highest),
+				slotRows = ["|!Level |" + range.map(function(n) { return "!" + ordinal(n) + " |"; }).join("")];
+			levels.forEach(function(l) {
+				var slots = slotsOf(l);
+				slotRows.push("|" + ordinal(l.level) + " |" + range.map(function(n) { return cell(slots[n - 1]) + " |"; }).join(""));
+			});
+			parts.push("''Spell Slots per Spell Level''");
+			parts.push(slotRows.join("\n"));
+		}
 		// The parts of Spellcasting (5e-bits keeps them beside the feature)
 		var extra = {};
 		if(c.spellcasting) {

@@ -131,7 +131,9 @@ another language would stand beside it in a folder of its own (`content/dnd5e201
   spell, the glossary "Darkvision (Glossary)"). `npm run content` reports every title that gets a
   suffix.
 - **Classes** (`Information Class`, the tree of the relation `classes` of the core): the 12
-  classes with proficiencies, multiclassing (p. 56-57), their table and their features; the 12
+  classes with proficiencies, multiclassing (p. 56-57), their table with the columns of the SRD
+  (the spell slots per spell level a table of their own below it, but not for the warlock) and
+  their features; the 12
   subclasses under the names of the SRD ("Draconic Bloodline", not "Draconic") with `classes:
   <class>`; the lasting choices as "<feature>: <option>" with `classes: <subclass or class>` -
   "Dragon Ancestor: Red" (`damage-type: fire`, table p. 44), "Circle of the Land: Forest" (its

@@ -283,7 +283,19 @@ test("the classes: a class with its values and table, a subclass under its SRD n
 	var sorcerer = get("Sorcerer");
 	assert.deepEqual(sorcerer.fields, {"hit-die": "1d6", "saving-throws": "con, cha", "spellcasting-ability": "cha"});
 	assert.match(sorcerer.text, /^''Proficiencies:'' Daggers; Darts/);
-	assert.match(sorcerer.text, /\|!Level \|!Proficiency Bonus \|!Features \|!Sorcery Points /);
+	assert.match(sorcerer.text, /\n\|!Level \|!Proficiency Bonus \|!Features \|!Sorcery Points \|!Cantrips Known \|!Spells Known \|\n/,
+		"the columns of the SRD (p. 42), no Metamagic Known");
+	assert.match(sorcerer.text, /\n''Spell Slots per Spell Level''\n\n\|!Level \|!1st \|.*!9th \|\n/, "the slots a table of their own");
+	assert.match(sorcerer.text, /\n\|20th \|4 \|3 \|3 \|3 \|3 \|2 \|2 \|1 \|1 \|\n/);
+	assert.match(get("Barbarian").text, /\n\|!Level \|!Proficiency Bonus \|!Features \|!Rages \|!Rage Damage \|\n[^]*\n\|20th \|\+6 \|Primal Champion \|Unlimited \|\+4 \|/, "SRD p. 8");
+	assert.match(get("Monk").text, /\n\|3rd \|\+2 \|[^|]*\|1d4 \|3 \|\+10 ft\. \|/, "SRD p. 26");
+	assert.match(get("Warlock").text, /\|!Spell Slots \|!Slot Level \|!Invocations Known \|\n[^]*\n\|20th \|\+6 \|Eldritch Master \|4 \|15 \|4 \|5th \|8 \|/, "SRD p. 46");
+	assert.doesNotMatch(get("Warlock").text, /Spell Slots per Spell Level/);
+	entries.filter(function(e) { return e.type === "Class" && !e.fields.classes; }).forEach(function(c) {
+		c.text.split("\n").filter(function(l) { return /^\|/.test(l); }).forEach(function(l) {
+			assert.ok(l.split("|").length - 2 <= 10, c.title + ": at most 10 columns, so that the table fits a tiddler: " + l);
+		});
+	});
 	assert.match(sorcerer.text, /<<feature "Spellcasting">> .*\n\n''\/\/Cantrips\.\/\/''/);
 	assert.match(get("Fighter").text, /''Multiclassing:'' Strength 13 or Dexterity 13/, "SRD p. 56");
 	assert.deepEqual(get("Draconic Bloodline").fields, {classes: "Sorcerer"});
