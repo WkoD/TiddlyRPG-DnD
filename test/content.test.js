@@ -51,6 +51,37 @@ test("the manifest: the ruleset of this repo, the files beside it; package.json 
 	manifest.files.forEach(function(file) {
 		assert.ok(fs.existsSync(path.join(DIR, file)), file);
 	});
+	// the form the server reads (content-server.js), met by the core of this run
+	var core = wiki.getTiddler("$:/plugins/tiddlyrpg-core").fields.version,
+		need = /^>=\s*(\d+\.\d+\.\d+\S*)$/.exec((manifest["tiddlyrpg-core-version"] || "").trim());
+	assert.ok(need, "tiddlyrpg-core-version as >=x.y.z: " + manifest["tiddlyrpg-core-version"]);
+	assert.ok($tw.utils.checkVersions(core, need[1]), "tiddlyrpg-core " + core + " meets " + need[0]);
+});
+
+test("prices: a number or a range [lo, hi] in the reference coin, readable in the coins of the setting", function() {
+	var content = $tw.modules.execute("$:/plugins/tiddlyrpg-core/modules/content.js"),
+		currency = $tw.modules.execute("$:/plugins/tiddlyrpg-core/modules/currency.js"),
+		cur = currency.active(wiki),
+		bad = [];
+	entries.forEach(function(e) {
+		var p = e.fields.price;
+		if(p === undefined) {
+			return;
+		}
+		var shape = typeof p === "number" ? p > 0 : Array.isArray(p) && p.length === 2 && typeof p[0] === "number" && typeof p[1] === "number" && p[0] < p[1];
+		var price = content.toFields(wiki, manifest, e, e.title).price;
+		if(!shape || currency.check(wiki, cur, price)) {
+			bad.push(e.title + ": " + JSON.stringify(p) + " -> " + price);
+		}
+	});
+	assert.deepEqual(bad, []);
+	assert.ok(currency.check(wiki, cur, "zehn"), "the check reports an unreadable price");
+});
+
+test("every text renders without a raw table row", function() {
+	var raw = /(^|\n)\s*\|/;
+	assert.ok(raw.test(h.render(wiki, "text/plain", "|!Level |!Features |! \n|1st|Rage|")), "a broken table stays raw");
+	assert.deepEqual(entries.filter(function(e) { return raw.test(h.render(wiki, "text/plain", e.text || "")); }).map(function(e) { return e.title; }), []);
 });
 
 test("items, spells, creatures, classes, folks, traits, languages, the feat and the glossary of the SRD 5.1", function() {

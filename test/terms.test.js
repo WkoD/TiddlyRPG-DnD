@@ -58,9 +58,12 @@ test("the hubs Ruleset and CampaignSetting: the system and the setting, each wit
 		"Zauberwirken", "Sinne", "Fertigkeiten", "Kreaturentypen", "Größenkategorien", "Gesinnungen",
 		"Schulen der Magie", "Sprachtypen", "Wirkungsbereiche", "Herausforderungsgrade", "Komponenten",
 		"Schaden neben den Arten", "Arten von Gegenständen", "Bewegungsarten", "Seltenheit", "Ergebnisse von Rettungswürfen",
-		"Geschwindigkeit", "Zauberangriffe", "Wörter für Reichweite und Wirkungsdauer", "Zeit", "Volumen"].forEach(function(name) {
+		"Geschwindigkeit", "Zauberangriffe", "Wörter für Reichweite und Wirkungsdauer", "Zeit", "Volumen",
+		"Charakterentwicklung", "Abschnitte im Text"].forEach(function(name) {
 		assert.match(html, new RegExp("<h3[^>]*>" + name + "</h3>"), name);
 	});
+	// one heading per domain of the ruleset: a new domain belongs in the list above
+	assert.equal((html.match(/<h3[^>]*>/g) || []).length, h.filter(wiki, "[trpgrulesdomains[ruleset]]").length);
 	assert.match(setting, /<h2[^>]*>Forgotten Realms<\/h2>/);
 	["Kalender", "Währung"].forEach(function(name) {
 		assert.match(setting, new RegExp("<h3[^>]*>" + name + "</h3>"), name);

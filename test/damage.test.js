@@ -63,3 +63,36 @@ test.describe("en-GB", function() {
 		assert.equal(dmg("1W8 Stichschaden"), "1d8 piercing damage");
 	});
 });
+
+// All 13 damage types of the domain, each with its phrase in both languages
+test.describe("every damage type", function() {
+	var PHRASES = {
+		acid: ["Säureschaden", "acid damage"],
+		bludgeoning: ["Wuchtschaden", "bludgeoning damage"],
+		cold: ["Kälteschaden", "cold damage"],
+		fire: ["Feuerschaden", "fire damage"],
+		force: ["Energieschaden", "force damage"],
+		lightning: ["Blitzschaden", "lightning damage"],
+		necrotic: ["nekrotischer Schaden", "necrotic damage"],
+		piercing: ["Stichschaden", "piercing damage"],
+		poison: ["Giftschaden", "poison damage"],
+		psychic: ["psychischer Schaden", "psychic damage"],
+		radiant: ["gleißender Schaden", "radiant damage"],
+		slashing: ["Hiebschaden", "slashing damage"],
+		thunder: ["Schallschaden", "thunder damage"]
+	};
+
+	test("the 13 types of the domain", function() {
+		var data = wiki.getTiddlerData("$:/tiddlyrpg/rules/domain/Damage");
+		assert.deepEqual(Array.from(data.entries, function(entry) { return entry.id; }), Object.keys(PHRASES));
+	});
+
+	test("de-DE and en-GB", function() {
+		[["de-DE", 0, "1W6 "], ["en-GB", 1, "1d6 "]].forEach(function(language) {
+			h.setLanguage(wiki, language[0]);
+			Object.keys(PHRASES).forEach(function(id) {
+				assert.equal(dmg("1d6 " + id), language[2] + PHRASES[id][language[1]], language[0] + " " + id);
+			});
+		});
+	});
+});

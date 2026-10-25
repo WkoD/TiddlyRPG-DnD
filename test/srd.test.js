@@ -147,19 +147,21 @@ CODES.forEach(function(code) {
 });
 
 CODES.forEach(function(code) {
-	test(code + ": every key of srd.multids stands below a comment with a page reference", function() {
-		var text = fs.readFileSync(path.join(plugin, "language", code, "srd.multids"), "utf8").replace(/\r\n/g, "\n"),
-			blocks = text.slice(text.indexOf("\n\n") + 2).split(/\n\s*\n/),
-			bare = [];
-		blocks.forEach(function(block) {
-			var lines = block.split("\n"),
-				comment = lines.filter(function(l) { return l.charAt(0) === "#"; }).join(" "),
-				entries = lines.filter(function(l) { return l.charAt(0) !== "#" && l.indexOf(":") > 0; });
-			if(entries.length && !/\b(p|S)\. \d+/.test(comment)) {
-				bare.push(entries[0]);
-			}
+	["srd.multids", "grammar.multids"].forEach(function(file) {
+		test(code + ": every key of " + file + " stands below a comment with a page reference", function() {
+			var text = fs.readFileSync(path.join(plugin, "language", code, file), "utf8").replace(/\r\n/g, "\n"),
+				blocks = text.slice(text.indexOf("\n\n") + 2).split(/\n\s*\n/),
+				bare = [];
+			blocks.forEach(function(block) {
+				var lines = block.split("\n"),
+					comment = lines.filter(function(l) { return l.charAt(0) === "#"; }).join(" "),
+					entries = lines.filter(function(l) { return l.charAt(0) !== "#" && l.indexOf(":") > 0; });
+				if(entries.length && !/\b(p|S)\. \d+/.test(comment)) {
+					bare.push(entries[0]);
+				}
+			});
+			assert.deepEqual(bare, []);
 		});
-		assert.deepEqual(bare, []);
 	});
 });
 

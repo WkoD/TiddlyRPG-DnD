@@ -87,3 +87,35 @@ test.describe("en-GB", function() {
 		assert.equal(f("[[1351-01-31]dateformat[]]"), "Midwinter 1351");
 	});
 });
+
+// Every month and festival of the data under its name in each language: a renamed id or a
+// wrong label fails here (the festivals on day 31 of their month, Shieldmeet on 32 in a leap year)
+test.describe("every month and festival in both languages", function() {
+	var MONTHS = ["Hammer", "Alturiak", "Ches", "Tarsakh", "Mirtul", "Kythorn", "Flamerule", "Eleasis", "Eleint", "Marpenoth", "Uktar", "Nightal"],
+		FESTIVALS = [["1351-01-31", "Midwinter"], ["1351-04-31", "Greengrass"], ["1351-07-31", "Midsummer"], ["1352-07-32", "Shieldmeet"], ["1351-09-31", "Highharvestide"], ["1351-11-31", "FeastOfTheMoon"]],
+		NAMES = {
+			"de-DE": {day: "5. ", festivals: ["Mittwinter", "Grüngras", "Mittsommer", "Schildtreff", "Hochernte", "Fest des Mondes"]},
+			"en-GB": {day: "5 ", festivals: ["Midwinter", "Greengrass", "Midsummer", "Shieldmeet", "Highharvestide", "Feast of the Moon"]}
+		};
+
+	test("the ids of the data", function() {
+		var cal = calendar.active(wiki);
+		assert.deepEqual(Array.from(cal.months, function(m) { return m.id; }), MONTHS);
+		var festivals = [];
+		cal.months.forEach(function(m) { (m.festivals || []).forEach(function(fest) { festivals.push(fest.id); }); });
+		assert.deepEqual(festivals, FESTIVALS.map(function(fest) { return fest[1]; }));
+	});
+
+	Object.keys(NAMES).forEach(function(code) {
+		test(code, function() {
+			h.setLanguage(wiki, code);
+			MONTHS.forEach(function(month, i) {
+				var date = "1351-" + (i < 9 ? "0" : "") + (i + 1) + "-05";
+				assert.equal(f("[[" + date + "]dateformat[]]"), NAMES[code].day + month + " 1351", date);
+			});
+			FESTIVALS.forEach(function(fest, i) {
+				assert.equal(f("[[" + fest[0] + "]dateformat[]]"), NAMES[code].festivals[i] + " " + fest[0].slice(0, 4), fest[1]);
+			});
+		});
+	});
+});

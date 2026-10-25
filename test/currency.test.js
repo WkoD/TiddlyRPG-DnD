@@ -62,3 +62,20 @@ test("the hub Currency", function() {
 	assert.match(html, /Münzen der Forgotten Realms/);
 	assert.match(html, /Preise des Regelwerks in GM sind hier Preise in GM\./);
 });
+
+test("every coin with its label and its name in both languages", function() {
+	var currency = $tw.modules.execute("$:/plugins/tiddlyrpg-core/modules/currency.js"),
+		COINS = {
+			"de-DE": {cp: ["KM", "Kupfermünze"], sp: ["SM", "Silbermünze"], ep: ["EM", "Elektrummünze"], gp: ["GM", "Goldmünze"], pp: ["PM", "Platinmünze"]},
+			"en-GB": {cp: ["cp", "copper piece"], sp: ["sp", "silver piece"], ep: ["ep", "electrum piece"], gp: ["gp", "gold piece"], pp: ["pp", "platinum piece"]}
+		};
+	Object.keys(COINS).forEach(function(code) {
+		h.setLanguage(wiki, code);
+		var cur = currency.active(wiki),
+			found = {};
+		f("[currency[coins]]").split(" ").forEach(function(coin) {
+			found[coin] = [currency.unitLabel(wiki, cur, coin), currency.coinName(wiki, cur, coin)];
+		});
+		assert.deepEqual(found, COINS[code], code);
+	});
+});
