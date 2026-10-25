@@ -30,7 +30,12 @@
  *     the SRD does not list them (GROUPS, AMMUNITION below);
  *   - a magic item that names one item ("Weapon (warhammer)") gets base and all its values;
  *   - prices are numbers in gp (the reference coin of the ruleset; the core writes them in the
- *     coins of the setting), weights in lb;
+ *     coins of the setting), weights in lb without a thousands comma; ammunition keeps the price
+ *     and weight of its bundle, the text names it; a pack lists its contents, a lance and a net
+ *     their rules in the text;
+ *   - charges, bonuses (attack and damage, AC, saving throws, spell attacks) and ability scores
+ *     from the fixed sentences of the SRD, only where they hold without a condition - one use
+ *     until the next dawn is one charge, not for several properties or beads;
  *   - texts are wikitext: the Markdown of 5e-bits converted, every character that would start
  *     markup of TiddlyWiki written as an entity, conditions as <<term>>;
  *   - the named parts of a text are sections of the ruleset (domain Section), short forms that run
@@ -391,11 +396,26 @@ function equipment(e) {
 		fields.price = price;
 	}
 	sentences((e.desc || []).join("\n"), fields);
-	return {id: "item:" + e.index, title: e.name, type: "Item", tags: tagsOf(category), fields: fields, text: wikitext(e.desc)};
+	// What the SRD lists beside an item: a pack holds its contents, a lance and a net have a rule
+	// of their own, ammunition is sold by the bundle - price and weight are those of the bundle
+	var lines = (e.desc || []).slice();
+	if(e.quantity > 1) {
+		lines.push("Price and weight are those of a bundle of " + e.quantity + ".");
+	}
+	if(e.contents && e.contents.length) {
+		lines.push("Contents:");
+		e.contents.forEach(function(c) {
+			lines.push("- " + (c.quantity > 1 ? c.quantity + " × " : "") + c.item.name);
+		});
+	}
+	Array.prototype.push.apply(lines, e.special || []);
+	return {id: "item:" + e.index, title: e.name, type: "Item", tags: tagsOf(category), fields: fields, text: wikitext(lines)};
 }
 
+// A weight as the fields read it: " lb", no thousands comma ("1,320 lb." -> "1320 lb"; the core reads
+// a comma as the decimal mark)
 function feetless(text) {
-	return String(text).replace(/\s*lb\.?/, " lb");
+	return String(text).replace(/(\d),(?=\d{3}\b)/g, "$1").replace(/\s*lb\.?/, " lb");
 }
 
 // The category tag of the wiki of the first main entry that names one (ItemCategory "tag")
@@ -405,7 +425,7 @@ var TAGS = {weapon: "Equipment", armor: "Equipment", shield: "Equipment", ammuni
 
 function tagsOf(category) {
 	var main = category.filter(function(c) { return TAGS[c]; })[0];
-	// ammunition is a trait of a weapon, a main entry alone
+	// ammunition is a property of a weapon, a main entry alone
 	if(main === "ammunition" && category.indexOf("weapon") !== -1) {
 		main = "weapon";
 	}
@@ -474,7 +494,10 @@ function magicItem(m, equipmentByName) {
 		inner = (match[2] || "").trim(),
 		base = null;
 	category.push(kind);
-	if(kind === "weapon" || kind === "armor") {
+	if(kind === "weapon" && /^any ammunition$/i.test(inner)) {
+		// "Weapon (any ammunition)": a piece of ammunition, used up like any other
+		category = ["ammunition"];
+	} else if(kind === "weapon" || kind === "armor") {
 		var any = /^any (\w+)/i.exec(inner);
 		if(any && GROUPS[any[1].toLowerCase()]) {
 			category.push(any[1].toLowerCase());
@@ -509,11 +532,7 @@ function magicItem(m, equipmentByName) {
 	fields.category = category.join(", ");
 	var text = desc.join("\n");
 	charges(text, fields);
-	var bonus = /(?:have|gain) a \+(\d) bonus to attack and damage rolls made with this (?:magic )?weapon/i.exec(text) ||
-		/(?:have|gain) a \+(\d) bonus to AC/i.exec(text);
-	if(bonus) {
-		fields.bonus = "+" + bonus[1];
-	}
+	bonuses(text, fields);
 	sentences(text, fields);
 	if(/\*\*\*Curse\.\*\*\*/.test(text)) {
 		// players see the curse once the DM lifts the lock
@@ -534,6 +553,47 @@ function magicItem(m, equipmentByName) {
 
 var CLASSES = ["barbarian", "bard", "cleric", "druid", "fighter", "monk", "paladin", "ranger", "rogue", "sorcerer", "warlock", "wizard", "spellcaster"];
 
+var ABILITIES = {strength: "str", dexterity: "dex", constitution: "con", intelligence: "int", wisdom: "wis", charisma: "cha"};
+
+// The bonuses and scores an item gives its wearer, from the fixed sentences of the SRD - only one
+// without a condition of its own: "+2 bonus to AC against ranged attacks", "if you are wearing no
+// armor" and a bonus for "any creature" in a light stay in the text
+function bonuses(text, fields) {
+	var sentences = text.split(/(?<=\.)\s+/).filter(function(s) { return !/\bany creature\b/i.test(s); }),
+		find = function(re) {
+			var hit = null;
+			sentences.some(function(s) { hit = re.exec(s); return !!hit; });
+			return hit;
+		};
+	var bonus = find(/(?:have|gain) a \+(\d) bonus to attack and damage rolls made with this (?:magic weapon|weapon|piece of magic ammunition)/i) ||
+		find(/magic quarterstaff that grants a \+(\d) bonus to attack and damage rolls made with it/i) ||
+		find(/(?:have|gain) a \+(\d) bonus to AC(?! against)(?![^.]*\bif\b)/i);
+	if(bonus) {
+		fields.bonus = "+" + bonus[1];
+	}
+	var saves = find(/(?:have|gain) a \+(\d) bonus to (?:AC and |Armor Class, )?saving throws/i);
+	if(saves) {
+		fields["saving-throw-bonus"] = "+" + saves[1];
+	}
+	var spell = find(/(?:have|gain) a \+(\d) bonus to (?:[^.]*,(?: and)? )?spell attack rolls/i);
+	if(spell) {
+		fields["spell-attack-bonus"] = "+" + spell[1];
+	}
+	// "Your Strength score is 19", "changes to (a) 21", "increases by 2, to a maximum of 20", "increases by 4
+	// and can exceed 20, but not 30" - not the lasting increase of a manual ("as does your maximum")
+	var set = find(/your (\w+) score (?:is|changes to(?: a)?) (\d+)/i),
+		raise = find(/your (\w+) score increases by (\d+)(?:, to a maximum of (\d+)| and can exceed \d+, but not (\d+))/i),
+		hit = set || raise,
+		ability = hit && ABILITIES[hit[1].toLowerCase()];
+	if(ability) {
+		fields.ability = ability;
+		fields["ability-score"] = set ? set[2] : "+" + raise[2];
+		if(!set) {
+			fields["ability-max"] = raise[3] || raise[4];
+		}
+	}
+}
+
 // Charges and their recovery from the fixed sentences of the SRD
 function charges(text, fields) {
 	var has = /has (\d+) charges/.exec(text);
@@ -546,7 +606,12 @@ function charges(text, fields) {
 		} else if(/regains all expended charges daily at dawn/.test(text)) {
 			fields["recharge-on"] = "dawn";
 		}
-	} else if(/can't be used again until the next dawn/.test(text)) {
+	} else if((text.match(/[^.]*can't be used again until the next dawn/g) || []).length === 1 && !/charge/i.test(text) &&
+		!/\bonce (?:two|three|four|five)\b|\b(?:twice|two|three|four|five) times\b/i.test(text) &&
+		!/\b(?:one of these|that bead|each)\b[^.]*can't be used again until the next dawn/i.test(text)) {
+		// one use until the next dawn: one charge - not an item of several such properties or beads
+		// (each one use), of uses counted ("once three objects have been pulled") or of charges of
+		// its own (the wishes of a Luck Blade)
 		fields.charges = "1";
 		fields["recharge-on"] = "dawn";
 	}
@@ -566,8 +631,8 @@ function sentences(text, fields) {
 	}
 	var hold = once(/can hold up to ([\d,]+) pounds, not exceeding a volume of ([\d,]+) cubic feet/);
 	if(hold) {
-		fields.capacity = hold[1] + " lb";
-		fields["capacity-volume"] = hold[2] + " ft³";
+		fields.capacity = hold[1].replace(/,/g, "") + " lb";
+		fields["capacity-volume"] = hold[2].replace(/,/g, "") + " ft³";
 	}
 	var res = [],
 		re = /you have resistance to (\w+) damage/gi,

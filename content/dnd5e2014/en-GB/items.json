@@ -324,7 +324,7 @@
 				"weight": "6 lb",
 				"price": 10
 			},
-			"text": ""
+			"text": "You have disadvantage when you use a lance to attack a target within 5 feet of you. Also, a lance requires two hands to wield when you aren't mounted."
 		},
 		{
 			"id": "item:longsword",
@@ -572,7 +572,7 @@
 				"weight": "3 lb",
 				"price": 1
 			},
-			"text": ""
+			"text": "A Large or smaller creature hit by a net is <<term restrained>> until it is freed. A net has no effect on creatures that are formless, or creatures that are Huge or larger. A creature can use its action to make a DC 10 Strength check, freeing itself or another creature within its reach on a success. Dealing 5 slashing damage to the net (AC 10) also frees the creature without harming it, ending the effect and destroying the net. When you use an action, bonus action, or reaction to attack with a net, you can make only one attack regardless of the number of attacks you can normally make."
 		},
 		{
 			"id": "item:padded-armor",
@@ -850,7 +850,7 @@
 				"weight": "1 lb",
 				"price": 1
 			},
-			"text": ""
+			"text": "Price and weight are those of a bundle of 20."
 		},
 		{
 			"id": "item:block-of-incense",
@@ -874,7 +874,7 @@
 				"weight": "1 lb",
 				"price": 1
 			},
-			"text": ""
+			"text": "Price and weight are those of a bundle of 50."
 		},
 		{
 			"id": "item:censer",
@@ -898,7 +898,7 @@
 				"weight": "1.5 lb",
 				"price": 1
 			},
-			"text": ""
+			"text": "Price and weight are those of a bundle of 20."
 		},
 		{
 			"id": "item:sling-bullet",
@@ -912,7 +912,7 @@
 				"weight": "1.5 lb",
 				"price": 0.04
 			},
-			"text": ""
+			"text": "Price and weight are those of a bundle of 20."
 		},
 		{
 			"id": "item:amulet",
@@ -2121,7 +2121,7 @@
 				"category": "equipment-pack",
 				"price": 16
 			},
-			"text": ""
+			"text": "Contents:\n\n* Backpack\n* Ball bearings (bag of 1,000)\n* String (10 feet)\n* Bell\n* 5 × Candle\n* Crowbar\n* Hammer\n* 10 × Piton\n* Lantern, hooded\n* 2 × Oil (flask)\n* 5 × Rations (1 day)\n* Tinderbox\n* Waterskin\n* Rope, hempen (50 feet)"
 		},
 		{
 			"id": "item:diplomats-pack",
@@ -2132,7 +2132,7 @@
 				"category": "equipment-pack",
 				"price": 39
 			},
-			"text": ""
+			"text": "Contents:\n\n* Chest\n* 2 × Case, map or scroll\n* Clothes, fine\n* Ink (1 ounce bottle)\n* Ink pen\n* Lamp\n* 2 × Oil (flask)\n* 5 × Paper (one sheet)\n* Perfume (vial)\n* Sealing wax\n* Soap"
 		},
 		{
 			"id": "item:dungeoneers-pack",
@@ -2143,7 +2143,7 @@
 				"category": "equipment-pack",
 				"price": 12
 			},
-			"text": ""
+			"text": "Contents:\n\n* Backpack\n* Crowbar\n* Hammer\n* 10 × Piton\n* 10 × Torch\n* Tinderbox\n* 10 × Rations (1 day)\n* Waterskin\n* Rope, hempen (50 feet)"
 		},
 		{
 			"id": "item:entertainers-pack",
@@ -2154,7 +2154,7 @@
 				"category": "equipment-pack",
 				"price": 40
 			},
-			"text": ""
+			"text": "Contents:\n\n* Backpack\n* Bedroll\n* 2 × Clothes, costume\n* 5 × Candle\n* 5 × Rations (1 day)\n* Waterskin\n* Disguise Kit"
 		},
 		{
 			"id": "item:explorers-pack",
@@ -2165,7 +2165,7 @@
 				"category": "equipment-pack",
 				"price": 10
 			},
-			"text": ""
+			"text": "Contents:\n\n* Backpack\n* Bedroll\n* Mess Kit\n* Tinderbox\n* 10 × Torch\n* 10 × Rations (1 day)\n* Waterskin\n* Rope, hempen (50 feet)"
 		},
 		{
 			"id": "item:priests-pack",
@@ -2176,7 +2176,7 @@
 				"category": "equipment-pack",
 				"price": 19
 			},
-			"text": ""
+			"text": "Contents:\n\n* Backpack\n* Blanket\n* 10 × Candle\n* Tinderbox\n* 2 × Rations (1 day)\n* Waterskin\n* Alms box\n* 2 × Block of incense\n* Censer\n* Vestments"
 		},
 		{
 			"id": "item:scholars-pack",
@@ -2187,7 +2187,7 @@
 				"category": "equipment-pack",
 				"price": 40
 			},
-			"text": ""
+			"text": "Contents:\n\n* Backpack\n* Book\n* Ink (1 ounce bottle)\n* Ink pen\n* 10 × Parchment (one sheet)\n* Little bag of sand\n* Small knife"
 		},
 		{
 			"id": "item:alchemists-supplies",
@@ -3530,11 +3530,12 @@
 			"title": "Ammunition, +1",
 			"type": "Item",
 			"tags": [
-				"Equipment"
+				"Consumable"
 			],
 			"fields": {
 				"rarity": "uncommon",
-				"category": "weapon"
+				"category": "ammunition",
+				"bonus": "+1"
 			},
 			"text": "You have a +1 bonus to attack and damage rolls made with this piece of magic ammunition. Once it hits a target, the ammunition is no longer magical."
 		},
@@ -3543,11 +3544,12 @@
 			"title": "Ammunition, +2",
 			"type": "Item",
 			"tags": [
-				"Equipment"
+				"Consumable"
 			],
 			"fields": {
 				"rarity": "rare",
-				"category": "weapon"
+				"category": "ammunition",
+				"bonus": "+2"
 			},
 			"text": "You have a +2 bonus to attack and damage rolls made with this piece of magic ammunition. Once it hits a target, the ammunition is no longer magical."
 		},
@@ -3556,11 +3558,12 @@
 			"title": "Ammunition, +3",
 			"type": "Item",
 			"tags": [
-				"Equipment"
+				"Consumable"
 			],
 			"fields": {
 				"rarity": "very-rare",
-				"category": "weapon"
+				"category": "ammunition",
+				"bonus": "+3"
 			},
 			"text": "You have a +3 bonus to attack and damage rolls made with this piece of magic ammunition. Once it hits a target, the ammunition is no longer magical."
 		},
@@ -3574,7 +3577,9 @@
 			"fields": {
 				"rarity": "rare",
 				"attunement": "yes",
-				"category": "wondrous-item"
+				"category": "wondrous-item",
+				"ability": "con",
+				"ability-score": "19"
 			},
 			"text": "Your Constitution score is 19 while you wear this amulet. It has no effect on you if your Constitution is already 19 or higher"
 		},
@@ -3750,8 +3755,7 @@
 				"ac": "+2",
 				"category": "shield",
 				"weight": "6 lb",
-				"base": "Shield",
-				"bonus": "+2"
+				"base": "Shield"
 			},
 			"text": "You gain a +2 bonus to AC against ranged attacks while you wield this shield. This bonus is in addition to the shield's normal bonus to AC. In addition, whenever an attacker makes a ranged attack against a target within 5 feet of you, you can use your reaction to become the target of the attack instead."
 		},
@@ -3820,9 +3824,7 @@
 			],
 			"fields": {
 				"rarity": "uncommon",
-				"category": "wondrous-item",
-				"charges": "1",
-				"recharge-on": "dawn"
+				"category": "wondrous-item"
 			},
 			"text": "This ordinary bag, made from gray cloth, appears empty. Reaching inside the bag, however, reveals the presence of a small, fuzzy object. The bag weighs 1/2 pound.\n\nYou can use an action to pull the fuzzy object from the bag and throw it up to 20 feet. When the object lands, it transforms into a creature you determine by rolling a d8 and consulting the table that corresponds to the bag's color. The creature vanishes at the next dawn or when it is reduced to 0 Hit Points.\n\nThe creature is friendly to you and your companions, and it acts on Your Turn. You can use a Bonus Action to Command how the creature moves and what action it takes on its next turn, or to give it general orders, such as to Attack your enemies. In the absence of such orders, the creature acts in a fashion appropriate to its Nature.\n\nOnce three fuzzy Objects have been pulled from the bag, the bag can't be used again until the next dawn.\n\nGray Bag:\n\n|!d8 |!Creature |\n|01 |Weasel |\n|02 |Giant Rat |\n|03 |Badger |\n|04 |Boar |\n|05 |Panther |\n|06 |Giant Badger |\n|07 |Dire Wolf |\n|08 |Giant Elk |"
 		},
@@ -3835,9 +3837,7 @@
 			],
 			"fields": {
 				"rarity": "uncommon",
-				"category": "wondrous-item",
-				"charges": "1",
-				"recharge-on": "dawn"
+				"category": "wondrous-item"
 			},
 			"text": "This ordinary bag, made from rust cloth, appears empty. Reaching inside the bag, however, reveals the presence of a small, fuzzy object. The bag weighs 1/2 pound.\n\nYou can use an action to pull the fuzzy object from the bag and throw it up to 20 feet. When the object lands, it transforms into a creature you determine by rolling a d8 and consulting the table that corresponds to the bag's color. The creature vanishes at the next dawn or when it is reduced to 0 Hit Points.\n\nThe creature is friendly to you and your companions, and it acts on Your Turn. You can use a Bonus Action to Command how the creature moves and what action it takes on its next turn, or to give it general orders, such as to Attack your enemies. In the absence of such orders, the creature acts in a fashion appropriate to its Nature.\n\nOnce three fuzzy Objects have been pulled from the bag, the bag can't be used again until the next dawn.\n\nRust Bag:\n\n|!d8 |!Creature |\n|01 |Rat |\n|02 |Owl |\n|03 |Mastiff |\n|04 |Goat |\n|05 |Giant Goat |\n|06 |Giant Boar |\n|07 |Lion |\n|08 |Brown Bear |"
 		},
@@ -3850,9 +3850,7 @@
 			],
 			"fields": {
 				"rarity": "uncommon",
-				"category": "wondrous-item",
-				"charges": "1",
-				"recharge-on": "dawn"
+				"category": "wondrous-item"
 			},
 			"text": "This ordinary bag, made from tan cloth, appears empty. Reaching inside the bag, however, reveals the presence of a small, fuzzy object. The bag weighs 1/2 pound.\n\nYou can use an action to pull the fuzzy object from the bag and throw it up to 20 feet. When the object lands, it transforms into a creature you determine by rolling a d8 and consulting the table that corresponds to the bag's color. The creature vanishes at the next dawn or when it is reduced to 0 Hit Points.\n\nThe creature is friendly to you and your companions, and it acts on Your Turn. You can use a Bonus Action to Command how the creature moves and what action it takes on its next turn, or to give it general orders, such as to Attack your enemies. In the absence of such orders, the creature acts in a fashion appropriate to its Nature.\n\nOnce three fuzzy Objects have been pulled from the bag, the bag can't be used again until the next dawn.\n\nTan Bag:\n\n|!d8 |!Creature |\n|01 |Jackal |\n|02 |Ape |\n|03 |Baboon |\n|04 |Axe Beak |\n|05 |Black Bear |\n|06 |Giant Weasel |\n|07 |Giant Hyena |\n|08 |Tiger |"
 		},
@@ -3879,7 +3877,10 @@
 			"fields": {
 				"rarity": "rare",
 				"attunement": "yes",
-				"category": "wondrous-item"
+				"category": "wondrous-item",
+				"ability": "con",
+				"ability-score": "+2",
+				"ability-max": "20"
 			},
 			"text": "While wearing this belt, you gain the following benefits:\n\nYour Constitution score increases by 2, to a maximum of 20.\n\nYou have advantage on Charisma (Persuasion) checks made to interact with Dwarves.\n\nIn addition, while attuned to the belt, you have a 50 percent chance each day at dawn of growing a full beard if you're capable of growing one, or a visibly thicker beard if you already have one.\n\nIf you aren't a dwarf, you gain the following additional benefits while wearing the belt:\n\nYou have advantage on Saving Throws against poison, and you have Resistance against poison damage.\n\nYou can speak, read, and write Dwarvish."
 		},
@@ -3893,7 +3894,9 @@
 			"fields": {
 				"rarity": "rare",
 				"attunement": "yes",
-				"category": "wondrous-item"
+				"category": "wondrous-item",
+				"ability": "str",
+				"ability-score": "21"
 			},
 			"text": "While wearing this belt, your Strength score changes to a 21. If your Strength is already equal to or greater than the belt's score, the item has no Effect on you."
 		},
@@ -3907,7 +3910,9 @@
 			"fields": {
 				"rarity": "very-rare",
 				"attunement": "yes",
-				"category": "wondrous-item"
+				"category": "wondrous-item",
+				"ability": "str",
+				"ability-score": "23"
 			},
 			"text": "While wearing this belt, your Strength score changes to a 23. If your Strength is already equal to or greater than the belt's score, the item has no Effect on you."
 		},
@@ -3921,7 +3926,9 @@
 			"fields": {
 				"rarity": "very-rare",
 				"attunement": "yes",
-				"category": "wondrous-item"
+				"category": "wondrous-item",
+				"ability": "str",
+				"ability-score": "23"
 			},
 			"text": "While wearing this belt, your Strength score changes to 23. If your Strength is already equal to or greater than the belt's score, the item has no Effect on you."
 		},
@@ -3935,7 +3942,9 @@
 			"fields": {
 				"rarity": "very-rare",
 				"attunement": "yes",
-				"category": "wondrous-item"
+				"category": "wondrous-item",
+				"ability": "str",
+				"ability-score": "25"
 			},
 			"text": "While wearing this belt, your Strength score changes to 25. If your Strength is already equal to or greater than the belt's score, the item has no Effect on you."
 		},
@@ -3949,7 +3958,9 @@
 			"fields": {
 				"rarity": "legendary",
 				"attunement": "yes",
-				"category": "wondrous-item"
+				"category": "wondrous-item",
+				"ability": "str",
+				"ability-score": "27"
 			},
 			"text": "While wearing this belt, your Strength score changes to 27. If your Strength is already equal to or greater than the belt's score, the item has no Effect on you."
 		},
@@ -3963,7 +3974,9 @@
 			"fields": {
 				"rarity": "legendary",
 				"attunement": "yes",
-				"category": "wondrous-item"
+				"category": "wondrous-item",
+				"ability": "str",
+				"ability-score": "29"
 			},
 			"text": "While wearing this belt, your Strength score changes to 29. If your Strength is already equal to or greater than the belt's score, the item has no Effect on you."
 		},
@@ -4093,8 +4106,7 @@
 			"fields": {
 				"rarity": "rare",
 				"attunement": "yes",
-				"category": "wondrous-item",
-				"bonus": "+2"
+				"category": "wondrous-item"
 			},
 			"text": "While wearing these bracers, you gain a +2 bonus to AC if you are wearing no armor and using no shield."
 		},
@@ -4321,7 +4333,8 @@
 				"rarity": "uncommon",
 				"attunement": "yes",
 				"category": "wondrous-item",
-				"bonus": "+1"
+				"bonus": "+1",
+				"saving-throw-bonus": "+1"
 			},
 			"text": "You gain a +1 bonus to AC and saving throws while you wear this cloak."
 		},
@@ -5295,7 +5308,9 @@
 			"fields": {
 				"rarity": "uncommon",
 				"attunement": "yes",
-				"category": "wondrous-item"
+				"category": "wondrous-item",
+				"ability": "str",
+				"ability-score": "19"
 			},
 			"text": "Your Strength score is 19 while you wear these gauntlets. They have no effect on you if your Strength is already 19 or higher."
 		},
@@ -5421,7 +5436,10 @@
 				"charges": "5",
 				"recharge": "1d4 + 1",
 				"recharge-on": "dawn",
-				"bonus": "+1"
+				"bonus": "+1",
+				"ability": "str",
+				"ability-score": "+4",
+				"ability-max": "30"
 			},
 			"text": "You gain a +1 bonus to attack and damage rolls made with this magic weapon.\n\nGiant's Bane (Requires Attunement). You must be wearing a belt of giant strength (any variety) and gauntlets of ogre power to attune to this weapon. The attunement ends if you take off either of those items. While you are attuned to this weapon and holding it, your Strength score increases by 4 and can exceed 20, but not 30. When you roll a 20 on an attack roll made with this weapon against a giant, the giant must succeed on a DC 17 Constitution saving throw or die.\n\nThe hammer also has 5 charges. While attuned to it, you can expend 1 charge and make a ranged weapon attack with the hammer, hurling it as if it had the thrown property with a normal range of 20 feet and a long range of 60 feet. If the attack hits, the hammer unleashes a thunderclap audible out to 300 feet. The target and every creature within 30 feet of it must succeed on a DC 17 Constitution saving throw or be <<term stunned>> until the end of your next turn. The hammer regains 1d4 + 1 expended charges daily at dawn."
 		},
@@ -5463,7 +5481,9 @@
 			"fields": {
 				"rarity": "uncommon",
 				"attunement": "yes",
-				"category": "wondrous-item"
+				"category": "wondrous-item",
+				"ability": "int",
+				"ability-score": "19"
 			},
 			"text": "Your Intelligence score is 19 while you wear this headband. It has no effect on you if your Intelligence is already 19 or higher."
 		},
@@ -5688,7 +5708,10 @@
 			"fields": {
 				"rarity": "very-rare",
 				"attunement": "yes",
-				"category": "wondrous-item"
+				"category": "wondrous-item",
+				"ability": "dex",
+				"ability-score": "+2",
+				"ability-max": "20"
 			},
 			"text": "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n\nWhen you use an action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. Thereafter, another creature must use an action to grasp or net the stone to separate it from you, either by making a successful attack roll against AC 24 or a successful DC 24 Dexterity (Acrobatics) check. You can use an action to seize and stow the stone, ending its effect.\n\nA stone has AC 24, 10 hit points, and resistance to all damage. It is considered to be an object that is being worn while it orbits your head.\n\n<<effect \"Agility\">> Your Dexterity score increases by 2, to a maximum of 20, while this deep red sphere orbits your head."
 		},
@@ -5716,7 +5739,10 @@
 			"fields": {
 				"rarity": "very-rare",
 				"attunement": "yes",
-				"category": "wondrous-item"
+				"category": "wondrous-item",
+				"ability": "con",
+				"ability-score": "+2",
+				"ability-max": "20"
 			},
 			"text": "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n\nWhen you use an action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. Thereafter, another creature must use an action to grasp or net the stone to separate it from you, either by making a successful attack roll against AC 24 or a successful DC 24 Dexterity (Acrobatics) check. You can use an action to seize and stow the stone, ending its effect.\n\nA stone has AC 24, 10 hit points, and resistance to all damage. It is considered to be an object that is being worn while it orbits your head.\n\n<<effect \"Fortitude\">> Your Constitution score increases by 2, to a maximum of 20, while this pink rhomboid orbits your head."
 		},
@@ -5744,7 +5770,10 @@
 			"fields": {
 				"rarity": "very-rare",
 				"attunement": "yes",
-				"category": "wondrous-item"
+				"category": "wondrous-item",
+				"ability": "wis",
+				"ability-score": "+2",
+				"ability-max": "20"
 			},
 			"text": "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n\nWhen you use an action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. Thereafter, another creature must use an action to grasp or net the stone to separate it from you, either by making a successful attack roll against AC 24 or a successful DC 24 Dexterity (Acrobatics) check. You can use an action to seize and stow the stone, ending its effect.\n\nA stone has AC 24, 10 hit points, and resistance to all damage. It is considered to be an object that is being worn while it orbits your head.\n\n<<effect \"Insight\">> Your Wisdom score increases by 2, to a maximum of 20, while this incandescent blue sphere orbits your head."
 		},
@@ -5758,7 +5787,10 @@
 			"fields": {
 				"rarity": "very-rare",
 				"attunement": "yes",
-				"category": "wondrous-item"
+				"category": "wondrous-item",
+				"ability": "int",
+				"ability-score": "+2",
+				"ability-max": "20"
 			},
 			"text": "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n\nWhen you use an action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. Thereafter, another creature must use an action to grasp or net the stone to separate it from you, either by making a successful attack roll against AC 24 or a successful DC 24 Dexterity (Acrobatics) check. You can use an action to seize and stow the stone, ending its effect.\n\nA stone has AC 24, 10 hit points, and resistance to all damage. It is considered to be an object that is being worn while it orbits your head.\n\n<<effect \"Intellect\">> Your Intelligence score increases by 2, to a maximum of 20, while this marbled scarlet and blue sphere orbits your head."
 		},
@@ -5772,7 +5804,10 @@
 			"fields": {
 				"rarity": "very-rare",
 				"attunement": "yes",
-				"category": "wondrous-item"
+				"category": "wondrous-item",
+				"ability": "cha",
+				"ability-score": "+2",
+				"ability-max": "20"
 			},
 			"text": "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n\nWhen you use an action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. Thereafter, another creature must use an action to grasp or net the stone to separate it from you, either by making a successful attack roll against AC 24 or a successful DC 24 Dexterity (Acrobatics) check. You can use an action to seize and stow the stone, ending its effect.\n\nA stone has AC 24, 10 hit points, and resistance to all damage. It is considered to be an object that is being worn while it orbits your head.\n\n<<effect \"Leadership\">> Your Charisma score increases by 2, to a maximum of 20, while this marbled pink and green sphere orbits your head."
 		},
@@ -5843,7 +5878,10 @@
 			"fields": {
 				"rarity": "very-rare",
 				"attunement": "yes",
-				"category": "wondrous-item"
+				"category": "wondrous-item",
+				"ability": "str",
+				"ability-score": "+2",
+				"ability-max": "20"
 			},
 			"text": "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n\nWhen you use an action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. Thereafter, another creature must use an action to grasp or net the stone to separate it from you, either by making a successful attack roll against AC 24 or a successful DC 24 Dexterity (Acrobatics) check. You can use an action to seize and stow the stone, ending its effect.\n\nA stone has AC 24, 10 hit points, and resistance to all damage. It is considered to be an object that is being worn while it orbits your head.\n\n<<effect \"Strength\">> Your Strength score increases by 2, to a maximum of 20, while this pale blue rhomboid orbits your head."
 		},
@@ -5934,9 +5972,8 @@
 				"rarity": "legendary",
 				"attunement": "yes",
 				"category": "weapon, sword",
-				"charges": "1",
-				"recharge-on": "dawn",
 				"bonus": "+1",
+				"saving-throw-bonus": "+1",
 				"spells": "Wish"
 			},
 			"text": "You gain a +1 bonus to attack and damage rolls made with this magic weapon. While the sword is on your person, you also gain a +1 bonus to saving throws.\n\n<<effect \"Luck\">> If the sword is on your person, you can call on its luck (no action required) to reroll one attack roll, ability check, or saving throw you dislike. You must use the second roll. This property can't be used again until the next dawn.\n\n<<effect \"Wish\">> The sword has 1d4 - 1 charges. While holding it, you can use an action to expend 1 charge and cast the wish spell from it. This property can't be used again until the next dawn. The sword loses this property if it has no charges."
@@ -6196,9 +6233,7 @@
 			"fields": {
 				"rarity": "rare",
 				"attunement": "yes",
-				"category": "wondrous-item",
-				"charges": "1",
-				"recharge-on": "dawn"
+				"category": "wondrous-item"
 			},
 			"text": "This necklace has 1d4 + 2 magic beads made from aquamarine, black pearl, or topaz. It also has many nonmagical beads made from stones such as amber, bloodstone, citrine, coral, jade, pearl, or quartz. If a magic bead is removed from the necklace, that bead loses its magic.\n\nSix types of magic beads exist. The GM decides the type of each bead on the necklace or determines it randomly. A necklace can have more than one bead of the same type. To use one, you must be wearing the necklace. Each bead contains a spell that you can cast from it as a bonus action (using your spell save DC if a save is necessary). Once a magic bead's spell is cast, that bead can't be used again until the next dawn.\n\n|!d20 |!Bead of... |!Spell |\n|1-6 |Blessing |Bless |\n|7-12 |Curing |Cure wounds (2nd level) or lesser restoration |\n|13-16 |Favor |Greater restoration |\n|17-18 |Smiting |Branding smite |\n|19 |Summons |Planar ally |\n|20 |Wind walking |Wind walk |"
 		},
@@ -6499,7 +6534,9 @@
 			],
 			"fields": {
 				"rarity": "uncommon",
-				"category": "potion"
+				"category": "potion",
+				"ability": "str",
+				"ability-score": "21"
 			},
 			"text": "When you drink this potion, your Strength score changes to 21 for 1 hour. The potion has no effect on you if your Strength is equal to or greater than that score.\n\nThis potion's transparent liquid has floating in it a sliver of fingernail from a hill giant."
 		},
@@ -6512,7 +6549,9 @@
 			],
 			"fields": {
 				"rarity": "rare",
-				"category": "potion"
+				"category": "potion",
+				"ability": "str",
+				"ability-score": "23"
 			},
 			"text": "When you drink this potion, your Strength score changes to 23 for 1 hour. The potion has no effect on you if your Strength is equal to or greater than that score.\n\nThis potion's transparent liquid has floating in it a sliver of fingernail from a frost giant."
 		},
@@ -6525,7 +6564,9 @@
 			],
 			"fields": {
 				"rarity": "rare",
-				"category": "potion"
+				"category": "potion",
+				"ability": "str",
+				"ability-score": "23"
 			},
 			"text": "When you drink this potion, your Strength score changes to 23 for 1 hour. The potion has no effect on you if your Strength is equal to or greater than that score.\n\nThis potion's transparent liquid has floating in it a sliver of fingernail from a stone giant."
 		},
@@ -6538,7 +6579,9 @@
 			],
 			"fields": {
 				"rarity": "rare",
-				"category": "potion"
+				"category": "potion",
+				"ability": "str",
+				"ability-score": "25"
 			},
 			"text": "When you drink this potion, your Strength score changes to 25 for 1 hour. The potion has no effect on you if your Strength is equal to or greater than that score.\n\nThis potion's transparent liquid has floating in it a sliver of fingernail from a fire giant."
 		},
@@ -6551,7 +6594,9 @@
 			],
 			"fields": {
 				"rarity": "very-rare",
-				"category": "potion"
+				"category": "potion",
+				"ability": "str",
+				"ability-score": "27"
 			},
 			"text": "When you drink this potion, your Strength score changes to 27 for 1 hour. The potion has no effect on you if your Strength is equal to or greater than that score.\n\nThis potion's transparent liquid has floating in it a sliver of fingernail from a cloud giant."
 		},
@@ -6564,7 +6609,9 @@
 			],
 			"fields": {
 				"rarity": "legendary",
-				"category": "potion"
+				"category": "potion",
+				"ability": "str",
+				"ability-score": "29"
 			},
 			"text": "When you drink this potion, your Strength score changes to 29 for 1 hour. The potion has no effect on you if your Strength is equal to or greater than that score.\n\nThis potion's transparent liquid has floating in it a sliver of fingernail from a storm giant."
 		},
@@ -7062,7 +7109,8 @@
 				"rarity": "rare",
 				"attunement": "yes",
 				"category": "ring",
-				"bonus": "+1"
+				"bonus": "+1",
+				"saving-throw-bonus": "+1"
 			},
 			"text": "You gain a +1 bonus to AC and saving throws while wearing this ring."
 		},
@@ -7421,6 +7469,7 @@
 				"rarity": "very-rare",
 				"attunement": "yes",
 				"category": "wondrous-item",
+				"saving-throw-bonus": "+1",
 				"spells": "[[Magic Missile]]"
 			},
 			"text": "This black or dark blue robe is embroidered with small white or silver stars. You gain a +1 bonus to saving throws while you wear it.\n\nSix stars, located on the robe's upper front portion, are particularly large. While wearing this robe, you can use an action to pull off one of the stars and use it to cast magic missile as a 5th-level spell. Daily at dusk, 1d6 removed stars reappear on the robe.\n\nWhile you wear the robe, you can use an action to enter the Astral Plane along with everything you are wearing and carrying. You remain there until you use an action to return to the plane you were on. You reappear in the last space you occupied, or if that space is occupied, the nearest unoccupied space."
@@ -7479,7 +7528,6 @@
 				"category": "rod",
 				"charges": "1",
 				"recharge-on": "dawn",
-				"bonus": "+1",
 				"light-bright": "60 ft",
 				"light-dim": "60 ft"
 			},
@@ -7495,9 +7543,7 @@
 			"fields": {
 				"rarity": "legendary",
 				"attunement": "yes",
-				"category": "rod",
-				"charges": "1",
-				"recharge-on": "dawn"
+				"category": "rod"
 			},
 			"text": "This rod has a flanged head, and it functions as a magic mace that grants a +3 bonus to attack and damage rolls made with it. The rod has properties associated with six different buttons that are set in a row along the haft. It has three other properties as well, detailed below.\n\n<<effect \"Six Buttons\">> You can press one of the rod's six buttons as a bonus action. A button's effect lasts until you push a different button or until you push the same button again, which causes the rod to revert to its normal form.\n\nIf you press ''button 1'', the rod becomes a flame tongue, as a fiery blade sprouts from the end opposite the rod's flanged head.\n\nIf you press ''button 2'', the rod's flanged head folds down and two crescent-shaped blades spring out, transforming the rod into a magic battleaxe that grants a +3 bonus to attack and damage rolls made with it.\n\nIf you press ''button 3'', the rod's flanged head folds down, a spear point springs from the rod's tip, and the rod's handle lengthens into a 6-foot haft, transforming the rod into a magic spear that grants a +3 bonus to attack and damage rolls made with it.\n\nIf you press ''button 4'', the rod transforms into a climbing pole up to 50 feet long, as you specify. In surfaces as hard as granite, a spike at the bottom and three hooks at the top anchor the pole. Horizontal bars 3 inches long fold out from the sides, 1 foot apart, forming a ladder. The pole can bear up to 4,000 pounds. More weight or lack of solid anchoring causes the rod to revert to its normal form.\n\nIf you press ''button 5'', the rod transforms into a handheld battering ram and grants its user a +10 bonus to Strength checks made to break through doors, barricades, and other barriers.\n\nIf you press ''button 6'', the rod assumes or remains in its normal form and indicates magnetic north. (Nothing happens if this function of the rod is used in a location that has no magnetic north.) The rod also gives you knowledge of your approximate depth beneath the ground or your height above it.\n\n<<effect \"Drain Life\">> When you hit a creature with a melee attack using the rod, you can force the target to make a DC 17 Constitution saving throw. On a failure, the target takes an extra 4d6 necrotic damage, and you regain a number of hit points equal to half that necrotic damage. This property can't be used again until the next dawn.\n\n<<effect \"Paralyze\">> When you hit a creature with a melee attack using the rod, you can force the target to make a DC 17 Strength saving throw. On a failure, the target is <<term paralyzed>> for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on a success. This property can't be used again until the next dawn.\n\n<<effect \"Terrify\">> While holding the rod, you can use an action to force each creature you can see within 30 feet of you to make a DC 17 Wisdom saving throw. On a failure, a target is <<term frightened>> of you for 1 minute. A frightened target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. This property can't be used again until the next dawn."
 		},
@@ -7880,6 +7926,9 @@
 				"charges": "20",
 				"recharge": "2d8 + 4",
 				"recharge-on": "dawn",
+				"bonus": "+2",
+				"saving-throw-bonus": "+2",
+				"spell-attack-bonus": "+2",
 				"spells": "[[Cone of Cold]] [[Globe of Invulnerability]] [[Hold Monster]] Levitate [[Magic Missile]] [[Ray of Enfeeblement]] [[Wall of Force]]"
 			},
 			"text": "This staff can be wielded as a magic quarterstaff that grants a +2 bonus to attack and damage rolls made with it. While holding it, you gain a +2 bonus to Armor Class, saving throws, and spell attack rolls.\n\nThe staff has 20 charges for the following properties. The staff regains 2d8 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff retains its +2 bonus to attack and damage rolls but loses all other properties. On a 20, the staff regains 1d8 + 2 charges.\n\n<<effect \"Power Strike\">> When you hit with a melee attack using the staff, you can expend 1 charge to deal an extra 1d6 force damage to the target.\n\n<<effect \"Spells\">> While holding this staff, you can use an action to expend 1 or more of its charges to cast one of the following spells from it, using your spell save DC and spell attack bonus: cone of cold (5 charges), fireball (5th-level version, 5 charges), globe of invulnerability (6 charges), hold monster (5 charges), levitate (2 charges), lightning bolt (5th-level version, 5 charges), magic missile (1 charge), ray of enfeeblement (1 charge), or wall of force (5 charges).\n\n<<effect \"Retributive Strike\">> You can use an action to break the staff over your knee or against a solid surface, performing a retributive strike. The staff is destroyed and releases its remaining magic in an explosion that expands to fill a 30-foot-radius sphere centered on it.\n\nYou have a 50 percent chance to instantly travel to a random plane of existence, avoiding the explosion. If you fail to avoid the effect, you take force damage equal to 16 × the number of charges in the staff. Every other creature in the area must make a DC 17 Dexterity saving throw. On a failed save, a creature takes an amount of damage based on how far away it is from the point of origin, as shown in the following table. On a successful save, a creature takes half as much damage.\n\n|!Distance from Origin |!Damage |\n|10 ft. away or closer |8 × the number of charges in the staff |\n|11 to 20 ft. away |6 × the number of charges in the staff |\n|21 to 30 ft. away |4 × the number of charges in the staff |"
@@ -7897,7 +7946,8 @@
 				"category": "staff",
 				"charges": "10",
 				"recharge": "1d6 + 4",
-				"recharge-on": "dawn"
+				"recharge-on": "dawn",
+				"bonus": "+3"
 			},
 			"text": "This staff can be wielded as a magic quarterstaff that grants a +3 bonus to attack and damage rolls made with it.\n\nThe staff has 10 charges. When you hit with a melee attack using it, you can expend up to 3 of its charges. For each charge you expend, the target takes an extra 1d6 force damage. The staff regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff becomes a nonmagical quarterstaff."
 		},
@@ -7933,6 +7983,8 @@
 				"charges": "50",
 				"recharge": "4d6 + 2",
 				"recharge-on": "dawn",
+				"bonus": "+2",
+				"spell-attack-bonus": "+2",
 				"spells": "[[Conjure Elemental]] [[Dispel Magic]] [[Flaming Sphere]] [[Ice Storm]] Invisibility Knock Passwall [[Plane Shift]] Telekinesis [[Wall of Fire]] Web"
 			},
 			"text": "This staff can be wielded as a magic quarterstaff that grants a +2 bonus to attack and damage rolls made with it. While you hold it, you gain a +2 bonus to spell attack rolls.\n\nThe staff has 50 charges for the following properties. It regains 4d6 + 2 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 20, the staff regains 1d12 + 1 charges.\n\n<<effect \"Spell Absorption\">> While holding the staff, you have advantage on saving throws against spells. In addition, you can use your reaction when another creature casts a spell that targets only you. If you do, the staff absorbs the magic of the spell, canceling its effect and gaining a number of charges equal to the absorbed spell's level. However, if doing so brings the staff's total number of charges above 50, the staff explodes as if you activated its retributive strike (see below).\n\n<<effect \"Spells\">> While holding the staff, you can use an action to expend some of its charges to cast one of the following spells from it, using your spell save DC and spellcasting ability: conjure elemental (7 charges), dispel magic (3 charges), fireball (7th-level version, 7 charges), flaming sphere (2 charges), ice storm (4 charges), invisibility (2 charges), knock (2 charges), lightning bolt (7th-level version, 7 charges), passwall (5 charges), plane shift (7 charges), telekinesis (5 charges), wall of fire (4 charges), or web (2 charges).\n\nYou can also use an action to cast one of the following spells from the staff without using any charges: arcane lock, detect magic, enlarge/reduce, light, mage hand, or protection from evil and good.\n\n<<effect \"Retributive Strike\">> You can use an action to break the staff over your knee or against a solid surface, performing a retributive strike. The staff is destroyed and releases its remaining magic in an explosion that expands to fill a 30-foot-radius sphere centered on it.\n\nYou have a 50 percent chance to instantly travel to a random plane of existence, avoiding the explosion. If you fail to avoid the effect, you take force damage equal to 16 × the number of charges in the staff. Every other creature in the area must make a DC 17 Dexterity saving throw. On a failed save, a creature takes an amount of damage based on how far away it is from the point of origin, as shown in the following table. On a successful save, a creature takes half as much damage.\n\n|!Distance from Origin |!Damage |\n|10 ft. away or closer |8 × the number of charges in the staff |\n|11 to 20 ft. away |6 × the number of charges in the staff |\n|21 to 30 ft. away |4 × the number of charges in the staff |"
@@ -7966,6 +8018,8 @@
 				"charges": "10",
 				"recharge": "1d6 + 4",
 				"recharge-on": "dawn",
+				"bonus": "+2",
+				"spell-attack-bonus": "+2",
 				"spells": "[[Pass Without Trace]] [[Animal Friendship]] Awaken Barkskin [[Locate Animals or Plants]] [[Speak with Animals]] [[Speak with Plants]] [[Wall of Thorns]]"
 			},
 			"text": "This staff can be wielded as a magic quarterstaff that grants a +2 bonus to attack and damage rolls made with it. While holding it, you have a +2 bonus to spell attack rolls.\n\nThe staff has 10 charges for the following properties. It regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff loses its properties and becomes a nonmagical quarterstaff.\n\n<<effect \"Spells\">> You can use an action to expend 1 or more of the staff's charges to cast one of the following spells from it, using your spell save DC: animal friendship (1 charge), awaken (5 charges), barkskin (2 charges), locate animals or plants (2 charges), speak with animals (1 charge), speak with plants (3 charges), or wall of thorns (6 charges).\n\nYou can also use an action to cast the pass without trace spell from the staff without using any charges.\n\n<<effect \"Tree Form\">> You can use an action to plant one end of the staff in fertile earth and expend 1 charge to transform the staff into a healthy tree. The tree is 60 feet tall and has a 5-foot-diameter trunk, and its branches at the top spread out in a 20-foot radius.\n\nThe tree appears ordinary but radiates a faint aura of transmutation magic if targeted by detect magic. While touching the tree and using another action to speak its command word, you return the staff to its normal form. Any creature in the tree falls when it reverts to a staff."
@@ -7981,8 +8035,7 @@
 				"rarity": "very-rare",
 				"attunement": "yes",
 				"category": "staff",
-				"charges": "1",
-				"recharge-on": "dawn"
+				"bonus": "+2"
 			},
 			"text": "This staff can be wielded as a magic quarterstaff that grants a +2 bonus to attack and damage rolls made with it. It also has the following additional properties. When one of these properties is used, it can't be used again until the next dawn.\n\n<<effect \"Lightning\">> When you hit with a melee attack using the staff, you can cause the target to take an extra 2d6 lightning damage.\n\n<<effect \"Thunder\">> When you hit with a melee attack using the staff, you can cause the staff to emit a crack of thunder, audible out to 300 feet. The target you hit must succeed on a DC 17 Constitution saving throw or become <<term stunned>> until the end of your next turn.\n\n<<effect \"Lightning Strike\">> You can use an action to cause a bolt of lightning to leap from the staff's tip in a line that is 5 feet wide and 120 feet long. Each creature in that line must make a DC 17 Dexterity saving throw, taking 9d6 lightning damage on a failed save, or half as much damage on a successful one.\n\n<<effect \"Thunderclap\">> You can use an action to cause the staff to issue a deafening thunderclap, audible out to 600 feet. Each creature within 60 feet of you (not including you) must make a DC 17 Constitution saving throw. On a failed save, a creature takes 2d6 thunder damage and becomes <<term deafened>> for 1 minute. On a successful save, a creature takes half damage and isn't deafened.\n\n<<effect \"Thunder and Lightning\">> You can use an action to use the Lightning Strike and Thunderclap properties at the same time. Doing so doesn't expend the daily use of those properties, only the use of this one."
 		},
@@ -8105,7 +8158,8 @@
 				"rarity": "legendary",
 				"attunement": "yes",
 				"category": "wondrous-item",
-				"charges": "7"
+				"charges": "7",
+				"spell-attack-bonus": "+2"
 			},
 			"text": "This talisman is a mighty symbol of goodness. A creature that is neither good nor evil in alignment takes 6d6 radiant damage upon touching the talisman. An evil creature takes 8d6 radiant damage upon touching the talisman. Either sort of creature takes the damage again each time it ends its turn holding or carrying the talisman.\n\nIf you are a good cleric or paladin, you can use the talisman as a holy symbol, and you gain a +2 bonus to spell attack rolls while you wear or hold it.\n\nThe talisman has 7 charges. If you are wearing or holding it, you can use an action to expend 1 charge from it and choose one creature you can see on the ground within 120 feet of you. If the target is of evil alignment, a flaming fissure opens under it. The target must succeed on a DC 20 Dexterity saving throw or fall into the fissure and be destroyed, leaving no remains. The fissure then closes, leaving no trace of its existence. When you expend the last charge, the talisman disperses into motes of golden light and is destroyed."
 		},
@@ -8134,7 +8188,8 @@
 				"rarity": "legendary",
 				"attunement": "yes",
 				"category": "wondrous-item",
-				"charges": "6"
+				"charges": "6",
+				"spell-attack-bonus": "+2"
 			},
 			"text": "This item symbolizes unrepentant evil. A creature that is neither good nor evil in alignment takes 6d6 necrotic damage upon touching the talisman. A good creature takes 8d6 necrotic damage upon touching the talisman. Either sort of creature takes the damage again each time it ends its turn holding or carrying the talisman.\n\nIf you are an evil cleric or paladin, you can use the talisman as a holy symbol, and you gain a +2 bonus to spell attack rolls while you wear or hold it.\n\nThe talisman has 6 charges. If you are wearing or holding it, you can use an action to expend 1 charge from the talisman and choose one creature you can see on the ground within 120 feet of you. If the target is of good alignment, a flaming fissure opens under it. The target must succeed on a DC 20 Dexterity saving throw or fall into the fissure and be destroyed, leaving no remains. The fissure then closes, leaving no trace of its existence. When you expend the last charge, the talisman dissolves into foul-smelling slime and is destroyed."
 		},
@@ -8430,7 +8485,8 @@
 				"rarity": "uncommon",
 				"attunement": "yes",
 				"classes": "Spellcaster",
-				"category": "wand"
+				"category": "wand",
+				"spell-attack-bonus": "+1"
 			},
 			"text": "While holding this wand, you gain a +1 bonus to spell attack rolls. In addition, you ignore half cover when making a spell attack."
 		},
@@ -8445,7 +8501,8 @@
 				"rarity": "rare",
 				"attunement": "yes",
 				"classes": "Spellcaster",
-				"category": "wand"
+				"category": "wand",
+				"spell-attack-bonus": "+2"
 			},
 			"text": "While holding this wand, you gain a +2 bonus to spell attack rolls. In addition, you ignore half cover when making a spell attack."
 		},
@@ -8460,7 +8517,8 @@
 				"rarity": "very-rare",
 				"attunement": "yes",
 				"classes": "Spellcaster",
-				"category": "wand"
+				"category": "wand",
+				"spell-attack-bonus": "+3"
 			},
 			"text": "While holding this wand, you gain a +3 bonus to spell attack rolls. In addition, you ignore half cover when making a spell attack."
 		},

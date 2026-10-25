@@ -153,6 +153,33 @@ test("a creature speaks only its languages, what it understands stays in its tex
 	assert.match(grimlock.text, /blindsight 30 ft\. or 10 ft\. while deafened \(blind beyond this radius\)/);
 });
 
+// What 5e-bits holds beside the text (quantity, contents, special) and the fixed sentences of the SRD
+// for charges, bonuses and scores, read as the SRD means them
+test("items: bundles, packs, special rules, one charge a day, bonuses and scores as the SRD says", function() {
+	var get = function(title) { return entries.filter(function(e) { return e.title === title; })[0]; },
+		f = function(title) { return get(title).fields; };
+	assert.match(get("Arrow").text, /bundle of 20/);
+	assert.equal(f("Arrow").price, 1, "the price of the bundle");
+	assert.match(get("Burglar's Pack").text, /Contents:[^]*\* 5 × Candle/);
+	assert.match(get("Lance").text, /disadvantage when you use a lance/);
+	assert.match(get("Net").text, /<<term restrained>>/);
+	assert.equal(entries.filter(function(e) { return e.title === "Elephant"; })[0].fields["carrying-capacity"], "1320 lb", "no thousands comma");
+	["Gray Bag of Tricks", "Staff of Thunder and Lightning", "Necklace of Prayer Beads", "Rod of Lordly Might", "Luck Blade"].forEach(function(t) {
+		assert.equal(f(t).charges, undefined, t + ": not one use a day");
+	});
+	assert.equal(f("Pearl of Power").charges, "1");
+	assert.equal(f("Arrow-Catching Shield").bonus, undefined, "only against ranged attacks");
+	assert.equal(f("Bracers of Defense").bonus, undefined, "only without armor and shield");
+	assert.equal(f("Rod of Alertness").bonus, undefined, "for every creature in the light");
+	assert.deepEqual([f("Ring of Protection").bonus, f("Ring of Protection")["saving-throw-bonus"]], ["+1", "+1"]);
+	assert.deepEqual([f("Staff of Power").bonus, f("Staff of Power")["saving-throw-bonus"], f("Staff of Power")["spell-attack-bonus"]], ["+2", "+2", "+2"]);
+	assert.equal(f("Wand of the War Mage, +3")["spell-attack-bonus"], "+3");
+	assert.deepEqual([f("Belt of Hill Giant Strength").ability, f("Belt of Hill Giant Strength")["ability-score"]], ["str", "21"]);
+	assert.deepEqual([f("Ioun Stone of Agility")["ability-score"], f("Ioun Stone of Agility")["ability-max"]], ["+2", "20"]);
+	assert.equal(f("Manual of Bodily Health").ability, undefined, "a lasting increase stays in the text");
+	assert.deepEqual([f("Ammunition, +2").category, f("Ammunition, +2").bonus, get("Ammunition, +2").tags.join()], ["ammunition", "+2", "Consumable"]);
+});
+
 test("a cursed item comes locked: players see the curse when the DM lifts the lock", function() {
 	var cursed = entries.filter(function(e) { return e.fields.cursed; });
 	assert.ok(cursed.length > 0);
