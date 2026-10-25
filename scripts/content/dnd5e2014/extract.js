@@ -19,7 +19,9 @@
  *     a creature before a spell before an entry of the glossary ("Druid (Creature)", "Shield
  *     (Spell)", "Darkvision (Glossary)"); every title that gets a suffix is reported;
  *   - the languages of a creature are the relation languages of the core ("[[Common (Language)]]"),
- *     what is no language of the SRD stays in its text;
+ *     what is no language of the SRD and what it only understands ("understands Common but can't
+ *     speak") stay in its text; a sense is its distance, a note on it ("blind beyond this radius")
+ *     stays in the text as the stat block writes it;
  *   - the classes of a spell and of an attunement are titles of entries of the category Class
  *     (the relation classes of the core): "Sorcerer Wizard", "Spellcaster";
  *   - umbrella entries of 5e-bits (with "variants") fall away, their variants stay;
@@ -860,14 +862,26 @@ function creature(x) {
 				senses.push("passive-perception " + x.senses[kind]);
 			}
 		} else {
-			senses.push(kind + " " + feet(x.senses[kind]).replace(/ \(.*\)$/, ""));
+			// The distance in senses; what the stat block says more of it stays in the text, as written
+			// ("60 ft. (blind beyond this radius)", "30 ft. or 10 ft. while deafened ...")
+			var raw = String(x.senses[kind]),
+				distance = /^\d+ ft\.?/.exec(raw)[0];
+			senses.push(kind + " " + feet(distance));
+			if(raw.trim() !== distance.trim()) {
+				rest.push("Senses: " + kind + " " + raw.trim());
+			}
 		}
 	});
 	var languages = [],
-		other = [];
-	(x.languages || "").split(/,\s*/).forEach(function(lang) {
+		other = [],
+		// What a creature understands but does not speak is no language of it: in the text whole, in
+		// its place (a mark while the list is split at its commas)
+		understood = /understands .*? but (?:can't|doesn't) speak(?: it| them)?/i.exec(x.languages || "");
+	(understood ? x.languages.replace(understood[0], "\u0000") : x.languages || "").split(/,\s*/).forEach(function(lang) {
 		var tele = /^telepathy (\d+) ft\.?$/.exec(lang.trim());
-		if(tele) {
+		if(lang.trim() === "\u0000") {
+			other.push(understood[0]);
+		} else if(tele) {
 			senses.push("telepathy " + tele[1] + " ft");
 		} else if(LANGUAGES[lang.trim().toLowerCase()]) {
 			languages.push(LANGUAGES[lang.trim().toLowerCase()]);

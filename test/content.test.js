@@ -137,6 +137,22 @@ test("the languages are entries: a creature names Common (Language); the rarity 
 	assert.equal(entries.filter(function(e) { return e.title === "Potion of Healing"; })[0].fields.rarity, "common");
 });
 
+// Stat blocks of the SRD: what a creature only understands is no language it speaks; a note on a
+// sense stays in the text
+test("a creature speaks only its languages, what it understands stays in its text; a note on a sense too", function() {
+	var get = function(title) { return entries.filter(function(e) { return e.title === title; })[0]; },
+		kraken = get("Kraken"), pegasus = get("Pegasus"), cube = get("Gelatinous Cube"), grimlock = get("Grimlock");
+	assert.equal(kraken.fields.languages, undefined);
+	assert.match(kraken.text, /''Languages:'' understands Abyssal, Celestial, Infernal, and Primordial but can't speak/);
+	assert.match(kraken.fields.senses, /telepathy 120 ft/);
+	assert.equal(pegasus.fields.languages, undefined);
+	assert.equal(get("Invisible Stalker").fields.languages, undefined, "Auran is no language of the SRD; Common only understood");
+	assert.equal(cube.fields.senses, "blindsight 60 ft");
+	assert.match(cube.text, /blindsight 60 ft\. \(blind beyond this radius\)/);
+	assert.equal(grimlock.fields.senses, "blindsight 30 ft");
+	assert.match(grimlock.text, /blindsight 30 ft\. or 10 ft\. while deafened \(blind beyond this radius\)/);
+});
+
 test("a cursed item comes locked: players see the curse when the DM lifts the lock", function() {
 	var cursed = entries.filter(function(e) { return e.fields.cursed; });
 	assert.ok(cursed.length > 0);
