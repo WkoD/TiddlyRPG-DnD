@@ -276,6 +276,23 @@ test("a text renders as written: no link the SRD does not have", function() {
 	assert.match(html, /500 pounds/);
 });
 
+// A row of a table of TiddlyWiki ends in "|": a header row that did not ("|!d10 |!Damage Type |! ")
+// turned the whole table into a paragraph of raw bars
+test("every table of a text is a table: each row ends in a bar, the header row first", function() {
+	var bad = [];
+	entries.forEach(function(e) {
+		(e.text || "").split("\n").forEach(function(line) {
+			if(line.charAt(0) === "|" && !/\|[hfck]?$/.test(line)) {
+				bad.push(e.title + ": " + line);
+			}
+		});
+	});
+	assert.deepEqual(bad, []);
+	var html = wiki.renderText("text/html", "text/vnd.tiddlywiki", entries.filter(function(x) { return x.title === "Wand of Wonder"; })[0].text);
+	assert.match(html, /<table><tbody><tr class="evenRow"><th align="left">d100<\/th><th align="left">Effect<\/th><\/tr>/);
+	assert.doesNotMatch(html, /<p>\|/);
+});
+
 test("the classes: a class with its values and table, a subclass under its SRD name, the lasting choices in the tree", function() {
 	var get = function(title) {
 		return entries.filter(function(e) { return e.title === title; })[0];

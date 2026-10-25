@@ -147,7 +147,7 @@ function wikitext(lines) {
 				if(/^\|[\s:|-]+\|$/.test(trimmed)) {
 					// the separator after the header: the header row becomes |!...|
 					var head = out.pop();
-					out.push(head.replace(/\|([^|]*)/g, function(all, cell) { return cell.trim() || all === "|" ? "|!" + cell.trim() + " " : all; }).replace(/\|! \|!$/, "|"));
+					out.push(head.replace(/\|([^|]*)/g, function(all, cell) { return cell.trim() || all === "|" ? "|!" + cell.trim() + " " : all; }).replace(/\|! $/, "|"));
 					return;
 				}
 				var cells = trimmed.slice(1, -1).split("|").map(function(c) { return inline(c.trim()).replace(/^&#124;/, ""); });
