@@ -50,7 +50,7 @@ with fifth edition, as plugin type `ruleset` for `tiddlyrpg-core`:
     `saves`, `skills`, `senses`, `languages`, `cr` ...;
   - persons and player characters: `height`, `weight`;
   - persons and player characters: `xp` (a whole number, "120.000" or "120,000" read as
-    120000) - the level (`player-level`) and the XP of the next level (`xp-next`) derive from it
+    120000, shown with the thousands separator of the wiki language) - the level (`player-level`) and the XP of the next level (`xp-next`) derive from it
     and are never written; the card of the hub `Player` shows the level ("Level 13"), also of a
     former player character;
   - folks (`Information Folk`): `size`, `speed`, `senses`, `languages`.

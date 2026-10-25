@@ -30,7 +30,7 @@ var DRAGON = {str: "27", dex: "10", con: "25", int: "16", wis: "13", cha: "21", 
 
 test("proficiency bonus and XP from the challenge rating; a written value wins", function() {
 	assert.equal(read(DRAGON, "proficiency"), "+6");
-	assert.equal(read(DRAGON, "xp"), "18000");
+	assert.equal(read(DRAGON, "xp"), "18,000", "as the SRD writes it, p. 287");
 	assert.equal(read({cr: "1/4"}, "xp"), "50");
 	assert.equal(read({cr: "0"}, "xp"), "10");
 	assert.equal(read({cr: "0", xp: "0"}, "xp"), "0", "CR 0: 0 or 10 XP (p. 258)");
@@ -139,7 +139,7 @@ test("the level of a player character by its XP, as the table Character Advancem
 		if(xp > 0) {
 			assert.equal(read({xp: String(xp - 1)}, "player-level"), String(i), (xp - 1) + " XP");
 		}
-		assert.equal(read({xp: String(xp)}, "xp-next"), i + 1 < thresholds.length ? String(thresholds[i + 1]) : "");
+		assert.equal(read({xp: String(xp)}, "xp-next"), i + 1 < thresholds.length ? thresholds[i + 1].toLocaleString("en-GB") : "");
 	});
 	assert.equal(read({xp: "24500"}, "player-level"), "7");
 	assert.equal(read({}, "player-level"), "");
@@ -153,7 +153,7 @@ test("a player character: level, XP and the next level in its block, the level o
 		assert.deepEqual(Array.from(h.filter(wiki, "[[Held]trpgfieldcard[]]")), ["Level 13"]);
 		h.setLanguage(wiki, "de-DE");
 		assert.deepEqual(Array.from(h.filter(wiki, "[[Held]trpgfieldcard[]]")), ["Stufe 13"]);
-		assert.equal(read({xp: "128500"}, "xp-next"), "140000");
+		assert.equal(read({xp: "128500"}, "xp-next"), "140.000", "the thousands separator of the wiki language");
 	} finally {
 		h.setLanguage(wiki, "en-GB");
 		wiki.deleteTiddler("Held");
@@ -163,7 +163,7 @@ test("a player character: level, XP and the next level in its block, the level o
 test("XP as people write them: thousands separated, also on a person", function() {
 	assert.equal(read({xp: "120.000"}, "player-level"), "13");
 	assert.equal(read({xp: "120,000"}, "player-level"), "13");
-	assert.equal(read({xp: "120.000"}, "xp"), "120000");
+	assert.equal(read({xp: "120.000"}, "xp"), "120,000");
 	assert.equal(fields.read(wiki, {xp: "1,5"}, "xp").problem, "Rules/Check/Integer");
 	assert.ok(fields.forTypes(wiki, ["Person"]).fields.indexOf("xp") !== -1, "a person may have XP");
 });
