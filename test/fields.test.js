@@ -143,6 +143,10 @@ test("the level of a player character by its XP, as the table Character Advancem
 	});
 	assert.equal(read({xp: "24500"}, "character-level"), "7");
 	assert.equal(read({}, "character-level"), "");
+	// The XP of a challenge rating are a reward: a person with stat block gets no level from them
+	assert.equal(read({cr: "5"}, "xp"), "1,800");
+	assert.equal(read({cr: "5"}, "character-level"), "");
+	assert.equal(read({cr: "5"}, "xp-next"), "");
 });
 
 test("a player character: level, XP and the next level in its block, the level on its card", function() {
