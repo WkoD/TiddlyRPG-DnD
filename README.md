@@ -60,7 +60,8 @@ with fifth edition, as plugin type `ruleset` for `tiddlyrpg-core`:
     former player character; `class-levels` - the level of each class of a character with
     several or without XP (`class-levels: Fighter 5, Rogue 8`; the form offers a number per class
     it names in `classes`) - without XP the level is their sum, with XP a message tells when they
-    add up to more ("level up due" when less); `character-background`, the background as free text;
+    add up to more ("level up due" when less); the block shows them in the tree of the classes,
+    a row per class beside the folk; `character-background`, the background as free text;
   - classes (`Information Class`: a class, a subclass, a lasting choice): `hit-die`,
     `saving-throws`, `spellcasting-ability`, `damage-type` (of a dragon ancestor);
   - folks (`Information Folk`): `size`, `speed`, `senses`, `ability-bonuses` (`con +2`), and of
