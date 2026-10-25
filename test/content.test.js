@@ -291,6 +291,9 @@ test("the classes: a class with its values and table, a subclass under its SRD n
 	assert.match(get("Monk").text, /\n\|3rd \|\+2 \|[^|]*\|1d4 \|3 \|\+10 ft\. \|/, "SRD p. 26");
 	assert.match(get("Warlock").text, /\|!Spell Slots \|!Slot Level \|!Invocations Known \|\n[^]*\n\|20th \|\+6 \|Eldritch Master \|4 \|15 \|4 \|5th \|8 \|/, "SRD p. 46");
 	assert.doesNotMatch(get("Warlock").text, /Spell Slots per Spell Level/);
+	// Every cell of the last column, where 5e-bits had 3 at level 4 and 4 at level 6
+	assert.deepEqual(get("Warlock").text.split("\n").filter(function(l) { return /^\|\d/.test(l); }).map(function(l) { return l.split("|")[8].trim(); }),
+		["-", "2", "2", "2", "3", "3", "4", "4", "5", "5", "5", "6", "6", "6", "7", "7", "7", "8", "8", "8"], "Invocations Known, SRD p. 46");
 	entries.filter(function(e) { return e.type === "Class" && !e.fields.classes; }).forEach(function(c) {
 		c.text.split("\n").filter(function(l) { return /^\|/.test(l); }).forEach(function(l) {
 			assert.ok(l.split("|").length - 2 <= 10, c.title + ": at most 10 columns, so that the table fits a tiddler: " + l);

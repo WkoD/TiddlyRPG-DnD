@@ -2697,7 +2697,7 @@
 				"cr": "1/4",
 				"saves": "dex",
 				"immunities": "poison, psychic",
-				"condition-immunities": "blinded, charmed, blinded, frightened, paralyzed, petrified, poisoned",
+				"condition-immunities": "blinded, charmed, deafened, frightened, paralyzed, petrified, poisoned",
 				"senses": "blindsight 60 ft"
 			},
 			"text": "''Armor Class:'' 17 (natural)\n\n<<trait \"Antimagic Susceptibility\">> The sword is <<term incapacitated>> while in the area of an antimagic field. If targeted by dispel magic, the sword must succeed on a Constitution saving throw against the caster's spell save DC or fall unconscious for 1 minute.\n\n<<trait \"False Appearance\">> While the sword remains motionless and isn't flying, it is indistinguishable from a normal sword.\n\n<<action \"Longsword\">> Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 5 (1d8 + 1) slashing damage."
@@ -5283,7 +5283,7 @@
 				"cr": "2",
 				"resistances": "acid",
 				"immunities": "lightning, slashing",
-				"condition-immunities": "blinded, charmed, blinded, exhaustion, frightened, prone",
+				"condition-immunities": "blinded, charmed, deafened, exhaustion, frightened, prone",
 				"senses": "blindsight 60 ft"
 			},
 			"text": "<<trait \"Amorphous\">> The jelly can move through a space as narrow as 1 inch wide without squeezing.\n\n<<trait \"Spider Climb\">> The jelly can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.\n\n<<action \"Pseudopod\">> Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 9 (2d6 + 2) bludgeoning damage plus 3 (1d6) acid damage.\n\n<<reaction \"Split\">> When a jelly that is Medium or larger is subjected to lightning or slashing damage, it splits into two new jellies if it has at least 10 hit points. Each new jelly has hit points equal to half the original jelly's, rounded down. New jellies are one size smaller than the original jelly."
@@ -6099,7 +6099,7 @@
 				"cha": "1",
 				"cr": "2",
 				"immunities": "poison, psychic",
-				"condition-immunities": "blinded, charmed, blinded, frightened, paralyzed, petrified, poisoned",
+				"condition-immunities": "blinded, charmed, deafened, frightened, paralyzed, petrified, poisoned",
 				"senses": "blindsight 60 ft"
 			},
 			"text": "<<trait \"Antimagic Susceptibility\">> The rug is <<term incapacitated>> while in the area of an antimagic field. If targeted by dispel magic, the rug must succeed on a Constitution saving throw against the caster's spell save DC or fall unconscious for 1 minute.\n\n<<trait \"Damage Transfer\">> While it is grappling a creature, the rug takes only half the damage dealt to it, and the creature grappled by the rug takes the other half.\n\n<<trait \"False Appearance\">> While the rug remains motionless, it is indistinguishable from a normal rug.\n\n<<action \"Smother\">> Melee Weapon Attack: +5 to hit, reach 5 ft., one Medium or smaller creature. Hit: The creature is <<term grappled>> (escape DC 13). Until this grapple ends, the target is <<term restrained>>, blinded, and at risk of suffocating, and the rug can't smother another target. In addition, at the start of each of the target's turns, the target takes 10 (2d6 + 3) bludgeoning damage."
@@ -6373,7 +6373,7 @@
 				"skills": "stealth",
 				"resistances": "cold, fire",
 				"immunities": "lightning",
-				"condition-immunities": "blinded, blinded, exhaustion",
+				"condition-immunities": "blinded, deafened, exhaustion",
 				"senses": "blindsight 60 ft"
 			},
 			"text": "''Armor Class:'' 15 (natural)\n\n<<trait \"Lightning Absorption\">> Whenever the shambling mound is subjected to lightning damage, it takes no damage and regains a number of hit points equal to the lightning damage dealt.\n\n<<action \"Multiattack\">> The shambling mound makes two slam attacks. If both attacks hit a Medium or smaller target, the target is <<term grappled>> (escape DC 14), and the shambling mound uses its Engulf on it.\n\n<<action \"Slam\">> Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) bludgeoning damage.\n\n<<action \"Engulf\">> The shambling mound engulfs a Medium or smaller creature grappled by it. The engulfed target is <<term blinded>>, restrained, and unable to breathe, and it must succeed on a DC 14 Constitution saving throw at the start of each of the mound's turns or take 13 (2d8 + 4) bludgeoning damage. If the mound moves, the engulfed target moves with it. The mound can have only one creature engulfed at a time."
@@ -6422,7 +6422,7 @@
 				"wis": "3",
 				"cha": "1",
 				"cr": "0",
-				"condition-immunities": "blinded, blinded, frightened",
+				"condition-immunities": "blinded, deafened, frightened",
 				"senses": "blindsight 30 ft"
 			},
 			"text": "<<trait \"False Appearance\">> While the shrieker remains motionless, it is indistinguishable from an ordinary fungus.\n\n<<reaction \"Shriek\">> When bright light or a creature is within 30 feet of the shrieker, it emits a shriek audible within 300 feet of it. The shrieker continues to shriek until the disturbance moves out of range and for 1d4 of the shrieker's turns afterward"
@@ -7421,7 +7421,7 @@
 				"wis": "3",
 				"cha": "1",
 				"cr": "1/4",
-				"condition-immunities": "blinded, blinded, frightened",
+				"condition-immunities": "blinded, deafened, frightened",
 				"senses": "blindsight 30 ft"
 			},
 			"text": "<<trait \"False Appearance\">> While the violet fungus remains motionless, it is indistinguishable from an ordinary fungus.\n\n<<action \"Multiattack\">> The fungus makes 1d4 Rotting Touch attacks.\n\n<<action \"Rotting Touch\">> Melee Weapon Attack: +2 to hit, reach 10 ft., one creature. Hit: 4 (1d8) necrotic damage."

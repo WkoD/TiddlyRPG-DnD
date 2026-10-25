@@ -33,7 +33,8 @@
  *     that names the folks and subfolks it belongs to (folk: Dwarf, folk: [[High Elf]]);
  *   - a folk names its languages without choice in the relation languages of the core, a language
  *     is "<name> (Language)" - several are creatures or folks too (Goblin, Halfling);
- *   - the feat Grappler with the mistakes of the data of 5e-bits mended (FEAT_TEXT).
+ *   - the feat Grappler with the mistakes of the data of 5e-bits mended (FEAT_TEXT), and the cells of
+ *     a class table where it differs from the SRD (CLASS_CELLS).
  */
 "use strict";
 
@@ -75,6 +76,10 @@ var CLASS_COLUMNS = {
 		["pact-slot-level", "Slot Level"], ["invocations_known", "Invocations Known"]],
 	wizard: [["cantrips_known", "Cantrips Known"]]
 };
+
+// Cells where 5e-bits differs from the table of the SRD 5.1 (checked against the text of the SRD in
+// Open5e, document wotc-srd): the warlock knows 2 invocations at level 4 and 3 at level 6
+var CLASS_CELLS = {warlock: {4: {invocations_known: 2}, 6: {invocations_known: 3}}};
 
 function ordinal(n) {
 	return n + ({1: "st", 2: "nd", 3: "rd"}[n] || "th");
@@ -162,8 +167,9 @@ exports.classes = function(data, h, spellTitle) {
 			if(k === "pact-slot-level") {
 				return level === -1 ? 0 : ordinal(level + 1);
 			}
-			var own = l.class_specific || {};
-			return k in own ? own[k] : (l.spellcasting || {})[k];
+			var own = l.class_specific || {},
+				mended = (CLASS_CELLS[c.index] || {})[l.level] || {};
+			return k in mended ? mended[k] : k in own ? own[k] : (l.spellcasting || {})[k];
 		};
 		var cell = function(v, format) {
 			if(v === 0 || v === undefined || v === null) {

@@ -704,6 +704,18 @@ function spell(s) {
 
 /* Creatures */
 
+// Condition immunities where 5e-bits repeats "blinded" in place of "deafened" (checked against the
+// text of the SRD 5.1 in Open5e, document wotc-srd); content.test.js reads every value, a label
+// twice is a problem there
+var CONDITION_IMMUNITIES = {
+	"flying-sword": "blinded, charmed, deafened, frightened, paralyzed, petrified, poisoned",
+	"ochre-jelly": "blinded, charmed, deafened, exhaustion, frightened, prone",
+	"rug-of-smothering": "blinded, charmed, deafened, frightened, paralyzed, petrified, poisoned",
+	"shambling-mound": "blinded, deafened, exhaustion",
+	"shrieker": "blinded, deafened, frightened",
+	"violet-fungus": "blinded, deafened, frightened"
+};
+
 // The languages of the SRD (p. 59) by their names in a stat block: the titles of their entries
 var LANGUAGES = {};
 ["Common", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc", "Abyssal", "Celestial", "Draconic", "Deep Speech",
@@ -834,7 +846,9 @@ function creature(x) {
 	if(vul) { f.vulnerabilities = vul; }
 	if(res) { f.resistances = res; }
 	if(imm) { f.immunities = imm; }
-	if(x.condition_immunities && x.condition_immunities.length) {
+	if(CONDITION_IMMUNITIES[x.index]) {
+		f["condition-immunities"] = CONDITION_IMMUNITIES[x.index];
+	} else if(x.condition_immunities && x.condition_immunities.length) {
 		f["condition-immunities"] = x.condition_immunities.map(function(c) { return c.index; }).join(", ");
 	}
 	var senses = [];
