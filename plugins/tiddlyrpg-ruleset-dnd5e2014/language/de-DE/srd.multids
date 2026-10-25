@@ -1,5 +1,5 @@
 created: 20261009183319191
-modified: 20261023171323639
+modified: 20261025121331430
 title: $:/tiddlyrpg/language/de-DE/
 
 # Begriffe des Systemreferenzdokuments 5.1 (deutsch, CC-BY-4.0, siehe den Tab license), von Hand;
@@ -392,23 +392,6 @@ Rules/Term/none: keinen Schaden
 Rules/Term/melee: Nahkampf-Zauberangriff
 Rules/Term/ranged: Fernkampf-Zauberangriff
 
-# Klassen: Kapitelüberschriften S. 8 Barbar, S. 11 Barde, S. 15 Druide, S. 20 Hexenmeister, S. 27
-# Kämpfer, S. 30 Kleriker, S. 34 Magier, S. 38 Mönch, S. 42 Paladin, S. 47 Schurke, S. 50
-# Waldläufer, S. 54 Zauberer; Zauberwirker S. 276 "erfordert Einstimmung durch einen Zauberwirker"
-Rules/Term/barbarian: Barbar
-Rules/Term/bard: Barde
-Rules/Term/cleric: Kleriker
-Rules/Term/druid: Druide
-Rules/Term/fighter: Kämpfer
-Rules/Term/monk: Mönch
-Rules/Term/paladin: Paladin
-Rules/Term/ranger: Waldläufer
-Rules/Term/rogue: Schurke
-Rules/Term/sorcerer: Zauberer
-Rules/Term/warlock: Hexenmeister
-Rules/Term/wizard: Magier
-Rules/Term/spellcaster: Zauberwirker
-
 # Schaden neben den Schadensarten in Werteblöcken: S. 444 "Hieb, Stich und Wucht durch
 # nichtmagische Angriffe", S. 388 "... ohne Silber", S. 345 "... ohne Adamant", S. 444 "Schaden
 # durch Zauber"
@@ -486,9 +469,11 @@ Rules/Challenge/30: 30
 # besondere Merkmale, Zauberwirken, Aktionen, Reaktionen S. 289 ("Besondere Merkmale",
 # "Zauberwirken"), Hortaktionen und legendäre Aktionen S. 291, Bonusaktionen S. 98, der Fluch eines
 # Gegenstands S. 230 (Berserkeraxt); Effekt ist unser Wort für das, was ein Gegenstand tut, wenn er
-# benutzt wird (S. 227, "Einen Gegenstand aktivieren")
+# benutzt wird (S. 227, "Einen Gegenstand aktivieren"); die Merkmale einer Klasse oder Unterklasse
+# S. 8 ("Klassenmerkmale")
 Rules/Section/effect: Effekt
 Rules/Section/curse: Fluch
+Rules/Section/feature: Klassenmerkmal
 Rules/Section/trait: Merkmal
 Rules/Section/spellcasting: Zauberwirken
 Rules/Section/action: Aktion
@@ -498,7 +483,8 @@ Rules/Section/legendary-action: legendäre Aktion
 Rules/Section/lair-action: Hortaktion
 
 # Die Überschriften der Abschnittsarten, in den Wertekästen S. 289 ("Aktionen", "Reaktionen"),
-# S. 291 ("Legendäre Aktionen", "Hortaktionen"), Bonusaktionen S. 98
+# S. 291 ("Legendäre Aktionen", "Hortaktionen"), Bonusaktionen S. 98, Klassenmerkmale S. 8
+Rules/Section/feature/Heading: Klassenmerkmale
 Rules/Section/action/Heading: Aktionen
 Rules/Section/bonus-action/Heading: Bonusaktionen
 Rules/Section/reaction/Heading: Reaktionen

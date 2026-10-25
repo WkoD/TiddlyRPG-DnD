@@ -1,5 +1,5 @@
 created: 20261022173526298
-modified: 20261024170244155
+modified: 20261025121331430
 title: $:/config/EditTemplateFields/Visibility/
 
 ability: hide
@@ -22,7 +22,6 @@ casting-trigger: hide
 category: hide
 cha: hide
 charges: hide
-classes: hide
 components: hide
 con: hide
 concentration: hide
@@ -74,5 +73,11 @@ vulnerabilities: hide
 weight: hide
 wis: hide
 xp: hide
-player-level: hide
+character-level: hide
 xp-next: hide
+ability-bonuses: hide
+character-background: hide
+damage-type: hide
+hit-die: hide
+saving-throws: hide
+spellcasting-ability: hide

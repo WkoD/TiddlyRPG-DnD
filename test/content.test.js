@@ -13,8 +13,8 @@ var test = require("node:test"),
 	h = require("./helpers");
 
 var DIR = path.join(__dirname, "..", "content", "dnd5e2014", "en-GB"),
-	// fields of the core, no schema fields
-	CORE = ["price", "base", "spells", "secret-fields"];
+	// fields of the core, no schema fields: the relations and the lock
+	CORE = ["price", "base", "spells", "classes", "folk", "secret-fields"];
 
 var $tw, wiki, fields, manifest, entries;
 
@@ -53,16 +53,19 @@ test("the manifest: the ruleset of this repo, the files beside it; package.json 
 	});
 });
 
-test("items, spells and creatures of the SRD 5.1", function() {
+test("items, spells, creatures, classes and folks of the SRD 5.1", function() {
 	var count = {};
 	entries.forEach(function(e) {
 		count[e.type] = (count[e.type] || 0) + 1;
 	});
-	assert.deepEqual(Object.keys(count).sort(), ["Creature", "Item", "Spell"]);
+	assert.deepEqual(Object.keys(count).sort(), ["Class", "Creature", "Folk", "Item", "Spell"]);
 	assert.ok(count.Item > 600 && count.Spell > 300 && count.Creature > 300, JSON.stringify(count));
+	assert.ok(count.Class > 100 && count.Folk === 23, JSON.stringify(count));
+	assert.deepEqual(entries.filter(function(e) { return (e.type === "Class" || e.type === "Folk") && e.tags.join() !== "Information"; }).map(function(e) { return e.title; }), [],
+		"a category of Information: the tag Information beside the type");
 });
 
-test("ids and titles unique in the package (an item before a creature before a spell)", function() {
+test("ids and titles unique in the package (a class or folk before an item before a creature before a spell)", function() {
 	var ids = {},
 		titles = {},
 		twice = [];
@@ -74,6 +77,7 @@ test("ids and titles unique in the package (an item before a creature before a s
 	});
 	assert.deepEqual(twice, []);
 	assert.ok(titles.shield && titles["shield (spell)"], "the armor keeps the title, the spell takes the type");
+	assert.ok(titles.druid && titles["druid (creature)"], "the class keeps the title, the creature takes the type");
 });
 
 test("no umbrella entries: a variant stands for itself", function() {
@@ -97,6 +101,14 @@ test("base and spells name entries of the package, by their titles", function() 
 			if(titles[title] !== "Spell") {
 				missing.push(e.title + " spells " + title);
 			}
+		});
+		// classes and folk: what a spell, an item or an entry of the tree belongs to
+		[["classes", "Class"], ["folk", "Folk"]].forEach(function(pair) {
+			$tw.utils.parseStringArray(e.fields[pair[0]] || "").forEach(function(title) {
+				if(titles[title] !== pair[1]) {
+					missing.push(e.title + " " + pair[0] + " " + title);
+				}
+			});
 		});
 	});
 	assert.deepEqual(missing, []);
@@ -159,7 +171,7 @@ test("a cursed item comes locked: players see the curse when the DM lifts the lo
 test("every creature and spell has its header line", function() {
 	h.setLanguage(wiki, "de-DE");
 	var empty = entries.filter(function(e) {
-		return e.type !== "Item" && !fields.summary(wiki, values(e), fields.forTypes(wiki, [e.type])).text;
+		return (e.type === "Creature" || e.type === "Spell") && !fields.summary(wiki, values(e), fields.forTypes(wiki, [e.type])).text;
 	}).map(function(e) { return e.title; });
 	assert.deepEqual(empty, []);
 });
@@ -260,4 +272,43 @@ test("a text renders as written: no link the SRD does not have", function() {
 		html = wiki.renderText("text/html", "text/vnd.tiddlywiki", e.text);
 	assert.doesNotMatch(html, /<a /);
 	assert.match(html, /500 pounds/);
+});
+
+test("the classes: a class with its values and table, a subclass under its SRD name, the lasting choices in the tree", function() {
+	var get = function(title) {
+		return entries.filter(function(e) { return e.title === title; })[0];
+	};
+	var sorcerer = get("Sorcerer");
+	assert.deepEqual(sorcerer.fields, {"hit-die": "1d6", "saving-throws": "con, cha", "spellcasting-ability": "cha"});
+	assert.match(sorcerer.text, /^''Proficiencies:'' Daggers; Darts/);
+	assert.match(sorcerer.text, /\|!Level \|!Proficiency Bonus \|!Features \|!Sorcery Points /);
+	assert.match(sorcerer.text, /<<feature "Spellcasting">> .*\n\n''\/\/Cantrips\.\/\/''/);
+	assert.match(get("Fighter").text, /''Multiclassing:'' Strength 13 or Dexterity 13/, "SRD p. 56");
+	assert.deepEqual(get("Draconic Bloodline").fields, {classes: "Sorcerer"});
+	assert.deepEqual(get("Dragon Ancestor: Red").fields, {classes: "[[Draconic Bloodline]]", "damage-type": "fire"});
+	assert.equal(get("Fighting Style: Archery").fields.classes, "Fighter Ranger");
+	assert.equal(get("Fighting Style: Defense").fields.classes, "Fighter Paladin Ranger");
+	assert.equal(get("Eldritch Invocation: Book of Ancient Secrets").fields.classes, "[[Pact of the Tome]]");
+	assert.equal(get("Pact of the Tome").fields.classes, "Warlock");
+	assert.equal(get("Spellcaster").fields.classes, "Bard Cleric Druid Paladin Ranger Sorcerer Warlock Wizard");
+	assert.match(get("Life Domain").fields.spells, /^Bless \[\[Cure Wounds\]\]/);
+	assert.match(get("Circle of the Land: Forest").fields.spells, /^Barkskin \[\[Spider Climb\]\]/);
+	assert.equal(get("Fireball").fields.classes, "Sorcerer Wizard", "a spell names classes only");
+	assert.equal(get("Wand of Fireballs").fields.classes, "Spellcaster");
+	["Path of the Berserker", "College of Lore", "Life Domain", "Circle of the Land", "Champion", "Way of the Open Hand",
+		"Oath of Devotion", "Hunter", "Thief", "Draconic Bloodline", "The Fiend", "School of Evocation"].forEach(function(title) {
+		assert.equal(get(title).type, "Class", title);
+	});
+});
+
+test("the folks: a folk with its values, a subfolk and a draconic ancestry in its tree", function() {
+	var get = function(title) {
+		return entries.filter(function(e) { return e.title === title; })[0];
+	};
+	assert.deepEqual(get("Dwarf").fields, {size: "medium", speed: "walk 25 ft", senses: "darkvision 60 ft",
+		languages: "common-language, dwarvish-language", "ability-bonuses": "con +2"});
+	assert.match(get("Dwarf").text, /<<trait "Dwarven Resilience">>/);
+	assert.doesNotMatch(get("Dwarf").text, /<<trait "Darkvision">>/, "Darkvision is the field senses");
+	assert.deepEqual(get("Hill Dwarf").fields, {folk: "Dwarf", "ability-bonuses": "wis +1"});
+	assert.deepEqual(get("Draconic Ancestry: Black").fields, {folk: "Dragonborn", "damage-type": "acid", area: "30 ft", "area-shape": "line", save: "dex"});
 });

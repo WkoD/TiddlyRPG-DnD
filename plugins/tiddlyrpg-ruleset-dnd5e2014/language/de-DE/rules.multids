@@ -1,5 +1,5 @@
 created: 20261009183319191
-modified: 20261024170244155
+modified: 20261025121331430
 title: $:/tiddlyrpg/language/de-DE/
 
 # Einheiten, Würfel und die Schadensgrammatik von D&D 5e (2014) auf Deutsch; Belege der Faktoren siehe en-GB.
@@ -62,7 +62,6 @@ Rules/Damage/radiant/Parse: gleißenden Schaden, gleißendem Schaden
 # Namen der Bereiche der Felder von Gegenständen, Zaubern und Kreaturen
 Rules/Domain/Area: Wirkungsbereiche
 Rules/Domain/Challenge: Herausforderungsgrade
-Rules/Domain/Class: Klassen
 Rules/Domain/Component: Komponenten
 Rules/Domain/DamageGroup: Schaden neben den Arten
 Rules/Domain/ItemCategory: Arten von Gegenständen
@@ -121,9 +120,6 @@ Rules/Field/category: Art
 Rules/Field/rarity: Seltenheit
 Rules/Field/cursed: Verflucht
 Rules/Field/attunement: Einstimmung
-Rules/Field/classes: Klassen
-Rules/Field/classes/attunement: Einstimmung durch
-Rules/Field/classes/spell: Klassen
 Rules/Field/damage: Schaden
 Rules/Field/damage-versatile: Vielseitig
 Rules/Field/range: Reichweite
@@ -189,7 +185,7 @@ Rules/Field/cha: CHA
 Rules/Field/cr: Herausforderungsgrad
 Rules/Field/xp: EP
 # Die Stufe einer Spielfigur nach ihren EP: S. 58, Tabelle "Charakterentwicklung" (Bereich Level)
-Rules/Field/player-level: Stufe
+Rules/Field/character-level: Stufe
 Rules/Field/xp-next: Nächste Stufe
 Rules/Field/proficiency: Übungsbonus
 Rules/Field/saves: Rettungswürfe
@@ -199,6 +195,15 @@ Rules/Field/senses: Sinne
 Rules/Field/languages: Sprachen
 Rules/Field/carrying-capacity: Traglast
 Rules/Field/height: Körpergröße
+
+# Klassen S. 8 ("Trefferwürfel", "Rettungswürfe", "Hintergrund"), S. 12 ("Attribut zum Zauberwirken");
+# Völker S. 2 ("Attributswerterhöhung"), S. 5 (Tabelle "Drakonische Abstammung": "Schadensart")
+Rules/Field/hit-die: Trefferwürfel
+Rules/Field/saving-throws: Rettungswürfe
+Rules/Field/spellcasting-ability: Attribut zum Zauberwirken
+Rules/Field/damage-type: Schadensart
+Rules/Field/ability-bonuses: Attributswerterhöhung
+Rules/Field/character-background: Hintergrund
 
 # Kopfzeilen: Gegenstand S. 228 "Wundersamer Gegenstand, selten (erfordert Einstimmung)"; Zauber
 # S. 142 "Hervorrufungszauber 3. Grades", S. 163 "Erkenntniszauber 1. Grades (Ritual)", S. 142

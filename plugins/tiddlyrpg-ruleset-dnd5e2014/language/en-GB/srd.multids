@@ -1,5 +1,5 @@
 created: 20261009183319191
-modified: 20261023181956562
+modified: 20261025121331430
 title: $:/tiddlyrpg/language/en-GB/
 
 # Terms of the System Reference Document 5.1 (English, CC-BY-4.0, see the tab license), by hand;
@@ -385,22 +385,6 @@ Rules/Term/none: no damage
 Rules/Term/melee: melee spell attack
 Rules/Term/ranged: ranged spell attack
 
-# Classes: p. 8-52, lowercase as in running text, e.g. p. 243 "requires attunement by a bard,
-# cleric, or druid"; spellcaster p. 248 "requires attunement by a spellcaster"
-Rules/Term/barbarian: barbarian
-Rules/Term/bard: bard
-Rules/Term/cleric: cleric
-Rules/Term/druid: druid
-Rules/Term/fighter: fighter
-Rules/Term/monk: monk
-Rules/Term/paladin: paladin
-Rules/Term/ranger: ranger
-Rules/Term/rogue: rogue
-Rules/Term/sorcerer: sorcerer
-Rules/Term/warlock: warlock
-Rules/Term/wizard: wizard
-Rules/Term/spellcaster: spellcaster
-
 # Damage beside the types in stat blocks: p. 261 "bludgeoning, piercing, and slashing from
 # nonmagical attacks", p. 274 "... that aren't silvered", p. 315 "... that aren't adamantine",
 # p. 395 "damage from spells"
@@ -478,9 +462,10 @@ Rules/Challenge/30: 30
 # special traits, spellcasting, actions, reactions p. 258-259 ("Special Traits", "Spellcasting",
 # "Actions", "Reactions"), legendary and lair actions p. 260, bonus actions p. 90, a curse of an
 # item p. 211 (Berserker Axe: "Curse."); effect is our word for what an item does when it is used
-# (p. 206, "Activating an Item")
+# (p. 206, "Activating an Item"); the features of a class or subclass p. 8 ("Class Features")
 Rules/Section/effect: effect
 Rules/Section/curse: curse
+Rules/Section/feature: class feature
 Rules/Section/trait: trait
 Rules/Section/spellcasting: spellcasting
 Rules/Section/action: action
@@ -490,7 +475,8 @@ Rules/Section/legendary-action: legendary action
 Rules/Section/lair-action: lair action
 
 # The headings of the kinds of sections, in the stat blocks p. 259 ("Actions", "Reactions"), p. 260
-# ("Legendary Actions", "Lair Actions"), bonus actions p. 90
+# ("Legendary Actions", "Lair Actions"), bonus actions p. 90, class features p. 8 ("Class Features")
+Rules/Section/feature/Heading: Class Features
 Rules/Section/action/Heading: Actions
 Rules/Section/bonus-action/Heading: Bonus Actions
 Rules/Section/reaction/Heading: Reactions

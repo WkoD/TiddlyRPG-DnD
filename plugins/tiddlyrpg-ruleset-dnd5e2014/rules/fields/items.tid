@@ -1,19 +1,19 @@
 created: 20261022173330580
-modified: 20261023170410365
+modified: 20261025121331430
 tags: $:/tags/tiddlyrpg/RulesFields
 title: $:/tiddlyrpg/rules/fields/items
 type: application/json
 
 {
     "types": ["Item", "Artifact"],
-    "fields": ["category", "rarity", "attunement", "cursed", "classes",
+    "fields": ["category", "rarity", "attunement", "cursed",
         "damage", "damage-versatile", "range", "ac", "ac-dex", "ac-dex-max", "strength-min", "stealth", "bonus",
         "spell-attack-bonus", "spell-dc-bonus", "spell-damage-bonus", "saving-throw-bonus",
         "charges", "recharge", "recharge-on", "save", "save-dc", "save-success", "area", "area-shape",
         "duration", "concentration", "ability", "ability-score", "ability-max", "healing", "light-bright", "light-dim",
         "speed", "resistances", "immunities", "vulnerabilities", "condition-immunities",
         "capacity", "capacity-volume", "travel-speed", "level", "weight"],
-    "labels": {"classes": "Rules/Field/classes/attunement", "level": "Rules/Field/level/spell",
+    "labels": {"level": "Rules/Field/level/spell",
         "resistances": "Rules/Field/resistances/grants", "immunities": "Rules/Field/immunities/grants",
         "vulnerabilities": "Rules/Field/vulnerabilities/grants", "condition-immunities": "Rules/Field/condition-immunities/grants"},
     "summary": {"key": "Rules/Summary/Item", "flags": {"attunement": "Rules/Summary/Attunement", "cursed": "Rules/Summary/Cursed"}},
@@ -24,7 +24,7 @@ type: application/json
                 {"fields": ["ac", "ac-dex", "ac-dex-max"], "key": "Rules/Line/ac", "flags": {"ac-dex": "Rules/Line/AcDex"}}
             ]},
         {"id": "magic", "fields": ["charges", "save", "area", "duration", "ability", "healing", "light-bright", "speed",
-            "resistances", "immunities", "vulnerabilities", "condition-immunities", "classes"],
+            "resistances", "immunities", "vulnerabilities", "condition-immunities"],
             "combine": [
                 {"fields": ["charges", "recharge", "recharge-on"], "key": "Rules/Line/charges"},
                 {"fields": ["save", "save-dc", "save-success"], "key": "Rules/Line/save"},
@@ -33,7 +33,7 @@ type: application/json
                 {"fields": ["ability", "ability-score", "ability-max"], "key": "Rules/Line/ability"},
                 {"fields": ["light-bright", "light-dim"], "key": "Rules/Line/light"}
             ],
-            "relations": ["spells"]},
+            "relations": ["spells", "classes"]},
         {"id": "properties", "fields": ["capacity", "travel-speed", "level"],
             "combine": [{"fields": ["capacity", "capacity-volume"], "key": "Rules/Line/capacity"}],
             "relations": ["base"]},

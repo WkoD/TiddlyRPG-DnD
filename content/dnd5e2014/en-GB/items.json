@@ -5541,7 +5541,7 @@
 			"fields": {
 				"rarity": "legendary",
 				"attunement": "yes",
-				"classes": "paladin",
+				"classes": "Paladin",
 				"category": "weapon, sword",
 				"bonus": "+3"
 			},
@@ -6286,7 +6286,7 @@
 			"fields": {
 				"rarity": "uncommon",
 				"attunement": "yes",
-				"classes": "spellcaster",
+				"classes": "Spellcaster",
 				"category": "wondrous-item",
 				"charges": "1",
 				"recharge-on": "dawn"
@@ -7961,7 +7961,7 @@
 			"fields": {
 				"rarity": "rare",
 				"attunement": "yes",
-				"classes": "druid",
+				"classes": "Druid",
 				"category": "staff",
 				"charges": "10",
 				"recharge": "1d6 + 4",
@@ -8251,7 +8251,7 @@
 			"fields": {
 				"rarity": "rare",
 				"attunement": "yes",
-				"classes": "spellcaster",
+				"classes": "Spellcaster",
 				"category": "wand",
 				"charges": "7",
 				"recharge": "1d6 + 1",
@@ -8304,7 +8304,7 @@
 			"fields": {
 				"rarity": "rare",
 				"attunement": "yes",
-				"classes": "spellcaster",
+				"classes": "Spellcaster",
 				"category": "wand",
 				"charges": "7",
 				"recharge": "1d6 + 1",
@@ -8323,7 +8323,7 @@
 			"fields": {
 				"rarity": "rare",
 				"attunement": "yes",
-				"classes": "spellcaster",
+				"classes": "Spellcaster",
 				"category": "wand",
 				"charges": "7",
 				"recharge": "1d6 + 1",
@@ -8376,7 +8376,7 @@
 			"fields": {
 				"rarity": "rare",
 				"attunement": "yes",
-				"classes": "spellcaster",
+				"classes": "Spellcaster",
 				"category": "wand",
 				"charges": "7",
 				"recharge": "1d6 + 1",
@@ -8394,7 +8394,7 @@
 			"fields": {
 				"rarity": "very-rare",
 				"attunement": "yes",
-				"classes": "spellcaster",
+				"classes": "Spellcaster",
 				"category": "wand",
 				"charges": "7",
 				"recharge": "1d6 + 1",
@@ -8429,7 +8429,7 @@
 			"fields": {
 				"rarity": "uncommon",
 				"attunement": "yes",
-				"classes": "spellcaster",
+				"classes": "Spellcaster",
 				"category": "wand"
 			},
 			"text": "While holding this wand, you gain a +1 bonus to spell attack rolls. In addition, you ignore half cover when making a spell attack."
@@ -8444,7 +8444,7 @@
 			"fields": {
 				"rarity": "rare",
 				"attunement": "yes",
-				"classes": "spellcaster",
+				"classes": "Spellcaster",
 				"category": "wand"
 			},
 			"text": "While holding this wand, you gain a +2 bonus to spell attack rolls. In addition, you ignore half cover when making a spell attack."
@@ -8459,7 +8459,7 @@
 			"fields": {
 				"rarity": "very-rare",
 				"attunement": "yes",
-				"classes": "spellcaster",
+				"classes": "Spellcaster",
 				"category": "wand"
 			},
 			"text": "While holding this wand, you gain a +3 bonus to spell attack rolls. In addition, you ignore half cover when making a spell attack."
@@ -8474,7 +8474,7 @@
 			"fields": {
 				"rarity": "uncommon",
 				"attunement": "yes",
-				"classes": "spellcaster",
+				"classes": "Spellcaster",
 				"category": "wand",
 				"charges": "7",
 				"recharge": "1d6 + 1",
@@ -8493,7 +8493,7 @@
 			"fields": {
 				"rarity": "rare",
 				"attunement": "yes",
-				"classes": "spellcaster",
+				"classes": "Spellcaster",
 				"category": "wand",
 				"charges": "7",
 				"recharge": "1d6 + 1",

@@ -105,7 +105,8 @@ with its pages as well.
 derive, when); one schema per type (`items`, `materials`, `spells`, `creatures`, `persons`,
 `characters` - the XP of a person or player character, its level derived, and the line of the
 card -,
-`folks` - a folk of the category `Folk`, no stat block) names
+`folks` - a folk of the category `Folk`, no stat block -, `classes` - a class, subclass or choice
+of the category `Class`) names
 its fields, groups and header line - the format is in the module header of `modules/fields.js`
 of `TiddlyRPG-Plugins`. Every field name is hidden from the field list of the core editor
 (`config/form-fields-hidden.multids`), the form shows it as a field of the rules.

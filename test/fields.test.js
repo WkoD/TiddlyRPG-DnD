@@ -124,7 +124,7 @@ test("a folk (Information Folk): size, speed, senses, languages - no stat block,
 	try {
 		var block = h.render(wiki, "text/plain", "{{Nichny||$:/plugins/tiddlyrpg-core/viewtemplates/fields}}");
 		assert.equal(block, "Size MediumSpeed 30 ft, climb 30 ftSenses darkvision 60 ftLanguages Common, Elvish");
-		assert.deepEqual(Array.from(fields.forTiddler(wiki, "Nichny").fields), ["size", "speed", "senses", "languages"]);
+		assert.deepEqual(Array.from(fields.forTiddler(wiki, "Nichny").fields), ["size", "speed", "senses", "languages", "ability-bonuses", "damage-type", "area", "area-shape", "save"]);
 	} finally {
 		wiki.deleteTiddler("Nichny");
 	}
@@ -135,21 +135,21 @@ test("the level of a player character by its XP, as the table Character Advancem
 	var thresholds = [0, 300, 900, 2700, 6500, 14000, 23000, 34000, 48000, 64000, 85000, 100000, 120000,
 		140000, 165000, 195000, 225000, 265000, 305000, 355000];
 	thresholds.forEach(function(xp, i) {
-		assert.equal(read({xp: String(xp)}, "player-level"), String(i + 1), xp + " XP");
+		assert.equal(read({xp: String(xp)}, "character-level"), String(i + 1), xp + " XP");
 		if(xp > 0) {
-			assert.equal(read({xp: String(xp - 1)}, "player-level"), String(i), (xp - 1) + " XP");
+			assert.equal(read({xp: String(xp - 1)}, "character-level"), String(i), (xp - 1) + " XP");
 		}
 		assert.equal(read({xp: String(xp)}, "xp-next"), i + 1 < thresholds.length ? thresholds[i + 1].toLocaleString("en-GB") : "");
 	});
-	assert.equal(read({xp: "24500"}, "player-level"), "7");
-	assert.equal(read({}, "player-level"), "");
+	assert.equal(read({xp: "24500"}, "character-level"), "7");
+	assert.equal(read({}, "character-level"), "");
 });
 
 test("a player character: level, XP and the next level in its block, the level on its card", function() {
 	h.add(wiki, {title: "Held", tags: "Player", player: "Tom", xp: "128500"});
 	try {
 		assert.deepEqual(Array.from(h.filter(wiki, "[[Held]trpgfieldsections[]]")), ["advancement"]);
-		assert.deepEqual(Array.from(h.filter(wiki, "[[Held]trpgfieldlines[advancement]]")), ["player-level", "xp", "xp-next"]);
+		assert.deepEqual(Array.from(h.filter(wiki, "[[Held]trpgfieldlines[advancement]]")), ["character-level", "xp", "xp-next"]);
 		assert.deepEqual(Array.from(h.filter(wiki, "[[Held]trpgfieldcard[]]")), ["Level 13"]);
 		h.setLanguage(wiki, "de-DE");
 		assert.deepEqual(Array.from(h.filter(wiki, "[[Held]trpgfieldcard[]]")), ["Stufe 13"]);
@@ -161,9 +161,29 @@ test("a player character: level, XP and the next level in its block, the level o
 });
 
 test("XP as people write them: thousands separated, also on a person", function() {
-	assert.equal(read({xp: "120.000"}, "player-level"), "13");
-	assert.equal(read({xp: "120,000"}, "player-level"), "13");
+	assert.equal(read({xp: "120.000"}, "character-level"), "13");
+	assert.equal(read({xp: "120,000"}, "character-level"), "13");
 	assert.equal(read({xp: "120.000"}, "xp"), "120,000");
 	assert.equal(fields.read(wiki, {xp: "1,5"}, "xp").problem, "Rules/Check/Integer");
 	assert.ok(fields.forTypes(wiki, ["Person"]).fields.indexOf("xp") !== -1, "a person may have XP");
+});
+
+test("a class: hit dice, saving throws, spellcasting ability; a folk: the ability score increase, the breath of an ancestry", function() {
+	h.add(wiki, {title: "Hexer", tags: "Information Class", "hit-die": "1d8", "saving-throws": "wis, cha", "spellcasting-ability": "cha"});
+	h.add(wiki, {title: "Schwarz", tags: "Information Folk", folk: "Drachenblut", "damage-type": "acid", area: "30 ft", "area-shape": "line", save: "dex", "ability-bonuses": "str +2, cha +1"});
+	try {
+		assert.equal(h.render(wiki, "text/plain", "{{Hexer||$:/plugins/tiddlyrpg-core/viewtemplates/fields}}"),
+			"Hit Dice 1d8Saving Throws WIS, CHASpellcasting Ability CHA");
+		assert.equal(read({"ability-bonuses": "str +2, cha +1"}, "ability-bonuses"), "STR +2, CHA +1");
+		assert.equal(read({"damage-type": "fire"}, "damage-type"), "fire");
+		assert.equal(fields.read(wiki, {"damage-type": "sunlight"}, "damage-type").problem, "Rules/Check/Label");
+		assert.match(h.render(wiki, "text/plain", "{{Schwarz||$:/plugins/tiddlyrpg-core/viewtemplates/fields}}"), /Damage Type acid.*30 ft line/);
+	} finally {
+		["Hexer", "Schwarz"].forEach(function(t) { wiki.deleteTiddler(t); });
+	}
+});
+
+test("a character: the background as free text beside the level", function() {
+	assert.ok(fields.forTypes(wiki, ["Player"]).fields.indexOf("character-background") !== -1);
+	assert.equal(read({"character-background": "Grew up at sea"}, "character-background"), "Grew up at sea");
 });

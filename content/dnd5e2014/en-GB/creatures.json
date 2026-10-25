@@ -2275,7 +2275,7 @@
 		},
 		{
 			"id": "creature:druid",
-			"title": "Druid",
+			"title": "Druid (Creature)",
 			"type": "Creature",
 			"tags": [],
 			"fields": {

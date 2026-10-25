@@ -74,11 +74,11 @@ function needed() {
 	return list.filter(function(key, index) { return list.indexOf(key) === index; });
 }
 
-test("the 33 domains of the ruleset with their types", function() {
+test("the 32 domains of the ruleset with their types", function() {
 	var types = {};
 	domains().forEach(function(d) { types[d.domain] = d.type; });
 	assert.deepEqual(types, {
-		Ability: "label", Action: "label", Alignment: "label", Area: "label", Challenge: "label", Class: "label",
+		Ability: "label", Action: "label", Alignment: "label", Area: "label", Challenge: "label",
 		Component: "label", Condition: "label", CreatureType: "label", Damage: "damage", DamageGroup: "label",
 		Dice: "tokens", ItemCategory: "label", Language: "label", Length: "unit", Level: "table", Mechanics: "label",
 		Movement: "label", Rarity: "label", SaveSuccess: "label", School: "label", Section: "section", Sense: "label", Size: "label",
@@ -193,9 +193,9 @@ test("the plugin lists its license tab", function() {
 	assert.ok(fs.existsSync(path.join(plugin, "license.tid")));
 });
 
-test("the kinds of sections: what an item does, its curse locked with cursed, what a creature has and does", function() {
+test("the kinds of sections: what an item does, its curse locked with cursed, the features of a class, what a creature has and does", function() {
 	var section = domains().filter(function(d) { return d.domain === "Section"; })[0];
 	assert.deepEqual(section.entries.map(function(e) { return e.id; }),
-		["effect", "curse", "trait", "spellcasting", "action", "bonus-action", "reaction", "legendary-action", "lair-action"]);
+		["effect", "curse", "feature", "trait", "spellcasting", "action", "bonus-action", "reaction", "legendary-action", "lair-action"]);
 	assert.equal(section.entries[1].lock, "cursed");
 });

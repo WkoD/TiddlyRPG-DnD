@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /*
  * The content package of tiddlyrpg-ruleset-dnd5e2014: the items, spells and creatures of the
- * SRD 5.1 (English) as entries for tiddlyrpg-core (module header of modules/content-server.js in
+ * SRD 5.1 (English), its classes and folks (characters.js beside this script) as entries for
+ * tiddlyrpg-core (module header of modules/content-server.js in
  * TiddlyRPG-Plugins), written to content/dnd5e2014/en-GB/ - the language of the texts in the path,
  * a package in another language would stand beside it.
  *
@@ -13,7 +14,10 @@
  *   node scripts/content/dnd5e2014/extract.js            fetch (if not cached) and write
  *
  * Decisions (see README.md "Content package"):
- *   - titles unique in the package: item before creature before spell ("Shield (Spell)");
+ *   - titles unique in the package: a class or folk before an item before a creature before a
+ *     spell ("Druid (Creature)", "Shield (Spell)"); every title that gets a suffix is reported;
+ *   - the classes of a spell and of an attunement are titles of entries of the category Class
+ *     (the relation classes of the core): "Sorcerer Wizard", "Spellcaster";
  *   - umbrella entries of 5e-bits (with "variants") fall away, their variants stay;
  *   - mounts and the goat are creatures with price and carrying capacity, vehicles are items;
  *   - the weapon groups (sword, axe ...) and the kind of ammunition of a weapon are our reading,
@@ -34,13 +38,15 @@
 var fs = require("fs"),
 	path = require("path"),
 	https = require("https"),
-	tables = require("./srd-tables.js");
+	tables = require("./srd-tables.js"),
+	characters = require("./characters.js");
 
 var VERSION = "v5.12.0",
 	BASE = "https://raw.githubusercontent.com/5e-bits/5e-database/" + VERSION + "/src/2014/en/",
 	CACHE = path.join(__dirname, "cache", VERSION),
 	OUT = path.join(__dirname, "..", "..", "..", "content", "dnd5e2014", "en-GB"),
-	FILES = ["Equipment", "Magic-Items", "Spells", "Monsters"];
+	FILES = ["Equipment", "Magic-Items", "Spells", "Monsters", "Classes", "Subclasses", "Features", "Levels", "Races",
+		"Subraces", "Traits"];
 
 /* Fetching */
 
@@ -477,7 +483,7 @@ function magicItem(m, equipmentByName) {
 		if(by) {
 			var classes = by[1].split(/,\s*|\s+or\s+|\s+and\s+/).map(function(c) { return c.replace(/^an? /, "").trim().toLowerCase(); }).filter(Boolean);
 			if(classes.every(function(c) { return CLASSES.indexOf(c) !== -1; })) {
-				fields.classes = classes.join(", ");
+				fields.classes = classes.map(function(c) { return c.charAt(0).toUpperCase() + c.slice(1); }).join(" ");
 			}
 		}
 	}
@@ -680,7 +686,7 @@ function spell(s) {
 			fields.healing = s.heal_at_slot_level[heal];
 		}
 	}
-	fields.classes = (s.classes || []).map(function(c) { return c.index; }).join(", ");
+	fields.classes = (s.classes || []).map(function(c) { return c.name; }).join(" ");
 	var text = wikitext(s.desc);
 	if(s.material) {
 		text = "//" + escape(s.material.replace(/^A |^An /, function(a) { return a; })) + "//\n\n" + text;
@@ -978,22 +984,35 @@ function main() {
 				target.fields.price = p.price;
 			}
 		});
-		// Titles unique: item before creature before spell
-		var taken = {};
-		items.forEach(function(e) { taken[e.title.toLowerCase()] = true; });
-		creatures.forEach(function(e) {
+		// Titles unique: a class or folk before an item before a creature before a spell; every
+		// suffix is reported. The classes and folks first by their titles (their spells follow)
+		var h = {wikitext: wikitext, section: section, escape: escape},
+			options = characters.classes(data, h, function() { return ""; }).concat(characters.folks(data, h, LANGUAGES)),
+			taken = {},
+			renamed = [];
+		options.forEach(function(e) {
 			if(taken[e.title.toLowerCase()]) {
-				e.title += " (Creature)";
+				throw new Error("Two classes or folks titled " + e.title);
 			}
 			taken[e.title.toLowerCase()] = true;
 		});
+		var unique = function(list, suffix) {
+			list.forEach(function(e) {
+				if(taken[e.title.toLowerCase()]) {
+					renamed.push(e.title + suffix);
+					e.title += suffix;
+				}
+				taken[e.title.toLowerCase()] = true;
+			});
+		};
+		unique(items, " (Item)");
+		unique(creatures, " (Creature)");
+		unique(spells, " (Spell)");
 		spells.forEach(function(e) {
-			if(taken[e.title.toLowerCase()]) {
-				e.title += " (Spell)";
-			}
-			taken[e.title.toLowerCase()] = true;
 			spellTitles[e.title.replace(/ \(Spell\)$/, "").toLowerCase()] = e.title;
 		});
+		var classes = characters.classes(data, h, function(name) { return spellTitles[name.toLowerCase()]; }),
+			folks = characters.folks(data, h, LANGUAGES);
 		// The spells of the spellcasting of a creature as links
 		creatures.forEach(function(e) {
 			e.text = linkSpells(e.text, spellTitles);
@@ -1015,6 +1034,8 @@ function main() {
 		write("items", items);
 		write("spells", spells);
 		write("creatures", creatures);
+		write("classes", classes);
+		write("folks", folks);
 		fs.writeFileSync(path.join(OUT, "manifest.json"), JSON.stringify({
 			name: "SRD 5.1 (English)",
 			ruleset: "$:/plugins/tiddlyrpg-ruleset-dnd5e2014",
@@ -1022,9 +1043,11 @@ function main() {
 			"tiddlyrpg-core-version": ">=2.2.0",
 			tag: "SRD 5.1 English",
 			source: "[[SRD 5.1 (English)|https://dnd.wizards.com/resources/systems-reference-document]] (CC-BY-4.0)",
-			files: ["items.json", "spells.json", "creatures.json"]
+			files: ["items.json", "spells.json", "creatures.json", "classes.json", "folks.json"]
 		}, null, "\t") + "\n");
-		console.log("items " + items.length + ", spells " + spells.length + ", creatures " + creatures.length);
+		console.log("items " + items.length + ", spells " + spells.length + ", creatures " + creatures.length +
+			", classes " + classes.length + ", folks " + folks.length);
+		console.log("with a suffix: " + (renamed.join(", ") || "none"));
 	});
 }
 

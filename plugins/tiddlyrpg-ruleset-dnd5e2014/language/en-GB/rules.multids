@@ -1,5 +1,5 @@
 created: 20261009183319191
-modified: 20261024170244155
+modified: 20261025121331430
 title: $:/tiddlyrpg/language/en-GB/
 
 # Units, dice and the damage grammar of D&D 5e (2014) in English; factors of the SRD 5.1 per pair:
@@ -66,7 +66,6 @@ Rules/Damage/slashing/Parse: slash
 # Names of the domains of the fields of items, spells and creatures
 Rules/Domain/Area: Areas of effect
 Rules/Domain/Challenge: Challenge ratings
-Rules/Domain/Class: Classes
 Rules/Domain/Component: Components
 Rules/Domain/DamageGroup: Damage beside the types
 Rules/Domain/ItemCategory: Item categories
@@ -125,9 +124,6 @@ Rules/Field/category: Category
 Rules/Field/rarity: Rarity
 Rules/Field/cursed: Cursed
 Rules/Field/attunement: Attunement
-Rules/Field/classes: Classes
-Rules/Field/classes/attunement: Attunement by
-Rules/Field/classes/spell: Classes
 Rules/Field/damage: Damage
 Rules/Field/damage-versatile: Versatile
 Rules/Field/range: Range
@@ -193,7 +189,7 @@ Rules/Field/cha: CHA
 Rules/Field/cr: Challenge
 Rules/Field/xp: XP
 # The level of a player character by its XP: p. 56, table "Character Advancement" (domain Level)
-Rules/Field/player-level: Level
+Rules/Field/character-level: Level
 Rules/Field/xp-next: Next level
 Rules/Field/proficiency: Proficiency Bonus
 Rules/Field/saves: Saving Throws
@@ -203,6 +199,15 @@ Rules/Field/senses: Senses
 Rules/Field/languages: Languages
 Rules/Field/carrying-capacity: Carrying capacity
 Rules/Field/height: Height
+
+# Classes p. 8 ("Hit Dice", "Saving Throws"), p. 12 ("Spellcasting Ability"); folks p. 3 ("Ability
+# Score Increase"), p. 5 (table "Draconic Ancestry": "Damage Type"); background p. 60
+Rules/Field/hit-die: Hit Dice
+Rules/Field/saving-throws: Saving Throws
+Rules/Field/spellcasting-ability: Spellcasting Ability
+Rules/Field/damage-type: Damage Type
+Rules/Field/ability-bonuses: Ability Score Increase
+Rules/Field/character-background: Background
 
 # Header lines: item p. 207 "Wondrous item, rare (requires attunement)"; spell p. 144 "3rd-level
 # evocation", p. 134 "1st-level divination (ritual)", p. 144 "Evocation cantrip"; creature p. 393

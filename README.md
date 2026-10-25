@@ -22,7 +22,7 @@ with fifth edition, as plugin type `ruleset` for `tiddlyrpg-core`:
   is the creature type, `giant-language` the language).
 - The domains of the fields below: `ItemCategory` (main entries such as `weapon`, `armor`,
   `potion`, `wondrous-item`, each with its properties: `martial`, `melee`, `versatile`, `sword`,
-  `medium` ...), `Rarity`, `Class`, `Component`, `Area`, `SpellWord` (`self`, `touch`,
+  `medium` ...), `Rarity`, `Component`, `Area`, `SpellWord` (`self`, `touch`,
   `instantaneous` ...), `SaveSuccess`, `SpellAttack`, `DamageGroup` (`nonmagical` ...),
   `Movement`, `Challenge` (with the XP and proficiency bonus of each challenge rating), the table
   `Level` (the XP of each level, "Character Advancement"), and the units `Time` (action, round, minute ... - not converted), `Speed` (mph, km/h) and `Volume`
@@ -32,8 +32,9 @@ with fifth edition, as plugin type `ruleset` for `tiddlyrpg-core`:
   where the field `cursed` is: locked with `secret-fields: cursed`, the players see the curse when
   the DM lifts the lock), `<<trait "Pack Tactics">>`, `<<spellcasting "Spellcasting">>`,
   `<<action "Bite">>`, `<<bonus-action "Name">>`, `<<reaction "Parry">>`,
-  `<<legendary-action "Tail Attack">>`, `<<lair-action "Name">>`. Each runs to the next one (a list belongs to the spellcasting before it) and
-  shows in this order, as in a stat block: effects, curse; traits, spellcasting, then actions,
+  `<<legendary-action "Tail Attack">>`, `<<lair-action "Name">>`, and `<<feature "Font of Magic">>` for
+  the features of a class or subclass (under the heading "Class Features"). Each runs to the next one (a list belongs to the spellcasting before it) and
+  shows in this order, as in a stat block: effects, curse; features; traits, spellcasting, then actions,
   bonus actions, reactions, legendary and lair actions under their headings. Legendary and lair
   actions start with their introduction, a section without a name: `<<legendary-action>> The
   dragon can take 3 legendary actions ...`.
@@ -41,19 +42,24 @@ with fifth edition, as plugin type `ruleset` for `tiddlyrpg-core`:
   creature, folk, person or player character holds as values, shown as a block like a stat block in the
   rulebook, with a header line ("martial weapon (melee, sword, versatile), rare (requires
   attunement)", "3rd-level evocation", "Medium beast, unaligned"):
-  - items: `category`, `rarity`, `attunement`, `cursed`, `classes`, `damage`,
+  - items: `category`, `rarity`, `attunement`, `cursed`, `damage`,
     `damage-versatile`, `range`, `ac`, `bonus`, `charges`, `recharge`, `save`, `area`, `duration`,
-    `light-bright`, `capacity`, `weight` ...;
+    `light-bright`, `capacity`, `weight` ...; "Attunement by" is the relation `classes` of the core
+    (`classes: Spellcaster`, `classes: Cleric Druid`);
   - spells: `level`, `school`, `ritual`, `casting-time`, `range`, `components`, `duration`,
-    `concentration`, `area`, `save`, `attack`, `damage`, `healing`, `classes`;
+    `concentration`, `area`, `save`, `attack`, `damage`, `healing`; the classes that cast it are the
+    relation `classes` of the core (`classes: Sorcerer Wizard`);
   - creatures: `size`, `creature-type`, `alignment`, `ac`, `hp`, `speed`, `str` ... `cha`,
     `saves`, `skills`, `senses`, `languages`, `cr` ...;
   - persons and player characters: `height`, `weight`;
   - persons and player characters: `xp` (a whole number, "120.000" or "120,000" read as
-    120000, shown with the thousands separator of the wiki language) - the level (`player-level`) and the XP of the next level (`xp-next`) derive from it
+    120000, shown with the thousands separator of the wiki language) - the level (`character-level`) and the XP of the next level (`xp-next`) derive from it
     and are never written; the card of the hub `Player` shows the level ("Level 13"), also of a
-    former player character;
-  - folks (`Information Folk`): `size`, `speed`, `senses`, `languages`.
+    former player character; `character-background`, the background as free text;
+  - classes (`Information Class`: a class, a subclass, a lasting choice): `hit-die`,
+    `saving-throws`, `spellcasting-ability`, `damage-type` (of a dragon ancestor);
+  - folks (`Information Folk`): `size`, `speed`, `senses`, `languages`, `ability-bonuses`
+    (`con +2`), and of a draconic ancestry `damage-type`, `area`, `save` (its breath).
 
   What the rules derive is not written: the modifier of an ability, the average of hit points,
   proficiency bonus and XP from the challenge rating, saving throws and skills (with
@@ -96,9 +102,10 @@ are shown. This plugin is not needed for that.
 
 ## Content package SRD 5.1 English (`content/dnd5e2014/en-GB/`)
 
-The items, spells and creatures of the SRD 5.1 in English as entries for the ruleset: about 610
-items (equipment, magic items, trade goods, food and drink, poisons), 320 spells and 330
-creatures, each with its fields filled and its text. They are no tiddlers and no plugin: a wiki
+The items, spells, creatures, classes and folks of the SRD 5.1 in English as entries for the
+ruleset: about 610 items (equipment, magic items, trade goods, food and drink, poisons), 320
+spells, 330 creatures, 120 entries of the category `Class` and 23 of `Folk`, each with its fields
+filled and its text. They are no tiddlers and no plugin: a wiki
 with this package in `node_modules` offers them while it runs on the Node server - in the
 search of the editor, in the choice of a relation, at a missing link and on the hub "Content" -
 and the DM takes one at a time into the wiki, where it becomes an ordinary tiddler. Without the
@@ -108,8 +115,25 @@ The wiki names the package "SRD 5.1 (English)"; every taken tiddler carries the 
 `SRD 5.1 English`, and its text stays English whatever the language of the wiki. A package in
 another language would stand beside it in a folder of its own (`content/dnd5e2014/<code>/`).
 
-- Titles are unique in the package: an item before a creature before a spell ("Shield" is the
-  armor, the spell is "Shield (Spell)").
+- Titles are unique in the package: a class or folk before an item before a creature before a
+  spell ("Shield" is the armor, the spell is "Shield (Spell)"; "Druid" is the class, the creature
+  "Druid (Creature)"). `npm run content` reports every title that gets a suffix.
+- **Classes** (`Information Class`, the tree of the relation `classes` of the core): the 12
+  classes with proficiencies, multiclassing (p. 56-57), their table and their features; the 12
+  subclasses under the names of the SRD ("Draconic Bloodline", not "Draconic") with `classes:
+  <class>`; the lasting choices as "<feature>: <option>" with `classes: <subclass or class>` -
+  "Dragon Ancestor: Red" (`damage-type: fire`, table p. 44), "Circle of the Land: Forest" (its
+  spells), "Fighting Style: Archery" (one entry, `classes: Fighter Ranger`), "Pact of the Tome",
+  "Eldritch Invocation: ..." (under the pact it needs), "Metamagic: ...", the options of the
+  Hunter, "Favored Enemy: ...", "Natural Explorer: ..."; "Spellcaster" belongs to the 8 classes
+  with Spellcasting or Pact Magic. A subclass or choice with spells of its own names them in
+  `spells`; a spell names its classes only. What a character chooses when it is made
+  (equipment, skills) is left out.
+- **Folks** (`Information Folk`): the 9 folks with their values, texts and traits (`<<trait>>`;
+  Darkvision is the field `senses`), the 4 subfolks with `folk: <folk>`, the 10 draconic
+  ancestries of the dragonborn as "Draconic Ancestry: Black" with their breath (table p. 5).
+- A figure names its class, subclass and choices in `classes`, its folk in `folk`, entries of the
+  package taken or not.
 - A magic item that names its base item ("Weapon (warhammer)") names it in `base` and carries all
   its values; nothing is inherited, so the item stays as it is when the base changes.
 - Mounts are creatures with `price` and `carrying-capacity`; vehicles are items.

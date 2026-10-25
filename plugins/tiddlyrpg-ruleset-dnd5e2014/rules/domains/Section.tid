@@ -1,5 +1,5 @@
 created: 20261023183549339
-modified: 20261023192426434
+modified: 20261025121331430
 tags: $:/tags/tiddlyrpg/RulesDomain
 title: $:/tiddlyrpg/rules/domain/Section
 type: application/json
@@ -15,6 +15,10 @@ type: application/json
         {
             "id": "curse",
             "lock": "cursed"
+        },
+        {
+            "id": "feature",
+            "heading": true
         },
         {
             "id": "trait"

@@ -8,6 +8,8 @@
 	"files": [
 		"items.json",
 		"spells.json",
-		"creatures.json"
+		"creatures.json",
+		"classes.json",
+		"folks.json"
 	]
 }

@@ -1,5 +1,5 @@
 created: 20261022173330580
-modified: 20261025075210577
+modified: 20261025121331430
 tags: $:/tags/tiddlyrpg/RulesFields
 title: $:/tiddlyrpg/rules/fields
 type: application/json
@@ -10,7 +10,6 @@ type: application/json
         "rarity": {"format": "label", "domain": "Rarity"},
         "cursed": {"format": "boolean"},
         "attunement": {"format": "boolean"},
-        "classes": {"format": "labels", "domain": "Class"},
 
         "damage": {"format": "damage", "when": {"category": ["weapon", "poison"]}},
         "damage-versatile": {"format": "damage", "when": {"category": ["weapon"]}},
@@ -79,7 +78,7 @@ type: application/json
         "cha": {"format": "number", "min": 1, "max": 30, "derive": {"kind": "modifier", "base": 10, "step": 2}},
         "cr": {"format": "label", "domain": "Challenge"},
         "xp": {"format": "number", "min": 0, "integer": true, "derive": {"kind": "lookup", "from": "cr", "column": "xp"}},
-        "player-level": {"format": "number", "edit": false, "derive": {"kind": "band", "from": "xp", "domain": "Level", "column": "xp"}},
+        "character-level": {"format": "number", "edit": false, "derive": {"kind": "band", "from": "xp", "domain": "Level", "column": "xp"}},
         "xp-next": {"format": "number", "integer": true, "edit": false, "derive": {"kind": "band", "from": "xp", "domain": "Level", "column": "xp", "next": true}},
         "proficiency": {"format": "number", "signed": true, "derive": {"kind": "lookup", "from": "cr", "column": "proficiency"}},
         "saves": {"format": "labels", "domain": "Ability",
@@ -93,6 +92,13 @@ type: application/json
         "languages": {"format": "labels", "domain": "Language"},
         "carrying-capacity": {"format": "unit", "domain": "Weight"},
 
-        "height": {"format": "unit", "domain": "Length", "kind": "size"}
+        "height": {"format": "unit", "domain": "Length", "kind": "size"},
+        "character-background": {"format": "text"},
+
+        "hit-die": {"format": "dice"},
+        "saving-throws": {"format": "labels", "domain": "Ability"},
+        "spellcasting-ability": {"format": "label", "domain": "Ability"},
+        "damage-type": {"format": "label", "domain": "Damage"},
+        "ability-bonuses": {"format": "labels", "domain": "Ability", "value": {"format": "number", "signed": true}}
     }
 }
