@@ -103,7 +103,8 @@ with its pages as well.
 
 **Fields** (`rules/fields/`): `definitions.tid` defines every field once (format, domain,
 derive, when); one schema per type (`items`, `materials`, `spells`, `creatures`, `persons`,
-`characters` - the XP of a player character, its level derived, and the line of its card -,
+`characters` - the XP of a person or player character, its level derived, and the line of the
+card -,
 `folks` - a folk of the category `Folk`, no stat block) names
 its fields, groups and header line - the format is in the module header of `modules/fields.js`
 of `TiddlyRPG-Plugins`. Every field name is hidden from the field list of the core editor

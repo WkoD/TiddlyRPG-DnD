@@ -159,3 +159,11 @@ test("a player character: level, XP and the next level in its block, the level o
 		wiki.deleteTiddler("Held");
 	}
 });
+
+test("XP as people write them: thousands separated, also on a person", function() {
+	assert.equal(read({xp: "120.000"}, "player-level"), "13");
+	assert.equal(read({xp: "120,000"}, "player-level"), "13");
+	assert.equal(read({xp: "120.000"}, "xp"), "120000");
+	assert.equal(fields.read(wiki, {xp: "1,5"}, "xp").problem, "Rules/Check/Integer");
+	assert.ok(fields.forTypes(wiki, ["Person"]).fields.indexOf("xp") !== -1, "a person may have XP");
+});
