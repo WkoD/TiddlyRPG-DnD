@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /*
  * The content package of tiddlyrpg-ruleset-dnd5e2014: the items, spells and creatures of the
- * SRD 5.1 (English), its classes and folks (characters.js beside this script) as entries for
+ * SRD 5.1 (English), its classes, folks, traits, languages and feat (characters.js) and the
+ * glossary of its terms (glossary.js) as entries for
  * tiddlyrpg-core (module header of modules/content-server.js in
  * TiddlyRPG-Plugins), written to content/dnd5e2014/en-GB/ - the language of the texts in the path,
  * a package in another language would stand beside it.
@@ -14,8 +15,11 @@
  *   node scripts/content/dnd5e2014/extract.js            fetch (if not cached) and write
  *
  * Decisions (see README.md "Content package"):
- *   - titles unique in the package: a class or folk before an item before a creature before a
- *     spell ("Druid (Creature)", "Shield (Spell)"); every title that gets a suffix is reported;
+ *   - titles unique in the package: a class, folk, trait, language or feat before an item before
+ *     a creature before a spell before an entry of the glossary ("Druid (Creature)", "Shield
+ *     (Spell)", "Darkvision (Glossary)"); every title that gets a suffix is reported;
+ *   - the languages of a creature are the relation languages of the core ("[[Common (Language)]]"),
+ *     what is no language of the SRD stays in its text;
  *   - the classes of a spell and of an attunement are titles of entries of the category Class
  *     (the relation classes of the core): "Sorcerer Wizard", "Spellcaster";
  *   - umbrella entries of 5e-bits (with "variants") fall away, their variants stay;
@@ -39,14 +43,15 @@ var fs = require("fs"),
 	path = require("path"),
 	https = require("https"),
 	tables = require("./srd-tables.js"),
-	characters = require("./characters.js");
+	characters = require("./characters.js"),
+	glossary = require("./glossary.js");
 
 var VERSION = "v5.12.0",
 	BASE = "https://raw.githubusercontent.com/5e-bits/5e-database/" + VERSION + "/src/2014/en/",
 	CACHE = path.join(__dirname, "cache", VERSION),
 	OUT = path.join(__dirname, "..", "..", "..", "content", "dnd5e2014", "en-GB"),
 	FILES = ["Equipment", "Magic-Items", "Spells", "Monsters", "Classes", "Subclasses", "Features", "Levels", "Races",
-		"Subraces", "Traits"];
+		"Subraces", "Traits", "Languages", "Feats", "Conditions", "Skills", "Rule-Sections"];
 
 /* Fetching */
 
@@ -699,10 +704,12 @@ function spell(s) {
 
 /* Creatures */
 
-var LANGUAGES = {common: "common-language", dwarvish: "dwarvish-language", elvish: "elvish-language", giant: "giant-language", gnomish: "gnomish-language",
-	goblin: "goblin-language", halfling: "halfling-language", orc: "orc-language", abyssal: "abyssal-language", celestial: "celestial-language",
-	draconic: "draconic-language", "deep speech": "deep-speech-language", infernal: "infernal-language", primordial: "primordial-language", sylvan: "sylvan-language",
-	undercommon: "undercommon-language"};
+// The languages of the SRD (p. 59) by their names in a stat block: the titles of their entries
+var LANGUAGES = {};
+["Common", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc", "Abyssal", "Celestial", "Draconic", "Deep Speech",
+	"Infernal", "Primordial", "Sylvan", "Undercommon"].forEach(function(name) {
+	LANGUAGES[name.toLowerCase()] = characters.languageTitle(name);
+});
 var DAMAGE = ["acid", "bludgeoning", "cold", "fire", "force", "lightning", "necrotic", "piercing", "poison", "psychic", "radiant", "slashing", "thunder"];
 var GROUP_PHRASES = [
 	[/^bludgeoning, piercing, and slashing from nonmagical (?:weapons|attacks) (?:that aren't silvered|not made with silvered weapons)$/i, "nonmagical-silvered"],
@@ -858,7 +865,7 @@ function creature(x) {
 		f.senses = senses.join(", ");
 	}
 	if(languages.length) {
-		f.languages = languages.join(", ");
+		f.languages = languages.map(function(t) { return "[[" + t + "]]"; }).join(" ");
 	}
 	if(other.length) {
 		rest.push("Languages: " + other.join(", "));
@@ -987,7 +994,8 @@ function main() {
 		// Titles unique: a class or folk before an item before a creature before a spell; every
 		// suffix is reported. The classes and folks first by their titles (their spells follow)
 		var h = {wikitext: wikitext, section: section, escape: escape},
-			options = characters.classes(data, h, function() { return ""; }).concat(characters.folks(data, h, LANGUAGES)),
+			options = characters.classes(data, h, function() { return ""; }).concat(characters.folks(data, h), characters.traits(data, h),
+				characters.languages(data, h), characters.feats(data, h)),
 			taken = {},
 			renamed = [];
 		options.forEach(function(e) {
@@ -1008,11 +1016,16 @@ function main() {
 		unique(items, " (Item)");
 		unique(creatures, " (Creature)");
 		unique(spells, " (Spell)");
+		var terms = glossary.glossary(data, h, tables);
+		unique(terms, " (Glossary)");
 		spells.forEach(function(e) {
 			spellTitles[e.title.replace(/ \(Spell\)$/, "").toLowerCase()] = e.title;
 		});
 		var classes = characters.classes(data, h, function(name) { return spellTitles[name.toLowerCase()]; }),
-			folks = characters.folks(data, h, LANGUAGES);
+			folks = characters.folks(data, h),
+			traits = characters.traits(data, h),
+			languageEntries = characters.languages(data, h),
+			feats = characters.feats(data, h);
 		// The spells of the spellcasting of a creature as links
 		creatures.forEach(function(e) {
 			e.text = linkSpells(e.text, spellTitles);
@@ -1036,6 +1049,10 @@ function main() {
 		write("creatures", creatures);
 		write("classes", classes);
 		write("folks", folks);
+		write("traits", traits);
+		write("languages", languageEntries);
+		write("feats", feats);
+		write("glossary", terms);
 		fs.writeFileSync(path.join(OUT, "manifest.json"), JSON.stringify({
 			name: "SRD 5.1 (English)",
 			ruleset: "$:/plugins/tiddlyrpg-ruleset-dnd5e2014",
@@ -1043,10 +1060,12 @@ function main() {
 			"tiddlyrpg-core-version": ">=2.2.0",
 			tag: "SRD 5.1 English",
 			source: "[[SRD 5.1 (English)|https://dnd.wizards.com/resources/systems-reference-document]] (CC-BY-4.0)",
-			files: ["items.json", "spells.json", "creatures.json", "classes.json", "folks.json"]
+			files: ["items.json", "spells.json", "creatures.json", "classes.json", "folks.json", "traits.json", "languages.json",
+				"feats.json", "glossary.json"]
 		}, null, "\t") + "\n");
 		console.log("items " + items.length + ", spells " + spells.length + ", creatures " + creatures.length +
-			", classes " + classes.length + ", folks " + folks.length);
+			", classes " + classes.length + ", folks " + folks.length + ", traits " + traits.length + ", languages " +
+			languageEntries.length + ", feats " + feats.length + ", glossary " + terms.length);
 		console.log("with a suffix: " + (renamed.join(", ") || "none"));
 	});
 }

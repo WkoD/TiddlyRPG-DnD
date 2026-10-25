@@ -1,5 +1,5 @@
 created: 20261022173526298
-modified: 20261025121331430
+modified: 20261025124110539
 title: $:/config/EditTemplateFields/Visibility/
 
 ability: hide
@@ -39,7 +39,6 @@ height: hide
 hp: hide
 immunities: hide
 int: hide
-languages: hide
 level: hide
 light-bright: hide
 light-dim: hide
@@ -81,3 +80,7 @@ damage-type: hide
 hit-die: hide
 saving-throws: hide
 spellcasting-ability: hide
+class-levels: hide
+language-type: hide
+prerequisites: hide
+script: hide

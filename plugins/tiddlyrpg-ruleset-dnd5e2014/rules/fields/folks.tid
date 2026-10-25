@@ -1,12 +1,12 @@
 created: 20261024153230471
-modified: 20261025121331430
+modified: 20261025124110539
 tags: $:/tags/tiddlyrpg/RulesFields
 title: $:/tiddlyrpg/rules/fields/folks
 type: application/json
 
 {
     "types": ["Folk"],
-    "fields": ["size", "speed", "senses", "languages", "ability-bonuses", "damage-type", "area", "area-shape", "save"],
+    "fields": ["size", "speed", "senses", "ability-bonuses", "damage-type", "area", "area-shape", "save"],
     "groups": [
         {"id": "breath", "fields": ["damage-type", "area", "save"],
             "combine": [{"fields": ["area", "area-shape"], "key": "Rules/Line/area"}]}

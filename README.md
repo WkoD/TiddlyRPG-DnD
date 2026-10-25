@@ -16,10 +16,11 @@ with fifth edition, as plugin type `ruleset` for `tiddlyrpg-core`:
   (units with the factors of the SRD 5.1: 1 in = 2.5 cm, 1 ft = 0.3 m, 1 mi = 1.6 km,
   1 lb = 0.5 kg), `Dice`, `Damage` (the 13 damage types), `Ability` and `Terms`, and the
   terms by group: `Condition`, `Action`, `Mechanics` (rolls, rest, damage, cover), `Spellcasting`,
-  `Sense`, `Skill`, `CreatureType`, `Size`, `Alignment`, `School` and `Language`. Each term is
-  written with its id, e.g. `<<term charmed>>`, `<<term cover variant:"half">>`,
-  `<<term lg variant:"name">>`; every id that stands alone is unique across the domains (`giant`
-  is the creature type, `giant-language` the language).
+  `Sense`, `Skill`, `CreatureType`, `Size`, `Alignment`, `School` and `LanguageType` (standard,
+  exotic). Each term is written with its id, e.g. `<<term charmed>>`, `<<term cover
+  variant:"half">>`, `<<term lg variant:"name">>`; every id that stands alone is unique across the
+  domains. A term the glossary of the content package explains links to its entry. The languages
+  themselves are entries of the category `Language` of the core (see "Content package").
 - The domains of the fields below: `ItemCategory` (main entries such as `weapon`, `armor`,
   `potion`, `wondrous-item`, each with its properties: `martial`, `melee`, `versatile`, `sword`,
   `medium` ...), `Rarity`, `Component`, `Area`, `SpellWord` (`self`, `touch`,
@@ -50,16 +51,23 @@ with fifth edition, as plugin type `ruleset` for `tiddlyrpg-core`:
     `concentration`, `area`, `save`, `attack`, `damage`, `healing`; the classes that cast it are the
     relation `classes` of the core (`classes: Sorcerer Wizard`);
   - creatures: `size`, `creature-type`, `alignment`, `ac`, `hp`, `speed`, `str` ... `cha`,
-    `saves`, `skills`, `senses`, `languages`, `cr` ...;
+    `saves`, `skills`, `senses`, `cr` ...; the languages are the relation `languages` of the core,
+    shown in the stat block;
   - persons and player characters: `height`, `weight`;
   - persons and player characters: `xp` (a whole number, "120.000" or "120,000" read as
     120000, shown with the thousands separator of the wiki language) - the level (`character-level`) and the XP of the next level (`xp-next`) derive from it
     and are never written; the card of the hub `Player` shows the level ("Level 13"), also of a
-    former player character; `character-background`, the background as free text;
+    former player character; `class-levels` - the level of each class of a character with
+    several or without XP (`class-levels: Fighter 5, Rogue 8`; the form offers a number per class
+    it names in `classes`) - without XP the level is their sum, with XP a message tells when they
+    add up to more ("level up due" when less); `character-background`, the background as free text;
   - classes (`Information Class`: a class, a subclass, a lasting choice): `hit-die`,
     `saving-throws`, `spellcasting-ability`, `damage-type` (of a dragon ancestor);
-  - folks (`Information Folk`): `size`, `speed`, `senses`, `languages`, `ability-bonuses`
-    (`con +2`), and of a draconic ancestry `damage-type`, `area`, `save` (its breath).
+  - folks (`Information Folk`): `size`, `speed`, `senses`, `ability-bonuses` (`con +2`), and of
+    a draconic ancestry `damage-type`, `area`, `save` (its breath); its languages are the relation
+    `languages` of the core;
+  - languages (`Information Language`): `language-type` (standard, exotic), `script`;
+  - feats (`Information Feat`): `prerequisites` (`str 13`).
 
   What the rules derive is not written: the modifier of an ability, the average of hit points,
   proficiency bonus and XP from the challenge rating, saving throws and skills (with
@@ -102,9 +110,10 @@ are shown. This plugin is not needed for that.
 
 ## Content package SRD 5.1 English (`content/dnd5e2014/en-GB/`)
 
-The items, spells, creatures, classes and folks of the SRD 5.1 in English as entries for the
-ruleset: about 610 items (equipment, magic items, trade goods, food and drink, poisons), 320
-spells, 330 creatures, 120 entries of the category `Class` and 23 of `Folk`, each with its fields
+The items, spells, creatures, classes, folks, traits, languages, the feat and the glossary of
+the SRD 5.1 in English as entries for the ruleset: about 610 items (equipment, magic items, trade
+goods, food and drink, poisons), 320 spells, 330 creatures, 120 entries of the category `Class`,
+23 of `Folk`, 27 traits, 16 languages, 1 feat and 47 entries of the glossary, each with its fields
 filled and its text. They are no tiddlers and no plugin: a wiki
 with this package in `node_modules` offers them while it runs on the Node server - in the
 search of the editor, in the choice of a relation, at a missing link and on the hub "Content" -
@@ -115,9 +124,11 @@ The wiki names the package "SRD 5.1 (English)"; every taken tiddler carries the 
 `SRD 5.1 English`, and its text stays English whatever the language of the wiki. A package in
 another language would stand beside it in a folder of its own (`content/dnd5e2014/<code>/`).
 
-- Titles are unique in the package: a class or folk before an item before a creature before a
-  spell ("Shield" is the armor, the spell is "Shield (Spell)"; "Druid" is the class, the creature
-  "Druid (Creature)"). `npm run content` reports every title that gets a suffix.
+- Titles are unique in the package: a class, folk, trait, language or feat before an item before
+  a creature before a spell before an entry of the glossary ("Shield" is the armor, the spell is
+  "Shield (Spell)"; "Druid" is the class, the creature "Druid (Creature)"; "Darkvision" is the
+  spell, the glossary "Darkvision (Glossary)"). `npm run content` reports every title that gets a
+  suffix.
 - **Classes** (`Information Class`, the tree of the relation `classes` of the core): the 12
   classes with proficiencies, multiclassing (p. 56-57), their table and their features; the 12
   subclasses under the names of the SRD ("Draconic Bloodline", not "Draconic") with `classes:
@@ -129,11 +140,21 @@ another language would stand beside it in a folder of its own (`content/dnd5e201
   with Spellcasting or Pact Magic. A subclass or choice with spells of its own names them in
   `spells`; a spell names its classes only. What a character chooses when it is made
   (equipment, skills) is left out.
-- **Folks** (`Information Folk`): the 9 folks with their values, texts and traits (`<<trait>>`;
-  Darkvision is the field `senses`), the 4 subfolks with `folk: <folk>`, the 10 draconic
-  ancestries of the dragonborn as "Draconic Ancestry: Black" with their breath (table p. 5).
-- A figure names its class, subclass and choices in `classes`, its folk in `folk`, entries of the
-  package taken or not.
+- **Folks** (`Information Folk`): the 9 folks with their values, texts and languages, the 4
+  subfolks with `folk: <folk>`, the 10 draconic ancestries of the dragonborn as "Draconic Ancestry:
+  Black" with their breath (table p. 5).
+- **Traits** (`Information Trait`): every trait of a folk or subfolk with `folk: <folks>` (Fey
+  Ancestry belongs to Elf and Half-Elf); Darkvision is the field `senses` of the folk.
+- **Languages** (`Information Language`): the 16 of the SRD (p. 59) as "Common (Language)" -
+  several are creatures or folks too -, with type, script and typical speakers. A creature and a
+  folk name theirs in `languages`; what is no language of the SRD ("understands Common but can't
+  speak") stays in the text of the creature.
+- **Feat** (`Information Feat`): Grappler (p. 75).
+- **Glossary** (`Information Glossary`): the conditions (appendix PH-A), the skills (p. 78-81), the
+  actions in combat (p. 92-93) and the senses (p. 86, 257), each with `term: <id>`; `<<term>>` and
+  the values of the rules link to them.
+- A figure names its class, subclass and choices in `classes`, its folk in `folk`, its feats and
+  languages in `feats` and `languages`, entries of the package taken or not.
 - A magic item that names its base item ("Weapon (warhammer)") names it in `base` and carries all
   its values; nothing is inherited, so the item stays as it is when the base changes.
 - Mounts are creatures with `price` and `carrying-capacity`; vehicles are items.

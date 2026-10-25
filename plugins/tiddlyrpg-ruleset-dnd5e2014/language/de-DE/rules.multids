@@ -1,5 +1,5 @@
 created: 20261009183319191
-modified: 20261025121331430
+modified: 20261025124110539
 title: $:/tiddlyrpg/language/de-DE/
 
 # Einheiten, Würfel und die Schadensgrammatik von D&D 5e (2014) auf Deutsch; Belege der Faktoren siehe en-GB.
@@ -15,7 +15,7 @@ Rules/Domain/Condition: Zustände
 Rules/Domain/CreatureType: Kreaturentypen
 Rules/Domain/Damage: Schaden
 Rules/Domain/Dice: Würfel
-Rules/Domain/Language: Sprachen
+Rules/Domain/LanguageType: Sprachtypen
 Rules/Domain/Length: Länge
 Rules/Domain/Mechanics: Spielmechanik
 Rules/Domain/School: Schulen der Magie
@@ -192,7 +192,6 @@ Rules/Field/saves: Rettungswürfe
 Rules/Field/skills: Fertigkeiten
 Rules/Field/expertise: Expertise
 Rules/Field/senses: Sinne
-Rules/Field/languages: Sprachen
 Rules/Field/carrying-capacity: Traglast
 Rules/Field/height: Körpergröße
 
@@ -204,6 +203,13 @@ Rules/Field/spellcasting-ability: Attribut zum Zauberwirken
 Rules/Field/damage-type: Schadensart
 Rules/Field/ability-bonuses: Attributswerterhöhung
 Rules/Field/character-background: Hintergrund
+
+# Die Stufe je Klasse einer Figur mit mehreren (Klassenkombinationen S. 58); ein Talent S. 80
+# ("Voraussetzung"); eine Sprache S. 62 (Tabellen "Standardsprachen", "Exotische Sprachen": "Schrift")
+Rules/Field/class-levels: Klassenstufen
+Rules/Field/prerequisites: Voraussetzung
+Rules/Field/language-type: Typ
+Rules/Field/script: Schrift
 
 # Kopfzeilen: Gegenstand S. 228 "Wundersamer Gegenstand, selten (erfordert Einstimmung)"; Zauber
 # S. 142 "Hervorrufungszauber 3. Grades", S. 163 "Erkenntniszauber 1. Grades (Ritual)", S. 142

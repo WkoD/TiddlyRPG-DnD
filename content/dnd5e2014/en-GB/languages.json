@@ -1,0 +1,211 @@
+{
+	"entries": [
+		{
+			"id": "language:common",
+			"title": "Common (Language)",
+			"type": "Language",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"language-type": "standard",
+				"script": "Common"
+			},
+			"text": "Typical speakers: Humans."
+		},
+		{
+			"id": "language:dwarvish",
+			"title": "Dwarvish (Language)",
+			"type": "Language",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"language-type": "standard",
+				"script": "Dwarvish"
+			},
+			"text": "Typical speakers: Dwarves."
+		},
+		{
+			"id": "language:elvish",
+			"title": "Elvish (Language)",
+			"type": "Language",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"language-type": "standard",
+				"script": "Elvish"
+			},
+			"text": "Typical speakers: Elves."
+		},
+		{
+			"id": "language:giant",
+			"title": "Giant (Language)",
+			"type": "Language",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"language-type": "standard",
+				"script": "Dwarvish"
+			},
+			"text": "Typical speakers: Ogres, Giants."
+		},
+		{
+			"id": "language:gnomish",
+			"title": "Gnomish (Language)",
+			"type": "Language",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"language-type": "standard",
+				"script": "Dwarvish"
+			},
+			"text": "Typical speakers: Gnomes."
+		},
+		{
+			"id": "language:goblin",
+			"title": "Goblin (Language)",
+			"type": "Language",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"language-type": "standard",
+				"script": "Dwarvish"
+			},
+			"text": "Typical speakers: Goblinoids."
+		},
+		{
+			"id": "language:halfling",
+			"title": "Halfling (Language)",
+			"type": "Language",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"language-type": "standard",
+				"script": "Common"
+			},
+			"text": "Typical speakers: Halflings."
+		},
+		{
+			"id": "language:orc",
+			"title": "Orc (Language)",
+			"type": "Language",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"language-type": "standard",
+				"script": "Dwarvish"
+			},
+			"text": "Typical speakers: Orcs."
+		},
+		{
+			"id": "language:abyssal",
+			"title": "Abyssal (Language)",
+			"type": "Language",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"language-type": "exotic",
+				"script": "Infernal"
+			},
+			"text": "Typical speakers: Demons."
+		},
+		{
+			"id": "language:celestial",
+			"title": "Celestial (Language)",
+			"type": "Language",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"language-type": "exotic",
+				"script": "Celestial"
+			},
+			"text": "Typical speakers: Celestials."
+		},
+		{
+			"id": "language:draconic",
+			"title": "Draconic (Language)",
+			"type": "Language",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"language-type": "exotic",
+				"script": "Draconic"
+			},
+			"text": "Typical speakers: Dragons, Dragonborn."
+		},
+		{
+			"id": "language:deep-speech",
+			"title": "Deep Speech (Language)",
+			"type": "Language",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"language-type": "exotic"
+			},
+			"text": "Typical speakers: Aboleths, Cloakers."
+		},
+		{
+			"id": "language:infernal",
+			"title": "Infernal (Language)",
+			"type": "Language",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"language-type": "exotic",
+				"script": "Infernal"
+			},
+			"text": "Typical speakers: Devils."
+		},
+		{
+			"id": "language:primordial",
+			"title": "Primordial (Language)",
+			"type": "Language",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"language-type": "exotic",
+				"script": "Dwarvish"
+			},
+			"text": "Typical speakers: Elementals."
+		},
+		{
+			"id": "language:sylvan",
+			"title": "Sylvan (Language)",
+			"type": "Language",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"language-type": "exotic",
+				"script": "Elvish"
+			},
+			"text": "Typical speakers: Fey creatures."
+		},
+		{
+			"id": "language:undercommon",
+			"title": "Undercommon (Language)",
+			"type": "Language",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"language-type": "exotic",
+				"script": "Elvish"
+			},
+			"text": "Typical speakers: Underdark traders."
+		}
+	]
+}

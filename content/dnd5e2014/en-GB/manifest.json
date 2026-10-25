@@ -10,6 +10,10 @@
 		"spells.json",
 		"creatures.json",
 		"classes.json",
-		"folks.json"
+		"folks.json",
+		"traits.json",
+		"languages.json",
+		"feats.json",
+		"glossary.json"
 	]
 }

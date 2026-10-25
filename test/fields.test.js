@@ -118,13 +118,13 @@ test("a spell slot with its level, as the spells of the SRD write it (EN p. 114,
 	}
 });
 
-test("a folk (Information Folk): size, speed, senses, languages - no stat block, no passive Perception without Wisdom", function() {
+test("a folk (Information Folk): size, speed, senses - no stat block, no passive Perception without Wisdom", function() {
 	wiki.addTiddler(new $tw.Tiddler({title: "Nichny", tags: "Information Folk", size: "medium", speed: "walk 30 ft, climb 30 ft",
-		senses: "darkvision 60 ft", languages: "common-language, elvish-language", text: "Cat folk."}));
+		senses: "darkvision 60 ft", text: "Cat folk."}));
 	try {
 		var block = h.render(wiki, "text/plain", "{{Nichny||$:/plugins/tiddlyrpg-core/viewtemplates/fields}}");
-		assert.equal(block, "Size MediumSpeed 30 ft, climb 30 ftSenses darkvision 60 ftLanguages Common, Elvish");
-		assert.deepEqual(Array.from(fields.forTiddler(wiki, "Nichny").fields), ["size", "speed", "senses", "languages", "ability-bonuses", "damage-type", "area", "area-shape", "save"]);
+		assert.equal(block, "Size MediumSpeed 30 ft, climb 30 ftSenses darkvision 60 ft");
+		assert.deepEqual(Array.from(fields.forTiddler(wiki, "Nichny").fields), ["size", "speed", "senses", "ability-bonuses", "damage-type", "area", "area-shape", "save"]);
 	} finally {
 		wiki.deleteTiddler("Nichny");
 	}
@@ -186,4 +186,19 @@ test("a class: hit dice, saving throws, spellcasting ability; a folk: the abilit
 test("a character: the background as free text beside the level", function() {
 	assert.ok(fields.forTypes(wiki, ["Player"]).fields.indexOf("character-background") !== -1);
 	assert.equal(read({"character-background": "Grew up at sea"}, "character-background"), "Grew up at sea");
+});
+
+test("a language: its type and script; a feat: its prerequisite; the levels of the classes", function() {
+	assert.equal(read({"language-type": "exotic"}, "language-type"), "exotic");
+	assert.equal(read({prerequisites: "str 13"}, "prerequisites"), "STR 13");
+	h.add(wiki, {title: "Kämpfer", tags: "Information Class"});
+	h.add(wiki, {title: "Schurke", tags: "Information Class"});
+	try {
+		assert.equal(read({"class-levels": "Kämpfer 5, Schurke 8"}, "class-levels"), "Kämpfer 5, Schurke 8");
+		assert.equal(read({"class-levels": "Kämpfer 5, Schurke 8"}, "character-level"), "13", "without XP the sum of the levels");
+		assert.equal(read({xp: "6500", "class-levels": "Kämpfer 5, Schurke 8"}, "character-level"), "5", "the XP win");
+		assert.equal(wiki.getTiddlerText("$:/config/flibbles/relink/fields/class-levels").trim(), "trpgtitles");
+	} finally {
+		["Kämpfer", "Schurke"].forEach(function(t) { wiki.deleteTiddler(t); });
+	}
 });

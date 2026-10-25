@@ -3,7 +3,7 @@
  * master GM/SL and experience points XP/EP - the German EP of the terms is no electrum piece, the
  * English GM no gold piece; each is read only within its domain. From the terms by group: a
  * condition, an action, cover with its variants, an alignment with its name, the creature type
- * giant beside the language giant-language.
+ * giant, a kind of language.
  */
 var test = require("node:test"),
 	assert = require("node:assert/strict"),
@@ -40,7 +40,7 @@ test("en-GB", function() {
 	assert.equal(t("lg"), "LG");
 	assert.equal(t("lg", "name"), "lawful good");
 	assert.equal(t("giant"), "giant");
-	assert.equal(t("giant-language"), "Giant");
+	assert.equal(t("exotic"), "exotic");
 });
 
 test("a term without abbreviation has no variant name; a value follows the term", function() {
@@ -56,7 +56,7 @@ test("the hubs Ruleset and CampaignSetting: the system and the setting, each wit
 	assert.match(html, /<h2[^>]*>D&amp;D 5e \(2014, SRD 5\.1\)<\/h2>/);
 	["Attribute", "Schaden", "Würfel", "Länge", "Begriffe", "Gewicht", "Zustände", "Aktionen", "Spielmechanik",
 		"Zauberwirken", "Sinne", "Fertigkeiten", "Kreaturentypen", "Größenkategorien", "Gesinnungen",
-		"Schulen der Magie", "Sprachen", "Wirkungsbereiche", "Herausforderungsgrade", "Komponenten",
+		"Schulen der Magie", "Sprachtypen", "Wirkungsbereiche", "Herausforderungsgrade", "Komponenten",
 		"Schaden neben den Arten", "Arten von Gegenständen", "Bewegungsarten", "Seltenheit", "Ergebnisse von Rettungswürfen",
 		"Geschwindigkeit", "Zauberangriffe", "Wörter für Reichweite und Wirkungsdauer", "Zeit", "Volumen"].forEach(function(name) {
 		assert.match(html, new RegExp("<h3[^>]*>" + name + "</h3>"), name);
@@ -88,5 +88,5 @@ test("de-DE", function() {
 	assert.equal(t("lg"), "RG");
 	assert.equal(t("lg", "name"), "rechtschaffen gut");
 	assert.equal(t("giant"), "Riese");
-	assert.equal(t("giant-language"), "Riesisch");
+	assert.equal(t("exotic"), "exotisch");
 });

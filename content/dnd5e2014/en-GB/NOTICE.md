@@ -1,9 +1,10 @@
 # Sources of this content package
 
-The entries in `items.json`, `spells.json`, `creatures.json`, `classes.json` and `folks.json` are
-material of the System Reference Document 5.1, converted by `scripts/content/dnd5e2014/extract.js`
-(with `characters.js`) from the data of the
-5e-bits database (tag v5.12.0) and, for trade goods, food and drink and poisons, from the SRD 5.1
+The entries in `items.json`, `spells.json`, `creatures.json`, `classes.json`, `folks.json`,
+`traits.json`, `languages.json`, `feats.json` and `glossary.json` are material of the System
+Reference Document 5.1, converted by `scripts/content/dnd5e2014/extract.js` (with `characters.js`
+and `glossary.js`) from the data of the
+5e-bits database (tag v5.12.0) and, for trade goods, food and drink, poisons and the senses, from the SRD 5.1
 itself.
 
 ## SRD 5.1

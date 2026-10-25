@@ -1,5 +1,5 @@
 created: 20261009183319191
-modified: 20261025121331430
+modified: 20261025124110539
 title: $:/tiddlyrpg/language/en-GB/
 
 # Units, dice and the damage grammar of D&D 5e (2014) in English; factors of the SRD 5.1 per pair:
@@ -19,7 +19,7 @@ Rules/Domain/Condition: Conditions
 Rules/Domain/CreatureType: Creature types
 Rules/Domain/Damage: Damage
 Rules/Domain/Dice: Dice
-Rules/Domain/Language: Languages
+Rules/Domain/LanguageType: Kinds of languages
 Rules/Domain/Length: Length
 Rules/Domain/Mechanics: Mechanics
 Rules/Domain/School: Schools of magic
@@ -196,7 +196,6 @@ Rules/Field/saves: Saving Throws
 Rules/Field/skills: Skills
 Rules/Field/expertise: Expertise
 Rules/Field/senses: Senses
-Rules/Field/languages: Languages
 Rules/Field/carrying-capacity: Carrying capacity
 Rules/Field/height: Height
 
@@ -208,6 +207,13 @@ Rules/Field/spellcasting-ability: Spellcasting Ability
 Rules/Field/damage-type: Damage Type
 Rules/Field/ability-bonuses: Ability Score Increase
 Rules/Field/character-background: Background
+
+# The level per class of a character with several (multiclassing p. 56); a feat p. 75 ("Prerequisite");
+# a language p. 59 (tables "Standard Languages", "Exotic Languages": "Script")
+Rules/Field/class-levels: Class levels
+Rules/Field/prerequisites: Prerequisite
+Rules/Field/language-type: Type
+Rules/Field/script: Script
 
 # Header lines: item p. 207 "Wondrous item, rare (requires attunement)"; spell p. 144 "3rd-level
 # evocation", p. 134 "1st-level divination (ritual)", p. 144 "Evocation cantrip"; creature p. 393

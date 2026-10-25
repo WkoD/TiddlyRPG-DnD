@@ -14,7 +14,7 @@ var test = require("node:test"),
 
 var DIR = path.join(__dirname, "..", "content", "dnd5e2014", "en-GB"),
 	// fields of the core, no schema fields: the relations and the lock
-	CORE = ["price", "base", "spells", "classes", "folk", "secret-fields"];
+	CORE = ["price", "base", "spells", "classes", "folk", "languages", "feats", "term", "secret-fields"];
 
 var $tw, wiki, fields, manifest, entries;
 
@@ -53,15 +53,15 @@ test("the manifest: the ruleset of this repo, the files beside it; package.json 
 	});
 });
 
-test("items, spells, creatures, classes and folks of the SRD 5.1", function() {
+test("items, spells, creatures, classes, folks, traits, languages, the feat and the glossary of the SRD 5.1", function() {
 	var count = {};
 	entries.forEach(function(e) {
 		count[e.type] = (count[e.type] || 0) + 1;
 	});
-	assert.deepEqual(Object.keys(count).sort(), ["Class", "Creature", "Folk", "Item", "Spell"]);
+	assert.deepEqual(Object.keys(count).sort(), ["Class", "Creature", "Feat", "Folk", "Glossary", "Item", "Language", "Spell", "Trait"]);
 	assert.ok(count.Item > 600 && count.Spell > 300 && count.Creature > 300, JSON.stringify(count));
-	assert.ok(count.Class > 100 && count.Folk === 23, JSON.stringify(count));
-	assert.deepEqual(entries.filter(function(e) { return (e.type === "Class" || e.type === "Folk") && e.tags.join() !== "Information"; }).map(function(e) { return e.title; }), [],
+	assert.ok(count.Class > 100 && count.Folk === 23 && count.Trait > 20 && count.Language === 16 && count.Feat === 1 && count.Glossary === 47, JSON.stringify(count));
+	assert.deepEqual(entries.filter(function(e) { return ["Class", "Folk", "Trait", "Language", "Feat", "Glossary"].indexOf(e.type) !== -1 && e.tags.join() !== "Information"; }).map(function(e) { return e.title; }), [],
 		"a category of Information: the tag Information beside the type");
 });
 
@@ -78,6 +78,7 @@ test("ids and titles unique in the package (a class or folk before an item befor
 	assert.deepEqual(twice, []);
 	assert.ok(titles.shield && titles["shield (spell)"], "the armor keeps the title, the spell takes the type");
 	assert.ok(titles.druid && titles["druid (creature)"], "the class keeps the title, the creature takes the type");
+	assert.ok(titles["darkvision"] && titles["darkvision (glossary)"], "the spell keeps the title, the glossary takes the type");
 });
 
 test("no umbrella entries: a variant stands for itself", function() {
@@ -103,7 +104,7 @@ test("base and spells name entries of the package, by their titles", function() 
 			}
 		});
 		// classes and folk: what a spell, an item or an entry of the tree belongs to
-		[["classes", "Class"], ["folk", "Folk"]].forEach(function(pair) {
+		[["classes", "Class"], ["folk", "Folk"], ["languages", "Language"], ["feats", "Feat"]].forEach(function(pair) {
 			$tw.utils.parseStringArray(e.fields[pair[0]] || "").forEach(function(title) {
 				if(titles[title] !== pair[1]) {
 					missing.push(e.title + " " + pair[0] + " " + title);
@@ -129,9 +130,10 @@ test("poisons with their damage, save and what a success does (SRD p. 204-205)",
 	assert.equal(poison("Poison, basic (vial)").damage, "1d4 poison");
 });
 
-test("the language Common is common-language, the rarity common", function() {
-	var languages = entries.filter(function(e) { return / common-language|^common-language/.test(e.fields.languages || ""); });
+test("the languages are entries: a creature names Common (Language); the rarity common", function() {
+	var languages = entries.filter(function(e) { return /\[\[Common \(Language\)\]\]/.test(e.fields.languages || ""); });
 	assert.ok(languages.length > 50);
+	assert.deepEqual(entries.filter(function(e) { return e.title === "Goblin"; })[0].fields.languages, "[[Common (Language)]] [[Goblin (Language)]]");
 	assert.equal(entries.filter(function(e) { return e.title === "Potion of Healing"; })[0].fields.rarity, "common");
 });
 
@@ -306,9 +308,33 @@ test("the folks: a folk with its values, a subfolk and a draconic ancestry in it
 		return entries.filter(function(e) { return e.title === title; })[0];
 	};
 	assert.deepEqual(get("Dwarf").fields, {size: "medium", speed: "walk 25 ft", senses: "darkvision 60 ft",
-		languages: "common-language, dwarvish-language", "ability-bonuses": "con +2"});
-	assert.match(get("Dwarf").text, /<<trait "Dwarven Resilience">>/);
-	assert.doesNotMatch(get("Dwarf").text, /<<trait "Darkvision">>/, "Darkvision is the field senses");
+		languages: "[[Common (Language)]] [[Dwarvish (Language)]]", "ability-bonuses": "con +2"});
+	assert.doesNotMatch(get("Dwarf").text, /<<trait/, "the traits are entries of their own");
+	assert.equal(get("Dwarven Resilience").fields.folk, "Dwarf");
+	assert.equal(get("Fey Ancestry").fields.folk, "Elf Half-Elf");
+	assert.equal(get("Dwarven Toughness").fields.folk, "[[Hill Dwarf]]");
+	assert.deepEqual(entries.filter(function(e) { return e.type === "Trait" && /^Darkvision/.test(e.title); }), [], "Darkvision is the field senses, no trait");
 	assert.deepEqual(get("Hill Dwarf").fields, {folk: "Dwarf", "ability-bonuses": "wis +1"});
 	assert.deepEqual(get("Draconic Ancestry: Black").fields, {folk: "Dragonborn", "damage-type": "acid", area: "30 ft", "area-shape": "line", save: "dex"});
+});
+
+test("languages, the feat and the glossary: their values and terms", function() {
+	var get = function(title) {
+		return entries.filter(function(e) { return e.title === title; })[0];
+	};
+	assert.deepEqual(get("Common (Language)").fields, {"language-type": "standard", script: "Common"});
+	assert.equal(get("Abyssal (Language)").fields["language-type"], "exotic");
+	assert.deepEqual(get("Grappler").fields, {prerequisites: "str 13"});
+	assert.match(get("Grappler").text, /close-quarters grappling/, "the mistakes of 5e-bits mended");
+	assert.deepEqual(get("Frightened").fields, {term: "frightened"});
+	assert.deepEqual(get("Use an Object").fields, {term: "use-an-object"});
+	assert.deepEqual(get("Darkvision (Glossary)").fields, {term: "darkvision"});
+	var language = $tw.modules.execute("$:/plugins/tiddlyrpg-core/modules/language.js"),
+		domains = language.domains(wiki),
+		unknown = entries.filter(function(e) { return e.type === "Glossary"; }).filter(function(e) {
+			return !["Condition", "Skill", "Action", "Sense"].some(function(d) {
+				return (domains[d].entries || []).some(function(x) { return x.id === e.fields.term; });
+			});
+		}).map(function(e) { return e.title + " " + e.fields.term; });
+	assert.deepEqual(unknown, [], "every term of the glossary is a term of the ruleset");
 });

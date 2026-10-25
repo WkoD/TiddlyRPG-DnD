@@ -80,7 +80,7 @@ test("the 32 domains of the ruleset with their types", function() {
 	assert.deepEqual(types, {
 		Ability: "label", Action: "label", Alignment: "label", Area: "label", Challenge: "label",
 		Component: "label", Condition: "label", CreatureType: "label", Damage: "damage", DamageGroup: "label",
-		Dice: "tokens", ItemCategory: "label", Language: "label", Length: "unit", Level: "table", Mechanics: "label",
+		Dice: "tokens", ItemCategory: "label", LanguageType: "label", Length: "unit", Level: "table", Mechanics: "label",
 		Movement: "label", Rarity: "label", SaveSuccess: "label", School: "label", Section: "section", Sense: "label", Size: "label",
 		Skill: "label", Speed: "unit", SpellAttack: "label", SpellWord: "label", Spellcasting: "label",
 		Terms: "label", Time: "unit", Volume: "unit", Weight: "unit"
@@ -132,17 +132,11 @@ test("the 13 damage types, 6 abilities and 7 terms of the SRD 5.1", function() {
 	assert.deepEqual(byName.Terms.entries.map(function(e) { return e.id; }), ["ac", "hp", "dc", "cr", "xp", "gm", "pb"]);
 });
 
-test("the terms of the SRD 5.1 by group: conditions, actions, mechanics, spellcasting, senses, skills, creature types, sizes, alignments, schools, languages", function() {
+test("the terms of the SRD 5.1 by group: conditions, actions, mechanics, spellcasting, senses, skills, creature types, sizes, alignments, schools, kinds of languages", function() {
 	var sizes = {};
 	domains().forEach(function(d) { sizes[d.domain] = d.entries ? d.entries.length : 0; });
 	assert.deepEqual([sizes.Condition, sizes.Action, sizes.Mechanics, sizes.Spellcasting, sizes.Sense, sizes.Skill,
-		sizes.CreatureType, sizes.Size, sizes.Alignment, sizes.School, sizes.Language], [15, 14, 19, 7, 6, 18, 14, 6, 15, 8, 16]);
-});
-
-test("every language id ends in -language: common is a rarity, giant and celestial are creature types", function() {
-	var language = domains().filter(function(d) { return d.domain === "Language"; })[0];
-	assert.deepEqual(language.entries.filter(function(e) { return !/-language$/.test(e.id); }), []);
-	assert.match(language.example, /-language$/);
+		sizes.CreatureType, sizes.Size, sizes.Alignment, sizes.School, sizes.LanguageType], [15, 14, 19, 7, 6, 18, 14, 6, 15, 8, 2]);
 });
 
 CODES.forEach(function(code) {

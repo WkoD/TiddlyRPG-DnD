@@ -1,5 +1,5 @@
 created: 20261009183319191
-modified: 20261025121331430
+modified: 20261025124110539
 title: $:/tiddlyrpg/language/de-DE/
 
 # Begriffe des Systemreferenzdokuments 5.1 (deutsch, CC-BY-4.0, siehe den Tab license), von Hand;
@@ -244,28 +244,13 @@ Rules/Term/illusion: Illusionszauber
 Rules/Term/necromancy: Nekromantiezauber
 Rules/Term/transmutation: Verwandlungszauber
 
-# Sprachen: S. 62, Tabellen "Standardsprachen" und "Exotische Sprachen"; jede ID endet auf -language
-# (common ist eine Seltenheit, giant und celestial sind Kreaturtypen, elvish liest sich als eigenes Wort)
-Rules/Term/common-language: Gemeinsprache
-Rules/Term/dwarvish-language: Zwergisch
-Rules/Term/elvish-language: Elfisch
-Rules/Term/giant-language: Riesisch
-Rules/Term/gnomish-language: Gnomisch
-Rules/Term/goblin-language: Goblinisch
-Rules/Term/halfling-language: Halblingisch
-Rules/Term/orc-language: Orkisch
-Rules/Term/abyssal-language: Abyssisch
-Rules/Term/celestial-language: Celestisch
-Rules/Term/draconic-language: Drakonisch
-Rules/Term/deep-speech-language: Tiefensprache
-Rules/Term/infernal-language: Infernalisch
-Rules/Term/primordial-language: Urtümlich
-Rules/Term/sylvan-language: Sylvanisch
-Rules/Term/undercommon-language: Gemeinsprache der Unterreiche
+# Sprachtypen: S. 62, Tabellen "Standardsprachen" und "Exotische Sprachen"
+Rules/Term/standard: Standard
+Rules/Term/exotic: exotisch
 
 # Seltenheit magischer Gegenstände: S. 226-228 ("Seltenheit"), im Kopf des Gegenstands, z. B.
 # S. 228 "Wundersamer Gegenstand, selten (erfordert Einstimmung)", S. 270 "Trank, gewöhnlich",
-# S. 282 "Artefakt" (die Sprache Common ist common-language)
+# S. 282 "Artefakt"
 Rules/Term/common: gewöhnlich
 Rules/Term/uncommon: ungewöhnlich
 Rules/Term/rare: selten

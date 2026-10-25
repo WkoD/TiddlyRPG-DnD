@@ -19,7 +19,11 @@
  *   - a class shows its proficiencies, multiclassing (p. 56-57), its table and its features as
  *     sections <<feature>>, the Spellcasting with its parts; what a character chooses when it is
  *     made - equipment, skills, ability scores, languages - is left out;
- *   - Darkvision of a folk is its field senses, not a section.
+ *   - Darkvision of a folk is its field senses; every other trait is an entry of the category Trait
+ *     that names the folks and subfolks it belongs to (folk: Dwarf, folk: [[High Elf]]);
+ *   - a folk names its languages without choice in the relation languages of the core, a language
+ *     is "<name> (Language)" - several are creatures or folks too (Goblin, Halfling);
+ *   - the feat Grappler with the mistakes of the data of 5e-bits mended (FEAT_TEXT).
  */
 "use strict";
 
@@ -244,36 +248,30 @@ exports.classes = function(data, h, spellTitle) {
 	return out;
 };
 
+// The title of a language in the package ("Common (Language)")
+var languageTitle = exports.languageTitle = function(name) {
+	return name + " (Language)";
+};
+
 /*
 The entries of the category Folk: the folks, their subfolks and the draconic ancestries of the
-dragonborn. <languages> the ids of the domain Language by name ("deep speech").
+dragonborn.
 */
-exports.folks = function(data, h, languages) {
-	var traits = {},
-		out = [];
-	data.Traits.forEach(function(t) { traits[t.index] = t; });
+exports.folks = function(data, h) {
+	var out = [];
 	var bonuses = function(list) {
 		return (list || []).map(function(b) { return b.ability_score.index + " +" + b.bonus; }).join(", ");
-	};
-	// The traits as sections: not Darkvision (the field senses), not the choice of an ancestry
-	var traitSections = function(refs) {
-		return (refs || []).map(function(ref) { return traits[ref.index]; }).filter(function(t) {
-			return t && t.index !== "darkvision" && !t.parent && !(t.trait_specific && t.trait_specific.subtrait_options);
-		}).map(function(t) {
-			return h.section("trait", h.escape(t.name), h.wikitext(t.desc));
-		});
 	};
 	data.Races.forEach(function(r) {
 		var fields = {size: r.size.toLowerCase(), speed: "walk " + r.speed + " ft"};
 		if((r.traits || []).some(function(t) { return t.index === "darkvision"; })) {
 			fields.senses = "darkvision 60 ft";
 		}
-		fields.languages = r.languages.map(function(l) { return languages[l.name.toLowerCase()]; }).join(", ");
+		fields.languages = titles(r.languages.map(function(l) { return languageTitle(l.name); }));
 		if(r.ability_bonuses && r.ability_bonuses.length) {
 			fields["ability-bonuses"] = bonuses(r.ability_bonuses);
 		}
-		var text = [r.age, r.alignment, r.size_description, r.language_desc].filter(Boolean).map(function(p) { return h.wikitext([p]); })
-			.concat(traitSections(r.traits)).join("\n\n");
+		var text = [r.age, r.alignment, r.size_description, r.language_desc].filter(Boolean).map(function(p) { return h.wikitext([p]); }).join("\n\n");
 		out.push({id: "folk:" + r.index, title: r.name, type: "Folk", tags: ["Information"], fields: fields, text: text});
 	});
 	data.Subraces.forEach(function(s) {
@@ -281,7 +279,7 @@ exports.folks = function(data, h, languages) {
 		if(s.ability_bonuses && s.ability_bonuses.length) {
 			fields["ability-bonuses"] = bonuses(s.ability_bonuses);
 		}
-		var text = [h.wikitext([s.desc])].concat(traitSections(s.racial_traits)).join("\n\n");
+		var text = h.wikitext([s.desc]);
 		out.push({id: "folk:" + s.index, title: s.name, type: "Folk", tags: ["Information"], fields: fields, text: text});
 	});
 	data.Traits.filter(function(t) { return t.parent && t.parent.index === "draconic-ancestry"; }).forEach(function(t) {
@@ -300,4 +298,55 @@ exports.folks = function(data, h, languages) {
 			tags: ["Information"], fields: fields, text: ""});
 	});
 	return out;
+};
+
+/*
+The entries of the category Trait: every trait of a folk or subfolk but Darkvision (the field
+senses of the folk) and the choices of a draconic ancestry (entries of Folk), each naming the
+folks it belongs to.
+*/
+exports.traits = function(data, h) {
+	var owners = {};
+	var add = function(index, title) {
+		(owners[index] = owners[index] || []).push(title);
+	};
+	data.Races.forEach(function(r) { (r.traits || []).forEach(function(t) { add(t.index, r.name); }); });
+	data.Subraces.forEach(function(s) { (s.racial_traits || []).forEach(function(t) { add(t.index, s.name); }); });
+	return data.Traits.filter(function(t) {
+		return t.index !== "darkvision" && !t.parent && owners[t.index];
+	}).map(function(t) {
+		return {id: "trait:" + t.index, title: t.name, type: "Trait", tags: ["Information"], fields: {folk: titles(owners[t.index])},
+			text: h.wikitext(t.desc)};
+	});
+};
+
+// The entries of the category Language: the standard and exotic languages (SRD p. 59)
+exports.languages = function(data, h) {
+	return data.Languages.map(function(l) {
+		var fields = {"language-type": l.type.toLowerCase()};
+		if(l.script) {
+			fields.script = l.script;
+		}
+		var speakers = (l.typical_speakers || []).join(", ");
+		return {id: "language:" + l.index, title: languageTitle(l.name), type: "Language", tags: ["Information"], fields: fields,
+			text: speakers ? "Typical speakers: " + h.escape(speakers) + "." : ""};
+	});
+};
+
+// The text of Grappler as the SRD has it (p. 75): 5e-bits writes "close--quarters" and capitals
+var FEAT_TEXT = {grappler: function(text) {
+	return text.replace("close--quarters", "close-quarters").replace("the Skills", "the skills").replace(" Grappling", " grappling")
+		.replace("Attack Rolls", "attack rolls").replace("Grappled by", "grappled by").replace("are both Restrained", "are both restrained");
+}};
+
+// The entries of the category Feat: the feat of the SRD (p. 75)
+exports.feats = function(data, h) {
+	return data.Feats.map(function(f) {
+		var fields = {};
+		if(f.prerequisites && f.prerequisites.length) {
+			fields.prerequisites = f.prerequisites.map(function(p) { return p.ability_score.index + " " + p.minimum_score; }).join(", ");
+		}
+		var desc = f.desc.map(function(line) { return FEAT_TEXT[f.index] ? FEAT_TEXT[f.index](line) : line; });
+		return {id: "feat:" + f.index, title: f.name, type: "Feat", tags: ["Information"], fields: fields, text: h.wikitext(desc)};
+	});
 };

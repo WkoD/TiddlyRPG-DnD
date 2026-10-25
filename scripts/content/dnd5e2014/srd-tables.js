@@ -1,7 +1,7 @@
 /*
  * What the data of 5e-bits does not have, read from the SRD 5.1 (English PDF): trade goods
- * (p. 72), food and drink (p. 73-74), poisons (p. 204-205). Prices in gp, texts in the Markdown of
- * 5e-bits (extract.js converts them like the rest).
+ * (p. 72), food and drink (p. 73-74), poisons (p. 204-205), the senses (p. 86, tremorsense
+ * p. 257). Prices in gp, texts in the Markdown of 5e-bits (extract.js converts them like the rest).
  *
  * Left out: lodging and meals per day and the services (prices of a stay, not things), the
  * lifestyles. Livestock of the trade goods is an item where the SRD has no stat block (chicken,
@@ -83,4 +83,17 @@ exports.poisons = [
 // Livestock of the trade goods with a stat block
 exports.creaturePrices = [
 	{title: "Goat", price: 1}
+];
+
+// The senses (p. 86 "Vision and Light"; tremorsense p. 257, the senses of a monster): the id of
+// the domain Sense, the text for the glossary (glossary.js)
+exports.senses = [
+	{id: "blindsight", name: "Blindsight",
+		desc: "A creature with blindsight can perceive its surroundings without relying on sight, within a specific radius. Creatures without eyes, such as oozes, and creatures with echolocation or heightened senses, such as bats and true dragons, have this sense."},
+	{id: "darkvision", name: "Darkvision",
+		desc: "Many creatures in fantasy gaming worlds, especially those that dwell underground, have darkvision. Within a specified range, a creature with darkvision can see in darkness as if the darkness were dim light, so areas of darkness are only lightly obscured as far as that creature is concerned. However, the creature can't discern color in darkness, only shades of gray."},
+	{id: "tremorsense", name: "Tremorsense",
+		desc: "A monster with tremorsense can detect and pinpoint the origin of vibrations within a specific radius, provided that the monster and the source of the vibrations are in contact with the same ground or substance. Tremorsense can't be used to detect flying or incorporeal creatures. Many burrowing creatures, such as ankhegs and umber hulks, have this special sense."},
+	{id: "truesight", name: "Truesight",
+		desc: "A creature with truesight can, out to a specific range, see in normal and magical darkness, see invisible creatures and objects, automatically detect visual illusions and succeed on saving throws against them, and perceives the original form of a shapechanger or a creature that is transformed by magic. Furthermore, the creature can see into the Ethereal Plane."}
 ];

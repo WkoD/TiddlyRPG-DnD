@@ -1,0 +1,568 @@
+{
+	"entries": [
+		{
+			"id": "glossary:condition-blinded",
+			"title": "Blinded",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "blinded"
+			},
+			"text": "* A blinded creature can't see and automatically fails any ability check that requires sight.\n* Attack rolls against the creature have advantage, and the creature's attack rolls have disadvantage."
+		},
+		{
+			"id": "glossary:condition-charmed",
+			"title": "Charmed",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "charmed"
+			},
+			"text": "* A charmed creature can't attack the charmer or target the charmer with harmful abilities or magical effects.\n* The charmer has advantage on any ability check to interact socially with the creature."
+		},
+		{
+			"id": "glossary:condition-deafened",
+			"title": "Deafened",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "deafened"
+			},
+			"text": "* A deafened creature can't hear and automatically fails any ability check that requires hearing."
+		},
+		{
+			"id": "glossary:condition-frightened",
+			"title": "Frightened",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "frightened"
+			},
+			"text": "* A frightened creature has disadvantage on ability checks and attack rolls while the source of its fear is within line of sight.\n* The creature can't willingly move closer to the source of its fear."
+		},
+		{
+			"id": "glossary:condition-grappled",
+			"title": "Grappled",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "grappled"
+			},
+			"text": "* A grappled creature's speed becomes 0, and it can't benefit from any bonus to its speed.\n* The condition ends if the grappler is <<term incapacitated>> (see the condition).\n* The condition also ends if an effect removes the grappled creature from the reach of the grappler or grappling effect, such as when a creature is hurled away by the thunderwave spell."
+		},
+		{
+			"id": "glossary:condition-incapacitated",
+			"title": "Incapacitated",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "incapacitated"
+			},
+			"text": "* An incapacitated creature can't take actions or reactions."
+		},
+		{
+			"id": "glossary:condition-invisible",
+			"title": "Invisible",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "invisible"
+			},
+			"text": "* An invisible creature is impossible to see without the aid of magic or a special sense. For the purpose of hiding, the creature is heavily obscured. The creature's location can be detected by any noise it makes or any tracks it leaves.\n* Attack rolls against the creature have disadvantage, and the creature's attack rolls have advantage."
+		},
+		{
+			"id": "glossary:condition-paralyzed",
+			"title": "Paralyzed",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "paralyzed"
+			},
+			"text": "* A paralyzed creature is <<term incapacitated>> (see the condition) and can't move or speak.\n* The creature automatically fails Strength and Dexterity saving throws.\n* Attack rolls against the creature have advantage.\n* Any attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature."
+		},
+		{
+			"id": "glossary:condition-petrified",
+			"title": "Petrified",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "petrified"
+			},
+			"text": "* A petrified creature is transformed, along with any nonmagical object it is wearing or carrying, into a solid inanimate substance (usually stone). Its weight increases by a factor of ten, and it ceases aging.\n* The creature is <<term incapacitated>> (see the condition), can't move or speak, and is unaware of its surroundings.\n* Attack rolls against the creature have advantage.\n* The creature automatically fails Strength and Dexterity saving throws.\n* The creature has resistance to all damage.\n* The creature is immune to poison and disease, although a poison or disease already in its system is suspended, not neutralized."
+		},
+		{
+			"id": "glossary:condition-poisoned",
+			"title": "Poisoned",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "poisoned"
+			},
+			"text": "* A poisoned creature has disadvantage on attack rolls and ability checks."
+		},
+		{
+			"id": "glossary:condition-prone",
+			"title": "Prone",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "prone"
+			},
+			"text": "* A prone creature's only movement option is to crawl, unless it stands up and thereby ends the condition.\n* The creature has disadvantage on attack rolls.\n* An attack roll against the creature has advantage if the attacker is within 5 feet of the creature. Otherwise, the attack roll has disadvantage."
+		},
+		{
+			"id": "glossary:condition-restrained",
+			"title": "Restrained",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "restrained"
+			},
+			"text": "* A restrained creature's speed becomes 0, and it can't benefit from any bonus to its speed.\n* Attack rolls against the creature have advantage, and the creature's attack rolls have disadvantage.\n* The creature has disadvantage on Dexterity saving throws."
+		},
+		{
+			"id": "glossary:condition-stunned",
+			"title": "Stunned",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "stunned"
+			},
+			"text": "* A stunned creature is <<term incapacitated>> (see the condition), can't move, and can speak only falteringly.\n* The creature automatically fails Strength and Dexterity saving throws.\n* Attack rolls against the creature have advantage."
+		},
+		{
+			"id": "glossary:condition-unconscious",
+			"title": "Unconscious",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "unconscious"
+			},
+			"text": "* An unconscious creature is <<term incapacitated>> (see the condition), can't move or speak, and is unaware of its surroundings.\n* The creature drops whatever it's holding and falls <<term prone>>.\n* The creature automatically fails Strength and Dexterity saving throws.\n* Attack rolls against the creature have advantage.\n* Any attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature."
+		},
+		{
+			"id": "glossary:condition-exhaustion",
+			"title": "Exhaustion",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "exhaustion"
+			},
+			"text": "Some special abilities and environmental hazards, such as starvation and the long-term effects of freezing or scorching temperatures, can lead to a special condition called exhaustion. Exhaustion is measured in six levels. An effect can give a creature one or more levels of exhaustion, as specified in the effect's description.\n\n1 - Disadvantage on ability checks\n\n2 - Speed halved\n\n3 - Disadvantage on attack rolls and saving throws\n\n4 - Hit point maximum halved\n\n5 - Speed reduced to 0\n\n6 - Death\n\nIf an already exhausted creature suffers another effect that causes exhaustion, its current level of exhaustion increases by the amount specified in the effect's description.\n\nA creature suffers the effect of its current level of exhaustion as well as all lower levels. For example, a creature suffering level 2 exhaustion has its speed halved and has disadvantage on ability checks.\n\nAn effect that removes exhaustion reduces its level as specified in the effect's description, with all exhaustion effects ending if a creature's exhaustion level is reduced below 1.\n\nFinishing a long rest reduces a creature's exhaustion level by 1, provided that the creature has also ingested some food and drink."
+		},
+		{
+			"id": "glossary:skill-acrobatics",
+			"title": "Acrobatics",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "acrobatics"
+			},
+			"text": "Your Dexterity (Acrobatics) check covers your attempt to stay on your feet in a tricky situation, such as when you're trying to run across a sheet of ice, balance on a tightrope, or stay upright on a rocking ship's deck. The GM might also call for a Dexterity (Acrobatics) check to see if you can perform acrobatic stunts, including dives, rolls, somersaults, and flips."
+		},
+		{
+			"id": "glossary:skill-animal-handling",
+			"title": "Animal Handling",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "animal-handling"
+			},
+			"text": "When there is any question whether you can calm down a domesticated animal, keep a mount from getting spooked, or intuit an animal's intentions, the GM might call for a Wisdom (Animal Handling) check. You also make a Wisdom (Animal Handling) check to control your mount when you attempt a risky maneuver."
+		},
+		{
+			"id": "glossary:skill-arcana",
+			"title": "Arcana",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "arcana"
+			},
+			"text": "Your Intelligence (Arcana) check measures your ability to recall lore about spells, magic items, eldritch symbols, magical traditions, the planes of existence, and the inhabitants of those planes."
+		},
+		{
+			"id": "glossary:skill-athletics",
+			"title": "Athletics",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "athletics"
+			},
+			"text": "Your Strength (Athletics) check covers difficult situations you encounter while climbing, jumping, or swimming."
+		},
+		{
+			"id": "glossary:skill-deception",
+			"title": "Deception",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "deception"
+			},
+			"text": "Your Charisma (Deception) check determines whether you can convincingly hide the truth, either verbally or through your actions. This deception can encompass everything from misleading others through ambiguity to telling outright lies. Typical situations include trying to fast- talk a guard, con a merchant, earn money through gambling, pass yourself off in a disguise, dull someone's suspicions with false assurances, or maintain a straight face while telling a blatant lie."
+		},
+		{
+			"id": "glossary:skill-history",
+			"title": "History",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "history"
+			},
+			"text": "Your Intelligence (History) check measures your ability to recall lore about historical events, legendary people, ancient kingdoms, past disputes, recent wars, and lost civilizations."
+		},
+		{
+			"id": "glossary:skill-insight",
+			"title": "Insight",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "insight"
+			},
+			"text": "Your Wisdom (Insight) check decides whether you can determine the true intentions of a creature, such as when searching out a lie or predicting someone's next move. Doing so involves gleaning clues from body language, speech habits, and changes in mannerisms."
+		},
+		{
+			"id": "glossary:skill-intimidation",
+			"title": "Intimidation",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "intimidation"
+			},
+			"text": "When you attempt to influence someone through overt threats, hostile actions, and physical violence, the GM might ask you to make a Charisma (Intimidation) check. Examples include trying to pry information out of a prisoner, convincing street thugs to back down from a confrontation, or using the edge of a broken bottle to convince a sneering vizier to reconsider a decision."
+		},
+		{
+			"id": "glossary:skill-investigation",
+			"title": "Investigation",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "investigation"
+			},
+			"text": "When you look around for clues and make deductions based on those clues, you make an Intelligence (Investigation) check. You might deduce the location of a hidden object, discern from the appearance of a wound what kind of weapon dealt it, or determine the weakest point in a tunnel that could cause it to collapse. Poring through ancient scrolls in search of a hidden fragment of knowledge might also call for an Intelligence (Investigation) check."
+		},
+		{
+			"id": "glossary:skill-medicine",
+			"title": "Medicine",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "medicine"
+			},
+			"text": "A Wisdom (Medicine) check lets you try to stabilize a dying companion or diagnose an illness."
+		},
+		{
+			"id": "glossary:skill-nature",
+			"title": "Nature",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "nature"
+			},
+			"text": "Your Intelligence (Nature) check measures your ability to recall lore about terrain, plants and animals, the weather, and natural cycles."
+		},
+		{
+			"id": "glossary:skill-perception",
+			"title": "Perception",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "perception"
+			},
+			"text": "Your Wisdom (Perception) check lets you spot, hear, or otherwise detect the presence of something. It measures your general awareness of your surroundings and the keenness of your senses. For example, you might try to hear a conversation through a closed door, eavesdrop under an open window, or hear monsters moving stealthily in the forest. Or you might try to spot things that are obscured or easy to miss, whether they are orcs lying in ambush on a road, thugs hiding in the shadows of an alley, or candlelight under a closed secret door."
+		},
+		{
+			"id": "glossary:skill-performance",
+			"title": "Performance",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "performance"
+			},
+			"text": "Your Charisma (Performance) check determines how well you can delight an audience with music, dance, acting, storytelling, or some other form of entertainment."
+		},
+		{
+			"id": "glossary:skill-persuasion",
+			"title": "Persuasion",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "persuasion"
+			},
+			"text": "When you attempt to influence someone or a group of people with tact, social graces, or good nature, the GM might ask you to make a Charisma (Persuasion) check. Typically, you use persuasion when acting in good faith, to foster friendships, make cordial requests, or exhibit proper etiquette. Examples of persuading others include convincing a chamberlain to let your party see the king, negotiating peace between warring tribes, or inspiring a crowd of townsfolk."
+		},
+		{
+			"id": "glossary:skill-religion",
+			"title": "Religion",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "religion"
+			},
+			"text": "Your Intelligence (Religion) check measures your ability to recall lore about deities, rites and prayers, religious hierarchies, holy symbols, and the practices of secret cults."
+		},
+		{
+			"id": "glossary:skill-sleight-of-hand",
+			"title": "Sleight of Hand",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "sleight-of-hand"
+			},
+			"text": "Whenever you attempt an act of legerdemain or manual trickery, such as planting something on someone else or concealing an object on your person, make a Dexterity (Sleight of Hand) check. The GM might also call for a Dexterity (Sleight of Hand) check to determine whether you can lift a coin purse off another person or slip something out of another person's pocket."
+		},
+		{
+			"id": "glossary:skill-stealth",
+			"title": "Stealth",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "stealth"
+			},
+			"text": "Make a Dexterity (Stealth) check when you attempt to conceal yourself from enemies, slink past guards, slip away without being noticed, or sneak up on someone without being seen or heard."
+		},
+		{
+			"id": "glossary:skill-survival",
+			"title": "Survival",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "survival"
+			},
+			"text": "The GM might ask you to make a Wisdom (Survival) check to follow tracks, hunt wild game, guide your group through frozen wastelands, identify signs that owlbears live nearby, predict the weather, or avoid quicksand and other natural hazards."
+		},
+		{
+			"id": "glossary:action-attack",
+			"title": "Attack",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "attack"
+			},
+			"text": "The most common action to take in combat is the Attack action, whether you are swinging a sword, firing an arrow from a bow, or brawling with your fists.\n\nWith this action, you make one melee or ranged attack. See the \"Making an Attack\" section for the rules that govern attacks.\n\nCertain features, such as the Extra Attack feature of the fighter, allow you to make more than one attack with this action."
+		},
+		{
+			"id": "glossary:action-cast-a-spell",
+			"title": "Cast a Spell",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "cast-a-spell"
+			},
+			"text": "Spellcasters such as wizards and clerics, as well as many monsters, have access to spells and can use them to great effect in combat. Each spell has a casting time, which specifies whether the caster must use an action, a reaction, minutes, or even hours to cast the spell. Casting a spell is, therefore, not necessarily an action. Most spells do have a casting time of 1 action, so a spellcaster often uses his or her action in combat to cast such a spell."
+		},
+		{
+			"id": "glossary:action-dash",
+			"title": "Dash",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "dash"
+			},
+			"text": "When you take the Dash action, you gain extra movement for the current turn. The increase equals your speed, after applying any modifiers. With a speed of 30 feet, for example, you can move up to 60 feet on your turn if you dash.\n\nAny increase or decrease to your speed changes this additional movement by the same amount. If your speed of 30 feet is reduced to 15 feet, for instance, you can move up to 30 feet this turn if you dash."
+		},
+		{
+			"id": "glossary:action-disengage",
+			"title": "Disengage",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "disengage"
+			},
+			"text": "If you take the Disengage action, your movement doesn't provoke opportunity attacks for the rest of the turn."
+		},
+		{
+			"id": "glossary:action-dodge",
+			"title": "Dodge",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "dodge"
+			},
+			"text": "When you take the Dodge action, you focus entirely on avoiding attacks. Until the start of your next turn, any attack roll made against you has disadvantage if you can see the attacker, and you make Dexterity saving throws with advantage. You lose this benefit if you are <<term incapacitated>> (as explained in appendix PH-A) or if your speed drops to 0."
+		},
+		{
+			"id": "glossary:action-help",
+			"title": "Help",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "help"
+			},
+			"text": "You can lend your aid to another creature in the completion of a task. When you take the Help action, the creature you aid gains advantage on the next ability check it makes to perform the task you are helping with, provided that it makes the check before the start of your next turn.\n\nAlternatively, you can aid a friendly creature in attacking a creature within 5 feet of you. You feint, distract the target, or in some other way team up to make your ally's attack more effective. If your ally attacks the target before your next turn, the first attack roll is made with advantage."
+		},
+		{
+			"id": "glossary:action-hide",
+			"title": "Hide",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "hide"
+			},
+			"text": "When you take the Hide action, you make a Dexterity (Stealth) check in an attempt to hide, following the rules for hiding. If you succeed, you gain certain benefits, as described in the \"Unseen Attackers and Targets\" section later in this chapter."
+		},
+		{
+			"id": "glossary:action-ready",
+			"title": "Ready",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "ready"
+			},
+			"text": "Sometimes you want to get the jump on a foe or wait for a particular circumstance before you act. To do so, you can take the Ready action on your turn, which lets you act using your reaction before the start of your next turn.\n\nFirst, you decide what perceivable circumstance will trigger your reaction. Then, you choose the action you will take in response to that trigger, or you choose to move up to your speed in response to it. Examples include \"If the cultist steps on the trapdoor, I'll pull the lever that opens it,\" and \"If the goblin steps next to me, I move away.\"\n\nWhen the trigger occurs, you can either take your reaction right after the trigger finishes or ignore the trigger. Remember that you can take only one reaction per round.\n\nWhen you ready a spell, you cast it as normal but hold its energy, which you release with your reaction when the trigger occurs. To be readied, a spell must have a casting time of 1 action, and holding onto the spell's magic requires concentration. If your concentration is broken, the spell dissipates without taking effect. For example, if you are concentrating on the //web// spell and ready //magic missile//, your //web// spell ends, and if you take damage before you release //magic missile// with your reaction, your concentration might be broken."
+		},
+		{
+			"id": "glossary:action-search",
+			"title": "Search",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "search"
+			},
+			"text": "When you take the Search action, you devote your attention to finding something. Depending on the nature of your search, the GM might have you make a Wisdom (Perception) check or an Intelligence (Investigation) check."
+		},
+		{
+			"id": "glossary:action-use-an-object",
+			"title": "Use an Object",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "use-an-object"
+			},
+			"text": "You normally interact with an object while doing something else, such as when you draw a sword as part of an attack. When an object requires your action for its use, you take the Use an Object action. This action is also useful when you want to interact with more than one object on your turn."
+		},
+		{
+			"id": "glossary:sense-blindsight",
+			"title": "Blindsight",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "blindsight"
+			},
+			"text": "A creature with blindsight can perceive its surroundings without relying on sight, within a specific radius. Creatures without eyes, such as oozes, and creatures with echolocation or heightened senses, such as bats and true dragons, have this sense."
+		},
+		{
+			"id": "glossary:sense-darkvision",
+			"title": "Darkvision (Glossary)",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "darkvision"
+			},
+			"text": "Many creatures in fantasy gaming worlds, especially those that dwell underground, have darkvision. Within a specified range, a creature with darkvision can see in darkness as if the darkness were dim light, so areas of darkness are only lightly obscured as far as that creature is concerned. However, the creature can't discern color in darkness, only shades of gray."
+		},
+		{
+			"id": "glossary:sense-tremorsense",
+			"title": "Tremorsense",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "tremorsense"
+			},
+			"text": "A monster with tremorsense can detect and pinpoint the origin of vibrations within a specific radius, provided that the monster and the source of the vibrations are in contact with the same ground or substance. Tremorsense can't be used to detect flying or incorporeal creatures. Many burrowing creatures, such as ankhegs and umber hulks, have this special sense."
+		},
+		{
+			"id": "glossary:sense-truesight",
+			"title": "Truesight",
+			"type": "Glossary",
+			"tags": [
+				"Information"
+			],
+			"fields": {
+				"term": "truesight"
+			},
+			"text": "A creature with truesight can, out to a specific range, see in normal and magical darkness, see invisible creatures and objects, automatically detect visual illusions and succeed on saving throws against them, and perceives the original form of a shapechanger or a creature that is transformed by magic. Furthermore, the creature can see into the Ethereal Plane."
+		}
+	]
+}

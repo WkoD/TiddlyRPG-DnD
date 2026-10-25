@@ -1,5 +1,5 @@
 created: 20261009183319191
-modified: 20261025121331430
+modified: 20261025124110539
 title: $:/tiddlyrpg/language/en-GB/
 
 # Terms of the System Reference Document 5.1 (English, CC-BY-4.0, see the tab license), by hand;
@@ -240,28 +240,12 @@ Rules/Term/illusion: illusion
 Rules/Term/necromancy: necromancy
 Rules/Term/transmutation: transmutation
 
-# Languages: p. 59, tables "Standard Languages" and "Exotic Languages"; every id ends in -language
-# (common is a rarity, giant and celestial are creature types, elvish reads as a word of its own)
-Rules/Term/common-language: Common
-Rules/Term/dwarvish-language: Dwarvish
-Rules/Term/elvish-language: Elvish
-Rules/Term/giant-language: Giant
-Rules/Term/gnomish-language: Gnomish
-Rules/Term/goblin-language: Goblin
-Rules/Term/halfling-language: Halfling
-Rules/Term/orc-language: Orc
-Rules/Term/abyssal-language: Abyssal
-Rules/Term/celestial-language: Celestial
-Rules/Term/draconic-language: Draconic
-Rules/Term/deep-speech-language: Deep Speech
-Rules/Term/infernal-language: Infernal
-Rules/Term/primordial-language: Primordial
-Rules/Term/sylvan-language: Sylvan
-Rules/Term/undercommon-language: Undercommon
+# Kinds of languages: p. 59, tables "Standard Languages" and "Exotic Languages"
+Rules/Term/standard: standard
+Rules/Term/exotic: exotic
 
 # Rarity of magic items: p. 206-207 ("Rarity"), in the item header, e.g. p. 207 "Wondrous item,
-# rare (requires attunement)", p. 233 "Potion, common", p. 252 "artifact" (the language Common is
-# common-language)
+# rare (requires attunement)", p. 233 "Potion, common", p. 252 "artifact"
 Rules/Term/common: common
 Rules/Term/uncommon: uncommon
 Rules/Term/rare: rare
