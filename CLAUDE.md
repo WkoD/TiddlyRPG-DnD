@@ -111,7 +111,10 @@ its fields, groups and header line - the format is in the module header of `modu
 of `TiddlyRPG-Plugins`. Every field name is hidden from the field list of the core editor
 (`config/form-fields-hidden.multids`), the form shows it as a field of the rules.
 - Tests here check the real data; the engines themselves are tested in `TiddlyRPG-Plugins`
-  against fixture plugins. A test of the same topic has the same file name in both repos.
+  against fixture plugins. A test of the same topic has the same file name in both repos. A test
+  of the data walks every entry, id and language (every month and festival, coin, damage type,
+  domain), not a sample: a renamed id or a wrong label passed before. The rules of "Mistakes
+  that came back" in the `CLAUDE.md` of `TiddlyRPG-Plugins` hold for the tests here as well.
 
 **Content package** (`content/dnd5e2014/en-GB/`, README "Content package SRD 5.1 English"): generated, never
 edited by hand - change `scripts/content/dnd5e2014/extract.js` (or `srd-tables.js` for what it
@@ -124,6 +127,22 @@ What a value of the package must be is what the fields of the ruleset read - `te
 reads every one. The notices of the sources stand in `content/dnd5e2014/en-GB/NOTICE.md`. The folder is the language
 of the texts; the name of the manifest says it too ("SRD 5.1 (English)"), and its `tag` marks
 every taken tiddler.
+
+The extractor has lost data silently before (a review after 2.0.0: quantities of ammunition,
+the contents of a pack, the special rules of a weapon, a table header no replacement ever
+matched, sentences cut in two). So:
+
+- Every field of the source is taken or left out on purpose, with a comment why; a new field
+  of a new database tag is a decision, not a default.
+- A replacement that must change something checks that it matched, and nothing is put in when
+  it did not (a placeholder of an empty replacement stays in the text otherwise).
+- A text is cut only at the end of a sentence; a clause that belongs to a value goes with it
+  into the text where the value has no field.
+- After `npm run content`, compare a sample with a second source (Open5e, document `wotc-srd`)
+  where the data have one - the class tables were compared cell by cell.
+- `test/content.test.js` reads every entry: every value, every price (a number or `[lo, hi]`
+  the currency accepts), every text rendered without a raw table row. A new kind of data gets
+  its check there, over all entries, not a sample.
 
 **Timestamps (`created`/`modified`):** every tiddler (`.tid`, `.multids` header) carries these
 fields in TiddlyWiki format (UTC, `YYYYMMDDHHMMSSmmm`). New file: `created` = `modified` = now;
