@@ -93,7 +93,7 @@ too (`test/srd.test.js` checks it). The PDFs are only read, never checked in. On
 the 2014 rules: a list of 2024 (such as the rules glossary of the Basic Rules 2024) can show which
 terms are missing, never their names. A term is written as in running text (`charmed`,
 `bezaubert`); a new id that stands alone must not exist in another label domain (`<<term>>`
-takes the first) - properties (`"for"`) may repeat one, their domain has keys of its own
+takes the first; the rule `plugins/domains` of the core reports it) - properties (`"for"`) may repeat one, their domain has keys of its own
 (`ItemCategory`: `Rules/Category/`). Units, dice, the damage grammar, the labels of the fields
 (`Rules/Field/...`) and the patterns of header lines and joined lines (`Rules/Summary/...`,
 `Rules/Line/...`) are in `rules.multids`. What only one language needs for its header lines -
