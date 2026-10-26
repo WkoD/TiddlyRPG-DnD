@@ -111,12 +111,34 @@ function escape(text) {
 var CONDITIONS = ["blinded", "charmed", "deafened", "frightened", "grappled", "incapacitated", "invisible",
 	"paralyzed", "petrified", "poisoned", "prone", "restrained", "stunned", "unconscious"];
 
-// A condition after a verb that gives it ("is poisoned", "the prone condition") as <<term>>
+// The words that give a condition ("is poisoned", "fall prone", "while charmed", "stable but
+// poisoned", "exiting prone"), one adverb between them ("be magically charmed", "is no longer
+// frightened")
+var GIVING = ["is", "are", "was", "were", "be", "been", "being", "become", "becomes", "became", "becoming", "remain",
+		"remains", "remained", "fall", "falls", "falling", "fell", "knocked", "left", "turn", "turns", "isn't", "aren't",
+		"wasn't", "weren't", "it's", "while", "but", "exiting"],
+	ADVERBS = ["also", "magically", "instantly", "then", "still", "otherwise", "either", "instead", "no longer", "not",
+		"already", "both"];
+
+// A condition the text gives as <<term>>, in any case ("knocked Unconscious"), and the conditions
+// listed after it ("can't be blinded, deafened, or incapacitated"); "the prone condition" too.
+// Not where it describes ("the grappled creature", "an invisible sphere", "prone to wanderlust";
+// "blinded and deafened to your surroundings" is the condition).
 function terms(text) {
-	var list = CONDITIONS.join("|");
+	var list = CONDITIONS.join("|"),
+		condition = "(?:" + list + ")\\b(?!(?<=prone) to\\b)",
+		more = "(?:(?:,\\s*(?:or|and)\\s+|,\\s*|\\s+(?:or|and)\\s+)" + condition + ")*",
+		mark = function(words) {
+			return words.replace(new RegExp("\\b(" + list + ")\\b", "gi"), function(c) { return "<<term " + c.toLowerCase() + ">>"; });
+		};
 	return text
-		.replace(new RegExp("\\b(is|are|be|becomes|become|been|being|falls|knocked|left) (" + list + ")\\b", "g"), "$1 <<term $2>>")
-		.replace(new RegExp("\\bthe (" + list + ") condition\\b", "g"), "the <<term $1>> condition");
+		.replace(new RegExp("\\b(" + GIVING.join("|") + ")(\\s+(?:" + ADVERBS.join("|") + "))?\\s+(" + condition + more + ")", "gi"),
+			function(all, verb, adverb, conditions) {
+				return verb + (adverb || "") + " " + mark(conditions);
+			})
+		.replace(new RegExp("\\bthe (" + condition + more + ") (conditions?)\\b", "gi"), function(all, conditions, noun) {
+			return "the " + mark(conditions) + " " + noun;
+		});
 }
 
 // One line of text: bold, italics, escapes
@@ -981,7 +1003,7 @@ function creature(x) {
 	}
 	var sections = [];
 	if(rest.length) {
-		sections.push(rest.map(function(r) { return "''" + escape(r.split(":")[0]) + ":''" + escape(r.slice(r.indexOf(":") + 1)); }).join("\n\n"));
+		sections.push(rest.map(function(r) { return "''" + escape(r.split(":")[0]) + ":''" + terms(escape(r.slice(r.indexOf(":") + 1))); }).join("\n\n"));
 	}
 	// The parts of the stat block as sections: special traits (spellcasting as a kind of its own),
 	// actions, reactions, legendary actions with their intro (SRD p. 258-260); the headings come
@@ -1182,7 +1204,12 @@ function main() {
 	});
 }
 
-main().catch(function(error) {
-	console.error(error);
-	process.exit(1);
-});
+// terms() for the tests (test/content.test.js); written only when run as a script
+exports.terms = terms;
+
+if(require.main === module) {
+	main().catch(function(error) {
+		console.error(error);
+		process.exit(1);
+	});
+}

@@ -158,6 +158,11 @@ another language would stand beside it in a folder of its own (`content/dnd5e201
   the values of the rules link to them.
 - A figure names its class, subclass and choices in `classes`, its folk in `folk`, its feats and
   languages in `feats` and `languages`, entries of the package taken or not.
+- **Conditions in the texts:** a condition the text gives is `<<term>>` and links to its entry of
+  the glossary - after a verb ("is poisoned", "fall prone", "knocked unconscious", "while
+  charmed", "is no longer frightened"), in a list after it ("can't be blinded, deafened, or
+  incapacitated") and as "the prone condition". Where the word describes, it stays plain ("the
+  grappled creature", "an invisible sphere", "prone to wanderlust").
 - A magic item that names its base item ("Weapon (warhammer)") names it in `base` and carries all
   its values; nothing is inherited, so the item stays as it is when the base changes.
 - Mounts are creatures with `price` and `carrying-capacity`; vehicles are items.

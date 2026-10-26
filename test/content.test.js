@@ -186,7 +186,7 @@ test("a creature speaks only its languages, what it understands stays in its tex
 	assert.equal(cube.fields.senses, "blindsight 60 ft");
 	assert.match(cube.text, /blindsight 60 ft\. \(blind beyond this radius\)/);
 	assert.equal(grimlock.fields.senses, "blindsight 30 ft");
-	assert.match(grimlock.text, /blindsight 30 ft\. or 10 ft\. while deafened \(blind beyond this radius\)/);
+	assert.match(grimlock.text, /blindsight 30 ft\. or 10 ft\. while <<term deafened>> \(blind beyond this radius\)/);
 });
 
 // What 5e-bits holds beside the text (quantity, contents, special) and the fixed sentences of the SRD
@@ -323,6 +323,46 @@ test("no text runs wikitext the SRD does not have: <<term>> of a condition, the 
 		}
 	});
 	assert.deepEqual(wrong, []);
+});
+
+test("a condition the text gives is a <<term>>: after a verb, an adverb, in a list; not where it describes", function() {
+	var terms = require("../scripts/content/dnd5e2014/extract.js").terms;
+	[
+		["you can't be blinded, deafened, or incapacitated.", "you can't be <<term blinded>>, <<term deafened>>, or <<term incapacitated>>."],
+		["the target is poisoned and stunned until", "the target is <<term poisoned>> and <<term stunned>> until"],
+		["if you fall unconscious", "if you fall <<term unconscious>>"],
+		["knocked Unconscious or if", "knocked <<term unconscious>> or if"],
+		["or be magically charmed by the aboleth", "or be magically <<term charmed>> by the aboleth"],
+		["the creature is no longer frightened", "the creature is no longer <<term frightened>>"],
+		["while frightened by the target", "while <<term frightened>> by the target"],
+		["aren't incapacitated", "aren't <<term incapacitated>>"],
+		["stable but poisoned for 1 hour", "stable but <<term poisoned>> for 1 hour"],
+		["you are blinded and deafened to your own surroundings", "you are <<term blinded>> and <<term deafened>> to your own surroundings"],
+		["the blinded and deafened conditions", "the <<term blinded>> and <<term deafened>> conditions"],
+		["the prone condition", "the <<term prone>> condition"]
+	].forEach(function(pair) {
+		assert.equal(terms(pair[0]), pair[1]);
+	});
+	["The charmed target is", "an invisible sphere", "a creature grappled by you", "Lightfoots are prone to wanderlust",
+		"is more prone to wanderlust", "<<action \"Poisoned Dart\">>"].forEach(function(text) {
+		assert.equal(terms(text), text);
+	});
+});
+
+test("every entry: no condition left plain after a word that gives it", function() {
+	var conditions = JSON.parse(wiki.getTiddlerText("$:/tiddlyrpg/rules/domain/Condition")).entries.map(function(e) { return e.id; })
+			.filter(function(id) { return id !== "exhaustion"; }),
+		re = new RegExp("\\b(?:is|are|was|were|be|been|being|becomes?|became|becoming|remains?|falls?|fell|knocked|isn't|aren't|while)" +
+			"(?:\\s+(?:also|magically|then|still|no longer|not|already|both))?\\s+(" + conditions.join("|") + ")\\b(?! to\\b)", "gi"),
+		plain = [];
+	entries.forEach(function(e) {
+		var m;
+		re.lastIndex = 0;
+		while((m = re.exec(e.text || ""))) {
+			plain.push(e.title + ": " + m[0]);
+		}
+	});
+	assert.deepEqual(plain, []);
 });
 
 test("the named parts of a text as sections: the parts of a stat block, the effects and the curse of an item", function() {

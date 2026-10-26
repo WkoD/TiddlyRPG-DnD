@@ -80,7 +80,9 @@ npm run test-lang            # only test/lang/: language packs
     type (en-GB, de-DE), ids and titles unique, `base` and `spells` name entries of the package,
     header lines as in the SRD, no text runs wikitext the SRD does not have (only `<<term>>` of a
     condition, the sections of the domain `Section`, the spells of a spellcasting as links to
-    the package), the named parts of a stat block and of an item as sections, cursed items locked
+    the package), the conditions a text gives as `<<term>>` (`terms()` of `extract.js` on
+    sentences, and no condition left plain after a giving word in any entry), the named parts of
+    a stat block and of an item as sections, cursed items locked
   - `lang/packs` - every language of every plugin complete against en-GB (keys only in
     `en-GB/names.multids` are proper names and may be missing; keys ending in `/Parse` are the
     words read in one language only, keys in `<code>/grammar.multids` the forms one language
