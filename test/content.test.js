@@ -79,9 +79,14 @@ test("prices: a number or a range [lo, hi] in the reference coin, readable in th
 });
 
 test("every text renders without a raw table row", function() {
-	var raw = /(^|\n)\s*\|/;
-	assert.ok(raw.test(h.render(wiki, "text/plain", "|!Level |!Features |! \n|1st|Rage|")), "a broken table stays raw");
-	assert.deepEqual(entries.filter(function(e) { return raw.test(h.render(wiki, "text/plain", e.text || "")); }).map(function(e) { return e.title; }), []);
+	// a paragraph that starts with "|": the row of a table TiddlyWiki did not read as one (as HTML -
+	// the plain text runs the paragraphs together)
+	var raw = /<p>\s*\|/,
+		html = function(text) { return h.render(wiki, "text/html", text); };
+	assert.ok(raw.test(html("|!Level |!Features |! \n|1st|Rage|")), "a broken header stays raw");
+	assert.ok(raw.test(html("|!Face |!Effect |\n\n&#124; 1 | Gases")), "a row without its closing | stays raw");
+	assert.ok(!raw.test(html("|!Face |!Effect |\n| 1 | Gases |")), "a table is none");
+	assert.deepEqual(entries.filter(function(e) { return raw.test(html(e.text || "")); }).map(function(e) { return e.title; }), []);
 });
 
 test("items, spells, creatures, classes, folks, traits, languages, the feat and the glossary of the SRD 5.1", function() {
@@ -191,6 +196,8 @@ test("items: bundles, packs, special rules, one charge a day, bonuses and scores
 		f = function(title) { return get(title).fields; };
 	assert.match(get("Arrow").text, /bundle of 20/);
 	assert.equal(f("Arrow").price, 1, "the price of the bundle");
+	assert.equal(f("Arrow of Slaying").base, "Arrow");
+	assert.equal(f("Arrow of Slaying").weight, undefined, "one arrow, not the weight of the bundle of its base");
 	assert.match(get("Burglar's Pack").text, /Contents:[^]*\* 5 × Candle/);
 	assert.match(get("Lance").text, /disadvantage when you use a lance/);
 	assert.match(get("Net").text, /<<term restrained>>/);

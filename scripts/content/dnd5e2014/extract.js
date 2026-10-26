@@ -150,6 +150,10 @@ function wikitext(lines) {
 			if(!trimmed) {
 				return;
 			}
+			// a row of a table; 5e-bits leaves the closing "|" out of some rows (Cube of Force)
+			if(/^\|/.test(trimmed) && !/\|$/.test(trimmed) && /^\|/.test(out[out.length - 1] || "")) {
+				trimmed += " |";
+			}
 			if(/^\|.*\|$/.test(trimmed)) {
 				if(/^\|[\s:|-]+\|$/.test(trimmed)) {
 					// the separator after the header: the header row becomes |!...|
@@ -475,6 +479,9 @@ function unmarked(index, desc) {
 	return out;
 }
 
+// The entries of equipment the SRD sells as a bundle (Arrow: 20)
+var BUNDLES = new Set();
+
 function magicItem(m, equipmentByName) {
 	if(m.variants && m.variants.length) {
 		return null;
@@ -518,9 +525,10 @@ function magicItem(m, equipmentByName) {
 		}
 	}
 	if(base) {
-		// the values of the base item come along, nothing is inherited
+		// the values of the base item come along, nothing is inherited; not the price, and not the
+		// weight of a bundle (Arrow: 20 arrows) for one piece (Arrow of Slaying)
 		Object.keys(base.fields).forEach(function(name) {
-			if(name !== "price") {
+			if(name !== "price" && !(name === "weight" && BUNDLES.has(base))) {
 				fields[name] = base.fields[name];
 			}
 		});
@@ -1054,6 +1062,9 @@ function main() {
 			if(entry) {
 				items.push(entry);
 				byName[e.name.toLowerCase()] = entry;
+				if(e.quantity > 1) {
+					BUNDLES.add(entry);
+				}
 			}
 		});
 		tableItems().forEach(function(entry) { items.push(entry); });
