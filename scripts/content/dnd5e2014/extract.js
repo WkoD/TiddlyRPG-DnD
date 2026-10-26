@@ -33,7 +33,7 @@
  *     coins of the setting), weights in lb without a thousands comma; ammunition keeps the price
  *     and weight of its bundle, the text names it; a pack lists its contents, a lance and a net
  *     their rules in the text;
- *   - charges, bonuses (attack and damage, AC, saving throws, spell attacks) and ability scores
+ *   - charges, bonuses (attack and damage, AC, saving throws, spell attacks, spell save DC) and ability scores
  *     from the fixed sentences of the SRD, only where they hold without a condition - one use
  *     until the next dawn is one charge, not for several properties or beads;
  *   - texts are wikitext: the Markdown of 5e-bits converted, every character that would start
