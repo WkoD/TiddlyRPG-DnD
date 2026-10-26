@@ -1,5 +1,5 @@
 created: 20261009183319191
-modified: 20261025124110539
+modified: 20261026132637071
 title: $:/tiddlyrpg/language/en-GB/
 
 # Terms of the System Reference Document 5.1 (English, CC-BY-4.0, see the tab license), by hand;
@@ -37,24 +37,39 @@ Rules/Damage/thunder/Phrase: thunder damage
 
 # Abilities: stat block p. 218 "STR DEX CON INT WIS CHA"; names p. 76 ("Ability Scores and Modifiers");
 # save: short for "<Ability> saving throw", e.g. p. 10 "a Wisdom saving throw"
+# mod, score: short for "<Ability> modifier" and "<Ability> score", p. 76 ("Each of a creature's abilities
+# has a score", "Ability Scores and Modifiers"), e.g. p. 8 "1d12 (or 7) + your Constitution modifier",
+# p. 7 "your Constitution score increases"
 Rules/Term/str: STR
 Rules/Term/str/name: Strength
 Rules/Term/str/save: STR save
+Rules/Term/str/mod: STR modifier
+Rules/Term/str/score: STR score
 Rules/Term/dex: DEX
 Rules/Term/dex/name: Dexterity
 Rules/Term/dex/save: DEX save
+Rules/Term/dex/mod: DEX modifier
+Rules/Term/dex/score: DEX score
 Rules/Term/con: CON
 Rules/Term/con/name: Constitution
 Rules/Term/con/save: CON save
+Rules/Term/con/mod: CON modifier
+Rules/Term/con/score: CON score
 Rules/Term/int: INT
 Rules/Term/int/name: Intelligence
 Rules/Term/int/save: INT save
+Rules/Term/int/mod: INT modifier
+Rules/Term/int/score: INT score
 Rules/Term/wis: WIS
 Rules/Term/wis/name: Wisdom
 Rules/Term/wis/save: WIS save
+Rules/Term/wis/mod: WIS modifier
+Rules/Term/wis/score: WIS score
 Rules/Term/cha: CHA
 Rules/Term/cha/name: Charisma
 Rules/Term/cha/save: CHA save
+Rules/Term/cha/mod: CHA modifier
+Rules/Term/cha/score: CHA score
 
 # Terms: AC p. 62 "Armor Class (AC)"; HP p. 116 table "Size HP AC" (= de p. 149);
 # DC p. 77 "Difficulty Class ... DC"; CR p. 15 "Destroy Undead (CR 1/2)" (= de p. 30);
@@ -130,6 +145,8 @@ Rules/Term/inspiration: inspiration
 Rules/Term/proficiency: proficiency
 Rules/Term/death-saving-throw: death saving throw
 Rules/Term/hit-dice: Hit Dice
+# average: p. 56 ("Hit Points" of multiclassing) "the average result of the die (rounded up)"
+Rules/Term/hit-dice/average: average of a Hit Die
 Rules/Term/temporary-hit-points: temporary hit points
 Rules/Term/short-rest: short rest
 Rules/Term/long-rest: long rest

@@ -1,5 +1,5 @@
 created: 20261009183319191
-modified: 20261025124110539
+modified: 20261026132637071
 title: $:/tiddlyrpg/language/de-DE/
 
 # Begriffe des Systemreferenzdokuments 5.1 (deutsch, CC-BY-4.0, siehe den Tab license), von Hand;
@@ -38,24 +38,39 @@ Rules/Damage/thunder/Phrase: Schallschaden
 
 # Attribute: Werteblock S. 259 "STR GES KON INT WEI CHA"; save: kurz für den Rettungswurf, z. B. S. 10
 # "einen Weisheitsrettungswurf (SG 8 + ...)"
+# mod, score: kurz für "<Attribut>smodifikator" und "<Attribut>swert", S. 81 ("Attributswerte",
+# "Attributsmodifikator"), z. B. S. 8 "1W12 (oder 7) + Konstitutionsmodifikator", S. 5 "Dein Stärkewert
+# steigt um 2"
 Rules/Term/str: STR
 Rules/Term/str/name: Stärke
 Rules/Term/str/save: STR-Rettungswurf
+Rules/Term/str/mod: STR-Modifikator
+Rules/Term/str/score: STR-Wert
 Rules/Term/dex: GES
 Rules/Term/dex/name: Geschicklichkeit
 Rules/Term/dex/save: GES-Rettungswurf
+Rules/Term/dex/mod: GES-Modifikator
+Rules/Term/dex/score: GES-Wert
 Rules/Term/con: KON
 Rules/Term/con/name: Konstitution
 Rules/Term/con/save: KON-Rettungswurf
+Rules/Term/con/mod: KON-Modifikator
+Rules/Term/con/score: KON-Wert
 Rules/Term/int: INT
 Rules/Term/int/name: Intelligenz
 Rules/Term/int/save: INT-Rettungswurf
+Rules/Term/int/mod: INT-Modifikator
+Rules/Term/int/score: INT-Wert
 Rules/Term/wis: WEI
 Rules/Term/wis/name: Weisheit
 Rules/Term/wis/save: WEI-Rettungswurf
+Rules/Term/wis/mod: WEI-Modifikator
+Rules/Term/wis/score: WEI-Wert
 Rules/Term/cha: CHA
 Rules/Term/cha/name: Charisma
 Rules/Term/cha/save: CHA-Rettungswurf
+Rules/Term/cha/mod: CHA-Modifikator
+Rules/Term/cha/score: CHA-Wert
 
 # Begriffe: RK S. 66 "Rüstungsklasse (RK)"; TP S. 149 Tabelle "Größe TP RK"; SG S. 82
 # "Schwierigkeitsgrad (SG)"; HG S. 30 "Untote zerstören (HG 1/2)"; EP S. 288 "Erfahrungspunkte (EP)";
@@ -132,6 +147,8 @@ Rules/Term/inspiration: Inspiration
 Rules/Term/proficiency: Übung
 Rules/Term/death-saving-throw: Todesrettungswurf
 Rules/Term/hit-dice: Trefferwürfel
+# average: S. 58 (Trefferpunkte beim Multiklassing) "das durchschnittliche Würfelergebnis (aufgerundet)"
+Rules/Term/hit-dice/average: Durchschnitt eines Trefferwürfels
 Rules/Term/temporary-hit-points: temporäre Trefferpunkte
 Rules/Term/short-rest: kurze Rast
 Rules/Term/long-rest: lange Rast

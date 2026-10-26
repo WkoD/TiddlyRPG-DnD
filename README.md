@@ -206,8 +206,11 @@ domains or per domain. The names of months and coins have their own setting unde
 
 | Macro | Shown (en / de) |
 |---|---|
-| `<<term wis>>`, `<<term wis variant:"save">>` (abilities str, dex, con, int, wis, cha; variants `save`, `name`) | WIS / WEI, WIS save / WEI-Rettungswurf |
+| `<<term wis>>`, `<<term wis variant:"save">>` (abilities str, dex, con, int, wis, cha; variants `save`, `name`, `mod`, `score`) | WIS / WEI, WIS save / WEI-Rettungswurf, WIS modifier / WEI-Modifikator, WIS score / WEI-Wert |
 | `<<term ac>>`, `<<term pb variant:"name">>` (terms ac, hp, dc, cr, xp, pb; variant `name`) | AC / RK, proficiency bonus / Übungsbonus |
+| `<<term dc value:"10 + cr">>`, `<<term dc value:"8 + cha:mod + pb">>` (a formula as the value) | DC 10 + CR / SG 10 + HG, DC 8 + CHA modifier + PB |
+| `<<dice "1d8 * cr">>`, `<<dice "1/4 hit-dice + hit-dice:average + con:mod">>` (a formula without a term before it; `hit-dice` with the variant `average`) | 1d8 × CR / 1W8 × HG, 1/4 Hit Dice + average of a Hit Die + CON modifier |
+| `<<rule "Rage" entry:"Barbarian">>`, `<<rule "Rage Damage" entry:"Barbarian">>` (a feature or a column of the table of a class, with its class; in a formula in single quotes, the class after a bar) | Rage, Rage Damage - as the class writes them, linked to the place in it |
 | `<<unit "30 ft">>`, `<<unit "60 ft" kind:"range">>` (lengths with the kinds `range`, `distance` and `size`, weights) | 30 ft / 9 m |
 | `<<unit "50 gp">>` (coins cp, sp, ep, gp, pp) | 50 gp / 50 GM |
 
