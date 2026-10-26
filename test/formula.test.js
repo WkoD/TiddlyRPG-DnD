@@ -52,6 +52,15 @@ test("de-DE: the same in German", function() {
 	assert.equal(term("dc", "10 + 'Rage Damage|Barbarian'"), "SG 10 + Rage Damage", "a name stays as the entry writes it");
 });
 
+test("<<damage>> with a formula: Rage Damage and the proficiency bonus before the type", function() {
+	h.setLanguage(wiki, "en-GB");
+	assert.equal(rules.damage(wiki, "1d6 + 'Rage Damage|Barbarian' cold").text, "1d6 + Rage Damage cold damage");
+	assert.equal(rules.damage(wiki, "1d4 + pb fire plus 1d6 cold").text, "1d4 + PB fire damage plus 1d6 cold damage");
+	h.setLanguage(wiki, "de-DE");
+	assert.equal(rules.damage(wiki, "1d6 + 'Rage Damage|Barbarian' cold").text, "1W6 + Rage Damage Kälteschaden");
+	assert.equal(rules.damage(wiki, "2d6 + str:mod Hieb").text, "2W6 + STR-Modifikator Hiebschaden");
+});
+
 test("every ability has the variants mod and score in both languages", function() {
 	["en-GB", "de-DE"].forEach(function(code) {
 		h.setLanguage(wiki, code);

@@ -75,7 +75,7 @@ npm run test-lang            # only test/lang/: language packs
     cases of the campaigns (Vandalia), GM/SL and XP/EP; `terms` also the hubs `Ruleset` and `CampaignSetting`
   - `formula` - formulas (the core's `modules/formula.js`) with the real data: the cases of the
     campaigns (Vandalia) in en-GB and de-DE, the variants `mod` and `score` of every ability,
-    `hit-dice:average`, a column of a class table by name with its jump mark
+    `hit-dice:average`, a column of a class table by name with its jump mark, a formula in `<<damage>>`
   - `licenses` - the tabs "readme" and "license" from `README.md` and `LICENSE`, the
     attribution of the SRD 5.1 word for word, the notice of the Fan Content Policy only in the
     setting, CC0 in `package.json`; the notices beside the content package
