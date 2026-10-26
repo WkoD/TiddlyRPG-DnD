@@ -610,14 +610,16 @@ function bonuses(text, fields) {
 
 // Charges and their recovery from the fixed sentences of the SRD
 function charges(text, fields) {
-	var has = /(?:has|starts with) (\d+) charges/.exec(text);
+	// "has 7 charges", "They have 3 charges", "starts with 36 charges", "expend 1 of its 10 charges";
+	// not a number of dice (the wishes of a Luck Blade: "1d4 - 1 charges")
+	var has = /(?:has|have|starts with) (\d+) charges|expend \d+ of its (\d+) charges/.exec(text);
 	if(has) {
-		fields.charges = has[1];
-		var regains = /regains (\d+d\d+(?: ?\+ ?\d+)?|\d+) expended charges daily at dawn/.exec(text);
+		fields.charges = has[1] || has[2];
+		var regains = /regains? (\d+d\d+(?: ?\+ ?\d+)?|\d+) expended charges daily at dawn/.exec(text);
 		if(regains) {
 			fields.recharge = regains[1].replace(/ ?\+ ?/, " + ");
 			fields["recharge-on"] = "dawn";
-		} else if(/regains all expended charges daily at dawn/.test(text)) {
+		} else if(/regains? all expended charges daily at dawn/.test(text)) {
 			fields["recharge-on"] = "dawn";
 		}
 	} else if((text.match(/[^.]*can't be used again until the next dawn/g) || []).length === 1 && !/charge/i.test(text) &&

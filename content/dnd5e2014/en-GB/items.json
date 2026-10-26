@@ -5026,6 +5026,8 @@
 				"rarity": "uncommon",
 				"attunement": "yes",
 				"category": "wondrous-item",
+				"charges": "3",
+				"recharge-on": "dawn",
 				"spells": "[[Charm Person]]"
 			},
 			"text": "These crystal lenses fit over the eyes. They have 3 charges. While wearing them, you can expend 1 charge as an action to cast the charm person spell (save DC 13) on a humanoid within 30 feet of you, provided that you and the target can see each other. The lenses regain all expended charges daily at dawn."
@@ -6392,7 +6394,10 @@
 			],
 			"fields": {
 				"rarity": "uncommon",
-				"category": "wondrous-item"
+				"category": "wondrous-item",
+				"charges": "3",
+				"recharge": "1d3",
+				"recharge-on": "dawn"
 			},
 			"text": "You must be proficient with wind instruments to use these pipes. They have 3 charges. You can use an action to play them and expend 1 charge to create an eerie, spellbinding tune. Each creature within 30 feet of you that hears you play must succeed on a DC 15 Wisdom saving throw or become <<term frightened>> of you for 1 minute. If you wish, all creatures in the area that aren't hostile toward you automatically succeed on the saving throw. A creature that fails the saving throw can repeat it at the end of each of its turns, ending the effect on itself on a success. A creature that succeeds on its saving throw is immune to the effect of these pipes for 24 hours. The pipes regain 1d3 expended charges daily at dawn."
 		},
@@ -6406,7 +6411,10 @@
 			"fields": {
 				"rarity": "uncommon",
 				"attunement": "yes",
-				"category": "wondrous-item"
+				"category": "wondrous-item",
+				"charges": "3",
+				"recharge": "1d3",
+				"recharge-on": "dawn"
 			},
 			"text": "You must be proficient with wind instruments to use these pipes. While you are attuned to the pipes, ordinary rats and giant rats are indifferent toward you and will not attack you unless you threaten or harm them.\n\nThe pipes have 3 charges. If you play the pipes as an action, you can use a bonus action to expend 1 to 3 charges, calling forth one swarm of rats with each expended charge, provided that enough rats are within half a mile of you to be called in this fashion (as determined by the GM). If there aren't enough rats to form a swarm, the charge is wasted. Called swarms move toward the music by the shortest available route but aren't under your control otherwise. The pipes regain 1d3 expended charges daily at dawn.\n\nWhenever a swarm of rats that isn't under another creature's control comes within 30 feet of you while you are playing the pipes, you can make a Charisma check contested by the swarm's Wisdom check. If you lose the contest, the swarm behaves as it normally would and can't be swayed by the pipes' music for the next 24 hours. If you win the contest, the swarm is swayed by the pipes' music and becomes friendly to you and your companions for as long as you continue to play the pipes each round as an action. A friendly swarm obeys your commands. If you issue no commands to a friendly swarm, it defends itself but otherwise takes no actions. If a friendly swarm starts its turn and can't hear the pipes' music, your control over that swarm ends, and the swarm behaves as it normally would and can't be swayed by the pipes' music for the next 24 hours."
 		},
@@ -7381,6 +7389,7 @@
 			"fields": {
 				"rarity": "legendary",
 				"category": "ring",
+				"charges": "3",
 				"spells": "Wish"
 			},
 			"text": "While wearing this ring, you can use an action to expend 1 of its 3 charges to cast the wish spell from it. The ring becomes nonmagical when you use the last charge."
@@ -7857,6 +7866,9 @@
 				"rarity": "rare",
 				"attunement": "yes",
 				"category": "staff",
+				"charges": "10",
+				"recharge": "1d8 + 2",
+				"recharge-on": "dawn",
 				"spells": "[[Charm Person]] Command [[Comprehend Languages]]"
 			},
 			"text": "While holding this staff, you can use an action to expend 1 of its 10 charges to cast charm person, command, or comprehend languages from it using your spell save DC. The staff can also be used as a magic quarterstaff.\n\nIf you are holding the staff and fail a saving throw against an enchantment spell that targets only you, you can turn your failed save into a successful one. You can't use this property of the staff again until the next dawn. If you succeed on a save against an enchantment spell that targets only you, with or without the staff's intervention, you can use your reaction to expend 1 charge from the staff and turn the spell back on its caster as if you had cast the spell.\n\nThe staff regains 1d8 + 2 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff becomes a nonmagical quarterstaff."

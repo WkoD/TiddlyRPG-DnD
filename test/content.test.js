@@ -215,6 +215,10 @@ test("items: bundles, packs, special rules, one charge a day, bonuses and scores
 	assert.equal(f("Rod of Lordly Might").bonus, "+3", "a magic mace that grants +3");
 	assert.deepEqual([f("Robe of the Archmagi")["spell-attack-bonus"], f("Robe of the Archmagi")["spell-dc-bonus"]], ["+2", "+2"], "spell save DC and spell attack bonus each increase by 2");
 	assert.deepEqual([f("Cube of Force").charges, f("Cube of Force").recharge, f("Cube of Force")["recharge-on"]], ["36", "1d20", "dawn"], "starts with 36 charges");
+	assert.deepEqual([f("Eyes of Charming").charges, f("Eyes of Charming")["recharge-on"]], ["3", "dawn"], "They have 3 charges ... regain all");
+	assert.deepEqual([f("Staff of Charming").charges, f("Staff of Charming").recharge], ["10", "1d8 + 2"], "1 of its 10 charges");
+	assert.deepEqual([f("Ring of Three Wishes").charges, f("Ring of Three Wishes")["recharge-on"]], ["3", undefined], "no recovery");
+	assert.equal(f("Luck Blade").charges, undefined, "a number of dice is no number of charges");
 	assert.deepEqual([f("Belt of Hill Giant Strength").ability, f("Belt of Hill Giant Strength")["ability-score"]], ["str", "21"]);
 	assert.deepEqual([f("Ioun Stone of Agility")["ability-score"], f("Ioun Stone of Agility")["ability-max"]], ["+2", "20"]);
 	assert.equal(f("Manual of Bodily Health").ability, undefined, "a lasting increase stays in the text");
