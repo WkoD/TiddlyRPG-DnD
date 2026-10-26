@@ -4422,7 +4422,10 @@
 			"fields": {
 				"rarity": "rare",
 				"attunement": "yes",
-				"category": "wondrous-item"
+				"category": "wondrous-item",
+				"charges": "36",
+				"recharge": "1d20",
+				"recharge-on": "dawn"
 			},
 			"text": "This cube is about an inch across. Each face has a distinct marking on it that can be pressed. The cube starts with 36 charges, and it regains 1d20 expended charges daily at dawn.\n\nYou can use an action to press one of the cube's faces, expending a number of charges based on the chosen face, as shown in the Cube of Force Faces table. Each face has a different effect. If the cube has insufficient charges remaining, nothing happens. Otherwise, a barrier of invisible force springs into existence, forming a cube 15 feet on a side. The barrier is centered on you, moves with you, and lasts for 1 minute, until you use an action to press the cube's sixth face, or the cube runs out of charges. You can change the barrier's effect by pressing a different face of the cube and expending the requisite number of charges, resetting the duration.\n\nIf your movement causes the barrier to come into contact with a solid object that can't pass through the cube, you can't move any closer to that object as long as the barrier remains.\n\nCube of Force Faces\n\n|!Face |!Charges |!Effect |\n|1 |1 |Gases, wind, and fog can't pass through the barrier. |\n|2 |2 |Nonliving matter can't pass through the barrier. Walls, floors, and ceilings can pass through at your discretion. |\n|3 |3 |Living matter can't pass through the barrier. |\n|4 |4 |Spell effects can't pass through the barrier. |\n|5 |5 |Nothing can pass through the barrier. Walls, floors, and ceilings can pass through at your discretion. |\n|6 |0 |The barrier deactivates. |\n\nThe cube loses charges when the barrier is targeted by certain spells or comes into contact with certain spell or magic item effects, as shown in the table below.\n\n|!Spell or Item |!Charges Lost |\n|Disintegrate |1d12 |\n|Horn of blasting |1d10 |\n|Passwall |1d6 |\n|Prismatic spray |1d20 |\n|Wall of fire |1d4 |"
 		},
@@ -7483,7 +7486,9 @@
 			"fields": {
 				"rarity": "legendary",
 				"attunement": "yes",
-				"category": "wondrous-item"
+				"category": "wondrous-item",
+				"spell-attack-bonus": "+2",
+				"spell-dc-bonus": "+2"
 			},
 			"text": "This elegant garment is made from exquisite cloth of white, gray, or black and adorned with silvery runes. The robe's color corresponds to the alignment for which the item was created. A white robe was made for good, gray for neutral, and black for evil. You can't attune to a robe of the archmagi that doesn't correspond to your alignment.\n\nYou gain these benefits while wearing the robe:\n\nIf you aren't wearing armor, your base Armor Class is 15 + your Dexterity modifier.\n\nYou have advantage on saving throws against spells and other magical effects.\n\nYour spell save DC and spell attack bonus each increase by 2."
 		},
@@ -7542,7 +7547,8 @@
 			"fields": {
 				"rarity": "legendary",
 				"attunement": "yes",
-				"category": "rod"
+				"category": "rod",
+				"bonus": "+3"
 			},
 			"text": "This rod has a flanged head, and it functions as a magic mace that grants a +3 bonus to attack and damage rolls made with it. The rod has properties associated with six different buttons that are set in a row along the haft. It has three other properties as well, detailed below.\n\n<<effect \"Six Buttons\">> You can press one of the rod's six buttons as a bonus action. A button's effect lasts until you push a different button or until you push the same button again, which causes the rod to revert to its normal form.\n\nIf you press ''button 1'', the rod becomes a flame tongue, as a fiery blade sprouts from the end opposite the rod's flanged head.\n\nIf you press ''button 2'', the rod's flanged head folds down and two crescent-shaped blades spring out, transforming the rod into a magic battleaxe that grants a +3 bonus to attack and damage rolls made with it.\n\nIf you press ''button 3'', the rod's flanged head folds down, a spear point springs from the rod's tip, and the rod's handle lengthens into a 6-foot haft, transforming the rod into a magic spear that grants a +3 bonus to attack and damage rolls made with it.\n\nIf you press ''button 4'', the rod transforms into a climbing pole up to 50 feet long, as you specify. In surfaces as hard as granite, a spike at the bottom and three hooks at the top anchor the pole. Horizontal bars 3 inches long fold out from the sides, 1 foot apart, forming a ladder. The pole can bear up to 4,000 pounds. More weight or lack of solid anchoring causes the rod to revert to its normal form.\n\nIf you press ''button 5'', the rod transforms into a handheld battering ram and grants its user a +10 bonus to Strength checks made to break through doors, barricades, and other barriers.\n\nIf you press ''button 6'', the rod assumes or remains in its normal form and indicates magnetic north. (Nothing happens if this function of the rod is used in a location that has no magnetic north.) The rod also gives you knowledge of your approximate depth beneath the ground or your height above it.\n\n<<effect \"Drain Life\">> When you hit a creature with a melee attack using the rod, you can force the target to make a DC 17 Constitution saving throw. On a failure, the target takes an extra 4d6 necrotic damage, and you regain a number of hit points equal to half that necrotic damage. This property can't be used again until the next dawn.\n\n<<effect \"Paralyze\">> When you hit a creature with a melee attack using the rod, you can force the target to make a DC 17 Strength saving throw. On a failure, the target is <<term paralyzed>> for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on a success. This property can't be used again until the next dawn.\n\n<<effect \"Terrify\">> While holding the rod, you can use an action to force each creature you can see within 30 feet of you to make a DC 17 Wisdom saving throw. On a failure, a target is <<term frightened>> of you for 1 minute. A frightened target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. This property can't be used again until the next dawn."
 		},

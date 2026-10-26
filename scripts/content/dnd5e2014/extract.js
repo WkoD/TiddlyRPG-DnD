@@ -574,7 +574,8 @@ function bonuses(text, fields) {
 			return hit;
 		};
 	var bonus = find(/(?:have|gain) a \+(\d) bonus to attack and damage rolls made with this (?:magic weapon|weapon|piece of magic ammunition)/i) ||
-		find(/magic quarterstaff that grants a \+(\d) bonus to attack and damage rolls made with it/i) ||
+		// a staff or rod that is a magic weapon too (Rod of Lordly Might: a mace, its other forms alike)
+		find(/magic (?:quarterstaff|mace) that grants a \+(\d) bonus to attack and damage rolls made with it/i) ||
 		find(/(?:have|gain) a \+(\d) bonus to AC(?! against)(?![^.]*\bif\b)/i);
 	if(bonus) {
 		fields.bonus = "+" + bonus[1];
@@ -583,9 +584,14 @@ function bonuses(text, fields) {
 	if(saves) {
 		fields["saving-throw-bonus"] = "+" + saves[1];
 	}
-	var spell = find(/(?:have|gain) a \+(\d) bonus to (?:[^.]*,(?: and)? )?spell attack rolls/i);
-	if(spell) {
-		fields["spell-attack-bonus"] = "+" + spell[1];
+	var spell = find(/(?:have|gain) a \+(\d) bonus to (?:[^.]*,(?: and)? )?spell attack rolls/i),
+		// "Your spell save DC and spell attack bonus each increase by 2" (Robe of the Archmagi)
+		both = find(/your spell save DC and spell attack bonus each increase by (\d)/i);
+	if(spell || both) {
+		fields["spell-attack-bonus"] = "+" + (spell || both)[1];
+	}
+	if(both) {
+		fields["spell-dc-bonus"] = "+" + both[1];
 	}
 	// "Your Strength score is 19", "changes to (a) 21", "increases by 2, to a maximum of 20", "increases by 4
 	// and can exceed 20, but not 30" - not the lasting increase of a manual ("as does your maximum")
@@ -604,7 +610,7 @@ function bonuses(text, fields) {
 
 // Charges and their recovery from the fixed sentences of the SRD
 function charges(text, fields) {
-	var has = /has (\d+) charges/.exec(text);
+	var has = /(?:has|starts with) (\d+) charges/.exec(text);
 	if(has) {
 		fields.charges = has[1];
 		var regains = /regains (\d+d\d+(?: ?\+ ?\d+)?|\d+) expended charges daily at dawn/.exec(text);

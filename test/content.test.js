@@ -212,6 +212,9 @@ test("items: bundles, packs, special rules, one charge a day, bonuses and scores
 	assert.deepEqual([f("Ring of Protection").bonus, f("Ring of Protection")["saving-throw-bonus"]], ["+1", "+1"]);
 	assert.deepEqual([f("Staff of Power").bonus, f("Staff of Power")["saving-throw-bonus"], f("Staff of Power")["spell-attack-bonus"]], ["+2", "+2", "+2"]);
 	assert.equal(f("Wand of the War Mage, +3")["spell-attack-bonus"], "+3");
+	assert.equal(f("Rod of Lordly Might").bonus, "+3", "a magic mace that grants +3");
+	assert.deepEqual([f("Robe of the Archmagi")["spell-attack-bonus"], f("Robe of the Archmagi")["spell-dc-bonus"]], ["+2", "+2"], "spell save DC and spell attack bonus each increase by 2");
+	assert.deepEqual([f("Cube of Force").charges, f("Cube of Force").recharge, f("Cube of Force")["recharge-on"]], ["36", "1d20", "dawn"], "starts with 36 charges");
 	assert.deepEqual([f("Belt of Hill Giant Strength").ability, f("Belt of Hill Giant Strength")["ability-score"]], ["str", "21"]);
 	assert.deepEqual([f("Ioun Stone of Agility")["ability-score"], f("Ioun Stone of Agility")["ability-max"]], ["+2", "20"]);
 	assert.equal(f("Manual of Bodily Health").ability, undefined, "a lasting increase stays in the text");
