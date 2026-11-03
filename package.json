@@ -11,7 +11,7 @@
     "content": "node scripts/content/dnd5e2014/extract.js"
   },
   "devDependencies": {
-    "tiddlyrpg-plugins": "git+https://github.com/WkoD/TiddlyRPG-Plugins.git#2.1.0",
+    "tiddlyrpg-plugins": "git+https://github.com/WkoD/TiddlyRPG-Plugins.git#2.2.0",
     "tiddlywiki": "5.4.1",
     "tw5-graph": "git+https://github.com/flibbles/tw5-graph.git#v1.7.1",
     "tw5-relink": "git+https://github.com/flibbles/tw5-relink.git#v2.6.1",
