@@ -122,8 +122,10 @@ of `TiddlyRPG-Plugins`. Every field name is hidden from the field list of the co
   that came back" in the `CLAUDE.md` of `TiddlyRPG-Plugins` hold for the tests here as well.
 
 **Content package** (`content/dnd5e2014/en-GB/`, README "Content package SRD 5.1 English"): generated, never
-edited by hand - change `scripts/content/dnd5e2014/extract.js` (or `srd-tables.js` for what it
-reads from the SRD text, with pages) and run `npm run content`. The script pins the tag of the
+edited by hand - change `scripts/content/dnd5e2014/extract.js` (items, spells, creatures, the
+whole run), `characters.js` (classes with subclasses and choices, folks, traits, languages, the
+feat), `glossary.js` (the entries of the glossary) or `srd-tables.js` (what it reads from the SRD
+text, with pages) and run `npm run content`. The script pins the tag of the
 5e-bits database (`VERSION`) and caches its files in `scripts/content/dnd5e2014/cache/`
 (gitignored); a new tag is a decision of its own, checked against `npm test`. The format of the
 files and the manifest is in the module header of `modules/content-server.js` of
@@ -197,7 +199,7 @@ plugin" in its `CLAUDE.md`); the texts live only in `README.md` and `LICENSE`:
 
 For now this repo keeps the major and minor version of `TiddlyRPG-Plugins` (`tiddlyrpg-core`),
 to show which versions fit together; the two may part later. The patch level (the third number)
-is each repo's own, so a fix is released alone (`2.1.1` here next to `2.1.0` of the core). A
+is each repo's own, so a fix is released alone (`2.2.1` here next to `2.2.0` of the core). A
 minor or major release here follows the one of the core.
 
 1. Raise `version` in `package.json` and in the `plugin.info` of every plugin - to the version of
