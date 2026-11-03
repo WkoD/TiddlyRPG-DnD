@@ -112,16 +112,17 @@ are shown. This plugin is not needed for that.
 ## Content package SRD 5.1 English (`content/dnd5e2014/en-GB/`)
 
 The items, spells, creatures, classes, folks, traits, languages, the feat and the glossary of
-the SRD 5.1 in English as entries for the ruleset: about 610 items (equipment, magic items, trade
-goods, food and drink, poisons), 320 spells, 330 creatures, 120 entries of the category `Class`,
-23 of `Folk`, 27 traits, 16 languages, 1 feat and 47 entries of the glossary, each with its fields
-filled and its text. They are no tiddlers and no plugin: a wiki
-with this package in `node_modules` offers them while it runs on the Node server - in the
-search of the editor, in the choice of a relation, at a missing link and on the hub "Content" -
-and the DM takes one at a time into the wiki, where it becomes an ordinary tiddler. Without the
-package nothing of this shows.
+the SRD 5.1 in English as entries for the ruleset - among the items equipment, magic items,
+trade goods, food and drink and poisons, among the classes their subclasses and lasting
+choices, among the folks their subfolks -, each with its fields filled and its text. They are
+no tiddlers of the wiki: what a wiki with this package in `node_modules` names is included at
+every start, also in its published copy (`README.md` of `TiddlyRPG-Plugins` -> "Content
+packages"); the rest is offered while the wiki runs on the Node server - in the search of the
+editor, in the choice of a relation, at a missing link and on the hub "Content". The DM takes
+an entry into the wiki to change it; it becomes an ordinary tiddler. Without the package nothing
+of this shows.
 
-The wiki names the package "SRD 5.1 (English)"; every taken tiddler carries the tag
+The wiki names the package "SRD 5.1 (English)"; every taken or included entry carries the tag
 `SRD 5.1 English`, and its text stays English whatever the language of the wiki. A package in
 another language would stand beside it in a folder of its own (`content/dnd5e2014/<code>/`).
 
@@ -179,7 +180,7 @@ the script, not checked in).
 A wiki of the TiddlyRPG family already has `tiddlyrpg-plugins` in its `package.json`, and its
 launcher `scripts/tw.js` already lists `tiddlyrpg-dnd` among the packages whose `plugins` folder
 it loads. Add this package to `devDependencies`, pinned to a tag like `tiddlyrpg-plugins`
-(`"tiddlyrpg-dnd": "git+https://github.com/WkoD/TiddlyRPG-DnD.git#2.0.0"`), and the plugins to
+(`"tiddlyrpg-dnd": "git+https://github.com/WkoD/TiddlyRPG-DnD.git#2.2.0"`), and the plugins to
 `tiddlywiki.info`:
 
 ```json
