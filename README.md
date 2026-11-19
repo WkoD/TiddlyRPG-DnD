@@ -180,7 +180,7 @@ the script, not checked in).
 A wiki of the TiddlyRPG family already has `tiddlyrpg-plugins` in its `package.json`, and its
 launcher `scripts/tw.js` already lists `tiddlyrpg-dnd` among the packages whose `plugins` folder
 it loads. Add this package to `devDependencies`, pinned to a tag like `tiddlyrpg-plugins`
-(`"tiddlyrpg-dnd": "git+https://github.com/WkoD/TiddlyRPG-DnD.git#2.2.0"`), and the plugins to
+(`"tiddlyrpg-dnd": "git+https://github.com/WkoD/TiddlyRPG-DnD.git#2.2.1"`), and the plugins to
 `tiddlywiki.info`:
 
 ```json

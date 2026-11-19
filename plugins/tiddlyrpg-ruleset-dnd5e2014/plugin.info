@@ -3,7 +3,7 @@
   "name": "tiddlyrpg-ruleset-dnd5e2014",
   "description": "Ruleset D&D 5e, rules of 2014 (SRD 5.1), compatible with fifth edition, for tiddlyrpg-core: rules domains for lengths, weights, speeds, volumes, time, dice, damage, abilities and terms, the terms of the SRD 5.1 by group (conditions, actions, mechanics, spellcasting, senses, skills, creature types, sizes, alignments, schools, item categories, rarities, kinds of language), the kinds of sections of a text (effects, curses, traits, actions, class features ...), the table of character advancement, and the fields of items, spells, creatures, persons, player characters, folks, classes, languages and feats with what the rules derive (shown like a stat block), in en-GB and de-DE. Data and wikitext only, no code. Requires tiddlyrpg-core.",
   "author": "WkoD",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "core-version": ">=5.4.0",
   "plugin-type": "ruleset",
   "dependents": [
